@@ -1,0 +1,14 @@
+set_io io_leds[0] 99
+set_io io_leds[1] 98
+set_io io_leds[2] 97
+set_io io_leds[3] 96
+set_io io_leds[4] 95
+set_io global_clk 21
+set_io io_jtag_tms 44
+set_io io_jtag_tck 45
+set_io io_jtag_tdi 47 
+set_io io_jtag_tdo 48
+set_io io_jtag1_tms 119
+set_io io_jtag1_tck 118
+set_io io_jtag1_tdi 117
+set_io io_jtag1_tdo 116
