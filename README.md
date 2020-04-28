@@ -1,3 +1,8 @@
+Based on the SpinalHDL Template Repo
+====================================
+git@github.com:SpinalHDL/SpinalTemplateSbt.git
+
+
 Spinal Base Project
 ============
 This repository is a base SBT project added to help non Scala/SBT native people in their first steps.
