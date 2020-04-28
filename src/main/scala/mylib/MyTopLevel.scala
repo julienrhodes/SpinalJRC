@@ -20,26 +20,36 @@ package mylib
 
 import spinal.core._
 import spinal.lib._
+import spinal.lib.com.jtag._
 
 import scala.util.Random
 
 //Hardware definition
 class MyTopLevel extends Component {
   val io = new Bundle {
-    val cond0 = in  Bool
-    val cond1 = in  Bool
-    val flag  = out Bool
-    val state = out UInt(8 bits)
-  }
-  val counter = Reg(UInt(8 bits)) init(0)
-
-  when(io.cond0){
-    counter := counter + 1
+    val jtag    = slave(Jtag())
+    val jtag1   = master(Jtag())
+    val leds    = out Bits(8 bit)
   }
 
-  io.state := counter
-  io.flag  := (counter === 0) | io.cond1
+  val ctrl = new ClockingArea(ClockDomain(io.jtag.tck)) {
+    val tap = new JtagTap(io.jtag, 8)
+    val idcodeArea = tap.idcode(B"x87654321")(instructionId = 4)
+    val ledsArea = tap.write(io.leds)(instructionId = 7)
+  }
+
+  val myClockArea = new ClockingArea(ClockDomain.external("global", frequency=ClockDomain.FixedFrequency(12 MHz))) {
+    val timeout = Timeout(500 ms)
+    val toggle = Reg(False)
+
+    io.leds(4) := toggle
+    when(timeout) {
+      toggle := ~toggle
+      timeout.clear()
+    }
+  }
 }
+
 
 //Generate the MyTopLevel's Verilog
 object MyTopLevelVerilog {
