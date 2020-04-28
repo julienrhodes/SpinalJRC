@@ -28,7 +28,7 @@ import scala.util.Random
 class MyTopLevel extends Component {
   val io = new Bundle {
     val jtag    = slave(Jtag())
-    val jtag1   = master(Jtag())
+    // val jtag1   = master(Jtag())
     val leds    = out Bits(8 bit)
   }
 
