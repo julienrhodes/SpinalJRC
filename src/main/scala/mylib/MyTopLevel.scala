@@ -47,11 +47,11 @@ class JtagBackplane extends Component {
     val leds    = out Bits(8 bit)
   }
 
-  //val ctrl = new ClockingArea(ClockDomain(io.jtag.tck)) {
+  val ctrl = new ClockingArea(ClockDomain(io.jtag.tck)) {
     val tap = new JtagTap(io.jtag, 8)
     val idcodeArea = tap.idcode(B"x87654321")(instructionId = 4)
     val ledsArea = tap.write(io.leds)(instructionId = 7)
-  //}
+  }
 }
 
 //class MyTopLevel extends Component {
