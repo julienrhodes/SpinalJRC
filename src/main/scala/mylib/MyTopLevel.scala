@@ -40,6 +40,7 @@ class Toggler extends Component {
   }
 }
 
+// Must conform to ARM Debug Interface "DR scan chain and DR registers"
 class JtagBackplane extends Component {
   val io = new Bundle {
     val jtag    = slave(Jtag())

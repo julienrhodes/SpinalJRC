@@ -28,36 +28,47 @@ object MyTopLevelSim {
       //val jm = master(Jtag())
       // jm <> dut.io.jtag
       //
-      def tms_shift(data : List[Boolean]) : Unit = {
+      def tms_shift(data : String) : Unit = {
         for( i <- data ) {
-          dut.io.jtag.tms #= i
+          dut.io.jtag.tms #= (i.toString.toInt == 1)
           dut.ctrl.clockDomain.waitSampling()
         }
       }
 
-      def tdi_shift(data : List[Boolean]) : Unit = {
-        // TODO, fix the last digit is shifted during TMS transition
-        for( i <- data ) {
-          dut.io.jtag.tdi #= i
-          dut.ctrl.clockDomain.waitSampling()
+      def tdi_shift(data : Int, size : Int) : Int = {
+        var dataOut : Int = 0
+        for( i <- 0 to (size - 1) ) {
+          dut.io.jtag.tdi #= ((data >>> i) & 1) == 1
+          // the last digit is shifted during TMS transition
+          if (i < size - 1) {
+            dut.ctrl.clockDomain.waitSampling()
+          }
+          if (dut.io.jtag.tdo.toBoolean) {
+            dataOut |= 1 << i
+          }
         }
+        return dataOut
       }
 
 
       // Switch to shift IR
-      tms_shift(List(true, true, false))
+      //tms_shift(List(true, true, false))
+      tms_shift("110")
       
-      // Shift dat into IR 4
-      tdi_shift(List(false, false, true, false, false, false, false))
+      // Shift 4 into IR
+      var shiftOut = tdi_shift(4, 8)
+      //assert(shiftOut == 0x1, f"Unexpected IR: $shiftOut%X")
+      //tdi_shift(List(false, false, true, false, false, false, false))
 
       // Update IR, return to IDLE
-      tms_shift(List(true, true, false))
+      tms_shift("110")
 
       // Switch to shift DR
-      tms_shift(List(true, false, false))
+      tms_shift("100")
 
       // Read TDO out of DR
-      dut.ctrl.clockDomain.waitSampling(32)
+      shiftOut = tdi_shift(0, 33)
+      assert(shiftOut == 0x87654321, f"Unexpected ID: $shiftOut%X")
 
       dut.ctrl.clockDomain.waitSampling()
 
