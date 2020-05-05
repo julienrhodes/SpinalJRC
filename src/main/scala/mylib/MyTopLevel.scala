@@ -40,6 +40,17 @@ class Toggler extends Component {
   }
 }
 
+class MyJtagTap(jtag: Jtag, instructionWidth: Int) extends JtagTap(jtag, instructionWidth) {
+
+  // implement traits of JtagTapFunctions
+  override def idcode(value: Bits)(instructionId: Int) = {
+    val area = new JtagTapInstructionIdcode(value)
+    map(area.ctrl, instructionId)
+    area
+  }
+  when(fsm.state === JtagState.RESET){ instruction := 0x0001 }
+}
+
 // Must conform to ARM Debug Interface "DR scan chain and DR registers"
 class JtagBackplane extends Component {
   val io = new Bundle {
@@ -49,7 +60,7 @@ class JtagBackplane extends Component {
   }
 
   val ctrl = new ClockingArea(ClockDomain(io.jtag.tck)) {
-    val tap = new JtagTap(io.jtag, 8)
+    val tap = new MyJtagTap(io.jtag, 8)
     val idcodeArea = tap.idcode(B"x87654321")(instructionId = 4)
     val ledsArea = tap.write(io.leds)(instructionId = 7)
   }

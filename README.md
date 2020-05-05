@@ -2,6 +2,13 @@ Based on the SpinalHDL Template Repo
 ====================================
 git@github.com:SpinalHDL/SpinalTemplateSbt.git
 
+Build against Dev branch of SpinalHDL
+=====================================
+
+1. `git clone git@github.com:SpinalHDL/SpinalHDL.git -b dev`
+1. `sbt clean publishLocal` Unreleased v1.4.1 is now published locally
+1. `cd SpinalJRC; sbt`
+1. `run mylib.MyTopLevelSim`
 
 Spinal Base Project
 ============

@@ -62,7 +62,7 @@ object MyTopLevelSim {
       
       // Shift 4 into IR
       var shiftOut = tdi_shift(4, 8)
-      assert(shiftOut == 0x4, f"Unexpected IR: $shiftOut%X")
+      assert(shiftOut == 0x1, f"Unexpected IR: $shiftOut%X")
       //tdi_shift(List(false, false, true, false, false, false, false))
 
       // Exit IR -> Update IR -> IDLE
