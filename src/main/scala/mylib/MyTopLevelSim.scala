@@ -35,16 +35,23 @@ object MyTopLevelSim {
         }
       }
 
-      def tdi_shift(data : Int, size : Int) : Int = {
+      def shift(data : Int, size : Int) : Int = {
         var dataOut : Int = 0
-        for( i <- 0 to (size - 2) ) {
+        for( i <- 0 to (size - 1) ) {
           dut.io.jtag.tdi #= ((data >>> i) & 1) == 1
-          // the last digit is shifted during TMS transition
           dut.ctrl.clockDomain.waitSampling()
           if (dut.io.jtag.tdo.toBoolean) {
             dataOut |= 1 << i
           }
         }
+        return dataOut
+      }
+
+      def shift_register(data : Int, size : Int) : Int = {
+        var dataOut : Int = 0
+        dataOut = shift(data, size - 1)
+
+        // the last digit is shifted during TMS transition
         // Exit SHIFT
         dut.io.jtag.tms #= true
         dut.ctrl.clockDomain.waitSampling()
@@ -57,13 +64,12 @@ object MyTopLevelSim {
 
 
       // Switch to shift IR
-      //tms_shift(List(true, true, false))
       tms_shift("1100")
       
       // Shift 4 into IR
-      var shiftOut = tdi_shift(4, 8)
+      var shiftOut = shift_register(4, 8)
       assert(shiftOut == 0x1, f"Unexpected IR: $shiftOut%X")
-      //tdi_shift(List(false, false, true, false, false, false, false))
+      //shift_register(List(false, false, true, false, false, false, false))
 
       // Exit IR -> Update IR -> IDLE
       tms_shift("10")
@@ -72,11 +78,32 @@ object MyTopLevelSim {
       tms_shift("100")
 
       // Read TDO out of DR
-      shiftOut = tdi_shift(0, 32)
+      shiftOut = shift_register(0, 32)
       assert(shiftOut == 0x87654321, f"Unexpected ID: $shiftOut%X")
 
       // Exit DR -> Update DR -> IDLE
       tms_shift("10")
+
+      // Switch to shift IR
+      tms_shift("1100")
+
+      // Bypass
+      shiftOut = shift_register(7, 8)
+      assert(shiftOut == 0x4, f"Unexpected IR: $shiftOut%X")
+      
+      // Exit IR -> Update IR -> IDLE
+      tms_shift("10")
+
+      shiftOut = shift(0xFF, 8)
+      assert(shiftOut == 0xFE, f"Unexpected bypass: $shiftOut%X")
+
+      // Switch to shift IR
+      tms_shift("1100")
+
+      shiftOut = shift(0xFFFF, 16)
+
+      shiftOut = shift(0x0, 16)
+      assert(shiftOut == 0x00FF, f"Unexpected IR: $shiftOut%X")
 
     }
   }
