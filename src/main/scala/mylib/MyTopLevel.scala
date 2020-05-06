@@ -28,12 +28,12 @@ import scala.util.Random
 
 class Toggler extends Component {
   val io = new Bundle {
-    val leds = out Bits(8 bit)
+    val led = out Bool
   }
   val toggle = Reg(False)
   val timeout = Timeout(500 ms)
 
-  io.leds(4) := toggle
+  io.led := toggle
   when(timeout) {
     toggle := ~toggle
     timeout.clear()
@@ -48,23 +48,40 @@ class MyJtagTap(jtag: Jtag, instructionWidth: Int) extends JtagTap(jtag, instruc
     map(area.ctrl, instructionId)
     area
   }
-  when(fsm.state === JtagState.RESET){ instruction := 0x0001 }
+  when(fsm.state === JtagState.RESET){ instruction := 0x01 }
 }
 
 // Must conform to ARM Debug Interface "DR scan chain and DR registers"
-class JtagBackplane extends Component {
-  val io = new Bundle {
-    val jtag    = slave(Jtag())
-    // val jtag1   = master(Jtag())
-    val leds    = out Bits(8 bit)
-  }
+  class JtagBackplane extends Component {
+    val io = new Bundle {
+      val jtag    = slave(Jtag())
+      // val jtag1   = master(Jtag())
+      val leds    = out Bits(8 bit)
+    }
 
-  val ctrl = new ClockingArea(ClockDomain(io.jtag.tck)) {
-    val tap = new MyJtagTap(io.jtag, 8)
-    val idcodeArea = tap.idcode(B"x87654321")(instructionId = 4)
-    val ledsArea = tap.write(io.leds)(instructionId = 7)
+    val globalClock = ClockDomain.external(
+      "global", frequency=ClockDomain.FixedFrequency(12 MHz))
+
+
+    val ctrl = new ClockingArea(ClockDomain(io.jtag.tck, globalClock.reset)) {
+      val tap = new MyJtagTap(io.jtag, 4)
+      val idcodeArea = tap.idcode(B"x00001143")(instructionId = 4)
+      val leds_slow = Reg(U(0, 8 bit)) init(0)
+      val ledsArea = tap.write(leds_slow)(instructionId = 7)
+    }
+
+
+    val globalClockArea = new ClockingArea(globalClock) {
+      val toggler = new Toggler()
+      //leds(4) := toggler.io.led
+      val buf0 = RegNext(ctrl.leds_slow) addTag(crossClockDomain)
+      val buf1 = RegNext(buf0)
+    }
+
+    io.leds := globalClockArea.buf1.asBits ^ (globalClockArea.toggler.io.led.asBits << 4).resized
+
+
   }
-}
 
 //class MyTopLevel extends Component {
 //
