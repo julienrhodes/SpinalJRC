@@ -61,7 +61,7 @@ class OSCH() extends BlackBox {
   //  17.73  19.00  20.46  22.17  24.18  26.60  29.56  33.25  38.00  44.33
   //  53.20  66.50  88.67 133.00
   val io = new Bundle {
-    val STBY = in Bool
+    val STDBY = in Bool
     val OSC = out Bool
     val SEDSTDBY = out Bool
   }
@@ -78,7 +78,7 @@ class MyTopLevel extends Component {
 
   // Setup internal oscillator as the clock source
   val osc = new OSCH()
-  osc.io.STBY := False
+  osc.io.STDBY := False
   osc.addAttribute("NOM_FREQ", "12.09")
 
   val globalClock = ClockDomain(osc.io.OSC, io.reset,
