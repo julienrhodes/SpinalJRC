@@ -1,0 +1,5 @@
+-rem
+-distrce
+-log "machx03l_jrc1.log"
+-o "machx03l_jrc1.csv"
+-pr "machx03l_jrc1.prf"

@@ -1,0 +1,14 @@
+#Start recording tcl command: 5/7/2020 14:18:22
+#Project Location: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build; Project name: machx03l
+prj_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l.ldf"
+pgr_project save "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/top_level.xcf"
+prj_src add -exclude "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/top_level.xcf"
+prj_src enable "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/top_level.xcf"
+pgr_project save "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/top_level.xcf"
+pgr_project save "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/top_level.xcf"
+pgr_project save "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/top_level.xcf"
+pgr_project save "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/top_level.xcf"
+pgr_program run
+prj_project save
+prj_project close
+#Stop recording: 5/7/2020 14:26:33

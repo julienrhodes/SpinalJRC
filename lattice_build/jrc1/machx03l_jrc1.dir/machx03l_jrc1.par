@@ -1,0 +1,27 @@
+PAR: Place And Route Diamond (64-bit) 3.11.0.396.4.
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+Thu May  7 15:31:00 2020
+
+/usr/local/diamond/3.11_x64/ispfpga/bin/lin64/par -f machx03l_jrc1.p2t
+machx03l_jrc1_map.ncd machx03l_jrc1.dir machx03l_jrc1.prf -gui -msgset
+/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/promote.xml
+
+
+Preference file: machx03l_jrc1.prf.
+
+Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
+Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
+----------   --------     -----        ------       -----------  -----------  ----         ------
+5_1   *      0            73.102       0            0.306        0            05           Completed
+
+* : Design saved.
+
+Total (real) run time for 1-seed: 5 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.

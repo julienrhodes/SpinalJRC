@@ -1,0 +1,10 @@
+#Start recording tcl command: 5/7/2020 13:44:31
+#Project Location: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build; Project name: machx03l
+prj_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l.ldf"
+prj_run Synthesis -impl jrc1 -task Lattice_Synthesis
+prj_run Synthesis -impl jrc1 -task Lattice_Synthesis -forceOne
+prj_run Synthesis -impl jrc1 -task Lattice_Synthesis -forceOne
+prj_run PAR -impl jrc1
+prj_run Export -impl jrc1 -task Bitgen
+prj_project close
+#Stop recording: 5/7/2020 14:17:46

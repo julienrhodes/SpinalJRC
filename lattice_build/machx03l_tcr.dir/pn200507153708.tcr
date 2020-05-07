@@ -1,0 +1,14 @@
+#Start recording tcl command: 5/7/2020 15:26:51
+#Project Location: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build; Project name: machx03l
+prj_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l.ldf"
+pgr_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/top_level.xcf"
+pgr_program run
+pgr_program run
+pgr_project save "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/top_level.xcf"
+prj_run Synthesis -impl jrc1 -task Lattice_Synthesis
+prj_run PAR -impl jrc1 -task PARTrace
+prj_run Export -impl jrc1
+pgr_project save "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/top_level.xcf"
+pgr_program run
+prj_project close
+#Stop recording: 5/7/2020 15:37:08
