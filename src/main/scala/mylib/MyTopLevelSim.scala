@@ -11,8 +11,9 @@ import scala.util.Random
 
 //MyTopLevel's testbench
 object MyTopLevelSim {
+  val myConfig = SpinalConfig(defaultClockDomainFrequency = FixedFrequency(12 MHz))
   def main(args: Array[String]) {
-    val compiled = SimConfig.withWave.compile{
+    val compiled = SimConfig.withConfig(myConfig).withWave.compile{
       val dut = new JtagBackplane
       dut
     }
@@ -20,8 +21,11 @@ object MyTopLevelSim {
     compiled.doSim("JtagBackPlane") { dut =>
       //Fork a process to generate the reset and the clock on the dut
       // dut.clockDomain.forkStimulus(10)
+      //ClockDomain(dut.io.OSC, dut.io.reset).forkStimulus(10)
+      //ClockDomain(ClockDomain, dut.io.coreReset).forkStimulus(10)
       dut.ctrl.clockDomain.forkStimulus(50)
-      dut.globalClockArea.clockDomain.forkStimulus(10)
+      //dut.clockDomain.frequency = ClockDomain.FixedFrequency(12 MHz)
+      dut.clockDomain.forkStimulus(10)
 
       dut.io.jtag.tdi #= false
       dut.io.jtag.tms #= false
