@@ -3,32 +3,29 @@ Report for cell MyTopLevel
    Instance path: MyTopLevel
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      63.00        100.0
-                                  LUT4	      65.00        100.0
+                                  SLIC	      61.00        100.0
+                                  LUT4	      97.00        100.0
                                  IOBUF	         13        100.0
-                                PFUREG	        111        100.0
+                                PFUREG	        103        100.0
                                 RIPPLE	         12        100.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                         JtagBackplane	          1        99.2
+                               Toggler	          1        25.5
+                         JtagBackplane	          1        70.5
 ---------------------------------------------------
 Report for cell JtagBackplane
    Instance path: MyTopLevel/globalClockArea_jtag
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      62.50        99.2
-                                  LUT4	      64.00        98.5
-                                PFUREG	        111        100.0
-                                RIPPLE	         12        100.0
-SUB MODULES
-                                  cell	      count    SLC Usage(%)
-                               Toggler	          1        24.7
+                                  SLIC	      43.00        70.5
+                                  LUT4	      79.00        81.4
+                                PFUREG	         78        75.7
 ---------------------------------------------------
 Report for cell Toggler
-   Instance path: MyTopLevel/globalClockArea_jtag/toggler_1
+   Instance path: MyTopLevel/globalClockArea_toggler
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      15.58        24.7
-                                  LUT4	      10.00        15.4
-                                PFUREG	         25        22.5
+                                  SLIC	      15.58        25.5
+                                  LUT4	      10.00        10.3
+                                PFUREG	         25        24.3
                                 RIPPLE	         12        100.0

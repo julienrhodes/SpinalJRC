@@ -9,14 +9,6 @@
     </Task>
     <Task name="Map">
         <Message>
-            <ID>1100644</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l.lpf(17): Semantic error in &quot;IOBUF PORT &quot;clk_x1&quot; PULLMODE=NONE IO_TYPE=LVCMOS33 ;&quot;: </Dynamic>
-            <Dynamic>clk_x1</Dynamic>
-            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l.lpf</Navigation>
-            <Navigation>17</Navigation>
-        </Message>
-        <Message>
             <ID>52101186</ID>
             <Severity>Warning</Severity>
             <Dynamic>MachXO3L</Dynamic>
@@ -50,18 +42,18 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(59): </Dynamic>
-            <Dynamic>JtagBackplane</Dynamic>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(303): </Dynamic>
+            <Dynamic>Toggler</Dynamic>
             <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
-            <Navigation>59</Navigation>
+            <Navigation>303</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(319): </Dynamic>
-            <Dynamic>Toggler</Dynamic>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(67): </Dynamic>
+            <Dynamic>JtagBackplane</Dynamic>
             <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
-            <Navigation>319</Navigation>
+            <Navigation>67</Navigation>
         </Message>
         <Message>
             <ID>35001611</ID>

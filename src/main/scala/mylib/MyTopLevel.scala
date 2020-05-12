@@ -48,7 +48,7 @@ class MyJtagTap(jtag: Jtag, instructionWidth: Int) extends JtagTap(jtag, instruc
     map(area.ctrl, instructionId)
     area
   }
-  when(fsm.state === JtagState.RESET){ instruction := 0x01 }
+  when(fsm.state === JtagState.RESET){ instruction := 4 }
 }
 
 class OSCH() extends BlackBox {
@@ -81,13 +81,17 @@ class MyTopLevel extends Component {
   osc.io.STDBY := False
   osc.addAttribute("NOM_FREQ", "12.09")
 
+  //val globalClock = ClockDomain(osc.io.OSC, io.reset,
   val globalClock = ClockDomain(osc.io.OSC, io.reset,
-    frequency=ClockDomain.FixedFrequency(12 MHz))
+    frequency=ClockDomain.FixedFrequency(12 MHz),
+    config=ClockDomainConfig(resetKind = ASYNC, resetActiveLevel = LOW))
 
   val globalClockArea = new ClockingArea(globalClock) {
+    val toggler = new Toggler()
     val jtag = new JtagBackplane()
-    jtag.io.jtag <> io.jtag
-    io.leds := jtag.io.leds
+    //jtag.io.jtag <> io.jtag
+    io.jtag <> jtag.io.jtag
+    io.leds := ~jtag.io.leds ^ toggler.io.led.asBits.resize(8 bit)
   }
 }
 
@@ -101,39 +105,48 @@ class JtagBackplane extends Component {
 
   val currentClk = ClockDomain.current
   // Define JTAG TAP
-  val ctrl = new ClockingArea(ClockDomain(io.jtag.tck, currentClk.reset)) {
-    val tap = new MyJtagTap(io.jtag, 4)
-    val idcodeArea = tap.idcode(B"x00001143")(instructionId = 4)
-    val leds_slow = Reg(U(0, 8 bit)) init(0)
-    val ledsArea = tap.write(leds_slow)(instructionId = 7)
+  val ctrl = new ClockingArea(ClockDomain(io.jtag.tck)) {//, currentClk.reset,
+      //config=ClockDomainConfig(resetKind = ASYNC, resetActiveLevel = LOW))) {
+    val buf = Reg(Bits(8 bits))
+    val tap = new MyJtagTap(io.jtag, 8)
+    val idcodeArea = tap.read(B"x413bd043")(instructionId = 4)
+    val ledsArea = tap.write(buf)(instructionId = 7)
+    io.leds := buf
+    buf(5) := ~buf(5)
+    buf(7) := io.jtag.tdo
   }
-
-  val toggler = new Toggler()
-  //leds(4) := toggler.io.led
-  val buf0 = RegNext(ctrl.leds_slow) addTag(crossClockDomain)
-  val buf1 = RegNext(buf0)
-
-  io.leds := (buf1.asBits ^ (toggler.io.led.asBits << 4).resized)
 
 
 }
 
-//class MyTopLevel extends Component {
-//
-//  val jtag_root = new JtagBackplane()
-//  val io = new Bundle {
-//    val jtag = jtag_root.io.jtag
-//    val leds = out Bits(8 bit)
-//  }
-//
-//
-//  io.leds := jtag_root.io.leds
-//  // val myClockArea = new ClockingArea(ClockDomain.external("global", frequency=ClockDomain.FixedFrequency(12 MHz))) {
-//  //   val toggler = new Toggler()
-//  // }
-//
-//}
+class Blinky extends Component {
+  val io = new Bundle {
+    val reset = in Bool
+    val leds    = out Bits(8 bit)
+  }
 
+  val osc = new OSCH()
+  osc.io.STDBY := False
+  osc.addAttribute("NOM_FREQ", "12.09")
+
+  val globalClock = ClockDomain(osc.io.OSC, io.reset,
+    frequency=ClockDomain.FixedFrequency(12 MHz),
+    config=ClockDomainConfig(resetKind = ASYNC, resetActiveLevel = LOW))
+  val globalClockArea = new ClockingArea(globalClock) {
+    val toggler = new Toggler()
+    val ledReg = Reg(B(8 bits, default -> True))
+    ledReg.setAll()
+    ledReg(1) := toggler.io.led
+    io.leds := ledReg
+  }
+
+}
+
+object MyBlinkyVerilog {
+  def main(args: Array[String]) {
+    SpinalVerilog(new Blinky)
+  }
+}
 
 //Generate the MyTopLevel's Verilog
 object MyTopLevelVerilog {

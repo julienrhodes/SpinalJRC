@@ -6,36 +6,7 @@
 -->
 </STYLE>
 </HEAD>
-<PRE><A name="pn200507094603"></A><B><U><big>pn200507094603</big></U></B>
-#Start recording tcl command: 5/7/2020 09:45:05
-#Project Location: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build; Project name: machx03l
-prj_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l.ldf"
-prj_project close
-#Stop recording: 5/7/2020 09:46:03
-
-
-
-<A name="pn200507094608"></A><B><U><big>pn200507094608</big></U></B>
-#Start recording tcl command: 5/7/2020 09:46:05
-#Project Location: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build; Project name: machx03l
-prj_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l.ldf"
-prj_project close
-#Stop recording: 5/7/2020 09:46:08
-
-
-
-<A name="pn200507101624"></A><B><U><big>pn200507101624</big></U></B>
-#Start recording tcl command: 5/7/2020 10:14:38
-#Project Location: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build; Project name: machx03l
-prj_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l.ldf"
-prj_src add "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/osc_int.v"
-prj_project save
-prj_project close
-#Stop recording: 5/7/2020 10:16:24
-
-
-
-<A name="pn200507101724"></A><B><U><big>pn200507101724</big></U></B>
+<PRE><A name="pn200507101724"></A><B><U><big>pn200507101724</big></U></B>
 #Start recording tcl command: 5/7/2020 10:16:53
 #Project Location: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build; Project name: machx03l
 prj_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l.ldf"
@@ -128,6 +99,106 @@ pgr_project save "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/top_lev
 pgr_program run
 prj_project close
 #Stop recording: 5/7/2020 14:50:02
+
+
+
+<A name="pn200507153708"></A><B><U><big>pn200507153708</big></U></B>
+#Start recording tcl command: 5/7/2020 15:26:51
+#Project Location: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build; Project name: machx03l
+prj_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l.ldf"
+pgr_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/top_level.xcf"
+pgr_program run
+pgr_program run
+pgr_project save "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/top_level.xcf"
+prj_run Synthesis -impl jrc1 -task Lattice_Synthesis
+prj_run PAR -impl jrc1 -task PARTrace
+prj_run Export -impl jrc1
+pgr_project save "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/top_level.xcf"
+pgr_program run
+prj_project close
+#Stop recording: 5/7/2020 15:37:08
+
+
+
+<A name="pn200508093553"></A><B><U><big>pn200508093553</big></U></B>
+#Start recording tcl command: 5/7/2020 15:49:37
+#Project Location: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build; Project name: machx03l
+prj_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l.ldf"
+pgr_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/top_level.xcf"
+pgr_project close
+pgr_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/top_level.xcf"
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_project close
+pgr_project save "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+prj_src add -exclude "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+prj_src enable "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_program set -cable 
+pgr_program run
+pgr_program set -port FTUSB-1
+pgr_program set -port FTUSB-0
+pgr_program set -cable 
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_project close
+prj_src remove "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+prj_src add -exclude "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+prj_src enable "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+pgr_project close
+pgr_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+pgr_project close
+prj_src remove "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+pgr_project save "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+prj_src add -exclude "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+prj_src enable "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+pgr_program run
+pgr_project save "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+pgr_project close
+pgr_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+pgr_project close
+prj_run PAR -impl jrc1
+prj_run Export -impl jrc1
+pgr_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_project save "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+prj_run Synthesis -impl jrc1 -task Lattice_Synthesis
+prj_run Synthesis -impl jrc1 -task Lattice_Synthesis
+prj_run PAR -impl jrc1
+prj_run Export -impl jrc1
+pgr_program run
+pgr_program run
+pgr_project save "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+prj_project save
+prj_project close
+#Stop recording: 5/8/2020 09:35:53
+
+
+
+<A name="pn200508095130"></A><B><U><big>pn200508095130</big></U></B>
+#Start recording tcl command: 5/8/2020 09:36:55
+#Project Location: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build; Project name: machx03l
+prj_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l.ldf"
+pgr_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+prj_project close
+#Stop recording: 5/8/2020 09:51:30
 
 
 

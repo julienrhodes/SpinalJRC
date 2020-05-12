@@ -1,20 +1,19 @@
 [ START MERGED ]
-n433 io_reset_c
-io_jtag_tck_N_164 io_jtag_tck_c
+io_jtag_tck_N_237 io_jtag_tck_c
 [ END MERGED ]
 [ START CLIPPED ]
 GND_net
 VCC_net
-globalClockArea_jtag/toggler_1/timeout_counter_value_202_add_4_23/CO
-globalClockArea_jtag/toggler_1/timeout_counter_value_202_add_4_1/S0
-globalClockArea_jtag/toggler_1/timeout_counter_value_202_add_4_1/CI
+globalClockArea_toggler/timeout_counter_value_208_add_4_23/CO
+globalClockArea_toggler/timeout_counter_value_208_add_4_1/S0
+globalClockArea_toggler/timeout_counter_value_208_add_4_1/CI
 [ END CLIPPED ]
 [ START OSC ]
 osc_OSC 12.09
 [ END OSC ]
 [ START DESIGN PREFS ]
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.11.0.396.4 -- WARNING: Map write only section -- Thu May  7 15:30:59 2020
+# map:  version Diamond (64-bit) 3.11.0.396.4 -- WARNING: Map write only section -- Tue May 12 13:50:24 2020
 
 SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=ENABLE I2C_PORT=DISABLE MASTER_SPI_PORT=ENABLE COMPRESS_CONFIG=ON CONFIGURATION=EXTERNAL MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=DISABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=DISABLE DUALBOOTGOLDEN=INTERNAL BACKGROUND_RECONFIG=OFF INBUF=ON ;
 LOCATE COMP "io_jtag_tdo" SITE "C6" ;

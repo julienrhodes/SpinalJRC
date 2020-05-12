@@ -14,7 +14,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Thu May  7 15:24:47 2020
+Tue May 12 13:50:23 2020
 
 
 Command Line:  synthesis -f machx03l_jrc1_lattice.synproj -gui -msgset /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/promote.xml 
@@ -90,8 +90,8 @@ Analyzing Verilog file /usr/local/diamond/3.11_x64/ispfpga/userware/unix/SYNTHES
 Top module name (Verilog): MyTopLevel
 INFO - synthesis: /home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(25): compiling module MyTopLevel. VERI-1018
 INFO - synthesis: /usr/local/diamond/3.11_x64/ispfpga/userware/unix/SYNTHESIS_HEADERS/machxo3l.v(1759): compiling module OSCH. VERI-1018
-INFO - synthesis: /home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(59): compiling module JtagBackplane. VERI-1018
-INFO - synthesis: /home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(319): compiling module Toggler. VERI-1018
+INFO - synthesis: /home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(303): compiling module Toggler. VERI-1018
+INFO - synthesis: /home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(67): compiling module JtagBackplane. VERI-1018
 Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/xo2c00a/data/xo2alib.ngl'...
 Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
@@ -102,7 +102,7 @@ Top-level module name = MyTopLevel.
 
 
 
-GSR instance connected to net n433.
+GSR instance connected to net io_reset_c.
 Applying 200.000000 MHz constraint to all clocks
 
 WARNING - synthesis: No user .sdc file.
@@ -115,20 +115,20 @@ All blocks are expanded and NGD expansion is successful.
 Writing NGD file machx03l_jrc1.ngd.
 
 ################### Begin Area Report (MyTopLevel)######################
-Number of register bits => 111 of 7485 (1 % )
+Number of register bits => 103 of 7485 (1 % )
 CCU2D => 12
-FD1P3AX => 16
-FD1P3IX => 31
-FD1P3JX => 6
-FD1S3AX => 32
+FD1P3AX => 29
+FD1P3IX => 27
+FD1P3JX => 1
+FD1S3AX => 20
 FD1S3IX => 26
 GSR => 1
 IB => 4
 INV => 1
-LUT4 => 66
+LUT4 => 97
 OB => 9
 OSCH => 1
-PFUMX => 5
+PFUMX => 4
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -138,30 +138,29 @@ TSALL => 1
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 2
-  Net : io_jtag_tck_c, loads : 70
-  Net : osc_OSC, loads : 41
+  Net : io_jtag_tck_c, loads : 78
+  Net : osc_OSC, loads : 25
 Clock Enable Nets
-Number of Clock Enables: 7
-Top 7 highest fanout Clock Enables:
-  Net : globalClockArea_jtag/io_jtag_tck_c_enable_38, loads : 27
-  Net : globalClockArea_jtag/io_jtag_tck_c_enable_52, loads : 8
-  Net : globalClockArea_jtag/io_jtag_tck_c_enable_45, loads : 8
-  Net : globalClockArea_jtag/io_jtag_tck_c_enable_15, loads : 5
-  Net : globalClockArea_jtag/io_jtag_tck_c_enable_12, loads : 3
-  Net : globalClockArea_jtag/toggler_1/timeout_counter_willOverflowIfInc, loads : 2
-  Net : globalClockArea_jtag/io_jtag_tck_c_enable_16, loads : 1
+Number of Clock Enables: 6
+Top 6 highest fanout Clock Enables:
+  Net : globalClockArea_jtag/io_jtag_tck_c_enable_56, loads : 32
+  Net : globalClockArea_jtag/io_jtag_tck_c_enable_23, loads : 8
+  Net : globalClockArea_jtag/io_jtag_tck_c_enable_37, loads : 8
+  Net : globalClockArea_jtag/io_jtag_tck_c_enable_29, loads : 7
+  Net : globalClockArea_toggler/timeout_counter_willOverflowIfInc, loads : 2
+  Net : globalClockArea_jtag/io_jtag_tck_c_enable_54, loads : 1
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : globalClockArea_jtag/n1249, loads : 36
-  Net : globalClockArea_jtag/io_jtag_tck_c_enable_38, loads : 27
-  Net : globalClockArea_jtag/ctrl_tap_fsm_state_2, loads : 26
-  Net : globalClockArea_jtag/ctrl_tap_fsm_state_0, loads : 25
-  Net : globalClockArea_jtag/ctrl_tap_fsm_state_3, loads : 23
-  Net : globalClockArea_jtag/toggler_1/n48, loads : 23
-  Net : globalClockArea_jtag/ctrl_tap_fsm_state_1, loads : 21
-  Net : globalClockArea_jtag/n1028, loads : 8
-  Net : globalClockArea_jtag/io_jtag_tck_c_enable_52, loads : 8
-  Net : globalClockArea_jtag/io_jtag_tck_c_enable_45, loads : 8
+  Net : globalClockArea_jtag/ctrl_tap_fsm_state_0, loads : 39
+  Net : globalClockArea_jtag/io_jtag_tck_c_enable_56, loads : 32
+  Net : globalClockArea_jtag/ctrl_tap_fsm_state_2, loads : 25
+  Net : globalClockArea_toggler/n63, loads : 23
+  Net : globalClockArea_jtag/ctrl_tap_fsm_state_3, loads : 21
+  Net : globalClockArea_jtag/n1327, loads : 21
+  Net : globalClockArea_jtag/ctrl_tap_fsm_state_1, loads : 20
+  Net : globalClockArea_jtag/n483, loads : 19
+  Net : globalClockArea_jtag/n1326, loads : 15
+  Net : globalClockArea_jtag/n460, loads : 11
 ################### End Clock Report ##################
 
 <A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
@@ -174,7 +173,7 @@ create_clock -period 5.000000 -name     |             |             |
 clk1 [get_nets osc_OSC]                 |  200.000 MHz|  115.714 MHz|     6 *
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets io_jtag_tck_c]           |  200.000 MHz|   74.460 MHz|     5 *
+clk0 [get_nets io_jtag_tck_c]           |  200.000 MHz|   72.664 MHz|     5 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -182,10 +181,10 @@ clk0 [get_nets io_jtag_tck_c]           |  200.000 MHz|   74.460 MHz|     5 *
 2 constraints not met.
 
 
-Peak Memory Usage: 193.918  MB
+Peak Memory Usage: 194.227  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 0.640  secs
+Elapsed CPU time for LSE flow : 0.642  secs
 --------------------------------------------------------------
 
 

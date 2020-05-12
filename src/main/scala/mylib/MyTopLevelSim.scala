@@ -25,7 +25,7 @@ object MyTopLevelSim {
       //ClockDomain(ClockDomain, dut.io.coreReset).forkStimulus(10)
       dut.ctrl.clockDomain.forkStimulus(50)
       //dut.clockDomain.frequency = ClockDomain.FixedFrequency(12 MHz)
-      dut.clockDomain.forkStimulus(10)
+      //dut.clockDomain.forkStimulus(10)
 
       dut.io.jtag.tdi #= false
       dut.io.jtag.tms #= false
@@ -74,8 +74,8 @@ object MyTopLevelSim {
       tms_shift("1100")
       
       // Shift 4 into IR
-      var shiftOut = shift_register(4, 4)
-      assert(shiftOut == 0x1, f"Unexpected IR: $shiftOut%X")
+      var shiftOut = shift_register(4, 8)
+      assert(shiftOut == 0x4, f"Unexpected IR: $shiftOut%X")
       //shift_register(List(false, false, true, false, false, false, false))
 
       // Exit IR -> Update IR -> IDLE
@@ -85,8 +85,8 @@ object MyTopLevelSim {
       tms_shift("100")
 
       // Read TDO out of DR
-      shiftOut = shift_register(0, 32)
-      assert(shiftOut == 0x00001143, f"Unexpected ID: $shiftOut%X")
+      shiftOut = shift_register(0xFFFFFFFF, 32)
+      assert(shiftOut == 0x413BD043, f"Unexpected ID: $shiftOut%X")
 
       // Exit DR -> Update DR -> IDLE
       tms_shift("10")
@@ -95,7 +95,7 @@ object MyTopLevelSim {
       tms_shift("1100")
 
       // Bypass
-      shiftOut = shift_register(7, 4)
+      shiftOut = shift_register(0xF, 8)
       assert(shiftOut == 0x4, f"Unexpected IR: $shiftOut%X")
       
       // Exit IR -> Update IR -> IDLE
@@ -107,10 +107,13 @@ object MyTopLevelSim {
       // Switch to shift IR
       tms_shift("1100")
 
+      // Confirm IR is 8 bits
+      // Flush with 1s
       shiftOut = shift(0xFFFF, 16)
 
+      // Flush with 0s
       shiftOut = shift(0x0, 16)
-      assert(shiftOut == 0x000F, f"Unexpected IR: $shiftOut%X")
+      assert(shiftOut == 0x00FF, f"Unexpected IR: $shiftOut%X")
 
       //val foo = RegInit(0, 8 bits)
       //assert(dut.io.leds == 0x00, f"Unexpected LED: $foo%X")

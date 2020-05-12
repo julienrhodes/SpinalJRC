@@ -6,26 +6,26 @@ Performance Grade:      5
 PACKAGE:          CABGA256
 Package Status:                     Final          Version 1.16
 
-Thu May  7 15:31:03 2020
+Tue May 12 13:50:29 2020
 
 Pinout by Port Name:
-+-------------+----------+--------------+-------+-----------+-----------+--------------------------------------+
-| Port Name   | Pin/Bank | Buffer Type  | Site  | PG Enable | BC Enable | Properties                           |
-+-------------+----------+--------------+-------+-----------+-----------+--------------------------------------+
-| io_jtag_tck | A7/0     | LVCMOS33_IN  | PT17C |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL  |
-| io_jtag_tdi | A6/0     | LVCMOS33_IN  | PT14D |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL  |
-| io_jtag_tdo | C6/0     | LVCMOS33_OUT | PT14C |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW        |
-| io_jtag_tms | B8/0     | LVCMOS33_IN  | PT17D |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL  |
-| io_leds[0]  | H11/1    | LVCMOS33_OUT | PR16C |           |           | DRIVE:8mA PULL:UP SLEW:SLOW          |
-| io_leds[1]  | J13/1    | LVCMOS33_OUT | PR16D |           |           | DRIVE:8mA PULL:UP SLEW:SLOW          |
-| io_leds[2]  | J11/1    | LVCMOS33_OUT | PR17C |           |           | DRIVE:8mA PULL:UP SLEW:SLOW          |
-| io_leds[3]  | L12/1    | LVCMOS33_OUT | PR17D |           |           | DRIVE:8mA PULL:UP SLEW:SLOW          |
-| io_leds[4]  | K11/1    | LVCMOS33_OUT | PR21C |           |           | DRIVE:8mA PULL:UP SLEW:SLOW          |
-| io_leds[5]  | L13/1    | LVCMOS33_OUT | PR21D |           |           | DRIVE:8mA PULL:UP SLEW:SLOW          |
-| io_leds[6]  | N15/1    | LVCMOS33_OUT | PR23C |           |           | DRIVE:8mA PULL:UP SLEW:SLOW          |
-| io_leds[7]  | P16/1    | LVCMOS33_OUT | PR23D |           |           | DRIVE:8mA PULL:UP SLEW:SLOW          |
-| io_reset    | B3/0     | LVCMOS33_IN  | PT9C  |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL  |
-+-------------+----------+--------------+-------+-----------+-----------+--------------------------------------+
++-------------+----------+--------------+-------+-----------+-----------+------------------------------------+
+| Port Name   | Pin/Bank | Buffer Type  | Site  | PG Enable | BC Enable | Properties                         |
++-------------+----------+--------------+-------+-----------+-----------+------------------------------------+
+| io_jtag_tck | A7/0     | LVCMOS33_IN  | PT17C |           |           | CLAMP:ON HYSTERESIS:SMALL          |
+| io_jtag_tdi | A6/0     | LVCMOS33_IN  | PT14D |           |           | CLAMP:ON HYSTERESIS:SMALL          |
+| io_jtag_tdo | C6/0     | LVCMOS33_OUT | PT14C |           |           | DRIVE:16mA OPENDRAIN:ON SLEW:SLOW  |
+| io_jtag_tms | B8/0     | LVCMOS33_IN  | PT17D |           |           | CLAMP:ON HYSTERESIS:SMALL          |
+| io_leds[0]  | H11/1    | LVCMOS33_OUT | PR16C |           |           | DRIVE:8mA PULL:UP SLEW:SLOW        |
+| io_leds[1]  | J13/1    | LVCMOS33_OUT | PR16D |           |           | DRIVE:8mA PULL:UP SLEW:SLOW        |
+| io_leds[2]  | J11/1    | LVCMOS33_OUT | PR17C |           |           | DRIVE:8mA PULL:UP SLEW:SLOW        |
+| io_leds[3]  | L12/1    | LVCMOS33_OUT | PR17D |           |           | DRIVE:8mA PULL:UP SLEW:SLOW        |
+| io_leds[4]  | K11/1    | LVCMOS33_OUT | PR21C |           |           | DRIVE:8mA PULL:UP SLEW:SLOW        |
+| io_leds[5]  | L13/1    | LVCMOS33_OUT | PR21D |           |           | DRIVE:8mA PULL:UP SLEW:SLOW        |
+| io_leds[6]  | N15/1    | LVCMOS33_OUT | PR23C |           |           | DRIVE:8mA PULL:UP SLEW:SLOW        |
+| io_leds[7]  | P16/1    | LVCMOS33_OUT | PR23D |           |           | DRIVE:8mA PULL:UP SLEW:SLOW        |
+| io_reset    | B3/0     | LVCMOS33_IN  | PT9C  |           |           | CLAMP:ON HYSTERESIS:SMALL          |
++-------------+----------+--------------+-------+-----------+-----------+------------------------------------+
 
 Vccio by Bank:
 +------+-------+
@@ -426,5 +426,5 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Thu May  7 15:31:03 2020
+Tue May 12 13:50:29 2020
 

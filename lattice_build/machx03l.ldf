@@ -9,7 +9,10 @@
         <Source name="machx03l.lpf" type="Logic Preference" type_short="LPF">
             <Options/>
         </Source>
-        <Source name="top_level.xcf" type="Programming Project File" type_short="Programming">
+        <Source name="test.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
+        <Source name="top_level.xcf" type="Programming Project File" type_short="Programming" excluded="TRUE">
             <Options/>
         </Source>
     </Implementation>

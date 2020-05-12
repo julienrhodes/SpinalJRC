@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Thu May  7 15:31:00 2020
+Tue May 12 13:50:25 2020
 
 /usr/local/diamond/3.11_x64/ispfpga/bin/lin64/par -f machx03l_jrc1.p2t
 machx03l_jrc1_map.ncd machx03l_jrc1.dir machx03l_jrc1.prf -gui -msgset
@@ -16,7 +16,7 @@ Preference file: machx03l_jrc1.prf.
 Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
 Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            73.102       0            0.306        0            05           Completed
+5_1   *      0            73.223       0            0.340        0            05           Completed
 
 * : Design saved.
 
