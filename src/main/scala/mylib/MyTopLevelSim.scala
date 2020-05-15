@@ -11,7 +11,7 @@ import scala.util.Random
 
 //MyTopLevel's testbench
 object MyTopLevelSim {
-  val myConfig = SpinalConfig(defaultClockDomainFrequency = FixedFrequency(12 MHz))
+  val myConfig = SpinalConfig(defaultClockDomainFrequency = FixedFrequency(12.09 MHz))
   def main(args: Array[String]) {
     val compiled = SimConfig.withConfig(myConfig).withWave.compile{
       val dut = new JtagBackplane
@@ -23,16 +23,31 @@ object MyTopLevelSim {
       // dut.clockDomain.forkStimulus(10)
       //ClockDomain(dut.io.OSC, dut.io.reset).forkStimulus(10)
       //ClockDomain(ClockDomain, dut.io.coreReset).forkStimulus(10)
-      dut.ctrl.clockDomain.forkStimulus(50)
+      dut.ctrl.clockDomain.forkStimulus(10)
+
+      fork {
+        dut.ctrl.clockDomain.waitRisingEdge(1)
+        dut.ctrl.clockDomain.assertReset()
+        dut.ctrl.clockDomain.waitRisingEdge(1)
+        dut.ctrl.clockDomain.deassertReset()
+      }
+
       //dut.clockDomain.frequency = ClockDomain.FixedFrequency(12 MHz)
       //dut.clockDomain.forkStimulus(10)
 
       dut.io.jtag.tdi #= false
       dut.io.jtag.tms #= false
-      dut.ctrl.clockDomain.waitSampling(2)
-      //val jm = master(Jtag())
-      // jm <> dut.io.jtag
-      //
+
+      // Loopback for port JTAG1
+      fork {
+        while(true) {
+          dut.io.jtag1.tdo #= dut.io.jtag1.tdi.toBoolean
+          dut.ctrl.clockDomain.waitSampling(1)
+        }
+      }
+
+      dut.ctrl.clockDomain.waitSampling(3)
+
       def tms_shift(data : String) : Unit = {
         for( i <- data ) {
           dut.io.jtag.tms #= (i.toString.toInt == 1)
@@ -68,7 +83,6 @@ object MyTopLevelSim {
         }
         return dataOut
       }
-
 
       // Switch to shift IR
       tms_shift("1100")
@@ -115,8 +129,30 @@ object MyTopLevelSim {
       shiftOut = shift(0x0, 16)
       assert(shiftOut == 0x00FF, f"Unexpected IR: $shiftOut%X")
 
-      //val foo = RegInit(0, 8 bits)
-      //assert(dut.io.leds == 0x00, f"Unexpected LED: $foo%X")
+      // Shift 8 into IR
+      shiftOut = shift_register(8, 8)
+
+      // Exit IR -> Update IR -> IDLE
+      tms_shift("10")
+
+      // Test bypass
+      shiftOut = shift(0x13, 8 + 1)
+      assert(shiftOut == 0x13 << 1, f"Unexpected idle pass through: $shiftOut%X")
+
+      // Switch to shift DR
+      tms_shift("100")
+
+      // Read TDO out of DR (chain reg)
+      shiftOut = shift_register(0x1, 8)
+      //assert(shiftOut == 0, f"Unexpected chain value: $shiftOut%X")
+
+      // Exit DR -> Update DR -> IDLE
+      tms_shift("10")
+
+      // Test Chaining in bypass
+      // The loopback is a delay, and there's a buffer on the inside that is also a delay
+      shiftOut = shift(0x13, 8 + 3)
+      assert(shiftOut == 0x13 << 3, f"Unexpected idle pass through with jtag1: $shiftOut%X")
 
     }
   }
