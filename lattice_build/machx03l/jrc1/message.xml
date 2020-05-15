@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="Bitgen">
+        <Message>
+            <ID>1083781</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>MachXO3L</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Map">
+        <Message>
+            <ID>52101186</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>MachXO3L</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(25): </Dynamic>
+            <Dynamic>MyTopLevel</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
+            <Navigation>25</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/userware/unix/SYNTHESIS_HEADERS/machxo3l.v(1759): </Dynamic>
+            <Dynamic>OSCH</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/userware/unix/SYNTHESIS_HEADERS/machxo3l.v</Navigation>
+            <Navigation>1759</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(449): </Dynamic>
+            <Dynamic>Toggler</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
+            <Navigation>449</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(96): </Dynamic>
+            <Dynamic>JtagBackplane</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
+            <Navigation>96</Navigation>
+        </Message>
+        <Message>
+            <ID>35935013</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(384): </Dynamic>
+            <Dynamic>\globalClockArea_jtag/_zz_9_i7</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
+            <Navigation>384</Navigation>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+    </Task>
+    <Task name="PAR">
+        <Message>
+            <ID>61061042</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>MachXO3L</Dynamic>
+        </Message>
+        <Message>
+            <ID>61061044</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>MachXO3L</Dynamic>
+        </Message>
+        <Message>
+            <ID>61061045</ID>
+            <Severity>Warning</Severity>
+        </Message>
+        <Message>
+            <ID>61061008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>io_jtag_tck_c</Dynamic>
+            <Dynamic>Primary</Dynamic>
+            <Dynamic>io_jtag_tck</Dynamic>
+            <Dynamic>A7</Dynamic>
+            <Dynamic>Primary</Dynamic>
+        </Message>
+        <Message>
+            <ID>62061008</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>io_jtag_tck_c</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Jedecgen">
+        <Message>
+            <ID>1083781</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>MachXO3L</Dynamic>
+        </Message>
+    </Task>
+</BaliMessageLog>

@@ -1,0 +1,176 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Fri May  8 11:03:31 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     Demo
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets osc_OSC]
+            866 items scored, 507 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 3.642ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \globalClockArea_toggler/timeout_counter_value_13__i22  (from osc_OSC +)
+   Destination:    FD1S3IX    CD             \globalClockArea_toggler/timeout_counter_value_13__i0  (to osc_OSC +)
+
+   Delay:                   8.496ns  (31.1% logic, 68.9% route), 6 logic levels.
+
+ Constraint Details:
+
+      8.496ns data_path \globalClockArea_toggler/timeout_counter_value_13__i22 to \globalClockArea_toggler/timeout_counter_value_13__i0 violates
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 3.642ns
+
+ Path Details: \globalClockArea_toggler/timeout_counter_value_13__i22 to \globalClockArea_toggler/timeout_counter_value_13__i0
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              \globalClockArea_toggler/timeout_counter_value_13__i22 (from osc_OSC)
+Route         2   e 1.002                                  \globalClockArea_toggler/timeout_counter_value[22]
+LUT4        ---     0.448              D to Z              \globalClockArea_toggler/i112_4_lut
+Route         1   e 0.788                                  \globalClockArea_toggler/n143
+LUT4        ---     0.448              B to Z              \globalClockArea_toggler/i120_4_lut
+Route         1   e 0.788                                  \globalClockArea_toggler/n151
+LUT4        ---     0.448              C to Z              \globalClockArea_toggler/i4_4_lut
+Route         1   e 0.788                                  \globalClockArea_toggler/n12
+LUT4        ---     0.448              C to Z              \globalClockArea_toggler/i128_4_lut
+Route         2   e 0.954                                  \globalClockArea_toggler/timeout_counter_willOverflowIfInc
+LUT4        ---     0.448              A to Z              \globalClockArea_toggler/i11_2_lut
+Route        23   e 1.533                                  \globalClockArea_toggler/n29
+                  --------
+                    8.496  (31.1% logic, 68.9% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 3.642ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \globalClockArea_toggler/timeout_counter_value_13__i22  (from osc_OSC +)
+   Destination:    FD1S3IX    CD             \globalClockArea_toggler/timeout_counter_value_13__i22  (to osc_OSC +)
+
+   Delay:                   8.496ns  (31.1% logic, 68.9% route), 6 logic levels.
+
+ Constraint Details:
+
+      8.496ns data_path \globalClockArea_toggler/timeout_counter_value_13__i22 to \globalClockArea_toggler/timeout_counter_value_13__i22 violates
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 3.642ns
+
+ Path Details: \globalClockArea_toggler/timeout_counter_value_13__i22 to \globalClockArea_toggler/timeout_counter_value_13__i22
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              \globalClockArea_toggler/timeout_counter_value_13__i22 (from osc_OSC)
+Route         2   e 1.002                                  \globalClockArea_toggler/timeout_counter_value[22]
+LUT4        ---     0.448              D to Z              \globalClockArea_toggler/i112_4_lut
+Route         1   e 0.788                                  \globalClockArea_toggler/n143
+LUT4        ---     0.448              B to Z              \globalClockArea_toggler/i120_4_lut
+Route         1   e 0.788                                  \globalClockArea_toggler/n151
+LUT4        ---     0.448              C to Z              \globalClockArea_toggler/i4_4_lut
+Route         1   e 0.788                                  \globalClockArea_toggler/n12
+LUT4        ---     0.448              C to Z              \globalClockArea_toggler/i128_4_lut
+Route         2   e 0.954                                  \globalClockArea_toggler/timeout_counter_willOverflowIfInc
+LUT4        ---     0.448              A to Z              \globalClockArea_toggler/i11_2_lut
+Route        23   e 1.533                                  \globalClockArea_toggler/n29
+                  --------
+                    8.496  (31.1% logic, 68.9% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 3.642ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1S3IX    CK             \globalClockArea_toggler/timeout_counter_value_13__i22  (from osc_OSC +)
+   Destination:    FD1S3IX    CD             \globalClockArea_toggler/timeout_counter_value_13__i21  (to osc_OSC +)
+
+   Delay:                   8.496ns  (31.1% logic, 68.9% route), 6 logic levels.
+
+ Constraint Details:
+
+      8.496ns data_path \globalClockArea_toggler/timeout_counter_value_13__i22 to \globalClockArea_toggler/timeout_counter_value_13__i21 violates
+      5.000ns delay constraint less
+      0.146ns L_S requirement (totaling 4.854ns) by 3.642ns
+
+ Path Details: \globalClockArea_toggler/timeout_counter_value_13__i22 to \globalClockArea_toggler/timeout_counter_value_13__i21
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.403             CK to Q              \globalClockArea_toggler/timeout_counter_value_13__i22 (from osc_OSC)
+Route         2   e 1.002                                  \globalClockArea_toggler/timeout_counter_value[22]
+LUT4        ---     0.448              D to Z              \globalClockArea_toggler/i112_4_lut
+Route         1   e 0.788                                  \globalClockArea_toggler/n143
+LUT4        ---     0.448              B to Z              \globalClockArea_toggler/i120_4_lut
+Route         1   e 0.788                                  \globalClockArea_toggler/n151
+LUT4        ---     0.448              C to Z              \globalClockArea_toggler/i4_4_lut
+Route         1   e 0.788                                  \globalClockArea_toggler/n12
+LUT4        ---     0.448              C to Z              \globalClockArea_toggler/i128_4_lut
+Route         2   e 0.954                                  \globalClockArea_toggler/timeout_counter_willOverflowIfInc
+LUT4        ---     0.448              A to Z              \globalClockArea_toggler/i11_2_lut
+Route        23   e 1.533                                  \globalClockArea_toggler/n29
+                  --------
+                    8.496  (31.1% logic, 68.9% route), 6 logic levels.
+
+Warning: 8.642 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets osc_OSC]                 |     5.000 ns|     8.642 ns|     6 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+\globalClockArea_toggler/timeout_counter|        |        |
+_willOverflowIfInc                      |       2|     499|     98.42%
+                                        |        |        |
+\globalClockArea_toggler/n29            |      23|     483|     95.27%
+                                        |        |        |
+\globalClockArea_toggler/n12            |       1|     407|     80.28%
+                                        |        |        |
+\globalClockArea_toggler/n151           |       1|     192|     37.87%
+                                        |        |        |
+\globalClockArea_toggler/n143           |       1|      96|     18.93%
+                                        |        |        |
+\globalClockArea_toggler/n147           |       1|      96|     18.93%
+                                        |        |        |
+\globalClockArea_toggler/n149           |       1|      96|     18.93%
+                                        |        |        |
+\globalClockArea_toggler/n13            |       1|      92|     18.15%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 507  Score: 1207852
+
+Constraints cover  866 paths, 70 nets, and 144 connections (98.0% coverage)
+
+
+Peak memory: 201338880 bytes, TRCE: 626688 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 

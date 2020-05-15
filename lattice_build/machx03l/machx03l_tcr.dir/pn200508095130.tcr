@@ -1,0 +1,6 @@
+#Start recording tcl command: 5/8/2020 09:36:55
+#Project Location: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build; Project name: machx03l
+prj_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l.ldf"
+pgr_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+prj_project close
+#Stop recording: 5/8/2020 09:51:30

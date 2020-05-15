@@ -1,0 +1,68 @@
+#Start recording tcl command: 5/7/2020 15:49:37
+#Project Location: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build; Project name: machx03l
+prj_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l.ldf"
+pgr_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/top_level.xcf"
+pgr_project close
+pgr_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/top_level.xcf"
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_project close
+pgr_project save "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+prj_src add -exclude "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+prj_src enable "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_program set -cable 
+pgr_program run
+pgr_program set -port FTUSB-1
+pgr_program set -port FTUSB-0
+pgr_program set -cable 
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_project close
+prj_src remove "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+prj_src add -exclude "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+prj_src enable "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+pgr_project close
+pgr_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+pgr_project close
+prj_src remove "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+pgr_project save "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+prj_src add -exclude "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+prj_src enable "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+pgr_program run
+pgr_project save "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+pgr_project close
+pgr_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+pgr_project close
+prj_run PAR -impl jrc1
+prj_run Export -impl jrc1
+pgr_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_program run
+pgr_project save "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+prj_run Synthesis -impl jrc1 -task Lattice_Synthesis
+prj_run Synthesis -impl jrc1 -task Lattice_Synthesis
+prj_run PAR -impl jrc1
+prj_run Export -impl jrc1
+pgr_program run
+pgr_program run
+pgr_project save "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
+prj_project save
+prj_project close
+#Stop recording: 5/8/2020 09:35:53

@@ -1,0 +1,488 @@
+<HTML>
+<HEAD><TITLE>Project Summary</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Mrp"></A>
+          Lattice Mapping Report File for Design Module 'MyTopLevel'
+
+
+
+<A name="mrp_di"></A><B><U><big>Design Information</big></U></B>
+
+Command line:   map -a MachXO3L -p LCMXO3L-6900C -t CABGA256 -s 5 -oc Commercial
+     machx03l_jrc1.ngd -o machx03l_jrc1_map.ncd -pr machx03l_jrc1.prf -mp
+     machx03l_jrc1.mrp -lpf /home/julien/Documents/git/3rd/SpinalJRC/lattice_bui
+     ld/machx03l/jrc1/machx03l_jrc1.lpf -lpf /home/julien/Documents/git/3rd/Spin
+     alJRC/lattice_build/machx03l/machx03l.lpf -c 0 -gui -msgset /home/julien/Do
+     cuments/git/3rd/SpinalJRC/lattice_build/machx03l/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO3L-6900CCABGA256
+Target Performance:   5
+Mapper:  xo3c00a,  version:  Diamond (64-bit) 3.11.0.396.4
+Mapped on:  05/15/20  15:27:56
+
+
+<A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
+   Number of registers:    118 out of  7485 (2%)
+      PFU registers:          118 out of  6864 (2%)
+      PIO registers:            0 out of   621 (0%)
+   Number of SLICEs:        75 out of  3432 (2%)
+      SLICEs as Logic/ROM:     75 out of  3432 (2%)
+      SLICEs as RAM:            0 out of  2574 (0%)
+      SLICEs as Carry:         12 out of  3432 (0%)
+   Number of LUT4s:        148 out of  6864 (2%)
+      Number used as logic LUTs:        124
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       24
+      Number used as shift registers:     0
+   Number of PIO sites used: 21 + 1(JTAGENB) out of 207 (11%)
+   Number of block RAMs:  0 out of 26 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        No
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : Yes
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 6 (0%)
+   Number of Dynamic Bank Controller (BCLVDSO):  0 out of 1 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Number of PLLs:  0 out of 2 (0%)
+   Number of DQSDLLs:  0 out of 2 (0%)
+   Number of CLKDIVC:  0 out of 4 (0%)
+   Number of ECLKSYNCA:  0 out of 4 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  2
+     Net osc_OSC: 14 loads, 14 rising, 0 falling (Driver: osc )
+     Net io_jtag_tck_c: 55 loads, 54 rising, 1 falling (Driver: PIO io_jtag_tck
+
+     )
+   Number of Clock Enables:  9
+     Net globalClockArea_jtag/io_jtag_tck_c_enable_12: 4 loads, 4 LSLICEs
+     Net globalClockArea_jtag/_zz_10: 1 loads, 1 LSLICEs
+     Net globalClockArea_jtag/io_jtag_tck_c_enable_37: 4 loads, 4 LSLICEs
+     Net globalClockArea_jtag/io_jtag_tck_c_enable_67: 5 loads, 5 LSLICEs
+     Net globalClockArea_jtag/io_jtag_tck_c_enable_63: 2 loads, 2 LSLICEs
+     Net globalClockArea_jtag/io_jtag_tck_c_enable_66: 18 loads, 18 LSLICEs
+     Net globalClockArea_jtag/io_jtag_tck_c_enable_31: 1 loads, 1 LSLICEs
+     Net globalClockArea_jtag/io_jtag_tck_c_enable_60: 4 loads, 4 LSLICEs
+     Net globalClockArea_toggler/timeout_counter_willOverflowIfInc: 1 loads, 1
+     LSLICEs
+   Number of LSRs:  7
+     Net globalClockArea_jtag/n1475: 5 loads, 5 LSLICEs
+     Net globalClockArea_jtag/n550: 2 loads, 2 LSLICEs
+     Net globalClockArea_jtag/n557: 9 loads, 9 LSLICEs
+     Net globalClockArea_jtag/n553: 2 loads, 2 LSLICEs
+     Net globalClockArea_jtag/n286: 3 loads, 3 LSLICEs
+     Net globalClockArea_toggler/n70: 12 loads, 12 LSLICEs
+     Net globalClockArea_toggler/timeout_state: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net globalClockArea_jtag/ctrl_tap_fsm_state_0: 32 loads
+     Net globalClockArea_jtag/ctrl_tap_fsm_state_2: 30 loads
+     Net globalClockArea_jtag/ctrl_tap_fsm_state_1: 24 loads
+     Net globalClockArea_jtag/n979: 24 loads
+     Net globalClockArea_jtag/ctrl_tap_fsm_state_3: 23 loads
+     Net globalClockArea_jtag/io_jtag_tck_c_enable_66: 18 loads
+     Net globalClockArea_jtag/n1494: 16 loads
+     Net globalClockArea_jtag/n1480: 13 loads
+     Net globalClockArea_jtag/n1489: 13 loads
+     Net globalClockArea_toggler/n70: 12 loads
+
+
+
+
+   Number of warnings:  1
+   Number of errors:    0
+     
+
+
+
+
+<A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
+
+WARNING - map: The JTAG port has been disabled in this project and JTAG pins
+     will be configured as General Purpose IO.  You have to use JTAGENB pin in
+     hardware to change the personality of the port from JTAG pins to general
+     purpose IO.  Reference MachXO3L Handbook for details on dual function JTAG
+     port.
+
+
+
+<A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+
+| io_jtag_tdo         | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| io_jtag1_tms        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| io_jtag1_tdi        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| io_jtag1_tck        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| io_jtag2_tms        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| io_jtag2_tdi        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| io_jtag2_tck        | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| io_leds[7]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| io_leds[6]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| io_leds[5]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| io_leds[4]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| io_leds[3]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| io_leds[2]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| io_leds[1]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| io_leds[0]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| io_reset            | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| io_jtag_tms         | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| io_jtag_tdi         | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| io_jtag_tck         | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| io_jtag1_tdo        | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| io_jtag2_tdo        | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+
+
+
+<A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
+
+Block i1263 undriven or does not drive anything - clipped.
+Signal io_jtag_tck_N_278 was merged into signal io_jtag_tck_c
+Signal GND_net undriven or does not drive anything - clipped.
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal globalClockArea_toggler/timeout_counter_value_225_add_4_23/CO undriven or
+     does not drive anything - clipped.
+Signal globalClockArea_toggler/timeout_counter_value_225_add_4_1/S0 undriven or
+     does not drive anything - clipped.
+Signal globalClockArea_toggler/timeout_counter_value_225_add_4_1/CI undriven or
+     does not drive anything - clipped.
+
+Block i1265 was optimized away.
+Block i1 was optimized away.
+
+     
+
+OSC Summary
+-----------
+
+OSC 1:                                     Pin/Node Value
+  OSC Instance Name:                                osc
+  OSC Type:                                         OSCH
+  STDBY Input:                                      NONE
+  OSC Output:                              NODE     osc_OSC
+  OSC Nominal Frequency (MHz):                      12.09
+
+
+
+<A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
+---------------
+
+Instance Name: osc
+         Type: OSCH
+
+
+
+<A name="mrp_gsr"></A><B><U><big>GSR Usage</big></U></B>
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'io_reset_c'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with disabled GSR Property
+-------------------------------------
+
+     These components have the GSR property set to DISABLED. The components will
+     not respond to the reset signal 'io_reset_c' via the GSR component.
+
+     Type and number of components of the type: 
+   Register = 80 
+
+     Type and instance name of component: 
+   Register : globalClockArea_jtag/ctrl_tap_instruction_i6
+   Register : globalClockArea_jtag/ctrl_buf2_103
+   Register : globalClockArea_jtag/ctrl_tap_fsm_state_i0
+   Register : globalClockArea_jtag/ctrl_tap_instructionShift_i0
+   Register : globalClockArea_jtag/ctrl_tap_bypass_105
+   Register : globalClockArea_jtag/ctrl_tap_instruction_i0
+   Register : globalClockArea_jtag/_zz_6_i0_i0
+   Register : globalClockArea_jtag/_zz_8_i0_i0
+   Register : globalClockArea_jtag/ctrl_tap_tdoUnbufferd_regNext_112
+   Register : globalClockArea_jtag/ctrl_tap_instruction_i5
+   Register : globalClockArea_jtag/ctrl_tap_instruction_i7
+
+   Register : globalClockArea_jtag/ctrl_tap_instruction_i4
+   Register : globalClockArea_jtag/_zz_3_i0_i5
+   Register : globalClockArea_jtag/_zz_8_i0_i3
+   Register : globalClockArea_jtag/ctrl_tap_instruction_i3
+   Register : globalClockArea_jtag/ctrl_tap_instruction_i1
+   Register : globalClockArea_jtag/ctrl_tap_instructionShift_i7
+   Register : globalClockArea_jtag/ctrl_tap_instructionShift_i6
+   Register : globalClockArea_jtag/ctrl_tap_instructionShift_i5
+   Register : globalClockArea_jtag/ctrl_tap_instructionShift_i4
+   Register : globalClockArea_jtag/ctrl_tap_instructionShift_i3
+   Register : globalClockArea_jtag/ctrl_tap_instructionShift_i2
+   Register : globalClockArea_jtag/ctrl_tap_instructionShift_i1
+   Register : globalClockArea_jtag/ctrl_tap_fsm_state_i3
+   Register : globalClockArea_jtag/ctrl_tap_fsm_state_i2
+   Register : globalClockArea_jtag/ctrl_tap_fsm_state_i1
+   Register : globalClockArea_jtag/_zz_3_i0_i0
+   Register : globalClockArea_jtag/_zz_3_i0_i4
+   Register : globalClockArea_jtag/_zz_3_i0_i3
+   Register : globalClockArea_jtag/_zz_3_i0_i2
+   Register : globalClockArea_jtag/_zz_8_i0_i6
+   Register : globalClockArea_jtag/_zz_8_i0_i5
+   Register : globalClockArea_jtag/_zz_5_i0_i0
+   Register : globalClockArea_jtag/_zz_3_i0_i29
+   Register : globalClockArea_jtag/_zz_3_i0_i28
+   Register : globalClockArea_jtag/_zz_3_i0_i27
+   Register : globalClockArea_jtag/_zz_3_i0_i26
+   Register : globalClockArea_jtag/_zz_6_i0_i1
+   Register : globalClockArea_jtag/_zz_3_i0_i25
+   Register : globalClockArea_jtag/_zz_3_i0_i23
+   Register : globalClockArea_jtag/_zz_3_i0_i22
+   Register : globalClockArea_jtag/_zz_3_i0_i18
+   Register : globalClockArea_jtag/_zz_3_i0_i13
+   Register : globalClockArea_jtag/ctrl_tap_instruction_i2
+   Register : globalClockArea_jtag/_zz_6_i0_i2
+   Register : globalClockArea_jtag/_zz_6_i0_i3
+   Register : globalClockArea_jtag/_zz_6_i0_i4
+   Register : globalClockArea_jtag/_zz_6_i0_i5
+   Register : globalClockArea_jtag/_zz_6_i0_i6
+   Register : globalClockArea_jtag/_zz_6_i0_i7
+   Register : globalClockArea_jtag/_zz_8_i0_i1
+   Register : globalClockArea_jtag/_zz_8_i0_i2
+   Register : globalClockArea_jtag/_zz_8_i0_i7
+   Register : globalClockArea_jtag/_zz_3_i0_i1
+   Register : globalClockArea_jtag/_zz_3_i0_i6
+   Register : globalClockArea_jtag/_zz_3_i0_i12
+   Register : globalClockArea_jtag/_zz_3_i0_i14
+   Register : globalClockArea_jtag/_zz_3_i0_i15
+   Register : globalClockArea_jtag/_zz_3_i0_i16
+   Register : globalClockArea_jtag/_zz_3_i0_i17
+   Register : globalClockArea_jtag/_zz_3_i0_i19
+   Register : globalClockArea_jtag/_zz_3_i0_i20
+   Register : globalClockArea_jtag/_zz_3_i0_i21
+   Register : globalClockArea_jtag/_zz_3_i0_i24
+   Register : globalClockArea_jtag/_zz_3_i0_i30
+   Register : globalClockArea_jtag/_zz_3_i0_i31
+   Register : globalClockArea_jtag/_zz_5_i0_i1
+
+   Register : globalClockArea_jtag/_zz_5_i0_i2
+   Register : globalClockArea_jtag/_zz_5_i0_i3
+   Register : globalClockArea_jtag/_zz_5_i0_i4
+   Register : globalClockArea_jtag/_zz_5_i0_i5
+   Register : globalClockArea_jtag/_zz_5_i0_i6
+   Register : globalClockArea_jtag/_zz_5_i0_i7
+   Register : globalClockArea_jtag/_zz_3_i0_i11
+   Register : globalClockArea_jtag/_zz_3_i0_i10
+   Register : globalClockArea_jtag/_zz_3_i0_i9
+   Register : globalClockArea_jtag/_zz_3_i0_i8
+   Register : globalClockArea_jtag/_zz_3_i0_i7
+   Register : globalClockArea_jtag/_zz_8_i0_i4
+   Register : globalClockArea_toggler/toggle_23
+
+     Components with synchronous local reset also reset by asynchronous GSR
+----------------------------------------------------------------------
+
+     These components have the GSR property set to ENABLED and the local reset
+     is synchronous. The components will respond to the synchronous local reset
+     and to the unrelated asynchronous reset signal 'io_reset_c' via the GSR
+     component.
+
+     Type and number of components of the type: 
+   Register = 27 
+
+     Type and instance name of component: 
+   Register : globalClockArea_jtag/_zz_9_i2
+   Register : globalClockArea_jtag/_zz_9_i1
+   Register : globalClockArea_jtag/_zz_9_i0
+   Register : globalClockArea_toggler/timeout_counter_value_225__i0
+   Register : globalClockArea_toggler/timeout_state_21
+   Register : globalClockArea_toggler/timeout_counter_value_225__i1
+   Register : globalClockArea_toggler/timeout_counter_value_225__i2
+   Register : globalClockArea_toggler/timeout_counter_value_225__i3
+   Register : globalClockArea_toggler/timeout_counter_value_225__i4
+   Register : globalClockArea_toggler/timeout_counter_value_225__i5
+   Register : globalClockArea_toggler/timeout_counter_value_225__i6
+   Register : globalClockArea_toggler/timeout_counter_value_225__i7
+   Register : globalClockArea_toggler/timeout_counter_value_225__i8
+   Register : globalClockArea_toggler/timeout_counter_value_225__i9
+   Register : globalClockArea_toggler/timeout_counter_value_225__i10
+   Register : globalClockArea_toggler/timeout_counter_value_225__i11
+   Register : globalClockArea_toggler/timeout_counter_value_225__i12
+   Register : globalClockArea_toggler/timeout_counter_value_225__i13
+   Register : globalClockArea_toggler/timeout_counter_value_225__i14
+   Register : globalClockArea_toggler/timeout_counter_value_225__i15
+   Register : globalClockArea_toggler/timeout_counter_value_225__i16
+   Register : globalClockArea_toggler/timeout_counter_value_225__i17
+   Register : globalClockArea_toggler/timeout_counter_value_225__i18
+   Register : globalClockArea_toggler/timeout_counter_value_225__i19
+   Register : globalClockArea_toggler/timeout_counter_value_225__i20
+   Register : globalClockArea_toggler/timeout_counter_value_225__i21
+   Register : globalClockArea_toggler/timeout_counter_value_225__i22
+
+
+
+
+
+
+<A name="mrp_runtime"></A><B><U><big>Run Time and Memory Usage</big></U></B>
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 196 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights
+     reserved.
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>
