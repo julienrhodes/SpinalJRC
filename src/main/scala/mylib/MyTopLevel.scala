@@ -40,62 +40,20 @@ class Toggler extends Component {
   }
 }
 
-trait MyJtagTapFunctions {
-  //Instruction wrappers
-  def idcode(value: Bits)(instructionId: Int)
-  def read[T <: Data](data: T, light : Boolean)(instructionId: Int)
-  def write[T <: Data](data: T, cleanUpdate: Boolean = true, readable: Boolean = true)(instructionId: Int)
-  def writeMasked[T <: Data](data: T, dataMask: T, dataInit: T, cleanUpdate: Boolean = true, readable: Boolean = true)(instructionId: Int, instructionMask: Int)
-  def flowFragmentPush[T <: Data](sink : Flow[Fragment[Bits]], sinkClockDomain : ClockDomain)(instructionId: Int)
-//  def hasUpdate(now : Bool)(instructionId : Int): Unit
-}
+class MyJtagTap(jtag: Jtag, instructionWidth: Int) extends JtagTap(jtag, instructionWidth) {
 
-class JtagTapInstructionWriteMasked[T <: Data](data: T, dataMask: T, dataInit: T, cleanUpdate: Boolean = true, readable: Boolean = true) extends Area {
-  val ctrl = JtagTapInstructionCtrl()
-
-  val shifter = Reg(Bits(widthOf(data) bit))
-  //val store = readable generate RegInit(dataInit.asBits)
-  val store = readable generate Reg(Bits(widthOf(data) bits)) init(dataInit.asBits)
-
-  when(ctrl.reset) {
-    store := dataInit.asBits
-  }
-  when(ctrl.enable) {
-    if (readable) when(ctrl.capture) {
-      shifter := store.resized
+  def writeMasked[T <: Data](data: T, dataMask: T, dataInit: T)(instructionId: Int, instructionMask: Int) = {
+    val area = {
+      val store = Reg(Bits(widthOf(data) bits)) init(dataInit.asBits)
+      when ((fsm.state === JtagState.IR_UPDATE) & ((instructionShift & instructionMask) === instructionId)) {
+        store := instructionShift & dataMask.asBits
+      }
+      data.assignFromBits(store)
     }
-
-    when(ctrl.shift) {
-      shifter := (ctrl.tdi ## shifter) >> 1
-    }
-
-    if (readable) when(ctrl.update) {
-      store := shifter & dataMask.asBits
-    }
-  }
-
-  if (readable) ctrl.tdo := shifter.lsb else ctrl.tdo := False
-  data.assignFromBits(if (!cleanUpdate) shifter else store)
-}
-
-class MyJtagTap(jtag: Jtag, instructionWidth: Int) extends JtagTap(jtag, instructionWidth) with MyJtagTapFunctions {
-
-  def mapMask(ctrl : JtagTapInstructionCtrl, instructionId : Int, instructionMask : Int): Unit ={
-    ctrl.tdi     := jtag.tdi
-    ctrl.enable  := (instruction & instructionMask) === (instructionId & instructionMask)
-    ctrl.capture := fsm.state === JtagState.DR_CAPTURE
-    ctrl.shift   := fsm.state === JtagState.DR_SHIFT
-    ctrl.update  := fsm.state === JtagState.DR_UPDATE
-    ctrl.reset   := fsm.state === JtagState.RESET
-    when(ctrl.enable) { tdoDr := ctrl.tdo }
-  }
-
-  override def writeMasked[T <: Data](data: T, dataMask: T, dataInit: T, cleanUpdate: Boolean = true, readable: Boolean = true)(instructionId: Int, instructionMask: Int) = {
-    val area = new JtagTapInstructionWriteMasked(data, dataMask, dataInit, cleanUpdate, readable)
-    mapMask(area.ctrl, instructionId, instructionMask)
     area
   }
 
+  // Ensure IDCODE is default state
   when(fsm.state === JtagState.RESET){
     instruction := 4
   }
@@ -160,30 +118,30 @@ class JtagBackplane extends Component {
   internalJtag.tck := io.jtag.tck
   internalJtag.tms := io.jtag.tms
   internalJtag.tdi := io.jtag.tdi
+  // tdo is assigned below depending on the JTAG chaining
 
   val currentClk = ClockDomain.current
   // Define JTAG TAP
   // TODO: Use reset signal
   val ctrl = new ClockingArea(ClockDomain(io.jtag.tck, currentClk.reset,
       config=ClockDomainConfig(resetKind = ASYNC, resetActiveLevel = LOW))) {
-    val leds = Reg(Bits(8 bits)) init(0)
-    val chain = Reg(Bits(8 bits)) init(0)
-    val buf = RegInit(False)
-    val buf2 = RegNext(buf)
+    //val leds = Bits(8 bits)
+    val leds = Bits(8 bits)
+    val chain = Bits(8 bits)
 
     val tap = new MyJtagTap(internalJtag, 8)
     val idcodeArea = tap.read(B"x413bd043")(instructionId = 4)
-    val ledsArea = tap.write(leds)(instructionId = 7)
-    val chainInstructionMask = 0xF8
+    val ledArea = tap.write(leds)(instructionId = 7)
     val chainArea = tap.writeMasked(
       data = chain,
-      dataMask = ~B(chainInstructionMask, widthOf(chain) bits), // 0x7
+      dataMask = B(0x7, 8 bits),//~B(chainInstructionMask, widthOf(chain) bits), // 0x7
       dataInit = B(widthOf(chain) bits, default -> false)
-    )(instructionId = 0x8, instructionMask = chainInstructionMask)
+    )(instructionId = 0x8, instructionMask = 0xF8)
 
     io.leds := leds
     
     io.jtag.tdo := internalJtag.tdo
+    //io.jtag.tdo := tap.tdoUnbufferd
     // TODO: Tri-state is the correct setting
     // JTAG 1
     io.jtag1.tck := False
@@ -193,13 +151,16 @@ class JtagBackplane extends Component {
     // Enable buffer
     when(chain(0)){
       // Chain it in!
+      io.leds(1) := True
       io.jtag1.tdi := internalJtag.tdo
-      buf := io.jtag1.tdo
-      io.jtag.tdo := buf
+      //io.jtag1.tdi := tap.tdoUnbufferd
+      io.jtag.tdo := ClockDomain.current.withRevertedClockEdge()(RegNext(io.jtag1.tdo))
 
       io.jtag1.tck := io.jtag.tck
       io.jtag1.tms := io.jtag.tms
 
+    }.otherwise {
+      io.leds(1) := False
     }
     
     // JTAG 2
@@ -209,17 +170,21 @@ class JtagBackplane extends Component {
 
     // Enable buffer
     when(chain(1)){
+      io.leds(2) := True
       // Chain it in!
       io.jtag2.tdi := internalJtag.tdo
+      //io.jtag2.tdi := tap.tdoUnbufferd
+
+      io.jtag.tdo := ClockDomain.current.withRevertedClockEdge()(RegNext(io.jtag2.tdo))
       when(chain(0)) {
-        io.jtag2.tdi := buf
+        io.jtag2.tdi := ClockDomain.current.withRevertedClockEdge()(RegNext(io.jtag1.tdo))
       }
-      buf2 := io.jtag2.tdo
-      io.jtag.tdo := buf2
 
       io.jtag2.tck := io.jtag.tck
       io.jtag2.tms := io.jtag.tms
 
+    }.otherwise {
+      io.leds(2) := False
     }
   }
 }

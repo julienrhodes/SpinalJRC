@@ -22,7 +22,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 <A name="Par_Twr_setup"></A><B><U><big>Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.0.396.4</big></U></B>
-Fri May 15 15:28:06 2020
+Tue May 19 10:24:01 2020
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -42,7 +42,7 @@ Report level:    verbose report, limited to 10 items per preference
 <A name="ptwr_set_ps"></A><B><U><big>Preference Summary</big></U></B>
 
 <LI><A href='#par_twr_pref_0_0' Target='right'>FREQUENCY NET "osc_OSC" 12.090000 MHz (0 errors)</A></LI>            590 items scored, 0 timing errors detected.
-Report:  111.359MHz is the maximum frequency for this preference.
+Report:   99.820MHz is the maximum frequency for this preference.
 
 BLOCK ASYNCPATHS
 BLOCK RESETPATHS
@@ -56,545 +56,545 @@ BLOCK RESETPATHS
 --------------------------------------------------------------------------------
 
 
-Passed: The following path meets requirements by 73.733ns
+Passed: The following path meets requirements by 72.695ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_225__i4  (from osc_OSC +)
-   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_225__i18  (to osc_OSC +)
-                   FF                        globalClockArea_toggler/timeout_counter_value_225__i17
+   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_215__i21  (from osc_OSC +)
+   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_215__i16  (to osc_OSC +)
+                   FF                        globalClockArea_toggler/timeout_counter_value_215__i15
 
-   Delay:               8.732ns  (30.6% logic, 69.4% route), 6 logic levels.
+   Delay:               9.770ns  (27.3% logic, 72.7% route), 6 logic levels.
 
  Constraint Details:
 
-      8.732ns physical path delay globalClockArea_toggler/SLICE_2 to globalClockArea_toggler/SLICE_1 meets
+      9.770ns physical path delay globalClockArea_toggler/SLICE_3 to globalClockArea_toggler/SLICE_1 meets
      82.713ns delay constraint less
       0.000ns skew and
-      0.248ns LSR_SET requirement (totaling 82.465ns) by 73.733ns
+      0.248ns LSR_SET requirement (totaling 82.465ns) by 72.695ns
 
  Physical Path Details:
 
-      Data path globalClockArea_toggler/SLICE_2 to globalClockArea_toggler/SLICE_1:
+      Data path globalClockArea_toggler/SLICE_3 to globalClockArea_toggler/SLICE_1:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.409    R16C19C.CLK to     R16C19C.Q1 globalClockArea_toggler/SLICE_2 (from osc_OSC)
-ROUTE         2     1.187     R16C19C.Q1 to     R16C22B.B1 globalClockArea_toggler/timeout_counter_value_4
-CTOF_DEL    ---     0.452     R16C22B.B1 to     R16C22B.F1 SLICE_63
-ROUTE         1     0.839     R16C22B.F1 to     R15C21A.D0 globalClockArea_toggler/n1209
-CTOF_DEL    ---     0.452     R15C21A.D0 to     R15C21A.F0 globalClockArea_toggler/SLICE_94
-ROUTE         1     0.659     R15C21A.F0 to     R15C21D.C0 globalClockArea_toggler/n1217
-CTOF_DEL    ---     0.452     R15C21D.C0 to     R15C21D.F0 globalClockArea_toggler/SLICE_93
-ROUTE         1     0.839     R15C21D.F0 to     R14C20B.D1 globalClockArea_toggler/n12
-CTOF_DEL    ---     0.452     R14C20B.D1 to     R14C20B.F1 globalClockArea_toggler/SLICE_92
-ROUTE         2     0.392     R14C20B.F1 to     R14C20B.C0 globalClockArea_toggler/timeout_counter_willOverflowIfInc
-CTOF_DEL    ---     0.452     R14C20B.C0 to     R14C20B.F0 globalClockArea_toggler/SLICE_92
-ROUTE        12     2.147     R14C20B.F0 to    R16C21B.LSR globalClockArea_toggler/n70 (to osc_OSC)
+REG_DEL     ---     0.409    R19C24D.CLK to     R19C24D.Q0 globalClockArea_toggler/SLICE_3 (from osc_OSC)
+ROUTE         2     1.535     R19C24D.Q0 to     R18C23C.A0 globalClockArea_toggler/timeout_counter_value_21
+CTOF_DEL    ---     0.452     R18C23C.A0 to     R18C23C.F0 SLICE_57
+ROUTE         1     0.659     R18C23C.F0 to     R18C23A.C0 globalClockArea_toggler/n1370
+CTOF_DEL    ---     0.452     R18C23A.C0 to     R18C23A.F0 globalClockArea_toggler/SLICE_71
+ROUTE         1     0.610     R18C23A.F0 to     R18C23B.B1 globalClockArea_toggler/n26
+CTOF_DEL    ---     0.452     R18C23B.B1 to     R18C23B.F1 globalClockArea_toggler/SLICE_70
+ROUTE         1     0.384     R18C23B.F1 to     R18C23D.C1 globalClockArea_toggler/n32
+CTOF_DEL    ---     0.452     R18C23D.C1 to     R18C23D.F1 globalClockArea_toggler/SLICE_72
+ROUTE         2     1.783     R18C23D.F1 to     R21C20D.C1 globalClockArea_toggler/timeout_counter_willOverflowIfInc
+CTOF_DEL    ---     0.452     R21C20D.C1 to     R21C20D.F1 globalClockArea_toggler/SLICE_89
+ROUTE        12     2.130     R21C20D.F1 to    R19C24A.LSR globalClockArea_toggler/n69 (to osc_OSC)
                   --------
-                    8.732   (30.6% logic, 69.4% route), 6 logic levels.
+                    9.770   (27.3% logic, 72.7% route), 6 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path osc to globalClockArea_toggler/SLICE_2:
+      Source Clock Path osc to globalClockArea_toggler/SLICE_3:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     3.765        OSC.OSC to    R16C19C.CLK osc_OSC
+ROUTE        14     3.765        OSC.OSC to    R19C24D.CLK osc_OSC
                   --------
                     3.765   (0.0% logic, 100.0% route), 0 logic levels.
 
       Destination Clock Path osc to globalClockArea_toggler/SLICE_1:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     3.765        OSC.OSC to    R16C21B.CLK osc_OSC
+ROUTE        14     3.765        OSC.OSC to    R19C24A.CLK osc_OSC
                   --------
                     3.765   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 73.733ns
+Passed: The following path meets requirements by 72.695ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_225__i4  (from osc_OSC +)
-   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_225__i8  (to osc_OSC +)
-                   FF                        globalClockArea_toggler/timeout_counter_value_225__i7
+   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_215__i21  (from osc_OSC +)
+   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_215__i4  (to osc_OSC +)
+                   FF                        globalClockArea_toggler/timeout_counter_value_215__i3
 
-   Delay:               8.732ns  (30.6% logic, 69.4% route), 6 logic levels.
+   Delay:               9.770ns  (27.3% logic, 72.7% route), 6 logic levels.
 
  Constraint Details:
 
-      8.732ns physical path delay globalClockArea_toggler/SLICE_2 to globalClockArea_toggler/SLICE_9 meets
+      9.770ns physical path delay globalClockArea_toggler/SLICE_3 to globalClockArea_toggler/SLICE_9 meets
      82.713ns delay constraint less
       0.000ns skew and
-      0.248ns LSR_SET requirement (totaling 82.465ns) by 73.733ns
+      0.248ns LSR_SET requirement (totaling 82.465ns) by 72.695ns
 
  Physical Path Details:
 
-      Data path globalClockArea_toggler/SLICE_2 to globalClockArea_toggler/SLICE_9:
+      Data path globalClockArea_toggler/SLICE_3 to globalClockArea_toggler/SLICE_9:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.409    R16C19C.CLK to     R16C19C.Q1 globalClockArea_toggler/SLICE_2 (from osc_OSC)
-ROUTE         2     1.187     R16C19C.Q1 to     R16C22B.B1 globalClockArea_toggler/timeout_counter_value_4
-CTOF_DEL    ---     0.452     R16C22B.B1 to     R16C22B.F1 SLICE_63
-ROUTE         1     0.839     R16C22B.F1 to     R15C21A.D0 globalClockArea_toggler/n1209
-CTOF_DEL    ---     0.452     R15C21A.D0 to     R15C21A.F0 globalClockArea_toggler/SLICE_94
-ROUTE         1     0.659     R15C21A.F0 to     R15C21D.C0 globalClockArea_toggler/n1217
-CTOF_DEL    ---     0.452     R15C21D.C0 to     R15C21D.F0 globalClockArea_toggler/SLICE_93
-ROUTE         1     0.839     R15C21D.F0 to     R14C20B.D1 globalClockArea_toggler/n12
-CTOF_DEL    ---     0.452     R14C20B.D1 to     R14C20B.F1 globalClockArea_toggler/SLICE_92
-ROUTE         2     0.392     R14C20B.F1 to     R14C20B.C0 globalClockArea_toggler/timeout_counter_willOverflowIfInc
-CTOF_DEL    ---     0.452     R14C20B.C0 to     R14C20B.F0 globalClockArea_toggler/SLICE_92
-ROUTE        12     2.147     R14C20B.F0 to    R16C20A.LSR globalClockArea_toggler/n70 (to osc_OSC)
+REG_DEL     ---     0.409    R19C24D.CLK to     R19C24D.Q0 globalClockArea_toggler/SLICE_3 (from osc_OSC)
+ROUTE         2     1.535     R19C24D.Q0 to     R18C23C.A0 globalClockArea_toggler/timeout_counter_value_21
+CTOF_DEL    ---     0.452     R18C23C.A0 to     R18C23C.F0 SLICE_57
+ROUTE         1     0.659     R18C23C.F0 to     R18C23A.C0 globalClockArea_toggler/n1370
+CTOF_DEL    ---     0.452     R18C23A.C0 to     R18C23A.F0 globalClockArea_toggler/SLICE_71
+ROUTE         1     0.610     R18C23A.F0 to     R18C23B.B1 globalClockArea_toggler/n26
+CTOF_DEL    ---     0.452     R18C23B.B1 to     R18C23B.F1 globalClockArea_toggler/SLICE_70
+ROUTE         1     0.384     R18C23B.F1 to     R18C23D.C1 globalClockArea_toggler/n32
+CTOF_DEL    ---     0.452     R18C23D.C1 to     R18C23D.F1 globalClockArea_toggler/SLICE_72
+ROUTE         2     1.783     R18C23D.F1 to     R21C20D.C1 globalClockArea_toggler/timeout_counter_willOverflowIfInc
+CTOF_DEL    ---     0.452     R21C20D.C1 to     R21C20D.F1 globalClockArea_toggler/SLICE_89
+ROUTE        12     2.130     R21C20D.F1 to    R19C22C.LSR globalClockArea_toggler/n69 (to osc_OSC)
                   --------
-                    8.732   (30.6% logic, 69.4% route), 6 logic levels.
+                    9.770   (27.3% logic, 72.7% route), 6 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path osc to globalClockArea_toggler/SLICE_2:
+      Source Clock Path osc to globalClockArea_toggler/SLICE_3:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     3.765        OSC.OSC to    R16C19C.CLK osc_OSC
+ROUTE        14     3.765        OSC.OSC to    R19C24D.CLK osc_OSC
                   --------
                     3.765   (0.0% logic, 100.0% route), 0 logic levels.
 
       Destination Clock Path osc to globalClockArea_toggler/SLICE_9:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     3.765        OSC.OSC to    R16C20A.CLK osc_OSC
+ROUTE        14     3.765        OSC.OSC to    R19C22C.CLK osc_OSC
                   --------
                     3.765   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 73.733ns
+Passed: The following path meets requirements by 72.695ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_225__i4  (from osc_OSC +)
-   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_225__i20  (to osc_OSC +)
-                   FF                        globalClockArea_toggler/timeout_counter_value_225__i19
+   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_215__i21  (from osc_OSC +)
+   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_215__i12  (to osc_OSC +)
+                   FF                        globalClockArea_toggler/timeout_counter_value_215__i11
 
-   Delay:               8.732ns  (30.6% logic, 69.4% route), 6 logic levels.
+   Delay:               9.770ns  (27.3% logic, 72.7% route), 6 logic levels.
 
  Constraint Details:
 
-      8.732ns physical path delay globalClockArea_toggler/SLICE_2 to globalClockArea_toggler/SLICE_11 meets
+      9.770ns physical path delay globalClockArea_toggler/SLICE_3 to globalClockArea_toggler/SLICE_11 meets
      82.713ns delay constraint less
       0.000ns skew and
-      0.248ns LSR_SET requirement (totaling 82.465ns) by 73.733ns
+      0.248ns LSR_SET requirement (totaling 82.465ns) by 72.695ns
 
  Physical Path Details:
 
-      Data path globalClockArea_toggler/SLICE_2 to globalClockArea_toggler/SLICE_11:
+      Data path globalClockArea_toggler/SLICE_3 to globalClockArea_toggler/SLICE_11:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.409    R16C19C.CLK to     R16C19C.Q1 globalClockArea_toggler/SLICE_2 (from osc_OSC)
-ROUTE         2     1.187     R16C19C.Q1 to     R16C22B.B1 globalClockArea_toggler/timeout_counter_value_4
-CTOF_DEL    ---     0.452     R16C22B.B1 to     R16C22B.F1 SLICE_63
-ROUTE         1     0.839     R16C22B.F1 to     R15C21A.D0 globalClockArea_toggler/n1209
-CTOF_DEL    ---     0.452     R15C21A.D0 to     R15C21A.F0 globalClockArea_toggler/SLICE_94
-ROUTE         1     0.659     R15C21A.F0 to     R15C21D.C0 globalClockArea_toggler/n1217
-CTOF_DEL    ---     0.452     R15C21D.C0 to     R15C21D.F0 globalClockArea_toggler/SLICE_93
-ROUTE         1     0.839     R15C21D.F0 to     R14C20B.D1 globalClockArea_toggler/n12
-CTOF_DEL    ---     0.452     R14C20B.D1 to     R14C20B.F1 globalClockArea_toggler/SLICE_92
-ROUTE         2     0.392     R14C20B.F1 to     R14C20B.C0 globalClockArea_toggler/timeout_counter_willOverflowIfInc
-CTOF_DEL    ---     0.452     R14C20B.C0 to     R14C20B.F0 globalClockArea_toggler/SLICE_92
-ROUTE        12     2.147     R14C20B.F0 to    R16C21C.LSR globalClockArea_toggler/n70 (to osc_OSC)
+REG_DEL     ---     0.409    R19C24D.CLK to     R19C24D.Q0 globalClockArea_toggler/SLICE_3 (from osc_OSC)
+ROUTE         2     1.535     R19C24D.Q0 to     R18C23C.A0 globalClockArea_toggler/timeout_counter_value_21
+CTOF_DEL    ---     0.452     R18C23C.A0 to     R18C23C.F0 SLICE_57
+ROUTE         1     0.659     R18C23C.F0 to     R18C23A.C0 globalClockArea_toggler/n1370
+CTOF_DEL    ---     0.452     R18C23A.C0 to     R18C23A.F0 globalClockArea_toggler/SLICE_71
+ROUTE         1     0.610     R18C23A.F0 to     R18C23B.B1 globalClockArea_toggler/n26
+CTOF_DEL    ---     0.452     R18C23B.B1 to     R18C23B.F1 globalClockArea_toggler/SLICE_70
+ROUTE         1     0.384     R18C23B.F1 to     R18C23D.C1 globalClockArea_toggler/n32
+CTOF_DEL    ---     0.452     R18C23D.C1 to     R18C23D.F1 globalClockArea_toggler/SLICE_72
+ROUTE         2     1.783     R18C23D.F1 to     R21C20D.C1 globalClockArea_toggler/timeout_counter_willOverflowIfInc
+CTOF_DEL    ---     0.452     R21C20D.C1 to     R21C20D.F1 globalClockArea_toggler/SLICE_89
+ROUTE        12     2.130     R21C20D.F1 to    R19C23C.LSR globalClockArea_toggler/n69 (to osc_OSC)
                   --------
-                    8.732   (30.6% logic, 69.4% route), 6 logic levels.
+                    9.770   (27.3% logic, 72.7% route), 6 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path osc to globalClockArea_toggler/SLICE_2:
+      Source Clock Path osc to globalClockArea_toggler/SLICE_3:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     3.765        OSC.OSC to    R16C19C.CLK osc_OSC
+ROUTE        14     3.765        OSC.OSC to    R19C24D.CLK osc_OSC
                   --------
                     3.765   (0.0% logic, 100.0% route), 0 logic levels.
 
       Destination Clock Path osc to globalClockArea_toggler/SLICE_11:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     3.765        OSC.OSC to    R16C21C.CLK osc_OSC
+ROUTE        14     3.765        OSC.OSC to    R19C23C.CLK osc_OSC
                   --------
                     3.765   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 73.733ns
+Passed: The following path meets requirements by 72.695ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_225__i4  (from osc_OSC +)
-   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_225__i10  (to osc_OSC +)
-                   FF                        globalClockArea_toggler/timeout_counter_value_225__i9
+   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_215__i21  (from osc_OSC +)
+   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_215__i20  (to osc_OSC +)
+                   FF                        globalClockArea_toggler/timeout_counter_value_215__i19
 
-   Delay:               8.732ns  (30.6% logic, 69.4% route), 6 logic levels.
+   Delay:               9.770ns  (27.3% logic, 72.7% route), 6 logic levels.
 
  Constraint Details:
 
-      8.732ns physical path delay globalClockArea_toggler/SLICE_2 to globalClockArea_toggler/SLICE_7 meets
+      9.770ns physical path delay globalClockArea_toggler/SLICE_3 to globalClockArea_toggler/SLICE_7 meets
      82.713ns delay constraint less
       0.000ns skew and
-      0.248ns LSR_SET requirement (totaling 82.465ns) by 73.733ns
+      0.248ns LSR_SET requirement (totaling 82.465ns) by 72.695ns
 
  Physical Path Details:
 
-      Data path globalClockArea_toggler/SLICE_2 to globalClockArea_toggler/SLICE_7:
+      Data path globalClockArea_toggler/SLICE_3 to globalClockArea_toggler/SLICE_7:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.409    R16C19C.CLK to     R16C19C.Q1 globalClockArea_toggler/SLICE_2 (from osc_OSC)
-ROUTE         2     1.187     R16C19C.Q1 to     R16C22B.B1 globalClockArea_toggler/timeout_counter_value_4
-CTOF_DEL    ---     0.452     R16C22B.B1 to     R16C22B.F1 SLICE_63
-ROUTE         1     0.839     R16C22B.F1 to     R15C21A.D0 globalClockArea_toggler/n1209
-CTOF_DEL    ---     0.452     R15C21A.D0 to     R15C21A.F0 globalClockArea_toggler/SLICE_94
-ROUTE         1     0.659     R15C21A.F0 to     R15C21D.C0 globalClockArea_toggler/n1217
-CTOF_DEL    ---     0.452     R15C21D.C0 to     R15C21D.F0 globalClockArea_toggler/SLICE_93
-ROUTE         1     0.839     R15C21D.F0 to     R14C20B.D1 globalClockArea_toggler/n12
-CTOF_DEL    ---     0.452     R14C20B.D1 to     R14C20B.F1 globalClockArea_toggler/SLICE_92
-ROUTE         2     0.392     R14C20B.F1 to     R14C20B.C0 globalClockArea_toggler/timeout_counter_willOverflowIfInc
-CTOF_DEL    ---     0.452     R14C20B.C0 to     R14C20B.F0 globalClockArea_toggler/SLICE_92
-ROUTE        12     2.147     R14C20B.F0 to    R16C20B.LSR globalClockArea_toggler/n70 (to osc_OSC)
+REG_DEL     ---     0.409    R19C24D.CLK to     R19C24D.Q0 globalClockArea_toggler/SLICE_3 (from osc_OSC)
+ROUTE         2     1.535     R19C24D.Q0 to     R18C23C.A0 globalClockArea_toggler/timeout_counter_value_21
+CTOF_DEL    ---     0.452     R18C23C.A0 to     R18C23C.F0 SLICE_57
+ROUTE         1     0.659     R18C23C.F0 to     R18C23A.C0 globalClockArea_toggler/n1370
+CTOF_DEL    ---     0.452     R18C23A.C0 to     R18C23A.F0 globalClockArea_toggler/SLICE_71
+ROUTE         1     0.610     R18C23A.F0 to     R18C23B.B1 globalClockArea_toggler/n26
+CTOF_DEL    ---     0.452     R18C23B.B1 to     R18C23B.F1 globalClockArea_toggler/SLICE_70
+ROUTE         1     0.384     R18C23B.F1 to     R18C23D.C1 globalClockArea_toggler/n32
+CTOF_DEL    ---     0.452     R18C23D.C1 to     R18C23D.F1 globalClockArea_toggler/SLICE_72
+ROUTE         2     1.783     R18C23D.F1 to     R21C20D.C1 globalClockArea_toggler/timeout_counter_willOverflowIfInc
+CTOF_DEL    ---     0.452     R21C20D.C1 to     R21C20D.F1 globalClockArea_toggler/SLICE_89
+ROUTE        12     2.130     R21C20D.F1 to    R19C24C.LSR globalClockArea_toggler/n69 (to osc_OSC)
                   --------
-                    8.732   (30.6% logic, 69.4% route), 6 logic levels.
+                    9.770   (27.3% logic, 72.7% route), 6 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path osc to globalClockArea_toggler/SLICE_2:
+      Source Clock Path osc to globalClockArea_toggler/SLICE_3:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     3.765        OSC.OSC to    R16C19C.CLK osc_OSC
+ROUTE        14     3.765        OSC.OSC to    R19C24D.CLK osc_OSC
                   --------
                     3.765   (0.0% logic, 100.0% route), 0 logic levels.
 
       Destination Clock Path osc to globalClockArea_toggler/SLICE_7:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     3.765        OSC.OSC to    R16C20B.CLK osc_OSC
+ROUTE        14     3.765        OSC.OSC to    R19C24C.CLK osc_OSC
                   --------
                     3.765   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 73.733ns
+Passed: The following path meets requirements by 72.695ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_225__i4  (from osc_OSC +)
-   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_225__i0  (to osc_OSC +)
+   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_215__i21  (from osc_OSC +)
+   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_215__i22  (to osc_OSC +)
+                   FF                        globalClockArea_toggler/timeout_counter_value_215__i21
 
-   Delay:               8.732ns  (30.6% logic, 69.4% route), 6 logic levels.
+   Delay:               9.770ns  (27.3% logic, 72.7% route), 6 logic levels.
 
  Constraint Details:
 
-      8.732ns physical path delay globalClockArea_toggler/SLICE_2 to globalClockArea_toggler/SLICE_3 meets
+      9.770ns physical path delay globalClockArea_toggler/SLICE_3 to globalClockArea_toggler/SLICE_3 meets
      82.713ns delay constraint less
       0.000ns skew and
-      0.248ns LSR_SET requirement (totaling 82.465ns) by 73.733ns
+      0.248ns LSR_SET requirement (totaling 82.465ns) by 72.695ns
 
  Physical Path Details:
 
-      Data path globalClockArea_toggler/SLICE_2 to globalClockArea_toggler/SLICE_3:
+      Data path globalClockArea_toggler/SLICE_3 to globalClockArea_toggler/SLICE_3:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.409    R16C19C.CLK to     R16C19C.Q1 globalClockArea_toggler/SLICE_2 (from osc_OSC)
-ROUTE         2     1.187     R16C19C.Q1 to     R16C22B.B1 globalClockArea_toggler/timeout_counter_value_4
-CTOF_DEL    ---     0.452     R16C22B.B1 to     R16C22B.F1 SLICE_63
-ROUTE         1     0.839     R16C22B.F1 to     R15C21A.D0 globalClockArea_toggler/n1209
-CTOF_DEL    ---     0.452     R15C21A.D0 to     R15C21A.F0 globalClockArea_toggler/SLICE_94
-ROUTE         1     0.659     R15C21A.F0 to     R15C21D.C0 globalClockArea_toggler/n1217
-CTOF_DEL    ---     0.452     R15C21D.C0 to     R15C21D.F0 globalClockArea_toggler/SLICE_93
-ROUTE         1     0.839     R15C21D.F0 to     R14C20B.D1 globalClockArea_toggler/n12
-CTOF_DEL    ---     0.452     R14C20B.D1 to     R14C20B.F1 globalClockArea_toggler/SLICE_92
-ROUTE         2     0.392     R14C20B.F1 to     R14C20B.C0 globalClockArea_toggler/timeout_counter_willOverflowIfInc
-CTOF_DEL    ---     0.452     R14C20B.C0 to     R14C20B.F0 globalClockArea_toggler/SLICE_92
-ROUTE        12     2.147     R14C20B.F0 to    R16C19A.LSR globalClockArea_toggler/n70 (to osc_OSC)
+REG_DEL     ---     0.409    R19C24D.CLK to     R19C24D.Q0 globalClockArea_toggler/SLICE_3 (from osc_OSC)
+ROUTE         2     1.535     R19C24D.Q0 to     R18C23C.A0 globalClockArea_toggler/timeout_counter_value_21
+CTOF_DEL    ---     0.452     R18C23C.A0 to     R18C23C.F0 SLICE_57
+ROUTE         1     0.659     R18C23C.F0 to     R18C23A.C0 globalClockArea_toggler/n1370
+CTOF_DEL    ---     0.452     R18C23A.C0 to     R18C23A.F0 globalClockArea_toggler/SLICE_71
+ROUTE         1     0.610     R18C23A.F0 to     R18C23B.B1 globalClockArea_toggler/n26
+CTOF_DEL    ---     0.452     R18C23B.B1 to     R18C23B.F1 globalClockArea_toggler/SLICE_70
+ROUTE         1     0.384     R18C23B.F1 to     R18C23D.C1 globalClockArea_toggler/n32
+CTOF_DEL    ---     0.452     R18C23D.C1 to     R18C23D.F1 globalClockArea_toggler/SLICE_72
+ROUTE         2     1.783     R18C23D.F1 to     R21C20D.C1 globalClockArea_toggler/timeout_counter_willOverflowIfInc
+CTOF_DEL    ---     0.452     R21C20D.C1 to     R21C20D.F1 globalClockArea_toggler/SLICE_89
+ROUTE        12     2.130     R21C20D.F1 to    R19C24D.LSR globalClockArea_toggler/n69 (to osc_OSC)
                   --------
-                    8.732   (30.6% logic, 69.4% route), 6 logic levels.
+                    9.770   (27.3% logic, 72.7% route), 6 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path osc to globalClockArea_toggler/SLICE_2:
+      Source Clock Path osc to globalClockArea_toggler/SLICE_3:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     3.765        OSC.OSC to    R16C19C.CLK osc_OSC
+ROUTE        14     3.765        OSC.OSC to    R19C24D.CLK osc_OSC
                   --------
                     3.765   (0.0% logic, 100.0% route), 0 logic levels.
 
       Destination Clock Path osc to globalClockArea_toggler/SLICE_3:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     3.765        OSC.OSC to    R16C19A.CLK osc_OSC
+ROUTE        14     3.765        OSC.OSC to    R19C24D.CLK osc_OSC
                   --------
                     3.765   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 73.733ns
+Passed: The following path meets requirements by 72.695ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_225__i4  (from osc_OSC +)
-   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_225__i12  (to osc_OSC +)
-                   FF                        globalClockArea_toggler/timeout_counter_value_225__i11
+   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_215__i21  (from osc_OSC +)
+   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_215__i8  (to osc_OSC +)
+                   FF                        globalClockArea_toggler/timeout_counter_value_215__i7
 
-   Delay:               8.732ns  (30.6% logic, 69.4% route), 6 logic levels.
+   Delay:               9.770ns  (27.3% logic, 72.7% route), 6 logic levels.
 
  Constraint Details:
 
-      8.732ns physical path delay globalClockArea_toggler/SLICE_2 to globalClockArea_toggler/SLICE_5 meets
+      9.770ns physical path delay globalClockArea_toggler/SLICE_3 to globalClockArea_toggler/SLICE_5 meets
      82.713ns delay constraint less
       0.000ns skew and
-      0.248ns LSR_SET requirement (totaling 82.465ns) by 73.733ns
+      0.248ns LSR_SET requirement (totaling 82.465ns) by 72.695ns
 
  Physical Path Details:
 
-      Data path globalClockArea_toggler/SLICE_2 to globalClockArea_toggler/SLICE_5:
+      Data path globalClockArea_toggler/SLICE_3 to globalClockArea_toggler/SLICE_5:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.409    R16C19C.CLK to     R16C19C.Q1 globalClockArea_toggler/SLICE_2 (from osc_OSC)
-ROUTE         2     1.187     R16C19C.Q1 to     R16C22B.B1 globalClockArea_toggler/timeout_counter_value_4
-CTOF_DEL    ---     0.452     R16C22B.B1 to     R16C22B.F1 SLICE_63
-ROUTE         1     0.839     R16C22B.F1 to     R15C21A.D0 globalClockArea_toggler/n1209
-CTOF_DEL    ---     0.452     R15C21A.D0 to     R15C21A.F0 globalClockArea_toggler/SLICE_94
-ROUTE         1     0.659     R15C21A.F0 to     R15C21D.C0 globalClockArea_toggler/n1217
-CTOF_DEL    ---     0.452     R15C21D.C0 to     R15C21D.F0 globalClockArea_toggler/SLICE_93
-ROUTE         1     0.839     R15C21D.F0 to     R14C20B.D1 globalClockArea_toggler/n12
-CTOF_DEL    ---     0.452     R14C20B.D1 to     R14C20B.F1 globalClockArea_toggler/SLICE_92
-ROUTE         2     0.392     R14C20B.F1 to     R14C20B.C0 globalClockArea_toggler/timeout_counter_willOverflowIfInc
-CTOF_DEL    ---     0.452     R14C20B.C0 to     R14C20B.F0 globalClockArea_toggler/SLICE_92
-ROUTE        12     2.147     R14C20B.F0 to    R16C20C.LSR globalClockArea_toggler/n70 (to osc_OSC)
+REG_DEL     ---     0.409    R19C24D.CLK to     R19C24D.Q0 globalClockArea_toggler/SLICE_3 (from osc_OSC)
+ROUTE         2     1.535     R19C24D.Q0 to     R18C23C.A0 globalClockArea_toggler/timeout_counter_value_21
+CTOF_DEL    ---     0.452     R18C23C.A0 to     R18C23C.F0 SLICE_57
+ROUTE         1     0.659     R18C23C.F0 to     R18C23A.C0 globalClockArea_toggler/n1370
+CTOF_DEL    ---     0.452     R18C23A.C0 to     R18C23A.F0 globalClockArea_toggler/SLICE_71
+ROUTE         1     0.610     R18C23A.F0 to     R18C23B.B1 globalClockArea_toggler/n26
+CTOF_DEL    ---     0.452     R18C23B.B1 to     R18C23B.F1 globalClockArea_toggler/SLICE_70
+ROUTE         1     0.384     R18C23B.F1 to     R18C23D.C1 globalClockArea_toggler/n32
+CTOF_DEL    ---     0.452     R18C23D.C1 to     R18C23D.F1 globalClockArea_toggler/SLICE_72
+ROUTE         2     1.783     R18C23D.F1 to     R21C20D.C1 globalClockArea_toggler/timeout_counter_willOverflowIfInc
+CTOF_DEL    ---     0.452     R21C20D.C1 to     R21C20D.F1 globalClockArea_toggler/SLICE_89
+ROUTE        12     2.130     R21C20D.F1 to    R19C23A.LSR globalClockArea_toggler/n69 (to osc_OSC)
                   --------
-                    8.732   (30.6% logic, 69.4% route), 6 logic levels.
+                    9.770   (27.3% logic, 72.7% route), 6 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path osc to globalClockArea_toggler/SLICE_2:
+      Source Clock Path osc to globalClockArea_toggler/SLICE_3:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     3.765        OSC.OSC to    R16C19C.CLK osc_OSC
+ROUTE        14     3.765        OSC.OSC to    R19C24D.CLK osc_OSC
                   --------
                     3.765   (0.0% logic, 100.0% route), 0 logic levels.
 
       Destination Clock Path osc to globalClockArea_toggler/SLICE_5:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     3.765        OSC.OSC to    R16C20C.CLK osc_OSC
+ROUTE        14     3.765        OSC.OSC to    R19C23A.CLK osc_OSC
                   --------
                     3.765   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 73.733ns
+Passed: The following path meets requirements by 72.695ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_225__i4  (from osc_OSC +)
-   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_225__i6  (to osc_OSC +)
-                   FF                        globalClockArea_toggler/timeout_counter_value_225__i5
+   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_215__i21  (from osc_OSC +)
+   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_215__i2  (to osc_OSC +)
+                   FF                        globalClockArea_toggler/timeout_counter_value_215__i1
 
-   Delay:               8.732ns  (30.6% logic, 69.4% route), 6 logic levels.
+   Delay:               9.770ns  (27.3% logic, 72.7% route), 6 logic levels.
 
  Constraint Details:
 
-      8.732ns physical path delay globalClockArea_toggler/SLICE_2 to globalClockArea_toggler/SLICE_0 meets
+      9.770ns physical path delay globalClockArea_toggler/SLICE_3 to globalClockArea_toggler/SLICE_0 meets
      82.713ns delay constraint less
       0.000ns skew and
-      0.248ns LSR_SET requirement (totaling 82.465ns) by 73.733ns
+      0.248ns LSR_SET requirement (totaling 82.465ns) by 72.695ns
 
  Physical Path Details:
 
-      Data path globalClockArea_toggler/SLICE_2 to globalClockArea_toggler/SLICE_0:
+      Data path globalClockArea_toggler/SLICE_3 to globalClockArea_toggler/SLICE_0:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.409    R16C19C.CLK to     R16C19C.Q1 globalClockArea_toggler/SLICE_2 (from osc_OSC)
-ROUTE         2     1.187     R16C19C.Q1 to     R16C22B.B1 globalClockArea_toggler/timeout_counter_value_4
-CTOF_DEL    ---     0.452     R16C22B.B1 to     R16C22B.F1 SLICE_63
-ROUTE         1     0.839     R16C22B.F1 to     R15C21A.D0 globalClockArea_toggler/n1209
-CTOF_DEL    ---     0.452     R15C21A.D0 to     R15C21A.F0 globalClockArea_toggler/SLICE_94
-ROUTE         1     0.659     R15C21A.F0 to     R15C21D.C0 globalClockArea_toggler/n1217
-CTOF_DEL    ---     0.452     R15C21D.C0 to     R15C21D.F0 globalClockArea_toggler/SLICE_93
-ROUTE         1     0.839     R15C21D.F0 to     R14C20B.D1 globalClockArea_toggler/n12
-CTOF_DEL    ---     0.452     R14C20B.D1 to     R14C20B.F1 globalClockArea_toggler/SLICE_92
-ROUTE         2     0.392     R14C20B.F1 to     R14C20B.C0 globalClockArea_toggler/timeout_counter_willOverflowIfInc
-CTOF_DEL    ---     0.452     R14C20B.C0 to     R14C20B.F0 globalClockArea_toggler/SLICE_92
-ROUTE        12     2.147     R14C20B.F0 to    R16C19D.LSR globalClockArea_toggler/n70 (to osc_OSC)
+REG_DEL     ---     0.409    R19C24D.CLK to     R19C24D.Q0 globalClockArea_toggler/SLICE_3 (from osc_OSC)
+ROUTE         2     1.535     R19C24D.Q0 to     R18C23C.A0 globalClockArea_toggler/timeout_counter_value_21
+CTOF_DEL    ---     0.452     R18C23C.A0 to     R18C23C.F0 SLICE_57
+ROUTE         1     0.659     R18C23C.F0 to     R18C23A.C0 globalClockArea_toggler/n1370
+CTOF_DEL    ---     0.452     R18C23A.C0 to     R18C23A.F0 globalClockArea_toggler/SLICE_71
+ROUTE         1     0.610     R18C23A.F0 to     R18C23B.B1 globalClockArea_toggler/n26
+CTOF_DEL    ---     0.452     R18C23B.B1 to     R18C23B.F1 globalClockArea_toggler/SLICE_70
+ROUTE         1     0.384     R18C23B.F1 to     R18C23D.C1 globalClockArea_toggler/n32
+CTOF_DEL    ---     0.452     R18C23D.C1 to     R18C23D.F1 globalClockArea_toggler/SLICE_72
+ROUTE         2     1.783     R18C23D.F1 to     R21C20D.C1 globalClockArea_toggler/timeout_counter_willOverflowIfInc
+CTOF_DEL    ---     0.452     R21C20D.C1 to     R21C20D.F1 globalClockArea_toggler/SLICE_89
+ROUTE        12     2.130     R21C20D.F1 to    R19C22B.LSR globalClockArea_toggler/n69 (to osc_OSC)
                   --------
-                    8.732   (30.6% logic, 69.4% route), 6 logic levels.
+                    9.770   (27.3% logic, 72.7% route), 6 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path osc to globalClockArea_toggler/SLICE_2:
+      Source Clock Path osc to globalClockArea_toggler/SLICE_3:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     3.765        OSC.OSC to    R16C19C.CLK osc_OSC
+ROUTE        14     3.765        OSC.OSC to    R19C24D.CLK osc_OSC
                   --------
                     3.765   (0.0% logic, 100.0% route), 0 logic levels.
 
       Destination Clock Path osc to globalClockArea_toggler/SLICE_0:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     3.765        OSC.OSC to    R16C19D.CLK osc_OSC
+ROUTE        14     3.765        OSC.OSC to    R19C22B.CLK osc_OSC
                   --------
                     3.765   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 73.733ns
+Passed: The following path meets requirements by 72.695ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_225__i4  (from osc_OSC +)
-   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_225__i14  (to osc_OSC +)
-                   FF                        globalClockArea_toggler/timeout_counter_value_225__i13
+   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_215__i21  (from osc_OSC +)
+   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_215__i18  (to osc_OSC +)
+                   FF                        globalClockArea_toggler/timeout_counter_value_215__i17
 
-   Delay:               8.732ns  (30.6% logic, 69.4% route), 6 logic levels.
+   Delay:               9.770ns  (27.3% logic, 72.7% route), 6 logic levels.
 
  Constraint Details:
 
-      8.732ns physical path delay globalClockArea_toggler/SLICE_2 to globalClockArea_toggler/SLICE_10 meets
+      9.770ns physical path delay globalClockArea_toggler/SLICE_3 to globalClockArea_toggler/SLICE_10 meets
      82.713ns delay constraint less
       0.000ns skew and
-      0.248ns LSR_SET requirement (totaling 82.465ns) by 73.733ns
+      0.248ns LSR_SET requirement (totaling 82.465ns) by 72.695ns
 
  Physical Path Details:
 
-      Data path globalClockArea_toggler/SLICE_2 to globalClockArea_toggler/SLICE_10:
+      Data path globalClockArea_toggler/SLICE_3 to globalClockArea_toggler/SLICE_10:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.409    R16C19C.CLK to     R16C19C.Q1 globalClockArea_toggler/SLICE_2 (from osc_OSC)
-ROUTE         2     1.187     R16C19C.Q1 to     R16C22B.B1 globalClockArea_toggler/timeout_counter_value_4
-CTOF_DEL    ---     0.452     R16C22B.B1 to     R16C22B.F1 SLICE_63
-ROUTE         1     0.839     R16C22B.F1 to     R15C21A.D0 globalClockArea_toggler/n1209
-CTOF_DEL    ---     0.452     R15C21A.D0 to     R15C21A.F0 globalClockArea_toggler/SLICE_94
-ROUTE         1     0.659     R15C21A.F0 to     R15C21D.C0 globalClockArea_toggler/n1217
-CTOF_DEL    ---     0.452     R15C21D.C0 to     R15C21D.F0 globalClockArea_toggler/SLICE_93
-ROUTE         1     0.839     R15C21D.F0 to     R14C20B.D1 globalClockArea_toggler/n12
-CTOF_DEL    ---     0.452     R14C20B.D1 to     R14C20B.F1 globalClockArea_toggler/SLICE_92
-ROUTE         2     0.392     R14C20B.F1 to     R14C20B.C0 globalClockArea_toggler/timeout_counter_willOverflowIfInc
-CTOF_DEL    ---     0.452     R14C20B.C0 to     R14C20B.F0 globalClockArea_toggler/SLICE_92
-ROUTE        12     2.147     R14C20B.F0 to    R16C20D.LSR globalClockArea_toggler/n70 (to osc_OSC)
+REG_DEL     ---     0.409    R19C24D.CLK to     R19C24D.Q0 globalClockArea_toggler/SLICE_3 (from osc_OSC)
+ROUTE         2     1.535     R19C24D.Q0 to     R18C23C.A0 globalClockArea_toggler/timeout_counter_value_21
+CTOF_DEL    ---     0.452     R18C23C.A0 to     R18C23C.F0 SLICE_57
+ROUTE         1     0.659     R18C23C.F0 to     R18C23A.C0 globalClockArea_toggler/n1370
+CTOF_DEL    ---     0.452     R18C23A.C0 to     R18C23A.F0 globalClockArea_toggler/SLICE_71
+ROUTE         1     0.610     R18C23A.F0 to     R18C23B.B1 globalClockArea_toggler/n26
+CTOF_DEL    ---     0.452     R18C23B.B1 to     R18C23B.F1 globalClockArea_toggler/SLICE_70
+ROUTE         1     0.384     R18C23B.F1 to     R18C23D.C1 globalClockArea_toggler/n32
+CTOF_DEL    ---     0.452     R18C23D.C1 to     R18C23D.F1 globalClockArea_toggler/SLICE_72
+ROUTE         2     1.783     R18C23D.F1 to     R21C20D.C1 globalClockArea_toggler/timeout_counter_willOverflowIfInc
+CTOF_DEL    ---     0.452     R21C20D.C1 to     R21C20D.F1 globalClockArea_toggler/SLICE_89
+ROUTE        12     2.130     R21C20D.F1 to    R19C24B.LSR globalClockArea_toggler/n69 (to osc_OSC)
                   --------
-                    8.732   (30.6% logic, 69.4% route), 6 logic levels.
+                    9.770   (27.3% logic, 72.7% route), 6 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path osc to globalClockArea_toggler/SLICE_2:
+      Source Clock Path osc to globalClockArea_toggler/SLICE_3:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     3.765        OSC.OSC to    R16C19C.CLK osc_OSC
+ROUTE        14     3.765        OSC.OSC to    R19C24D.CLK osc_OSC
                   --------
                     3.765   (0.0% logic, 100.0% route), 0 logic levels.
 
       Destination Clock Path osc to globalClockArea_toggler/SLICE_10:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     3.765        OSC.OSC to    R16C20D.CLK osc_OSC
+ROUTE        14     3.765        OSC.OSC to    R19C24B.CLK osc_OSC
                   --------
                     3.765   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 73.733ns
+Passed: The following path meets requirements by 72.695ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_225__i4  (from osc_OSC +)
-   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_225__i22  (to osc_OSC +)
-                   FF                        globalClockArea_toggler/timeout_counter_value_225__i21
+   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_215__i21  (from osc_OSC +)
+   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_215__i0  (to osc_OSC +)
 
-   Delay:               8.732ns  (30.6% logic, 69.4% route), 6 logic levels.
+   Delay:               9.770ns  (27.3% logic, 72.7% route), 6 logic levels.
 
  Constraint Details:
 
-      8.732ns physical path delay globalClockArea_toggler/SLICE_2 to globalClockArea_toggler/SLICE_8 meets
+      9.770ns physical path delay globalClockArea_toggler/SLICE_3 to globalClockArea_toggler/SLICE_8 meets
      82.713ns delay constraint less
       0.000ns skew and
-      0.248ns LSR_SET requirement (totaling 82.465ns) by 73.733ns
+      0.248ns LSR_SET requirement (totaling 82.465ns) by 72.695ns
 
  Physical Path Details:
 
-      Data path globalClockArea_toggler/SLICE_2 to globalClockArea_toggler/SLICE_8:
+      Data path globalClockArea_toggler/SLICE_3 to globalClockArea_toggler/SLICE_8:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.409    R16C19C.CLK to     R16C19C.Q1 globalClockArea_toggler/SLICE_2 (from osc_OSC)
-ROUTE         2     1.187     R16C19C.Q1 to     R16C22B.B1 globalClockArea_toggler/timeout_counter_value_4
-CTOF_DEL    ---     0.452     R16C22B.B1 to     R16C22B.F1 SLICE_63
-ROUTE         1     0.839     R16C22B.F1 to     R15C21A.D0 globalClockArea_toggler/n1209
-CTOF_DEL    ---     0.452     R15C21A.D0 to     R15C21A.F0 globalClockArea_toggler/SLICE_94
-ROUTE         1     0.659     R15C21A.F0 to     R15C21D.C0 globalClockArea_toggler/n1217
-CTOF_DEL    ---     0.452     R15C21D.C0 to     R15C21D.F0 globalClockArea_toggler/SLICE_93
-ROUTE         1     0.839     R15C21D.F0 to     R14C20B.D1 globalClockArea_toggler/n12
-CTOF_DEL    ---     0.452     R14C20B.D1 to     R14C20B.F1 globalClockArea_toggler/SLICE_92
-ROUTE         2     0.392     R14C20B.F1 to     R14C20B.C0 globalClockArea_toggler/timeout_counter_willOverflowIfInc
-CTOF_DEL    ---     0.452     R14C20B.C0 to     R14C20B.F0 globalClockArea_toggler/SLICE_92
-ROUTE        12     2.147     R14C20B.F0 to    R16C21D.LSR globalClockArea_toggler/n70 (to osc_OSC)
+REG_DEL     ---     0.409    R19C24D.CLK to     R19C24D.Q0 globalClockArea_toggler/SLICE_3 (from osc_OSC)
+ROUTE         2     1.535     R19C24D.Q0 to     R18C23C.A0 globalClockArea_toggler/timeout_counter_value_21
+CTOF_DEL    ---     0.452     R18C23C.A0 to     R18C23C.F0 SLICE_57
+ROUTE         1     0.659     R18C23C.F0 to     R18C23A.C0 globalClockArea_toggler/n1370
+CTOF_DEL    ---     0.452     R18C23A.C0 to     R18C23A.F0 globalClockArea_toggler/SLICE_71
+ROUTE         1     0.610     R18C23A.F0 to     R18C23B.B1 globalClockArea_toggler/n26
+CTOF_DEL    ---     0.452     R18C23B.B1 to     R18C23B.F1 globalClockArea_toggler/SLICE_70
+ROUTE         1     0.384     R18C23B.F1 to     R18C23D.C1 globalClockArea_toggler/n32
+CTOF_DEL    ---     0.452     R18C23D.C1 to     R18C23D.F1 globalClockArea_toggler/SLICE_72
+ROUTE         2     1.783     R18C23D.F1 to     R21C20D.C1 globalClockArea_toggler/timeout_counter_willOverflowIfInc
+CTOF_DEL    ---     0.452     R21C20D.C1 to     R21C20D.F1 globalClockArea_toggler/SLICE_89
+ROUTE        12     2.130     R21C20D.F1 to    R19C22A.LSR globalClockArea_toggler/n69 (to osc_OSC)
                   --------
-                    8.732   (30.6% logic, 69.4% route), 6 logic levels.
+                    9.770   (27.3% logic, 72.7% route), 6 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path osc to globalClockArea_toggler/SLICE_2:
+      Source Clock Path osc to globalClockArea_toggler/SLICE_3:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     3.765        OSC.OSC to    R16C19C.CLK osc_OSC
+ROUTE        14     3.765        OSC.OSC to    R19C24D.CLK osc_OSC
                   --------
                     3.765   (0.0% logic, 100.0% route), 0 logic levels.
 
       Destination Clock Path osc to globalClockArea_toggler/SLICE_8:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     3.765        OSC.OSC to    R16C21D.CLK osc_OSC
+ROUTE        14     3.765        OSC.OSC to    R19C22A.CLK osc_OSC
                   --------
                     3.765   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Passed: The following path meets requirements by 73.733ns
+Passed: The following path meets requirements by 72.695ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_225__i4  (from osc_OSC +)
-   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_225__i4  (to osc_OSC +)
-                   FF                        globalClockArea_toggler/timeout_counter_value_225__i3
+   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_215__i21  (from osc_OSC +)
+   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_215__i10  (to osc_OSC +)
+                   FF                        globalClockArea_toggler/timeout_counter_value_215__i9
 
-   Delay:               8.732ns  (30.6% logic, 69.4% route), 6 logic levels.
+   Delay:               9.770ns  (27.3% logic, 72.7% route), 6 logic levels.
 
  Constraint Details:
 
-      8.732ns physical path delay globalClockArea_toggler/SLICE_2 to globalClockArea_toggler/SLICE_2 meets
+      9.770ns physical path delay globalClockArea_toggler/SLICE_3 to globalClockArea_toggler/SLICE_2 meets
      82.713ns delay constraint less
       0.000ns skew and
-      0.248ns LSR_SET requirement (totaling 82.465ns) by 73.733ns
+      0.248ns LSR_SET requirement (totaling 82.465ns) by 72.695ns
 
  Physical Path Details:
 
-      Data path globalClockArea_toggler/SLICE_2 to globalClockArea_toggler/SLICE_2:
+      Data path globalClockArea_toggler/SLICE_3 to globalClockArea_toggler/SLICE_2:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.409    R16C19C.CLK to     R16C19C.Q1 globalClockArea_toggler/SLICE_2 (from osc_OSC)
-ROUTE         2     1.187     R16C19C.Q1 to     R16C22B.B1 globalClockArea_toggler/timeout_counter_value_4
-CTOF_DEL    ---     0.452     R16C22B.B1 to     R16C22B.F1 SLICE_63
-ROUTE         1     0.839     R16C22B.F1 to     R15C21A.D0 globalClockArea_toggler/n1209
-CTOF_DEL    ---     0.452     R15C21A.D0 to     R15C21A.F0 globalClockArea_toggler/SLICE_94
-ROUTE         1     0.659     R15C21A.F0 to     R15C21D.C0 globalClockArea_toggler/n1217
-CTOF_DEL    ---     0.452     R15C21D.C0 to     R15C21D.F0 globalClockArea_toggler/SLICE_93
-ROUTE         1     0.839     R15C21D.F0 to     R14C20B.D1 globalClockArea_toggler/n12
-CTOF_DEL    ---     0.452     R14C20B.D1 to     R14C20B.F1 globalClockArea_toggler/SLICE_92
-ROUTE         2     0.392     R14C20B.F1 to     R14C20B.C0 globalClockArea_toggler/timeout_counter_willOverflowIfInc
-CTOF_DEL    ---     0.452     R14C20B.C0 to     R14C20B.F0 globalClockArea_toggler/SLICE_92
-ROUTE        12     2.147     R14C20B.F0 to    R16C19C.LSR globalClockArea_toggler/n70 (to osc_OSC)
+REG_DEL     ---     0.409    R19C24D.CLK to     R19C24D.Q0 globalClockArea_toggler/SLICE_3 (from osc_OSC)
+ROUTE         2     1.535     R19C24D.Q0 to     R18C23C.A0 globalClockArea_toggler/timeout_counter_value_21
+CTOF_DEL    ---     0.452     R18C23C.A0 to     R18C23C.F0 SLICE_57
+ROUTE         1     0.659     R18C23C.F0 to     R18C23A.C0 globalClockArea_toggler/n1370
+CTOF_DEL    ---     0.452     R18C23A.C0 to     R18C23A.F0 globalClockArea_toggler/SLICE_71
+ROUTE         1     0.610     R18C23A.F0 to     R18C23B.B1 globalClockArea_toggler/n26
+CTOF_DEL    ---     0.452     R18C23B.B1 to     R18C23B.F1 globalClockArea_toggler/SLICE_70
+ROUTE         1     0.384     R18C23B.F1 to     R18C23D.C1 globalClockArea_toggler/n32
+CTOF_DEL    ---     0.452     R18C23D.C1 to     R18C23D.F1 globalClockArea_toggler/SLICE_72
+ROUTE         2     1.783     R18C23D.F1 to     R21C20D.C1 globalClockArea_toggler/timeout_counter_willOverflowIfInc
+CTOF_DEL    ---     0.452     R21C20D.C1 to     R21C20D.F1 globalClockArea_toggler/SLICE_89
+ROUTE        12     2.130     R21C20D.F1 to    R19C23B.LSR globalClockArea_toggler/n69 (to osc_OSC)
                   --------
-                    8.732   (30.6% logic, 69.4% route), 6 logic levels.
+                    9.770   (27.3% logic, 72.7% route), 6 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path osc to globalClockArea_toggler/SLICE_2:
+      Source Clock Path osc to globalClockArea_toggler/SLICE_3:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     3.765        OSC.OSC to    R16C19C.CLK osc_OSC
+ROUTE        14     3.765        OSC.OSC to    R19C24D.CLK osc_OSC
                   --------
                     3.765   (0.0% logic, 100.0% route), 0 logic levels.
 
       Destination Clock Path osc to globalClockArea_toggler/SLICE_2:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     3.765        OSC.OSC to    R16C19C.CLK osc_OSC
+ROUTE        14     3.765        OSC.OSC to    R19C23B.CLK osc_OSC
                   --------
                     3.765   (0.0% logic, 100.0% route), 0 logic levels.
 
-Report:  111.359MHz is the maximum frequency for this preference.
+Report:   99.820MHz is the maximum frequency for this preference.
 
 <A name="ptwr_set_rs"></A><B><U><big>Report Summary</big></U></B>
 --------------
@@ -602,7 +602,7 @@ Report:  111.359MHz is the maximum frequency for this preference.
 Preference                              |   Constraint|       Actual|Levels
 ----------------------------------------------------------------------------
                                         |             |             |
-FREQUENCY NET "osc_OSC" 12.090000 MHz ; |   12.090 MHz|  111.359 MHz|   6  
+FREQUENCY NET "osc_OSC" 12.090000 MHz ; |   12.090 MHz|   99.820 MHz|   6  
                                         |             |             |
 ----------------------------------------------------------------------------
 
@@ -618,7 +618,7 @@ Found 2 clocks:
 Clock Domain: osc_OSC   Source: osc.OSC   Loads: 14
    Covered under: FREQUENCY NET "osc_OSC" 12.090000 MHz ;
 
-Clock Domain: io_jtag_tck_c   Source: io_jtag_tck.PAD   Loads: 57
+Clock Domain: io_jtag_tck_c   Source: io_jtag_tck.PAD   Loads: 46
    No transfer within this clock domain is found
 
 
@@ -628,11 +628,11 @@ Clock Domain: io_jtag_tck_c   Source: io_jtag_tck.PAD   Loads: 57
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 590 paths, 1 nets, and 123 connections (16.73% coverage)
+Constraints cover 590 paths, 1 nets, and 124 connections (19.44% coverage)
 
 --------------------------------------------------------------------------------
 <A name="Par_Twr_hold"></A><B><U><big>Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.0.396.4</big></U></B>
-Fri May 15 15:28:06 2020
+Tue May 19 10:24:01 2020
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -665,90 +665,90 @@ BLOCK RESETPATHS
 --------------------------------------------------------------------------------
 
 
-Passed: The following path meets requirements by 0.340ns
+Passed: The following path meets requirements by 0.336ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
    Source:         FF         Q              globalClockArea_toggler/timeout_state_21  (from osc_OSC +)
    Destination:    FF         Data in        globalClockArea_toggler/timeout_state_21  (to osc_OSC +)
 
-   Delay:               0.283ns  (47.0% logic, 53.0% route), 1 logic levels.
+   Delay:               0.279ns  (47.7% logic, 52.3% route), 1 logic levels.
 
  Constraint Details:
 
-      0.283ns physical path delay SLICE_69 to SLICE_69 meets
+      0.279ns physical path delay SLICE_61 to SLICE_61 meets
      -0.057ns LSR_HLD and
       0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.057ns) by 0.340ns
+      0.000ns skew requirement (totaling -0.057ns) by 0.336ns
 
  Physical Path Details:
 
-      Data path SLICE_69 to SLICE_69:
+      Data path SLICE_61 to SLICE_61:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R16C26C.CLK to     R16C26C.Q0 SLICE_69 (from osc_OSC)
-ROUTE         3     0.150     R16C26C.Q0 to    R16C26C.LSR globalClockArea_toggler/timeout_state (to osc_OSC)
+REG_DEL     ---     0.133    R21C23A.CLK to     R21C23A.Q0 SLICE_61 (from osc_OSC)
+ROUTE         3     0.146     R21C23A.Q0 to    R21C23A.LSR globalClockArea_toggler/timeout_state (to osc_OSC)
                   --------
-                    0.283   (47.0% logic, 53.0% route), 1 logic levels.
+                    0.279   (47.7% logic, 52.3% route), 1 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path osc to SLICE_69:
+      Source Clock Path osc to SLICE_61:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     1.443        OSC.OSC to    R16C26C.CLK osc_OSC
+ROUTE        14     1.425        OSC.OSC to    R21C23A.CLK osc_OSC
                   --------
-                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+                    1.425   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path osc to SLICE_69:
+      Destination Clock Path osc to SLICE_61:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     1.443        OSC.OSC to    R16C26C.CLK osc_OSC
+ROUTE        14     1.425        OSC.OSC to    R21C23A.CLK osc_OSC
                   --------
-                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+                    1.425   (0.0% logic, 100.0% route), 0 logic levels.
 
 
 Passed: The following path meets requirements by 0.379ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              globalClockArea_toggler/toggle_23  (from osc_OSC +)
-   Destination:    FF         Data in        globalClockArea_toggler/toggle_23  (to osc_OSC +)
+   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_215__i5  (from osc_OSC +)
+   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_215__i5  (to osc_OSC +)
 
    Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
 
  Constraint Details:
 
-      0.366ns physical path delay SLICE_70 to SLICE_70 meets
+      0.366ns physical path delay globalClockArea_toggler/SLICE_4 to globalClockArea_toggler/SLICE_4 meets
      -0.013ns DIN_HLD and
       0.000ns delay constraint less
       0.000ns skew requirement (totaling -0.013ns) by 0.379ns
 
  Physical Path Details:
 
-      Data path SLICE_70 to SLICE_70:
+      Data path globalClockArea_toggler/SLICE_4 to globalClockArea_toggler/SLICE_4:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R16C26B.CLK to     R16C26B.Q0 SLICE_70 (from osc_OSC)
-ROUTE         2     0.132     R16C26B.Q0 to     R16C26B.A0 globalClockArea_toggler_io_led
-CTOF_DEL    ---     0.101     R16C26B.A0 to     R16C26B.F0 SLICE_70
-ROUTE         1     0.000     R16C26B.F0 to    R16C26B.DI0 globalClockArea_toggler/io_led_N_57 (to osc_OSC)
+REG_DEL     ---     0.133    R19C22D.CLK to     R19C22D.Q0 globalClockArea_toggler/SLICE_4 (from osc_OSC)
+ROUTE         2     0.132     R19C22D.Q0 to     R19C22D.A0 globalClockArea_toggler/timeout_counter_value_5
+CTOF_DEL    ---     0.101     R19C22D.A0 to     R19C22D.F0 globalClockArea_toggler/SLICE_4
+ROUTE         1     0.000     R19C22D.F0 to    R19C22D.DI0 globalClockArea_toggler/n115 (to osc_OSC)
                   --------
                     0.366   (63.9% logic, 36.1% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path osc to SLICE_70:
+      Source Clock Path osc to globalClockArea_toggler/SLICE_4:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     1.443        OSC.OSC to    R16C26B.CLK osc_OSC
+ROUTE        14     1.443        OSC.OSC to    R19C22D.CLK osc_OSC
                   --------
                     1.443   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path osc to SLICE_70:
+      Destination Clock Path osc to globalClockArea_toggler/SLICE_4:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     1.443        OSC.OSC to    R16C26B.CLK osc_OSC
+ROUTE        14     1.443        OSC.OSC to    R19C22D.CLK osc_OSC
                   --------
                     1.443   (0.0% logic, 100.0% route), 0 logic levels.
 
@@ -757,8 +757,8 @@ Passed: The following path meets requirements by 0.379ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_225__i18  (from osc_OSC +)
-   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_225__i18  (to osc_OSC +)
+   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_215__i16  (from osc_OSC +)
+   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_215__i16  (to osc_OSC +)
 
    Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
 
@@ -774,10 +774,10 @@ Passed: The following path meets requirements by 0.379ns
       Data path globalClockArea_toggler/SLICE_1 to globalClockArea_toggler/SLICE_1:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R16C21B.CLK to     R16C21B.Q1 globalClockArea_toggler/SLICE_1 (from osc_OSC)
-ROUTE         2     0.132     R16C21B.Q1 to     R16C21B.A1 globalClockArea_toggler/timeout_counter_value_18
-CTOF_DEL    ---     0.101     R16C21B.A1 to     R16C21B.F1 globalClockArea_toggler/SLICE_1
-ROUTE         1     0.000     R16C21B.F1 to    R16C21B.DI1 globalClockArea_toggler/n102 (to osc_OSC)
+REG_DEL     ---     0.133    R19C24A.CLK to     R19C24A.Q1 globalClockArea_toggler/SLICE_1 (from osc_OSC)
+ROUTE         2     0.132     R19C24A.Q1 to     R19C24A.A1 globalClockArea_toggler/timeout_counter_value_16
+CTOF_DEL    ---     0.101     R19C24A.A1 to     R19C24A.F1 globalClockArea_toggler/SLICE_1
+ROUTE         1     0.000     R19C24A.F1 to    R19C24A.DI1 globalClockArea_toggler/n104 (to osc_OSC)
                   --------
                     0.366   (63.9% logic, 36.1% route), 2 logic levels.
 
@@ -786,14 +786,14 @@ ROUTE         1     0.000     R16C21B.F1 to    R16C21B.DI1 globalClockArea_toggl
       Source Clock Path osc to globalClockArea_toggler/SLICE_1:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     1.443        OSC.OSC to    R16C21B.CLK osc_OSC
+ROUTE        14     1.443        OSC.OSC to    R19C24A.CLK osc_OSC
                   --------
                     1.443   (0.0% logic, 100.0% route), 0 logic levels.
 
       Destination Clock Path osc to globalClockArea_toggler/SLICE_1:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     1.443        OSC.OSC to    R16C21B.CLK osc_OSC
+ROUTE        14     1.443        OSC.OSC to    R19C24A.CLK osc_OSC
                   --------
                     1.443   (0.0% logic, 100.0% route), 0 logic levels.
 
@@ -802,143 +802,8 @@ Passed: The following path meets requirements by 0.379ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_225__i20  (from osc_OSC +)
-   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_225__i20  (to osc_OSC +)
-
-   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
-
- Constraint Details:
-
-      0.366ns physical path delay globalClockArea_toggler/SLICE_11 to globalClockArea_toggler/SLICE_11 meets
-     -0.013ns DIN_HLD and
-      0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
-
- Physical Path Details:
-
-      Data path globalClockArea_toggler/SLICE_11 to globalClockArea_toggler/SLICE_11:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R16C21C.CLK to     R16C21C.Q1 globalClockArea_toggler/SLICE_11 (from osc_OSC)
-ROUTE         2     0.132     R16C21C.Q1 to     R16C21C.A1 globalClockArea_toggler/timeout_counter_value_20
-CTOF_DEL    ---     0.101     R16C21C.A1 to     R16C21C.F1 globalClockArea_toggler/SLICE_11
-ROUTE         1     0.000     R16C21C.F1 to    R16C21C.DI1 globalClockArea_toggler/n100 (to osc_OSC)
-                  --------
-                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path osc to globalClockArea_toggler/SLICE_11:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     1.443        OSC.OSC to    R16C21C.CLK osc_OSC
-                  --------
-                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path osc to globalClockArea_toggler/SLICE_11:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     1.443        OSC.OSC to    R16C21C.CLK osc_OSC
-                  --------
-                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Passed: The following path meets requirements by 0.379ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_225__i22  (from osc_OSC +)
-   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_225__i22  (to osc_OSC +)
-
-   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
-
- Constraint Details:
-
-      0.366ns physical path delay globalClockArea_toggler/SLICE_8 to globalClockArea_toggler/SLICE_8 meets
-     -0.013ns DIN_HLD and
-      0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
-
- Physical Path Details:
-
-      Data path globalClockArea_toggler/SLICE_8 to globalClockArea_toggler/SLICE_8:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R16C21D.CLK to     R16C21D.Q1 globalClockArea_toggler/SLICE_8 (from osc_OSC)
-ROUTE         2     0.132     R16C21D.Q1 to     R16C21D.A1 globalClockArea_toggler/timeout_counter_value_22
-CTOF_DEL    ---     0.101     R16C21D.A1 to     R16C21D.F1 globalClockArea_toggler/SLICE_8
-ROUTE         1     0.000     R16C21D.F1 to    R16C21D.DI1 globalClockArea_toggler/n98 (to osc_OSC)
-                  --------
-                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path osc to globalClockArea_toggler/SLICE_8:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     1.443        OSC.OSC to    R16C21D.CLK osc_OSC
-                  --------
-                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path osc to globalClockArea_toggler/SLICE_8:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     1.443        OSC.OSC to    R16C21D.CLK osc_OSC
-                  --------
-                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Passed: The following path meets requirements by 0.379ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_225__i4  (from osc_OSC +)
-   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_225__i4  (to osc_OSC +)
-
-   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
-
- Constraint Details:
-
-      0.366ns physical path delay globalClockArea_toggler/SLICE_2 to globalClockArea_toggler/SLICE_2 meets
-     -0.013ns DIN_HLD and
-      0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
-
- Physical Path Details:
-
-      Data path globalClockArea_toggler/SLICE_2 to globalClockArea_toggler/SLICE_2:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R16C19C.CLK to     R16C19C.Q1 globalClockArea_toggler/SLICE_2 (from osc_OSC)
-ROUTE         2     0.132     R16C19C.Q1 to     R16C19C.A1 globalClockArea_toggler/timeout_counter_value_4
-CTOF_DEL    ---     0.101     R16C19C.A1 to     R16C19C.F1 globalClockArea_toggler/SLICE_2
-ROUTE         1     0.000     R16C19C.F1 to    R16C19C.DI1 globalClockArea_toggler/n116 (to osc_OSC)
-                  --------
-                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path osc to globalClockArea_toggler/SLICE_2:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     1.443        OSC.OSC to    R16C19C.CLK osc_OSC
-                  --------
-                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path osc to globalClockArea_toggler/SLICE_2:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     1.443        OSC.OSC to    R16C19C.CLK osc_OSC
-                  --------
-                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Passed: The following path meets requirements by 0.379ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_225__i6  (from osc_OSC +)
-   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_225__i6  (to osc_OSC +)
+   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_215__i1  (from osc_OSC +)
+   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_215__i1  (to osc_OSC +)
 
    Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
 
@@ -954,10 +819,10 @@ Passed: The following path meets requirements by 0.379ns
       Data path globalClockArea_toggler/SLICE_0 to globalClockArea_toggler/SLICE_0:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R16C19D.CLK to     R16C19D.Q1 globalClockArea_toggler/SLICE_0 (from osc_OSC)
-ROUTE         2     0.132     R16C19D.Q1 to     R16C19D.A1 globalClockArea_toggler/timeout_counter_value_6
-CTOF_DEL    ---     0.101     R16C19D.A1 to     R16C19D.F1 globalClockArea_toggler/SLICE_0
-ROUTE         1     0.000     R16C19D.F1 to    R16C19D.DI1 globalClockArea_toggler/n114 (to osc_OSC)
+REG_DEL     ---     0.133    R19C22B.CLK to     R19C22B.Q0 globalClockArea_toggler/SLICE_0 (from osc_OSC)
+ROUTE         2     0.132     R19C22B.Q0 to     R19C22B.A0 globalClockArea_toggler/timeout_counter_value_1
+CTOF_DEL    ---     0.101     R19C22B.A0 to     R19C22B.F0 globalClockArea_toggler/SLICE_0
+ROUTE         1     0.000     R19C22B.F0 to    R19C22B.DI0 globalClockArea_toggler/n119 (to osc_OSC)
                   --------
                     0.366   (63.9% logic, 36.1% route), 2 logic levels.
 
@@ -966,14 +831,14 @@ ROUTE         1     0.000     R16C19D.F1 to    R16C19D.DI1 globalClockArea_toggl
       Source Clock Path osc to globalClockArea_toggler/SLICE_0:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     1.443        OSC.OSC to    R16C19D.CLK osc_OSC
+ROUTE        14     1.443        OSC.OSC to    R19C22B.CLK osc_OSC
                   --------
                     1.443   (0.0% logic, 100.0% route), 0 logic levels.
 
       Destination Clock Path osc to globalClockArea_toggler/SLICE_0:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     1.443        OSC.OSC to    R16C19D.CLK osc_OSC
+ROUTE        14     1.443        OSC.OSC to    R19C22B.CLK osc_OSC
                   --------
                     1.443   (0.0% logic, 100.0% route), 0 logic levels.
 
@@ -982,43 +847,43 @@ Passed: The following path meets requirements by 0.379ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_225__i8  (from osc_OSC +)
-   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_225__i8  (to osc_OSC +)
+   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_215__i9  (from osc_OSC +)
+   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_215__i9  (to osc_OSC +)
 
    Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
 
  Constraint Details:
 
-      0.366ns physical path delay globalClockArea_toggler/SLICE_9 to globalClockArea_toggler/SLICE_9 meets
+      0.366ns physical path delay globalClockArea_toggler/SLICE_2 to globalClockArea_toggler/SLICE_2 meets
      -0.013ns DIN_HLD and
       0.000ns delay constraint less
       0.000ns skew requirement (totaling -0.013ns) by 0.379ns
 
  Physical Path Details:
 
-      Data path globalClockArea_toggler/SLICE_9 to globalClockArea_toggler/SLICE_9:
+      Data path globalClockArea_toggler/SLICE_2 to globalClockArea_toggler/SLICE_2:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R16C20A.CLK to     R16C20A.Q1 globalClockArea_toggler/SLICE_9 (from osc_OSC)
-ROUTE         2     0.132     R16C20A.Q1 to     R16C20A.A1 globalClockArea_toggler/timeout_counter_value_8
-CTOF_DEL    ---     0.101     R16C20A.A1 to     R16C20A.F1 globalClockArea_toggler/SLICE_9
-ROUTE         1     0.000     R16C20A.F1 to    R16C20A.DI1 globalClockArea_toggler/n112 (to osc_OSC)
+REG_DEL     ---     0.133    R19C23B.CLK to     R19C23B.Q0 globalClockArea_toggler/SLICE_2 (from osc_OSC)
+ROUTE         2     0.132     R19C23B.Q0 to     R19C23B.A0 globalClockArea_toggler/timeout_counter_value_9
+CTOF_DEL    ---     0.101     R19C23B.A0 to     R19C23B.F0 globalClockArea_toggler/SLICE_2
+ROUTE         1     0.000     R19C23B.F0 to    R19C23B.DI0 globalClockArea_toggler/n111 (to osc_OSC)
                   --------
                     0.366   (63.9% logic, 36.1% route), 2 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path osc to globalClockArea_toggler/SLICE_9:
+      Source Clock Path osc to globalClockArea_toggler/SLICE_2:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     1.443        OSC.OSC to    R16C20A.CLK osc_OSC
+ROUTE        14     1.443        OSC.OSC to    R19C23B.CLK osc_OSC
                   --------
                     1.443   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path osc to globalClockArea_toggler/SLICE_9:
+      Destination Clock Path osc to globalClockArea_toggler/SLICE_2:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     1.443        OSC.OSC to    R16C20A.CLK osc_OSC
+ROUTE        14     1.443        OSC.OSC to    R19C23B.CLK osc_OSC
                   --------
                     1.443   (0.0% logic, 100.0% route), 0 logic levels.
 
@@ -1027,8 +892,53 @@ Passed: The following path meets requirements by 0.379ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_225__i10  (from osc_OSC +)
-   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_225__i10  (to osc_OSC +)
+   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_215__i12  (from osc_OSC +)
+   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_215__i12  (to osc_OSC +)
+
+   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.366ns physical path delay globalClockArea_toggler/SLICE_11 to globalClockArea_toggler/SLICE_11 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+
+ Physical Path Details:
+
+      Data path globalClockArea_toggler/SLICE_11 to globalClockArea_toggler/SLICE_11:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R19C23C.CLK to     R19C23C.Q1 globalClockArea_toggler/SLICE_11 (from osc_OSC)
+ROUTE         2     0.132     R19C23C.Q1 to     R19C23C.A1 globalClockArea_toggler/timeout_counter_value_12
+CTOF_DEL    ---     0.101     R19C23C.A1 to     R19C23C.F1 globalClockArea_toggler/SLICE_11
+ROUTE         1     0.000     R19C23C.F1 to    R19C23C.DI1 globalClockArea_toggler/n108 (to osc_OSC)
+                  --------
+                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path osc to globalClockArea_toggler/SLICE_11:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        14     1.443        OSC.OSC to    R19C23C.CLK osc_OSC
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path osc to globalClockArea_toggler/SLICE_11:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        14     1.443        OSC.OSC to    R19C23C.CLK osc_OSC
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.379ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_215__i20  (from osc_OSC +)
+   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_215__i20  (to osc_OSC +)
 
    Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
 
@@ -1044,10 +954,10 @@ Passed: The following path meets requirements by 0.379ns
       Data path globalClockArea_toggler/SLICE_7 to globalClockArea_toggler/SLICE_7:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R16C20B.CLK to     R16C20B.Q1 globalClockArea_toggler/SLICE_7 (from osc_OSC)
-ROUTE         2     0.132     R16C20B.Q1 to     R16C20B.A1 globalClockArea_toggler/timeout_counter_value_10
-CTOF_DEL    ---     0.101     R16C20B.A1 to     R16C20B.F1 globalClockArea_toggler/SLICE_7
-ROUTE         1     0.000     R16C20B.F1 to    R16C20B.DI1 globalClockArea_toggler/n110 (to osc_OSC)
+REG_DEL     ---     0.133    R19C24C.CLK to     R19C24C.Q1 globalClockArea_toggler/SLICE_7 (from osc_OSC)
+ROUTE         2     0.132     R19C24C.Q1 to     R19C24C.A1 globalClockArea_toggler/timeout_counter_value_20
+CTOF_DEL    ---     0.101     R19C24C.A1 to     R19C24C.F1 globalClockArea_toggler/SLICE_7
+ROUTE         1     0.000     R19C24C.F1 to    R19C24C.DI1 globalClockArea_toggler/n100 (to osc_OSC)
                   --------
                     0.366   (63.9% logic, 36.1% route), 2 logic levels.
 
@@ -1056,14 +966,14 @@ ROUTE         1     0.000     R16C20B.F1 to    R16C20B.DI1 globalClockArea_toggl
       Source Clock Path osc to globalClockArea_toggler/SLICE_7:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     1.443        OSC.OSC to    R16C20B.CLK osc_OSC
+ROUTE        14     1.443        OSC.OSC to    R19C24C.CLK osc_OSC
                   --------
                     1.443   (0.0% logic, 100.0% route), 0 logic levels.
 
       Destination Clock Path osc to globalClockArea_toggler/SLICE_7:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     1.443        OSC.OSC to    R16C20B.CLK osc_OSC
+ROUTE        14     1.443        OSC.OSC to    R19C24C.CLK osc_OSC
                   --------
                     1.443   (0.0% logic, 100.0% route), 0 logic levels.
 
@@ -1072,8 +982,53 @@ Passed: The following path meets requirements by 0.379ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_225__i14  (from osc_OSC +)
-   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_225__i14  (to osc_OSC +)
+   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_215__i21  (from osc_OSC +)
+   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_215__i21  (to osc_OSC +)
+
+   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.366ns physical path delay globalClockArea_toggler/SLICE_3 to globalClockArea_toggler/SLICE_3 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+
+ Physical Path Details:
+
+      Data path globalClockArea_toggler/SLICE_3 to globalClockArea_toggler/SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R19C24D.CLK to     R19C24D.Q0 globalClockArea_toggler/SLICE_3 (from osc_OSC)
+ROUTE         2     0.132     R19C24D.Q0 to     R19C24D.A0 globalClockArea_toggler/timeout_counter_value_21
+CTOF_DEL    ---     0.101     R19C24D.A0 to     R19C24D.F0 globalClockArea_toggler/SLICE_3
+ROUTE         1     0.000     R19C24D.F0 to    R19C24D.DI0 globalClockArea_toggler/n99 (to osc_OSC)
+                  --------
+                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path osc to globalClockArea_toggler/SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        14     1.443        OSC.OSC to    R19C24D.CLK osc_OSC
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path osc to globalClockArea_toggler/SLICE_3:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        14     1.443        OSC.OSC to    R19C24D.CLK osc_OSC
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.379ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_215__i18  (from osc_OSC +)
+   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_215__i18  (to osc_OSC +)
 
    Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
 
@@ -1089,10 +1044,10 @@ Passed: The following path meets requirements by 0.379ns
       Data path globalClockArea_toggler/SLICE_10 to globalClockArea_toggler/SLICE_10:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133    R16C20D.CLK to     R16C20D.Q1 globalClockArea_toggler/SLICE_10 (from osc_OSC)
-ROUTE         2     0.132     R16C20D.Q1 to     R16C20D.A1 globalClockArea_toggler/timeout_counter_value_14
-CTOF_DEL    ---     0.101     R16C20D.A1 to     R16C20D.F1 globalClockArea_toggler/SLICE_10
-ROUTE         1     0.000     R16C20D.F1 to    R16C20D.DI1 globalClockArea_toggler/n106 (to osc_OSC)
+REG_DEL     ---     0.133    R19C24B.CLK to     R19C24B.Q1 globalClockArea_toggler/SLICE_10 (from osc_OSC)
+ROUTE         2     0.132     R19C24B.Q1 to     R19C24B.A1 globalClockArea_toggler/timeout_counter_value_18
+CTOF_DEL    ---     0.101     R19C24B.A1 to     R19C24B.F1 globalClockArea_toggler/SLICE_10
+ROUTE         1     0.000     R19C24B.F1 to    R19C24B.DI1 globalClockArea_toggler/n102 (to osc_OSC)
                   --------
                     0.366   (63.9% logic, 36.1% route), 2 logic levels.
 
@@ -1101,14 +1056,59 @@ ROUTE         1     0.000     R16C20D.F1 to    R16C20D.DI1 globalClockArea_toggl
       Source Clock Path osc to globalClockArea_toggler/SLICE_10:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     1.443        OSC.OSC to    R16C20D.CLK osc_OSC
+ROUTE        14     1.443        OSC.OSC to    R19C24B.CLK osc_OSC
                   --------
                     1.443   (0.0% logic, 100.0% route), 0 logic levels.
 
       Destination Clock Path osc to globalClockArea_toggler/SLICE_10:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        14     1.443        OSC.OSC to    R16C20D.CLK osc_OSC
+ROUTE        14     1.443        OSC.OSC to    R19C24B.CLK osc_OSC
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.379ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              globalClockArea_toggler/timeout_counter_value_215__i7  (from osc_OSC +)
+   Destination:    FF         Data in        globalClockArea_toggler/timeout_counter_value_215__i7  (to osc_OSC +)
+
+   Delay:               0.366ns  (63.9% logic, 36.1% route), 2 logic levels.
+
+ Constraint Details:
+
+      0.366ns physical path delay globalClockArea_toggler/SLICE_5 to globalClockArea_toggler/SLICE_5 meets
+     -0.013ns DIN_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.013ns) by 0.379ns
+
+ Physical Path Details:
+
+      Data path globalClockArea_toggler/SLICE_5 to globalClockArea_toggler/SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133    R19C23A.CLK to     R19C23A.Q0 globalClockArea_toggler/SLICE_5 (from osc_OSC)
+ROUTE         2     0.132     R19C23A.Q0 to     R19C23A.A0 globalClockArea_toggler/timeout_counter_value_7
+CTOF_DEL    ---     0.101     R19C23A.A0 to     R19C23A.F0 globalClockArea_toggler/SLICE_5
+ROUTE         1     0.000     R19C23A.F0 to    R19C23A.DI0 globalClockArea_toggler/n113 (to osc_OSC)
+                  --------
+                    0.366   (63.9% logic, 36.1% route), 2 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path osc to globalClockArea_toggler/SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        14     1.443        OSC.OSC to    R19C23A.CLK osc_OSC
+                  --------
+                    1.443   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path osc to globalClockArea_toggler/SLICE_5:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        14     1.443        OSC.OSC to    R19C23A.CLK osc_OSC
                   --------
                     1.443   (0.0% logic, 100.0% route), 0 logic levels.
 
@@ -1118,7 +1118,7 @@ ROUTE        14     1.443        OSC.OSC to    R16C20D.CLK osc_OSC
 Preference(MIN Delays)                  |   Constraint|       Actual|Levels
 ----------------------------------------------------------------------------
                                         |             |             |
-FREQUENCY NET "osc_OSC" 12.090000 MHz ; |     0.000 ns|     0.340 ns|   1  
+FREQUENCY NET "osc_OSC" 12.090000 MHz ; |     0.000 ns|     0.336 ns|   1  
                                         |             |             |
 ----------------------------------------------------------------------------
 
@@ -1134,7 +1134,7 @@ Found 2 clocks:
 Clock Domain: osc_OSC   Source: osc.OSC   Loads: 14
    Covered under: FREQUENCY NET "osc_OSC" 12.090000 MHz ;
 
-Clock Domain: io_jtag_tck_c   Source: io_jtag_tck.PAD   Loads: 57
+Clock Domain: io_jtag_tck_c   Source: io_jtag_tck.PAD   Loads: 46
    No transfer within this clock domain is found
 
 
@@ -1144,7 +1144,7 @@ Clock Domain: io_jtag_tck_c   Source: io_jtag_tck.PAD   Loads: 57
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 590 paths, 1 nets, and 123 connections (16.73% coverage)
+Constraints cover 590 paths, 1 nets, and 124 connections (19.44% coverage)
 
 
 

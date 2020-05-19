@@ -38,11 +38,20 @@ object MyTopLevelSim {
       dut.io.jtag.tdi #= false
       dut.io.jtag.tms #= false
 
-      // Loopback for port JTAG1
+      // 8 bit shift register port for JTAG1
       fork {
+        var data = 0
         while(true) {
-          dut.io.jtag1.tdo #= dut.io.jtag1.tdi.toBoolean
-          dut.ctrl.clockDomain.waitSampling(1)
+          // TDI is sampled on the rising clock edge
+          dut.ctrl.clockDomain.waitRisingEdge(1)
+          if (dut.io.jtag1.tdi.toBoolean)
+          {
+            data |= 1 << 8
+          }
+          // TDO is updated on the falling clock edge
+          dut.ctrl.clockDomain.waitFallingEdge(1)
+          dut.io.jtag1.tdo #= ((data & 1) == 1)
+          data = data >> 1
         }
       }
 
@@ -109,14 +118,19 @@ object MyTopLevelSim {
       tms_shift("1100")
 
       // Bypass
-      shiftOut = shift_register(0xF, 8)
+      shiftOut = shift_register(0xFF, 8)
       assert(shiftOut == 0x4, f"Unexpected IR: $shiftOut%X")
       
       // Exit IR -> Update IR -> IDLE
       tms_shift("10")
 
+      shift(0x00, 8)
       shiftOut = shift(0xFF, 8)
       assert(shiftOut == 0xFE, f"Unexpected bypass: $shiftOut%X")
+
+      // Test bypass (a single clock delay)
+      shiftOut = shift(0x13, 8 + 1) >> 1
+      assert(shiftOut == 0x13, f"Unexpected idle pass through: $shiftOut%X")
 
       // Switch to shift IR
       tms_shift("1100")
@@ -124,35 +138,39 @@ object MyTopLevelSim {
       // Confirm IR is 8 bits
       // Flush with 1s
       shiftOut = shift(0xFFFF, 16)
-
       // Flush with 0s
       shiftOut = shift(0x0, 16)
       assert(shiftOut == 0x00FF, f"Unexpected IR: $shiftOut%X")
 
-      // Shift 8 into IR
-      shiftOut = shift_register(8, 8)
+      var ledState = dut.io.leds.toInt
+      assert(ledState.&(2) == 0, f"Unexpected LED: $ledState%X")
+      // ENABLE JTAG 1
+      // Shift 9 into IR
+      shiftOut = shift_register(9, 8)
 
+      ledState = dut.io.leds.toInt
+      assert(ledState.&(2) == 0, f"Unexpected LED: $ledState%X")
       // Exit IR -> Update IR -> IDLE
       tms_shift("10")
+      dut.ctrl.clockDomain.waitSampling(2)
 
-      // Test bypass
-      shiftOut = shift(0x13, 8 + 1)
-      assert(shiftOut == 0x13 << 1, f"Unexpected idle pass through: $shiftOut%X")
+      ledState = dut.io.leds.toInt
+      assert(ledState.&(2) == 2, f"Unexpected LED: $ledState%X")
 
-      // Switch to shift DR
-      tms_shift("100")
+      // // Switch to shift DR
+      // tms_shift("100")
 
-      // Read TDO out of DR (chain reg)
-      shiftOut = shift_register(0x1, 8)
-      //assert(shiftOut == 0, f"Unexpected chain value: $shiftOut%X")
+      // // Read TDO out of DR (chain reg)
+      // shiftOut = shift_register(0x1, 8)
+      // //assert(shiftOut == 0, f"Unexpected chain value: $shiftOut%X")
 
-      // Exit DR -> Update DR -> IDLE
-      tms_shift("10")
+      //  // Exit DR -> Update DR -> IDLE
+      //  tms_shift("10")
 
-      // Test Chaining in bypass
+      // Test Chaining in bypass (a 2 clock delay)
       // The loopback is a delay, and there's a buffer on the inside that is also a delay
-      shiftOut = shift(0x13, 8 + 3)
-      assert(shiftOut == 0x13 << 3, f"Unexpected idle pass through with jtag1: $shiftOut%X")
+      shiftOut = shift(0xA1, 8 + 11) >> 11
+      assert(shiftOut == 0xA1, f"Unexpected idle pass through with jtag1: $shiftOut%X")
 
     }
   }

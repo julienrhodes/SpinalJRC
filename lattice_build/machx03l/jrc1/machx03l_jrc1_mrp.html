@@ -23,19 +23,19 @@ Target Vendor:  LATTICE
 Target Device:  LCMXO3L-6900CCABGA256
 Target Performance:   5
 Mapper:  xo3c00a,  version:  Diamond (64-bit) 3.11.0.396.4
-Mapped on:  05/15/20  15:27:56
+Mapped on:  05/19/20  10:23:51
 
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of registers:    118 out of  7485 (2%)
-      PFU registers:          118 out of  6864 (2%)
+   Number of registers:     99 out of  7485 (1%)
+      PFU registers:           99 out of  6864 (1%)
       PIO registers:            0 out of   621 (0%)
-   Number of SLICEs:        75 out of  3432 (2%)
-      SLICEs as Logic/ROM:     75 out of  3432 (2%)
+   Number of SLICEs:        67 out of  3432 (2%)
+      SLICEs as Logic/ROM:     67 out of  3432 (2%)
       SLICEs as RAM:            0 out of  2574 (0%)
       SLICEs as Carry:         12 out of  3432 (0%)
-   Number of LUT4s:        148 out of  6864 (2%)
-      Number used as logic LUTs:        124
+   Number of LUT4s:        133 out of  6864 (2%)
+      Number used as logic LUTs:        109
       Number used as distributed RAM:     0
       Number used as ripple logic:       24
       Number used as shift registers:     0
@@ -66,40 +66,35 @@ Mapped on:  05/15/20  15:27:56
      ripple logic.
    Number of clocks:  2
      Net osc_OSC: 14 loads, 14 rising, 0 falling (Driver: osc )
-     Net io_jtag_tck_c: 55 loads, 54 rising, 1 falling (Driver: PIO io_jtag_tck
+     Net io_jtag_tck_c: 44 loads, 42 rising, 2 falling (Driver: PIO io_jtag_tck
 
      )
-   Number of Clock Enables:  9
-     Net globalClockArea_jtag/io_jtag_tck_c_enable_12: 4 loads, 4 LSLICEs
-     Net globalClockArea_jtag/_zz_10: 1 loads, 1 LSLICEs
-     Net globalClockArea_jtag/io_jtag_tck_c_enable_37: 4 loads, 4 LSLICEs
-     Net globalClockArea_jtag/io_jtag_tck_c_enable_67: 5 loads, 5 LSLICEs
-     Net globalClockArea_jtag/io_jtag_tck_c_enable_63: 2 loads, 2 LSLICEs
-     Net globalClockArea_jtag/io_jtag_tck_c_enable_66: 18 loads, 18 LSLICEs
-     Net globalClockArea_jtag/io_jtag_tck_c_enable_31: 1 loads, 1 LSLICEs
-     Net globalClockArea_jtag/io_jtag_tck_c_enable_60: 4 loads, 4 LSLICEs
+   Number of Clock Enables:  7
      Net globalClockArea_toggler/timeout_counter_willOverflowIfInc: 1 loads, 1
      LSLICEs
-   Number of LSRs:  7
-     Net globalClockArea_jtag/n1475: 5 loads, 5 LSLICEs
-     Net globalClockArea_jtag/n550: 2 loads, 2 LSLICEs
-     Net globalClockArea_jtag/n557: 9 loads, 9 LSLICEs
-     Net globalClockArea_jtag/n553: 2 loads, 2 LSLICEs
-     Net globalClockArea_jtag/n286: 3 loads, 3 LSLICEs
-     Net globalClockArea_toggler/n70: 12 loads, 12 LSLICEs
+     Net globalClockArea_jtag/io_jtag_tck_c_enable_31: 4 loads, 4 LSLICEs
+     Net globalClockArea_jtag/io_jtag_tck_c_enable_25: 4 loads, 4 LSLICEs
+     Net globalClockArea_jtag/io_jtag_tck_c_enable_18: 1 loads, 1 LSLICEs
+     Net globalClockArea_jtag/io_jtag_tck_c_enable_57: 19 loads, 19 LSLICEs
+     Net globalClockArea_jtag/io_jtag_tck_c_enable_38: 4 loads, 4 LSLICEs
+     Net globalClockArea_jtag/io_jtag_tck_c_enable_58: 1 loads, 1 LSLICEs
+   Number of LSRs:  4
+     Net globalClockArea_toggler/n69: 12 loads, 12 LSLICEs
      Net globalClockArea_toggler/timeout_state: 1 loads, 1 LSLICEs
+     Net globalClockArea_jtag/n1574: 8 loads, 8 LSLICEs
+     Net globalClockArea_jtag/n502: 10 loads, 10 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net globalClockArea_jtag/ctrl_tap_fsm_state_0: 32 loads
-     Net globalClockArea_jtag/ctrl_tap_fsm_state_2: 30 loads
-     Net globalClockArea_jtag/ctrl_tap_fsm_state_1: 24 loads
-     Net globalClockArea_jtag/n979: 24 loads
-     Net globalClockArea_jtag/ctrl_tap_fsm_state_3: 23 loads
-     Net globalClockArea_jtag/io_jtag_tck_c_enable_66: 18 loads
-     Net globalClockArea_jtag/n1494: 16 loads
-     Net globalClockArea_jtag/n1480: 13 loads
-     Net globalClockArea_jtag/n1489: 13 loads
-     Net globalClockArea_toggler/n70: 12 loads
+     Net globalClockArea_jtag/ctrl_tap_fsm_state_0: 39 loads
+     Net globalClockArea_jtag/ctrl_tap_fsm_state_2: 27 loads
+     Net globalClockArea_jtag/n1578: 21 loads
+     Net globalClockArea_jtag/ctrl_tap_fsm_state_1: 20 loads
+     Net globalClockArea_jtag/ctrl_tap_fsm_state_3: 20 loads
+     Net globalClockArea_jtag/io_jtag_tck_c_enable_57: 19 loads
+     Net globalClockArea_jtag/n1577: 15 loads
+     Net globalClockArea_toggler/n69: 12 loads
+     Net ctrl_tap_fsm_stateNext_3__N_78_c_3: 10 loads
+     Net globalClockArea_jtag/n502: 10 loads
 
 
 
@@ -127,20 +122,20 @@ WARNING - map: The JTAG port has been disabled in this project and JTAG pins
 | IO Name             | Direction | Levelmode | IO         |
 |                     |           |  IO_TYPE  | Register   |
 +---------------------+-----------+-----------+------------+
-
 | io_jtag_tdo         | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| io_jtag1_tms        | OUTPUT    | LVCMOS25  |            |
+| io_jtag1_tms        | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| io_jtag1_tdi        | OUTPUT    | LVCMOS25  |            |
+| io_jtag1_tdi        | OUTPUT    | LVCMOS33  |            |
+
 +---------------------+-----------+-----------+------------+
-| io_jtag1_tck        | OUTPUT    | LVCMOS25  |            |
+| io_jtag1_tck        | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| io_jtag2_tms        | OUTPUT    | LVCMOS25  |            |
+| io_jtag2_tms        | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| io_jtag2_tdi        | OUTPUT    | LVCMOS25  |            |
+| io_jtag2_tdi        | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| io_jtag2_tck        | OUTPUT    | LVCMOS25  |            |
+| io_jtag2_tck        | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | io_leds[7]          | OUTPUT    | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
@@ -166,30 +161,30 @@ WARNING - map: The JTAG port has been disabled in this project and JTAG pins
 +---------------------+-----------+-----------+------------+
 | io_jtag_tck         | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| io_jtag1_tdo        | INPUT     | LVCMOS25  |            |
+| io_jtag1_tdo        | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| io_jtag2_tdo        | INPUT     | LVCMOS25  |            |
+| io_jtag2_tdo        | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 
 
 
 <A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
 
-Block i1263 undriven or does not drive anything - clipped.
-Signal io_jtag_tck_N_278 was merged into signal io_jtag_tck_c
+Block i1391 undriven or does not drive anything - clipped.
+Signal io_jtag_tck_N_264 was merged into signal io_jtag_tck_c
 Signal GND_net undriven or does not drive anything - clipped.
 Signal VCC_net undriven or does not drive anything - clipped.
-Signal globalClockArea_toggler/timeout_counter_value_225_add_4_23/CO undriven or
+Signal globalClockArea_toggler/timeout_counter_value_215_add_4_1/S0 undriven or
      does not drive anything - clipped.
-Signal globalClockArea_toggler/timeout_counter_value_225_add_4_1/S0 undriven or
+Signal globalClockArea_toggler/timeout_counter_value_215_add_4_1/CI undriven or
      does not drive anything - clipped.
-Signal globalClockArea_toggler/timeout_counter_value_225_add_4_1/CI undriven or
+Signal globalClockArea_toggler/timeout_counter_value_215_add_4_23/CO undriven or
      does not drive anything - clipped.
-
-Block i1265 was optimized away.
+Block i1393 was optimized away.
 Block i1 was optimized away.
 
      
+
 
 OSC Summary
 -----------
@@ -232,24 +227,47 @@ GSR Component:
      not respond to the reset signal 'io_reset_c' via the GSR component.
 
      Type and number of components of the type: 
-   Register = 80 
+   Register = 73 
 
      Type and instance name of component: 
-   Register : globalClockArea_jtag/ctrl_tap_instruction_i6
-   Register : globalClockArea_jtag/ctrl_buf2_103
-   Register : globalClockArea_jtag/ctrl_tap_fsm_state_i0
+   Register : globalClockArea_toggler/toggle_23
+   Register : globalClockArea_jtag/ctrl_tap_fsm_state_i3
+   Register : globalClockArea_jtag/ctrl_tap_fsm_state_i2
+   Register : globalClockArea_jtag/ctrl_tap_fsm_state_i1
    Register : globalClockArea_jtag/ctrl_tap_instructionShift_i0
-   Register : globalClockArea_jtag/ctrl_tap_bypass_105
+   Register : globalClockArea_jtag/ctrl_tap_bypass_91
    Register : globalClockArea_jtag/ctrl_tap_instruction_i0
    Register : globalClockArea_jtag/_zz_6_i0_i0
-   Register : globalClockArea_jtag/_zz_8_i0_i0
-   Register : globalClockArea_jtag/ctrl_tap_tdoUnbufferd_regNext_112
-   Register : globalClockArea_jtag/ctrl_tap_instruction_i5
-   Register : globalClockArea_jtag/ctrl_tap_instruction_i7
+   Register : globalClockArea_jtag/_zz_3_i0_i0
+   Register : globalClockArea_jtag/ctrl_tap_tdoUnbufferd_regNext_97
+   Register : globalClockArea_jtag/ctrl_tap_fsm_state_i0
+   Register : globalClockArea_jtag/io_jtag1_tdo_regNext_99
+   Register : globalClockArea_jtag/io_jtag2_tdo_regNext_100
+   Register : globalClockArea_jtag/_zz_3_i0_i30
+   Register : globalClockArea_jtag/_zz_5_i0_i0
+   Register : globalClockArea_jtag/_zz_3_i0_i24
+   Register : globalClockArea_jtag/_zz_3_i0_i21
+   Register : globalClockArea_jtag/_zz_3_i0_i20
 
+   Register : globalClockArea_jtag/_zz_3_i0_i19
+   Register : globalClockArea_jtag/_zz_3_i0_i17
+   Register : globalClockArea_jtag/_zz_3_i0_i16
+   Register : globalClockArea_jtag/_zz_3_i0_i15
+   Register : globalClockArea_jtag/_zz_3_i0_i14
+   Register : globalClockArea_jtag/_zz_3_i0_i12
+   Register : globalClockArea_jtag/_zz_3_i0_i6
+   Register : globalClockArea_jtag/_zz_3_i0_i1
+   Register : globalClockArea_jtag/_zz_6_i0_i7
+   Register : globalClockArea_jtag/_zz_6_i0_i6
+   Register : globalClockArea_jtag/_zz_6_i0_i5
+   Register : globalClockArea_jtag/_zz_6_i0_i4
+   Register : globalClockArea_jtag/_zz_6_i0_i3
+   Register : globalClockArea_jtag/_zz_6_i0_i2
+   Register : globalClockArea_jtag/_zz_6_i0_i1
+   Register : globalClockArea_jtag/ctrl_tap_instruction_i7
+   Register : globalClockArea_jtag/ctrl_tap_instruction_i6
+   Register : globalClockArea_jtag/ctrl_tap_instruction_i5
    Register : globalClockArea_jtag/ctrl_tap_instruction_i4
-   Register : globalClockArea_jtag/_zz_3_i0_i5
-   Register : globalClockArea_jtag/_zz_8_i0_i3
    Register : globalClockArea_jtag/ctrl_tap_instruction_i3
    Register : globalClockArea_jtag/ctrl_tap_instruction_i1
    Register : globalClockArea_jtag/ctrl_tap_instructionShift_i7
@@ -259,64 +277,34 @@ GSR Component:
    Register : globalClockArea_jtag/ctrl_tap_instructionShift_i3
    Register : globalClockArea_jtag/ctrl_tap_instructionShift_i2
    Register : globalClockArea_jtag/ctrl_tap_instructionShift_i1
-   Register : globalClockArea_jtag/ctrl_tap_fsm_state_i3
-   Register : globalClockArea_jtag/ctrl_tap_fsm_state_i2
-   Register : globalClockArea_jtag/ctrl_tap_fsm_state_i1
-   Register : globalClockArea_jtag/_zz_3_i0_i0
-   Register : globalClockArea_jtag/_zz_3_i0_i4
-   Register : globalClockArea_jtag/_zz_3_i0_i3
-   Register : globalClockArea_jtag/_zz_3_i0_i2
-   Register : globalClockArea_jtag/_zz_8_i0_i6
-   Register : globalClockArea_jtag/_zz_8_i0_i5
-   Register : globalClockArea_jtag/_zz_5_i0_i0
-   Register : globalClockArea_jtag/_zz_3_i0_i29
-   Register : globalClockArea_jtag/_zz_3_i0_i28
-   Register : globalClockArea_jtag/_zz_3_i0_i27
-   Register : globalClockArea_jtag/_zz_3_i0_i26
-   Register : globalClockArea_jtag/_zz_6_i0_i1
-   Register : globalClockArea_jtag/_zz_3_i0_i25
-   Register : globalClockArea_jtag/_zz_3_i0_i23
-   Register : globalClockArea_jtag/_zz_3_i0_i22
-   Register : globalClockArea_jtag/_zz_3_i0_i18
-   Register : globalClockArea_jtag/_zz_3_i0_i13
-   Register : globalClockArea_jtag/ctrl_tap_instruction_i2
-   Register : globalClockArea_jtag/_zz_6_i0_i2
-   Register : globalClockArea_jtag/_zz_6_i0_i3
-   Register : globalClockArea_jtag/_zz_6_i0_i4
-   Register : globalClockArea_jtag/_zz_6_i0_i5
-   Register : globalClockArea_jtag/_zz_6_i0_i6
-   Register : globalClockArea_jtag/_zz_6_i0_i7
-   Register : globalClockArea_jtag/_zz_8_i0_i1
-   Register : globalClockArea_jtag/_zz_8_i0_i2
-   Register : globalClockArea_jtag/_zz_8_i0_i7
-   Register : globalClockArea_jtag/_zz_3_i0_i1
-   Register : globalClockArea_jtag/_zz_3_i0_i6
-   Register : globalClockArea_jtag/_zz_3_i0_i12
-   Register : globalClockArea_jtag/_zz_3_i0_i14
-   Register : globalClockArea_jtag/_zz_3_i0_i15
-   Register : globalClockArea_jtag/_zz_3_i0_i16
-   Register : globalClockArea_jtag/_zz_3_i0_i17
-   Register : globalClockArea_jtag/_zz_3_i0_i19
-   Register : globalClockArea_jtag/_zz_3_i0_i20
-   Register : globalClockArea_jtag/_zz_3_i0_i21
-   Register : globalClockArea_jtag/_zz_3_i0_i24
-   Register : globalClockArea_jtag/_zz_3_i0_i30
-   Register : globalClockArea_jtag/_zz_3_i0_i31
    Register : globalClockArea_jtag/_zz_5_i0_i1
-
    Register : globalClockArea_jtag/_zz_5_i0_i2
    Register : globalClockArea_jtag/_zz_5_i0_i3
    Register : globalClockArea_jtag/_zz_5_i0_i4
    Register : globalClockArea_jtag/_zz_5_i0_i5
    Register : globalClockArea_jtag/_zz_5_i0_i6
    Register : globalClockArea_jtag/_zz_5_i0_i7
+   Register : globalClockArea_jtag/_zz_3_i0_i31
+   Register : globalClockArea_jtag/_zz_3_i0_i29
+   Register : globalClockArea_jtag/_zz_3_i0_i28
+   Register : globalClockArea_jtag/_zz_3_i0_i27
+   Register : globalClockArea_jtag/_zz_3_i0_i26
+   Register : globalClockArea_jtag/_zz_3_i0_i25
+   Register : globalClockArea_jtag/_zz_3_i0_i23
+   Register : globalClockArea_jtag/_zz_3_i0_i22
+   Register : globalClockArea_jtag/_zz_3_i0_i18
+   Register : globalClockArea_jtag/_zz_3_i0_i13
    Register : globalClockArea_jtag/_zz_3_i0_i11
    Register : globalClockArea_jtag/_zz_3_i0_i10
    Register : globalClockArea_jtag/_zz_3_i0_i9
    Register : globalClockArea_jtag/_zz_3_i0_i8
    Register : globalClockArea_jtag/_zz_3_i0_i7
-   Register : globalClockArea_jtag/_zz_8_i0_i4
-   Register : globalClockArea_toggler/toggle_23
+   Register : globalClockArea_jtag/_zz_3_i0_i5
+   Register : globalClockArea_jtag/_zz_3_i0_i4
+   Register : globalClockArea_jtag/_zz_3_i0_i3
+   Register : globalClockArea_jtag/_zz_3_i0_i2
+   Register : globalClockArea_jtag/ctrl_tap_instruction_i2
+
 
      Components with synchronous local reset also reset by asynchronous GSR
 ----------------------------------------------------------------------
@@ -327,39 +315,33 @@ GSR Component:
      component.
 
      Type and number of components of the type: 
-   Register = 27 
+   Register = 24 
 
      Type and instance name of component: 
-   Register : globalClockArea_jtag/_zz_9_i2
-   Register : globalClockArea_jtag/_zz_9_i1
-   Register : globalClockArea_jtag/_zz_9_i0
-   Register : globalClockArea_toggler/timeout_counter_value_225__i0
+   Register : globalClockArea_toggler/timeout_counter_value_215__i0
    Register : globalClockArea_toggler/timeout_state_21
-   Register : globalClockArea_toggler/timeout_counter_value_225__i1
-   Register : globalClockArea_toggler/timeout_counter_value_225__i2
-   Register : globalClockArea_toggler/timeout_counter_value_225__i3
-   Register : globalClockArea_toggler/timeout_counter_value_225__i4
-   Register : globalClockArea_toggler/timeout_counter_value_225__i5
-   Register : globalClockArea_toggler/timeout_counter_value_225__i6
-   Register : globalClockArea_toggler/timeout_counter_value_225__i7
-   Register : globalClockArea_toggler/timeout_counter_value_225__i8
-   Register : globalClockArea_toggler/timeout_counter_value_225__i9
-   Register : globalClockArea_toggler/timeout_counter_value_225__i10
-   Register : globalClockArea_toggler/timeout_counter_value_225__i11
-   Register : globalClockArea_toggler/timeout_counter_value_225__i12
-   Register : globalClockArea_toggler/timeout_counter_value_225__i13
-   Register : globalClockArea_toggler/timeout_counter_value_225__i14
-   Register : globalClockArea_toggler/timeout_counter_value_225__i15
-   Register : globalClockArea_toggler/timeout_counter_value_225__i16
-   Register : globalClockArea_toggler/timeout_counter_value_225__i17
-   Register : globalClockArea_toggler/timeout_counter_value_225__i18
-   Register : globalClockArea_toggler/timeout_counter_value_225__i19
-   Register : globalClockArea_toggler/timeout_counter_value_225__i20
-   Register : globalClockArea_toggler/timeout_counter_value_225__i21
-   Register : globalClockArea_toggler/timeout_counter_value_225__i22
-
-
-
+   Register : globalClockArea_toggler/timeout_counter_value_215__i1
+   Register : globalClockArea_toggler/timeout_counter_value_215__i2
+   Register : globalClockArea_toggler/timeout_counter_value_215__i3
+   Register : globalClockArea_toggler/timeout_counter_value_215__i4
+   Register : globalClockArea_toggler/timeout_counter_value_215__i5
+   Register : globalClockArea_toggler/timeout_counter_value_215__i6
+   Register : globalClockArea_toggler/timeout_counter_value_215__i7
+   Register : globalClockArea_toggler/timeout_counter_value_215__i8
+   Register : globalClockArea_toggler/timeout_counter_value_215__i9
+   Register : globalClockArea_toggler/timeout_counter_value_215__i10
+   Register : globalClockArea_toggler/timeout_counter_value_215__i11
+   Register : globalClockArea_toggler/timeout_counter_value_215__i12
+   Register : globalClockArea_toggler/timeout_counter_value_215__i13
+   Register : globalClockArea_toggler/timeout_counter_value_215__i14
+   Register : globalClockArea_toggler/timeout_counter_value_215__i15
+   Register : globalClockArea_toggler/timeout_counter_value_215__i16
+   Register : globalClockArea_toggler/timeout_counter_value_215__i17
+   Register : globalClockArea_toggler/timeout_counter_value_215__i18
+   Register : globalClockArea_toggler/timeout_counter_value_215__i19
+   Register : globalClockArea_toggler/timeout_counter_value_215__i20
+   Register : globalClockArea_toggler/timeout_counter_value_215__i21
+   Register : globalClockArea_toggler/timeout_counter_value_215__i22
 
 
 
@@ -370,45 +352,6 @@ GSR Component:
    Total REAL Time: 0 secs  
    Peak Memory Usage: 196 MB
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

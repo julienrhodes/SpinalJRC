@@ -6,17 +6,7 @@
 -->
 </STYLE>
 </HEAD>
-<PRE><A name="pn200507101724"></A><B><U><big>pn200507101724</big></U></B>
-#Start recording tcl command: 5/7/2020 10:16:53
-#Project Location: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build; Project name: machx03l
-prj_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l.ldf"
-prj_project save
-prj_project close
-#Stop recording: 5/7/2020 10:17:24
-
-
-
-<A name="pn200507102048"></A><B><U><big>pn200507102048</big></U></B>
+<PRE><A name="pn200507102048"></A><B><U><big>pn200507102048</big></U></B>
 #Start recording tcl command: 5/7/2020 10:19:04
 #Project Location: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build; Project name: machx03l
 prj_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l.ldf"
@@ -199,6 +189,32 @@ prj_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03
 pgr_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/test.xcf"
 prj_project close
 #Stop recording: 5/8/2020 09:51:30
+
+
+
+<A name="pn200515152902"></A><B><U><big>pn200515152902</big></U></B>
+#Start recording tcl command: 5/15/2020 15:27:12
+#Project Location: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l; Project name: machx03l
+prj_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.ldf"
+prj_run Synthesis -impl jrc1 -task Lattice_Synthesis
+prj_run PAR -impl jrc1 -task PARTrace
+prj_run Export -impl jrc1
+prj_run Synthesis -impl jrc1 -task Lattice_Synthesis
+prj_src remove "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/MyTopLevel.v"
+prj_src add "/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v"
+prj_run Synthesis -impl jrc1 -task Lattice_Synthesis
+prj_run PAR -impl jrc1
+pgr_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/top_level.xcf"
+pgr_project save "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/top_level.xcf"
+pgr_project close
+pgr_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/test.xcf"
+prj_run Export -impl jrc1 -task Bitgen
+prj_run Export -impl jrc1
+pgr_project save "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/test.xcf"
+pgr_project close
+prj_project save
+prj_project close
+#Stop recording: 5/15/2020 15:29:02
 
 
 

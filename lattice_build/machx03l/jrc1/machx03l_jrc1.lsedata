@@ -48,7 +48,7 @@
     </pins>
 
     <!--
-        Instances in netlist: 90
+        Instances in netlist: 80
     -->
 
     <instance  name = "globalClockArea_toggler/timeout_counter_value_22__I_0"  library = "work"  arch = ""  type = "comb">
@@ -855,7 +855,7 @@
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_113"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_102"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[3]"  direction = "in"  />
         <pitem  name = "d0[2]"  direction = "in"  />
@@ -865,6 +865,118 @@
         <pitem  name = "d1[0]"  direction = "in"  />
         <pitem  name = "d0[1]"  direction = "in"  />
         <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "globalClockArea_jtag/gnd"  />
+        <nitem  name = "globalClockArea_jtag/pwr"  />
+        <nitem  name = "io_jtag_tms"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_118[3]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_118[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_118[1]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_118[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_103"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "globalClockArea_jtag/gnd"  />
+        <nitem  name = "globalClockArea_jtag/pwr"  />
+        <nitem  name = "io_jtag_tms"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_114[3]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_114[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_114[1]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_114[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_104"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "globalClockArea_jtag/gnd"  />
+        <nitem  name = "globalClockArea_jtag/pwr"  />
+        <nitem  name = "io_jtag_tms"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_110[3]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_110[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_110[1]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_110[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_105"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "globalClockArea_jtag/gnd"  />
+        <nitem  name = "globalClockArea_jtag/pwr"  />
+        <nitem  name = "io_jtag_tms"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_106[3]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_106[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_106[1]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_106[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_106"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
         <pitem  name = "cond"  direction = "in"  />
         <pitem  name = "o[3]"  direction = "out"  />
         <pitem  name = "o[2]"  direction = "out"  />
@@ -883,16 +995,16 @@
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_114"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_107"  library = "work"  arch = ""  type = "comb">
         <pins>
-        <pitem  name = "d0[3]"  direction = "in"  />
-        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
         <pitem  name = "d0[0]"  direction = "in"  />
         <pitem  name = "d1[3]"  direction = "in"  />
-        <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "d0[2]"  direction = "in"  />
         <pitem  name = "d1[2]"  direction = "in"  />
         <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
         <pitem  name = "cond"  direction = "in"  />
         <pitem  name = "o[3]"  direction = "out"  />
         <pitem  name = "o[2]"  direction = "out"  />
@@ -911,16 +1023,16 @@
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_115"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_108"  library = "work"  arch = ""  type = "comb">
         <pins>
-        <pitem  name = "d0[3]"  direction = "in"  />
-        <pitem  name = "d0[0]"  direction = "in"  />
-        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
         <pitem  name = "d1[1]"  direction = "in"  />
         <pitem  name = "d1[0]"  direction = "in"  />
-        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
         <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
         <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
         <pitem  name = "cond"  direction = "in"  />
         <pitem  name = "o[3]"  direction = "out"  />
         <pitem  name = "o[2]"  direction = "out"  />
@@ -939,13 +1051,13 @@
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_116"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_109"  library = "work"  arch = ""  type = "comb">
         <pins>
+        <pitem  name = "d0[1]"  direction = "in"  />
         <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
         <pitem  name = "d0[0]"  direction = "in"  />
         <pitem  name = "d1[3]"  direction = "in"  />
-        <pitem  name = "d0[2]"  direction = "in"  />
-        <pitem  name = "d0[1]"  direction = "in"  />
         <pitem  name = "d1[2]"  direction = "in"  />
         <pitem  name = "d1[1]"  direction = "in"  />
         <pitem  name = "d1[0]"  direction = "in"  />
@@ -967,16 +1079,16 @@
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_117"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_110"  library = "work"  arch = ""  type = "comb">
         <pins>
-        <pitem  name = "d0[3]"  direction = "in"  />
         <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
         <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
         <pitem  name = "d1[2]"  direction = "in"  />
         <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
-        <pitem  name = "d0[2]"  direction = "in"  />
-        <pitem  name = "d1[3]"  direction = "in"  />
         <pitem  name = "cond"  direction = "in"  />
         <pitem  name = "o[3]"  direction = "out"  />
         <pitem  name = "o[2]"  direction = "out"  />
@@ -995,16 +1107,16 @@
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_118"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_111"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
         <pitem  name = "d0[0]"  direction = "in"  />
         <pitem  name = "d1[3]"  direction = "in"  />
         <pitem  name = "d1[2]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
-        <pitem  name = "d0[3]"  direction = "in"  />
-        <pitem  name = "d0[1]"  direction = "in"  />
         <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
         <pitem  name = "cond"  direction = "in"  />
         <pitem  name = "o[3]"  direction = "out"  />
         <pitem  name = "o[2]"  direction = "out"  />
@@ -1023,16 +1135,16 @@
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_119"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_112"  library = "work"  arch = ""  type = "comb">
         <pins>
-        <pitem  name = "d0[2]"  direction = "in"  />
-        <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
         <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
         <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
         <pitem  name = "d0[0]"  direction = "in"  />
         <pitem  name = "d1[3]"  direction = "in"  />
-        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
         <pitem  name = "cond"  direction = "in"  />
         <pitem  name = "o[3]"  direction = "out"  />
         <pitem  name = "o[2]"  direction = "out"  />
@@ -1051,119 +1163,7 @@
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_120"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "d0[1]"  direction = "in"  />
-        <pitem  name = "d0[3]"  direction = "in"  />
-        <pitem  name = "d0[2]"  direction = "in"  />
-        <pitem  name = "d0[0]"  direction = "in"  />
-        <pitem  name = "d1[3]"  direction = "in"  />
-        <pitem  name = "d1[2]"  direction = "in"  />
-        <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
-        <pitem  name = "cond"  direction = "in"  />
-        <pitem  name = "o[3]"  direction = "out"  />
-        <pitem  name = "o[2]"  direction = "out"  />
-        <pitem  name = "o[1]"  direction = "out"  />
-        <pitem  name = "o[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "globalClockArea_jtag/gnd"  />
-        <nitem  name = "globalClockArea_jtag/pwr"  />
-        <nitem  name = "io_jtag_tms"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_74[3]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_74[2]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_74[1]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_74[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_121"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "d0[1]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
-        <pitem  name = "d0[3]"  direction = "in"  />
-        <pitem  name = "d0[2]"  direction = "in"  />
-        <pitem  name = "d0[0]"  direction = "in"  />
-        <pitem  name = "d1[3]"  direction = "in"  />
-        <pitem  name = "d1[2]"  direction = "in"  />
-        <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "cond"  direction = "in"  />
-        <pitem  name = "o[3]"  direction = "out"  />
-        <pitem  name = "o[2]"  direction = "out"  />
-        <pitem  name = "o[1]"  direction = "out"  />
-        <pitem  name = "o[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "globalClockArea_jtag/gnd"  />
-        <nitem  name = "globalClockArea_jtag/pwr"  />
-        <nitem  name = "io_jtag_tms"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_70[3]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_70[2]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_70[1]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_70[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_122"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "d0[2]"  direction = "in"  />
-        <pitem  name = "d0[3]"  direction = "in"  />
-        <pitem  name = "d0[1]"  direction = "in"  />
-        <pitem  name = "d0[0]"  direction = "in"  />
-        <pitem  name = "d1[3]"  direction = "in"  />
-        <pitem  name = "d1[2]"  direction = "in"  />
-        <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
-        <pitem  name = "cond"  direction = "in"  />
-        <pitem  name = "o[3]"  direction = "out"  />
-        <pitem  name = "o[2]"  direction = "out"  />
-        <pitem  name = "o[1]"  direction = "out"  />
-        <pitem  name = "o[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "globalClockArea_jtag/gnd"  />
-        <nitem  name = "globalClockArea_jtag/pwr"  />
-        <nitem  name = "io_jtag_tms"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_66[3]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_66[2]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_66[1]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_66[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_123"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "d0[3]"  direction = "in"  />
-        <pitem  name = "d0[2]"  direction = "in"  />
-        <pitem  name = "d0[1]"  direction = "in"  />
-        <pitem  name = "d1[2]"  direction = "in"  />
-        <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "d0[0]"  direction = "in"  />
-        <pitem  name = "d1[3]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
-        <pitem  name = "cond"  direction = "in"  />
-        <pitem  name = "o[3]"  direction = "out"  />
-        <pitem  name = "o[2]"  direction = "out"  />
-        <pitem  name = "o[1]"  direction = "out"  />
-        <pitem  name = "o[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "globalClockArea_jtag/gnd"  />
-        <nitem  name = "globalClockArea_jtag/pwr"  />
-        <nitem  name = "io_jtag_tms"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_62[3]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_62[2]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_62[1]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_62[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_129"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_118"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[3]"  direction = "in"  />
         <pitem  name = "d0[2]"  direction = "in"  />
@@ -1184,14 +1184,14 @@
         <nitem  name = "globalClockArea_jtag/gnd"  />
         <nitem  name = "globalClockArea_jtag/pwr"  />
         <nitem  name = "io_jtag_tms"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_106[3]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_106[2]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_106[1]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_106[0]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_122[3]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_122[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_122[1]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_122[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/ctrl_tap_fsm_state_3__I_0_124"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/ctrl_tap_fsm_state_3__I_0_113"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "o[3]"  direction = "out"  />
         <pitem  name = "o[2]"  direction = "out"  />
@@ -1276,6 +1276,22 @@
         <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[2]"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[1]"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[0]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_118[3]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_118[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_118[1]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_118[0]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_114[3]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_114[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_114[1]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_114[0]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_110[3]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_110[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_110[1]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_110[0]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_106[3]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_106[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_106[1]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_106[0]"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_102[3]"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_102[2]"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_102[1]"  />
@@ -1304,30 +1320,14 @@
         <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_78[2]"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_78[1]"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_78[0]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_74[3]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_74[2]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_74[1]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_74[0]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_70[3]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_70[2]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_70[1]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_70[0]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_66[3]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_66[2]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_66[1]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_66[0]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_62[3]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_62[2]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_62[1]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_62[0]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_106[3]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_106[2]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_106[1]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_106[0]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_122[3]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_122[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_122[1]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext_3__N_122[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_206_I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_182_I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "o"  direction = "out"  />
         <pitem  name = "a[2]"  direction = "in"  />
@@ -1336,10 +1336,10 @@
         </pins>
 
         <nets>
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_tdoUnbufferd_N_281"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_206"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_208"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_210"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_tdoUnbufferd_N_265"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_182"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_184"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_186"  />
         </nets>
     </instance>
 
@@ -1359,9 +1359,9 @@
         <nitem  name = "globalClockArea_jtag/ctrl_tap_bypass"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_tdoUnbufferd"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_tdoDr"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_tdoUnbufferd_N_281"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_207"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_209"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_tdoUnbufferd_N_265"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_183"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_185"  />
         </nets>
     </instance>
 
@@ -1377,23 +1377,7 @@
         <nitem  name = "globalClockArea_jtag/gnd"  />
         <nitem  name = "globalClockArea_jtag/_zz_2"  />
         <nitem  name = "globalClockArea_jtag/_zz_3[0]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_tdoDr_N_283"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/ctrl_tap_tdoDr_I_2"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "c"  direction = "in"  />
-        <pitem  name = "a1"  direction = "in"  />
-        <pitem  name = "a0"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "globalClockArea_jtag/_zz_4"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5[0]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_tdoDr_N_283"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_tdoDr_N_282"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_tdoDr_N_266"  />
         </nets>
     </instance>
 
@@ -1407,13 +1391,13 @@
 
         <nets>
         <nitem  name = "globalClockArea_jtag/ctrl_tap_tdoDr"  />
-        <nitem  name = "globalClockArea_jtag/_zz_7"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[0]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_tdoDr_N_282"  />
+        <nitem  name = "globalClockArea_jtag/_zz_4"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5[0]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_tdoDr_N_266"  />
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/ctrl_tap_instruction_7__I_0_137"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/ctrl_tap_instruction_7__I_0_125"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "b[7]"  direction = "in"  />
         <pitem  name = "b[6]"  direction = "in"  />
@@ -1485,93 +1469,7 @@
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/and_35"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "b[2]"  direction = "in"  />
-        <pitem  name = "b[1]"  direction = "in"  />
-        <pitem  name = "b[0]"  direction = "in"  />
-        <pitem  name = "b[7]"  direction = "in"  />
-        <pitem  name = "b[6]"  direction = "in"  />
-        <pitem  name = "b[5]"  direction = "in"  />
-        <pitem  name = "b[4]"  direction = "in"  />
-        <pitem  name = "b[3]"  direction = "in"  />
-        <pitem  name = "a[7]"  direction = "in"  />
-        <pitem  name = "a[6]"  direction = "in"  />
-        <pitem  name = "a[5]"  direction = "in"  />
-        <pitem  name = "a[4]"  direction = "in"  />
-        <pitem  name = "a[3]"  direction = "in"  />
-        <pitem  name = "a[2]"  direction = "in"  />
-        <pitem  name = "a[1]"  direction = "in"  />
-        <pitem  name = "a[0]"  direction = "in"  />
-        <pitem  name = "o[7]"  direction = "out"  />
-        <pitem  name = "o[6]"  direction = "out"  />
-        <pitem  name = "o[5]"  direction = "out"  />
-        <pitem  name = "o[4]"  direction = "out"  />
-        <pitem  name = "o[3]"  direction = "out"  />
-        <pitem  name = "o[2]"  direction = "out"  />
-        <pitem  name = "o[1]"  direction = "out"  />
-        <pitem  name = "o[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "globalClockArea_jtag/gnd"  />
-        <nitem  name = "globalClockArea_jtag/pwr"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction[7]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction[6]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction[5]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction[4]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction[3]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction[2]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction[1]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction[0]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_7_N_284[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_7_N_284[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_7_N_284[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_7_N_284[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_7_N_284[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_7_N_284[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_7_N_284[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_7_N_284[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/_zz_7_I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "b[7]"  direction = "in"  />
-        <pitem  name = "b[6]"  direction = "in"  />
-        <pitem  name = "b[5]"  direction = "in"  />
-        <pitem  name = "b[4]"  direction = "in"  />
-        <pitem  name = "b[2]"  direction = "in"  />
-        <pitem  name = "b[1]"  direction = "in"  />
-        <pitem  name = "b[0]"  direction = "in"  />
-        <pitem  name = "b[3]"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        <pitem  name = "a[7]"  direction = "in"  />
-        <pitem  name = "a[6]"  direction = "in"  />
-        <pitem  name = "a[5]"  direction = "in"  />
-        <pitem  name = "a[4]"  direction = "in"  />
-        <pitem  name = "a[3]"  direction = "in"  />
-        <pitem  name = "a[2]"  direction = "in"  />
-        <pitem  name = "a[1]"  direction = "in"  />
-        <pitem  name = "a[0]"  direction = "in"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "globalClockArea_jtag/gnd"  />
-        <nitem  name = "globalClockArea_jtag/pwr"  />
-        <nitem  name = "globalClockArea_jtag/_zz_7"  />
-        <nitem  name = "globalClockArea_jtag/_zz_7_N_284[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_7_N_284[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_7_N_284[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_7_N_284[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_7_N_284[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_7_N_284[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_7_N_284[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_7_N_284[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/internalJtag_tdo_I_0_130"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/internalJtag_tdo_I_0_119"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "c"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
@@ -1580,10 +1478,10 @@
         </pins>
 
         <nets>
-        <nitem  name = "globalClockArea_jtag/_zz_10"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[1]"  />
         <nitem  name = "globalClockArea_jtag/internalJtag_tdo"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_buf"  />
-        <nitem  name = "globalClockArea_jtag/io_jtag_tdo_N_276"  />
+        <nitem  name = "globalClockArea_jtag/io_jtag1_tdo_regNext"  />
+        <nitem  name = "globalClockArea_jtag/io_jtag_tdo_N_262"  />
         </nets>
     </instance>
 
@@ -1597,13 +1495,13 @@
 
         <nets>
         <nitem  name = "io_jtag_tdo"  />
-        <nitem  name = "globalClockArea_jtag/_zz_11"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_buf2"  />
-        <nitem  name = "globalClockArea_jtag/io_jtag_tdo_N_276"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[2]"  />
+        <nitem  name = "globalClockArea_jtag/io_jtag2_tdo_regNext"  />
+        <nitem  name = "globalClockArea_jtag/io_jtag_tdo_N_262"  />
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/io_jtag_tck_I_0_132"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/io_jtag_tck_I_0_121"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -1615,11 +1513,11 @@
         <nitem  name = "globalClockArea_jtag/gnd"  />
         <nitem  name = "io_jtag_tck"  />
         <nitem  name = "io_jtag1_tck"  />
-        <nitem  name = "globalClockArea_jtag/_zz_10"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[1]"  />
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_131"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/io_jtag_tms_I_0_120"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -1631,7 +1529,7 @@
         <nitem  name = "globalClockArea_jtag/gnd"  />
         <nitem  name = "io_jtag_tms"  />
         <nitem  name = "io_jtag1_tms"  />
-        <nitem  name = "globalClockArea_jtag/_zz_10"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[1]"  />
         </nets>
     </instance>
 
@@ -1646,12 +1544,12 @@
         <nets>
         <nitem  name = "globalClockArea_jtag/gnd"  />
         <nitem  name = "io_jtag1_tdi"  />
-        <nitem  name = "globalClockArea_jtag/_zz_10"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[1]"  />
         <nitem  name = "globalClockArea_jtag/internalJtag_tdo"  />
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/io_jtag_tck_I_0_133"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/io_jtag_tck_I_0_122"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -1663,7 +1561,7 @@
         <nitem  name = "globalClockArea_jtag/gnd"  />
         <nitem  name = "io_jtag_tck"  />
         <nitem  name = "io_jtag2_tck"  />
-        <nitem  name = "globalClockArea_jtag/_zz_11"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[2]"  />
         </nets>
     </instance>
 
@@ -1679,11 +1577,11 @@
         <nitem  name = "globalClockArea_jtag/gnd"  />
         <nitem  name = "io_jtag_tms"  />
         <nitem  name = "io_jtag2_tms"  />
-        <nitem  name = "globalClockArea_jtag/_zz_11"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[2]"  />
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/io_jtag_tdo_N_276_I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/io_jtag_tdo_N_262_I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "o"  direction = "out"  />
@@ -1694,422 +1592,12 @@
         <nets>
         <nitem  name = "globalClockArea_jtag/gnd"  />
         <nitem  name = "io_jtag2_tdi"  />
-        <nitem  name = "globalClockArea_jtag/_zz_11"  />
-        <nitem  name = "globalClockArea_jtag/io_jtag_tdo_N_276"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[2]"  />
+        <nitem  name = "globalClockArea_jtag/io_jtag_tdo_N_262"  />
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/io_reset_I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "i"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "io_reset"  />
-        <nitem  name = "globalClockArea_jtag/io_reset_N_61"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/ctrl_tap_fsm_state_3__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "b[3]"  direction = "in"  />
-        <pitem  name = "b[2]"  direction = "in"  />
-        <pitem  name = "b[1]"  direction = "in"  />
-        <pitem  name = "b[0]"  direction = "in"  />
-        <pitem  name = "a[3]"  direction = "in"  />
-        <pitem  name = "a[2]"  direction = "in"  />
-        <pitem  name = "a[1]"  direction = "in"  />
-        <pitem  name = "a[0]"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "globalClockArea_jtag/gnd"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[3]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[2]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[1]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[0]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_219"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/mux_49"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "d1[7]"  direction = "in"  />
-        <pitem  name = "d1[6]"  direction = "in"  />
-        <pitem  name = "d1[5]"  direction = "in"  />
-        <pitem  name = "d1[4]"  direction = "in"  />
-        <pitem  name = "d1[3]"  direction = "in"  />
-        <pitem  name = "d1[2]"  direction = "in"  />
-        <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
-        <pitem  name = "d0[7]"  direction = "in"  />
-        <pitem  name = "d0[6]"  direction = "in"  />
-        <pitem  name = "d0[5]"  direction = "in"  />
-        <pitem  name = "d0[4]"  direction = "in"  />
-        <pitem  name = "d0[3]"  direction = "in"  />
-        <pitem  name = "d0[2]"  direction = "in"  />
-        <pitem  name = "d0[1]"  direction = "in"  />
-        <pitem  name = "d0[0]"  direction = "in"  />
-        <pitem  name = "cond"  direction = "in"  />
-        <pitem  name = "o[7]"  direction = "out"  />
-        <pitem  name = "o[6]"  direction = "out"  />
-        <pitem  name = "o[5]"  direction = "out"  />
-        <pitem  name = "o[4]"  direction = "out"  />
-        <pitem  name = "o[3]"  direction = "out"  />
-        <pitem  name = "o[2]"  direction = "out"  />
-        <pitem  name = "o[1]"  direction = "out"  />
-        <pitem  name = "o[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "globalClockArea_jtag/gnd"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[0]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_219"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_190[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_190[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_190[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_190[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_190[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_190[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_190[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_190[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/equal_50"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "b[3]"  direction = "in"  />
-        <pitem  name = "b[2]"  direction = "in"  />
-        <pitem  name = "b[1]"  direction = "in"  />
-        <pitem  name = "b[0]"  direction = "in"  />
-        <pitem  name = "a[3]"  direction = "in"  />
-        <pitem  name = "a[2]"  direction = "in"  />
-        <pitem  name = "a[1]"  direction = "in"  />
-        <pitem  name = "a[0]"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "globalClockArea_jtag/pwr"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[3]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[2]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[1]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[0]"  />
-        <nitem  name = "globalClockArea_jtag/n373"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/and_51"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "b[7]"  direction = "in"  />
-        <pitem  name = "b[6]"  direction = "in"  />
-        <pitem  name = "b[5]"  direction = "in"  />
-        <pitem  name = "b[4]"  direction = "in"  />
-        <pitem  name = "b[3]"  direction = "in"  />
-        <pitem  name = "b[2]"  direction = "in"  />
-        <pitem  name = "b[1]"  direction = "in"  />
-        <pitem  name = "b[0]"  direction = "in"  />
-        <pitem  name = "a[7]"  direction = "in"  />
-        <pitem  name = "a[6]"  direction = "in"  />
-        <pitem  name = "a[5]"  direction = "in"  />
-        <pitem  name = "a[4]"  direction = "in"  />
-        <pitem  name = "a[3]"  direction = "in"  />
-        <pitem  name = "a[2]"  direction = "in"  />
-        <pitem  name = "a[1]"  direction = "in"  />
-        <pitem  name = "a[0]"  direction = "in"  />
-        <pitem  name = "o[7]"  direction = "out"  />
-        <pitem  name = "o[6]"  direction = "out"  />
-        <pitem  name = "o[5]"  direction = "out"  />
-        <pitem  name = "o[4]"  direction = "out"  />
-        <pitem  name = "o[3]"  direction = "out"  />
-        <pitem  name = "o[2]"  direction = "out"  />
-        <pitem  name = "o[1]"  direction = "out"  />
-        <pitem  name = "o[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "globalClockArea_jtag/gnd"  />
-        <nitem  name = "globalClockArea_jtag/pwr"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[0]"  />
-        <nitem  name = "globalClockArea_jtag/n375"  />
-        <nitem  name = "globalClockArea_jtag/n376"  />
-        <nitem  name = "globalClockArea_jtag/n377"  />
-        <nitem  name = "globalClockArea_jtag/n378"  />
-        <nitem  name = "globalClockArea_jtag/n379"  />
-        <nitem  name = "globalClockArea_jtag/n380"  />
-        <nitem  name = "globalClockArea_jtag/n381"  />
-        <nitem  name = "globalClockArea_jtag/n382"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/mux_52"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "d0[7]"  direction = "in"  />
-        <pitem  name = "d0[6]"  direction = "in"  />
-        <pitem  name = "d0[5]"  direction = "in"  />
-        <pitem  name = "d0[4]"  direction = "in"  />
-        <pitem  name = "d0[3]"  direction = "in"  />
-        <pitem  name = "d0[2]"  direction = "in"  />
-        <pitem  name = "d0[1]"  direction = "in"  />
-        <pitem  name = "d0[0]"  direction = "in"  />
-        <pitem  name = "cond"  direction = "in"  />
-        <pitem  name = "d1[7]"  direction = "in"  />
-        <pitem  name = "d1[6]"  direction = "in"  />
-        <pitem  name = "d1[5]"  direction = "in"  />
-        <pitem  name = "d1[4]"  direction = "in"  />
-        <pitem  name = "d1[3]"  direction = "in"  />
-        <pitem  name = "d1[2]"  direction = "in"  />
-        <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
-        <pitem  name = "o[7]"  direction = "out"  />
-        <pitem  name = "o[6]"  direction = "out"  />
-        <pitem  name = "o[5]"  direction = "out"  />
-        <pitem  name = "o[4]"  direction = "out"  />
-        <pitem  name = "o[3]"  direction = "out"  />
-        <pitem  name = "o[2]"  direction = "out"  />
-        <pitem  name = "o[1]"  direction = "out"  />
-        <pitem  name = "o[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_190[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_190[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_190[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_190[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_190[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_190[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_190[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_190[0]"  />
-        <nitem  name = "globalClockArea_jtag/n373"  />
-        <nitem  name = "globalClockArea_jtag/n375"  />
-        <nitem  name = "globalClockArea_jtag/n376"  />
-        <nitem  name = "globalClockArea_jtag/n377"  />
-        <nitem  name = "globalClockArea_jtag/n378"  />
-        <nitem  name = "globalClockArea_jtag/n379"  />
-        <nitem  name = "globalClockArea_jtag/n380"  />
-        <nitem  name = "globalClockArea_jtag/n381"  />
-        <nitem  name = "globalClockArea_jtag/n382"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_198[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_198[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_198[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_198[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_198[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_198[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_198[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_198[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/_zz_9_7__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "cond"  direction = "in"  />
-        <pitem  name = "d0[7]"  direction = "in"  />
-        <pitem  name = "d0[6]"  direction = "in"  />
-        <pitem  name = "d0[5]"  direction = "in"  />
-        <pitem  name = "d0[4]"  direction = "in"  />
-        <pitem  name = "d0[3]"  direction = "in"  />
-        <pitem  name = "d0[2]"  direction = "in"  />
-        <pitem  name = "d0[1]"  direction = "in"  />
-        <pitem  name = "d0[0]"  direction = "in"  />
-        <pitem  name = "d1[7]"  direction = "in"  />
-        <pitem  name = "d1[6]"  direction = "in"  />
-        <pitem  name = "d1[5]"  direction = "in"  />
-        <pitem  name = "d1[4]"  direction = "in"  />
-        <pitem  name = "d1[3]"  direction = "in"  />
-        <pitem  name = "d1[2]"  direction = "in"  />
-        <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
-        <pitem  name = "o[7]"  direction = "out"  />
-        <pitem  name = "o[6]"  direction = "out"  />
-        <pitem  name = "o[5]"  direction = "out"  />
-        <pitem  name = "o[4]"  direction = "out"  />
-        <pitem  name = "o[3]"  direction = "out"  />
-        <pitem  name = "o[2]"  direction = "out"  />
-        <pitem  name = "o[1]"  direction = "out"  />
-        <pitem  name = "o[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "globalClockArea_jtag/_zz_7"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_190[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_190[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_190[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_190[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_190[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_190[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_190[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_190[0]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_198[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_198[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_198[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_198[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_198[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_198[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_198[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_198[0]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_182[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_182[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_182[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_182[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_182[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_182[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_182[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_182[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/ctrl_buf_I_0_134"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "a1"  direction = "in"  />
-        <pitem  name = "c"  direction = "in"  />
-        <pitem  name = "a0"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "io_jtag1_tdo"  />
-        <nitem  name = "globalClockArea_jtag/_zz_10"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_buf"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_buf_N_279"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/ctrl_chain"  library = "work"  arch = ""  type = "reg">
-        <pins>
-        <pitem  name = "set[0]"  direction = "in"  />
-        <pitem  name = "set[1]"  direction = "in"  />
-        <pitem  name = "clock"  direction = "in"  />
-        <pitem  name = "q[0]"  direction = "out"  />
-        <pitem  name = "q[1]"  direction = "out"  />
-        <pitem  name = "d[1]"  direction = "in"  />
-        <pitem  name = "d[0]"  direction = "in"  />
-        <pitem  name = "reset[0]"  direction = "in"  />
-        <pitem  name = "reset[1]"  direction = "in"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "globalClockArea_jtag/gnd"  />
-        <nitem  name = "io_jtag_tck"  />
-        <nitem  name = "globalClockArea_jtag/_zz_10"  />
-        <nitem  name = "globalClockArea_jtag/_zz_11"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[0]"  />
-        <nitem  name = "globalClockArea_jtag/io_reset_N_61"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/ctrl_buf_101"  library = "work"  arch = ""  type = "reg">
-        <pins>
-        <pitem  name = "s"  direction = "in"  />
-        <pitem  name = "clk"  direction = "in"  />
-        <pitem  name = "q"  direction = "out"  />
-        <pitem  name = "r"  direction = "in"  />
-        <pitem  name = "d"  direction = "in"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "globalClockArea_jtag/gnd"  />
-        <nitem  name = "io_jtag_tck"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_buf"  />
-        <nitem  name = "globalClockArea_jtag/io_reset_N_61"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_buf_N_279"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/_zz_9"  library = "work"  arch = ""  type = "reg">
-        <pins>
-        <pitem  name = "set[0]"  direction = "in"  />
-        <pitem  name = "set[1]"  direction = "in"  />
-        <pitem  name = "set[2]"  direction = "in"  />
-        <pitem  name = "set[3]"  direction = "in"  />
-        <pitem  name = "set[4]"  direction = "in"  />
-        <pitem  name = "set[5]"  direction = "in"  />
-        <pitem  name = "set[6]"  direction = "in"  />
-        <pitem  name = "set[7]"  direction = "in"  />
-        <pitem  name = "clock"  direction = "in"  />
-        <pitem  name = "q[7]"  direction = "out"  />
-        <pitem  name = "q[6]"  direction = "out"  />
-        <pitem  name = "q[5]"  direction = "out"  />
-        <pitem  name = "q[4]"  direction = "out"  />
-        <pitem  name = "q[3]"  direction = "out"  />
-        <pitem  name = "q[2]"  direction = "out"  />
-        <pitem  name = "q[1]"  direction = "out"  />
-        <pitem  name = "q[0]"  direction = "out"  />
-        <pitem  name = "reset[0]"  direction = "in"  />
-        <pitem  name = "reset[1]"  direction = "in"  />
-        <pitem  name = "reset[2]"  direction = "in"  />
-        <pitem  name = "reset[3]"  direction = "in"  />
-        <pitem  name = "reset[4]"  direction = "in"  />
-        <pitem  name = "reset[5]"  direction = "in"  />
-        <pitem  name = "reset[6]"  direction = "in"  />
-        <pitem  name = "reset[7]"  direction = "in"  />
-        <pitem  name = "d[7]"  direction = "in"  />
-        <pitem  name = "d[6]"  direction = "in"  />
-        <pitem  name = "d[5]"  direction = "in"  />
-        <pitem  name = "d[4]"  direction = "in"  />
-        <pitem  name = "d[3]"  direction = "in"  />
-        <pitem  name = "d[2]"  direction = "in"  />
-        <pitem  name = "d[1]"  direction = "in"  />
-        <pitem  name = "d[0]"  direction = "in"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "globalClockArea_jtag/gnd"  />
-        <nitem  name = "io_jtag_tck"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[0]"  />
-        <nitem  name = "globalClockArea_jtag/io_reset_N_61"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_182[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_182[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_182[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_182[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_182[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_182[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_182[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9_7__N_182[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/ctrl_buf2_103"  library = "work"  arch = ""  type = "reg">
-        <pins>
-        <pitem  name = "r"  direction = "in"  />
-        <pitem  name = "s"  direction = "in"  />
-        <pitem  name = "clk"  direction = "in"  />
-        <pitem  name = "q"  direction = "out"  />
-        <pitem  name = "d"  direction = "in"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "globalClockArea_jtag/gnd"  />
-        <nitem  name = "io_jtag_tck"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_buf2"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_buf2_N_280"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/ctrl_tap_fsm_state_3__I_0_125"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/ctrl_tap_fsm_state_3__I_0_114"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "b[3]"  direction = "in"  />
         <pitem  name = "b[2]"  direction = "in"  />
@@ -2129,11 +1617,11 @@
         <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[2]"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[1]"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[0]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_206"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_182"  />
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/ctrl_tap_fsm_state_3__I_0_126"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/ctrl_tap_fsm_state_3__I_0_115"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "b[3]"  direction = "in"  />
         <pitem  name = "b[1]"  direction = "in"  />
@@ -2153,35 +1641,11 @@
         <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[2]"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[1]"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[0]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_207"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_183"  />
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/ctrl_tap_fsm_state_3__I_0_127"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "b[2]"  direction = "in"  />
-        <pitem  name = "b[1]"  direction = "in"  />
-        <pitem  name = "b[0]"  direction = "in"  />
-        <pitem  name = "b[3]"  direction = "in"  />
-        <pitem  name = "a[3]"  direction = "in"  />
-        <pitem  name = "a[2]"  direction = "in"  />
-        <pitem  name = "a[1]"  direction = "in"  />
-        <pitem  name = "a[0]"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "globalClockArea_jtag/gnd"  />
-        <nitem  name = "globalClockArea_jtag/pwr"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[3]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[2]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[1]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[0]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_208"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/ctrl_tap_fsm_state_3__I_0_128"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/ctrl_tap_fsm_state_3__I_0_117"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "b[2]"  direction = "in"  />
         <pitem  name = "b[3]"  direction = "in"  />
@@ -2201,11 +1665,11 @@
         <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[2]"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[1]"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[0]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_209"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_185"  />
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_206_I_0_135"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_182_I_0_123"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[3]"  direction = "in"  />
         <pitem  name = "a[2]"  direction = "in"  />
@@ -2215,11 +1679,11 @@
         </pins>
 
         <nets>
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_206"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_207"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_208"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_209"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_210"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_182"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_183"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_184"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_185"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_186"  />
         </nets>
     </instance>
 
@@ -2298,23 +1762,23 @@
         <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift[2]"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift[1]"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift[0]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_206"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_207"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_208"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_209"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_210"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_118[7]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_118[6]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_118[5]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_118[4]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_118[3]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_118[2]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_118[1]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_118[0]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_182"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_183"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_184"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_185"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_186"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_134[7]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_134[6]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_134[5]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_134[4]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_134[3]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_134[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_134[1]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_134[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/select_65"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/select_49"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "data[39]"  direction = "in"  />
         <pitem  name = "data[31]"  direction = "in"  />
@@ -2388,23 +1852,46 @@
         <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift[2]"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift[1]"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift[0]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_206"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_207"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_208"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_209"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_210"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_211[7]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_211[6]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_211[5]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_211[4]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_211[3]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_211[2]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_211[1]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_211[0]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_182"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_183"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_184"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_185"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_186"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_187[7]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_187[6]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_187[5]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_187[4]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_187[3]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_187[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_187[1]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_187[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/ctrl_tap_instruction_7__I_0_136"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/ctrl_tap_fsm_state_3__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "globalClockArea_jtag/gnd"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[3]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[1]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[0]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_195"  />
+        </nets>
+    </instance>
+
+    <instance  name = "globalClockArea_jtag/ctrl_tap_instruction_7__I_0_124"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d1[7]"  direction = "in"  />
         <pitem  name = "d1[6]"  direction = "in"  />
@@ -2414,7 +1901,6 @@
         <pitem  name = "d1[1]"  direction = "in"  />
         <pitem  name = "d1[0]"  direction = "in"  />
         <pitem  name = "d1[2]"  direction = "in"  />
-        <pitem  name = "cond"  direction = "in"  />
         <pitem  name = "d0[7]"  direction = "in"  />
         <pitem  name = "d0[6]"  direction = "in"  />
         <pitem  name = "d0[5]"  direction = "in"  />
@@ -2423,6 +1909,7 @@
         <pitem  name = "d0[2]"  direction = "in"  />
         <pitem  name = "d0[1]"  direction = "in"  />
         <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
         <pitem  name = "o[7]"  direction = "out"  />
         <pitem  name = "o[6]"  direction = "out"  />
         <pitem  name = "o[5]"  direction = "out"  />
@@ -2436,27 +1923,27 @@
         <nets>
         <nitem  name = "globalClockArea_jtag/gnd"  />
         <nitem  name = "globalClockArea_jtag/pwr"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_219"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_211[7]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_211[6]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_211[5]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_211[4]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_211[3]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_211[2]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_211[1]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_211[0]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_110[7]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_110[6]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_110[5]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_110[4]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_110[3]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_110[2]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_110[1]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_110[0]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_187[7]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_187[6]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_187[5]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_187[4]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_187[3]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_187[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_187[1]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_187[0]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_195"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_126[7]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_126[6]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_126[5]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_126[4]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_126[3]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_126[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_126[1]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_126[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/equal_68"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/equal_52"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "b[2]"  direction = "in"  />
         <pitem  name = "b[0]"  direction = "in"  />
@@ -2476,11 +1963,11 @@
         <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[2]"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[1]"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[0]"  />
-        <nitem  name = "globalClockArea_jtag/n463"  />
+        <nitem  name = "globalClockArea_jtag/n383"  />
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/mux_69"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/mux_53"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d1[31]"  direction = "in"  />
         <pitem  name = "d1[29]"  direction = "in"  />
@@ -2616,43 +2103,43 @@
         <nitem  name = "globalClockArea_jtag/_zz_3[2]"  />
         <nitem  name = "globalClockArea_jtag/_zz_3[1]"  />
         <nitem  name = "globalClockArea_jtag/_zz_3[0]"  />
-        <nitem  name = "globalClockArea_jtag/n463"  />
-        <nitem  name = "globalClockArea_jtag/n465"  />
-        <nitem  name = "globalClockArea_jtag/n466"  />
-        <nitem  name = "globalClockArea_jtag/n467"  />
-        <nitem  name = "globalClockArea_jtag/n468"  />
-        <nitem  name = "globalClockArea_jtag/n469"  />
-        <nitem  name = "globalClockArea_jtag/n470"  />
-        <nitem  name = "globalClockArea_jtag/n471"  />
-        <nitem  name = "globalClockArea_jtag/n472"  />
-        <nitem  name = "globalClockArea_jtag/n473"  />
-        <nitem  name = "globalClockArea_jtag/n474"  />
-        <nitem  name = "globalClockArea_jtag/n475"  />
-        <nitem  name = "globalClockArea_jtag/n476"  />
-        <nitem  name = "globalClockArea_jtag/n477"  />
-        <nitem  name = "globalClockArea_jtag/n478"  />
-        <nitem  name = "globalClockArea_jtag/n479"  />
-        <nitem  name = "globalClockArea_jtag/n480"  />
-        <nitem  name = "globalClockArea_jtag/n481"  />
-        <nitem  name = "globalClockArea_jtag/n482"  />
-        <nitem  name = "globalClockArea_jtag/n483"  />
-        <nitem  name = "globalClockArea_jtag/n484"  />
-        <nitem  name = "globalClockArea_jtag/n485"  />
-        <nitem  name = "globalClockArea_jtag/n486"  />
-        <nitem  name = "globalClockArea_jtag/n487"  />
-        <nitem  name = "globalClockArea_jtag/n488"  />
-        <nitem  name = "globalClockArea_jtag/n489"  />
-        <nitem  name = "globalClockArea_jtag/n490"  />
-        <nitem  name = "globalClockArea_jtag/n491"  />
-        <nitem  name = "globalClockArea_jtag/n492"  />
-        <nitem  name = "globalClockArea_jtag/n493"  />
-        <nitem  name = "globalClockArea_jtag/n494"  />
-        <nitem  name = "globalClockArea_jtag/n495"  />
-        <nitem  name = "globalClockArea_jtag/n496"  />
+        <nitem  name = "globalClockArea_jtag/n383"  />
+        <nitem  name = "globalClockArea_jtag/n385"  />
+        <nitem  name = "globalClockArea_jtag/n386"  />
+        <nitem  name = "globalClockArea_jtag/n387"  />
+        <nitem  name = "globalClockArea_jtag/n388"  />
+        <nitem  name = "globalClockArea_jtag/n389"  />
+        <nitem  name = "globalClockArea_jtag/n390"  />
+        <nitem  name = "globalClockArea_jtag/n391"  />
+        <nitem  name = "globalClockArea_jtag/n392"  />
+        <nitem  name = "globalClockArea_jtag/n393"  />
+        <nitem  name = "globalClockArea_jtag/n394"  />
+        <nitem  name = "globalClockArea_jtag/n395"  />
+        <nitem  name = "globalClockArea_jtag/n396"  />
+        <nitem  name = "globalClockArea_jtag/n397"  />
+        <nitem  name = "globalClockArea_jtag/n398"  />
+        <nitem  name = "globalClockArea_jtag/n399"  />
+        <nitem  name = "globalClockArea_jtag/n400"  />
+        <nitem  name = "globalClockArea_jtag/n401"  />
+        <nitem  name = "globalClockArea_jtag/n402"  />
+        <nitem  name = "globalClockArea_jtag/n403"  />
+        <nitem  name = "globalClockArea_jtag/n404"  />
+        <nitem  name = "globalClockArea_jtag/n405"  />
+        <nitem  name = "globalClockArea_jtag/n406"  />
+        <nitem  name = "globalClockArea_jtag/n407"  />
+        <nitem  name = "globalClockArea_jtag/n408"  />
+        <nitem  name = "globalClockArea_jtag/n409"  />
+        <nitem  name = "globalClockArea_jtag/n410"  />
+        <nitem  name = "globalClockArea_jtag/n411"  />
+        <nitem  name = "globalClockArea_jtag/n412"  />
+        <nitem  name = "globalClockArea_jtag/n413"  />
+        <nitem  name = "globalClockArea_jtag/n414"  />
+        <nitem  name = "globalClockArea_jtag/n415"  />
+        <nitem  name = "globalClockArea_jtag/n416"  />
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/mux_71"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/mux_55"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d1[31]"  direction = "in"  />
         <pitem  name = "d1[30]"  direction = "in"  />
@@ -2786,71 +2273,71 @@
         <nitem  name = "globalClockArea_jtag/_zz_3[3]"  />
         <nitem  name = "globalClockArea_jtag/_zz_3[2]"  />
         <nitem  name = "globalClockArea_jtag/_zz_3[1]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_209"  />
-        <nitem  name = "globalClockArea_jtag/n465"  />
-        <nitem  name = "globalClockArea_jtag/n466"  />
-        <nitem  name = "globalClockArea_jtag/n467"  />
-        <nitem  name = "globalClockArea_jtag/n468"  />
-        <nitem  name = "globalClockArea_jtag/n469"  />
-        <nitem  name = "globalClockArea_jtag/n470"  />
-        <nitem  name = "globalClockArea_jtag/n471"  />
-        <nitem  name = "globalClockArea_jtag/n472"  />
-        <nitem  name = "globalClockArea_jtag/n473"  />
-        <nitem  name = "globalClockArea_jtag/n474"  />
-        <nitem  name = "globalClockArea_jtag/n475"  />
-        <nitem  name = "globalClockArea_jtag/n476"  />
-        <nitem  name = "globalClockArea_jtag/n477"  />
-        <nitem  name = "globalClockArea_jtag/n478"  />
-        <nitem  name = "globalClockArea_jtag/n479"  />
-        <nitem  name = "globalClockArea_jtag/n480"  />
-        <nitem  name = "globalClockArea_jtag/n481"  />
-        <nitem  name = "globalClockArea_jtag/n482"  />
-        <nitem  name = "globalClockArea_jtag/n483"  />
-        <nitem  name = "globalClockArea_jtag/n484"  />
-        <nitem  name = "globalClockArea_jtag/n485"  />
-        <nitem  name = "globalClockArea_jtag/n486"  />
-        <nitem  name = "globalClockArea_jtag/n487"  />
-        <nitem  name = "globalClockArea_jtag/n488"  />
-        <nitem  name = "globalClockArea_jtag/n489"  />
-        <nitem  name = "globalClockArea_jtag/n490"  />
-        <nitem  name = "globalClockArea_jtag/n491"  />
-        <nitem  name = "globalClockArea_jtag/n492"  />
-        <nitem  name = "globalClockArea_jtag/n493"  />
-        <nitem  name = "globalClockArea_jtag/n494"  />
-        <nitem  name = "globalClockArea_jtag/n495"  />
-        <nitem  name = "globalClockArea_jtag/n496"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[31]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[30]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[29]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[28]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[27]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[26]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[25]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[24]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[23]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[22]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[21]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[20]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[19]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[18]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[17]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[16]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[15]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[14]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[13]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[12]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[11]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[10]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[9]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[8]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[0]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_185"  />
+        <nitem  name = "globalClockArea_jtag/n385"  />
+        <nitem  name = "globalClockArea_jtag/n386"  />
+        <nitem  name = "globalClockArea_jtag/n387"  />
+        <nitem  name = "globalClockArea_jtag/n388"  />
+        <nitem  name = "globalClockArea_jtag/n389"  />
+        <nitem  name = "globalClockArea_jtag/n390"  />
+        <nitem  name = "globalClockArea_jtag/n391"  />
+        <nitem  name = "globalClockArea_jtag/n392"  />
+        <nitem  name = "globalClockArea_jtag/n393"  />
+        <nitem  name = "globalClockArea_jtag/n394"  />
+        <nitem  name = "globalClockArea_jtag/n395"  />
+        <nitem  name = "globalClockArea_jtag/n396"  />
+        <nitem  name = "globalClockArea_jtag/n397"  />
+        <nitem  name = "globalClockArea_jtag/n398"  />
+        <nitem  name = "globalClockArea_jtag/n399"  />
+        <nitem  name = "globalClockArea_jtag/n400"  />
+        <nitem  name = "globalClockArea_jtag/n401"  />
+        <nitem  name = "globalClockArea_jtag/n402"  />
+        <nitem  name = "globalClockArea_jtag/n403"  />
+        <nitem  name = "globalClockArea_jtag/n404"  />
+        <nitem  name = "globalClockArea_jtag/n405"  />
+        <nitem  name = "globalClockArea_jtag/n406"  />
+        <nitem  name = "globalClockArea_jtag/n407"  />
+        <nitem  name = "globalClockArea_jtag/n408"  />
+        <nitem  name = "globalClockArea_jtag/n409"  />
+        <nitem  name = "globalClockArea_jtag/n410"  />
+        <nitem  name = "globalClockArea_jtag/n411"  />
+        <nitem  name = "globalClockArea_jtag/n412"  />
+        <nitem  name = "globalClockArea_jtag/n413"  />
+        <nitem  name = "globalClockArea_jtag/n414"  />
+        <nitem  name = "globalClockArea_jtag/n415"  />
+        <nitem  name = "globalClockArea_jtag/n416"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[31]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[30]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[29]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[28]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[27]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[26]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[25]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[24]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[23]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[22]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[21]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[20]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[19]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[18]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[17]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[16]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[15]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[14]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[13]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[12]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[11]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[10]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[9]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[8]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[7]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[6]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[5]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[4]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[3]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[2]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[1]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[0]"  />
         </nets>
     </instance>
 
@@ -2989,75 +2476,83 @@
         <nitem  name = "globalClockArea_jtag/_zz_3[2]"  />
         <nitem  name = "globalClockArea_jtag/_zz_3[1]"  />
         <nitem  name = "globalClockArea_jtag/_zz_3[0]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[31]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[30]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[29]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[28]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[27]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[26]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[25]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[24]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[23]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[22]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[21]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[20]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[19]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[18]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[17]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[16]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[15]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[14]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[13]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[12]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[11]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[10]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[9]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[8]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_220[0]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[31]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[30]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[29]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[28]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[27]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[26]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[25]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[24]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[23]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[22]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[21]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[20]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[19]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[18]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[17]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[16]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[15]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[14]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[13]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[12]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[11]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[10]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[9]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[8]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[0]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[31]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[30]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[29]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[28]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[27]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[26]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[25]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[24]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[23]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[22]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[21]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[20]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[19]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[18]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[17]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[16]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[15]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[14]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[13]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[12]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[11]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[10]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[9]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[8]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[7]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[6]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[5]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[4]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[3]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[2]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[1]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_196[0]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[31]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[30]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[29]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[28]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[27]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[26]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[25]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[24]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[23]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[22]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[21]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[20]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[19]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[18]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[17]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[16]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[15]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[14]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[13]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[12]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[11]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[10]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[9]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[8]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[7]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[6]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[5]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[4]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[3]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[2]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[1]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/mux_74"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/mux_58"  library = "work"  arch = ""  type = "comb">
         <pins>
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
         <pitem  name = "d0[7]"  direction = "in"  />
         <pitem  name = "d0[6]"  direction = "in"  />
         <pitem  name = "d0[5]"  direction = "in"  />
@@ -3066,14 +2561,6 @@
         <pitem  name = "d0[2]"  direction = "in"  />
         <pitem  name = "d0[1]"  direction = "in"  />
         <pitem  name = "d0[0]"  direction = "in"  />
-        <pitem  name = "d1[7]"  direction = "in"  />
-        <pitem  name = "d1[6]"  direction = "in"  />
-        <pitem  name = "d1[5]"  direction = "in"  />
-        <pitem  name = "d1[4]"  direction = "in"  />
-        <pitem  name = "d1[3]"  direction = "in"  />
-        <pitem  name = "d1[2]"  direction = "in"  />
-        <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
         <pitem  name = "cond"  direction = "in"  />
         <pitem  name = "o[7]"  direction = "out"  />
         <pitem  name = "o[6]"  direction = "out"  />
@@ -3086,6 +2573,14 @@
         </pins>
 
         <nets>
+        <nitem  name = "globalClockArea_jtag_io_leds[7]"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[6]"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[5]"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[4]"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[3]"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[0]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_leds[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_leds[1]"  />
         <nitem  name = "globalClockArea_jtag/_zz_5[7]"  />
         <nitem  name = "globalClockArea_jtag/_zz_5[6]"  />
         <nitem  name = "globalClockArea_jtag/_zz_5[5]"  />
@@ -3094,27 +2589,19 @@
         <nitem  name = "globalClockArea_jtag/_zz_5[2]"  />
         <nitem  name = "globalClockArea_jtag/_zz_5[1]"  />
         <nitem  name = "globalClockArea_jtag/_zz_5[0]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[0]"  />
-        <nitem  name = "globalClockArea_jtag/n463"  />
-        <nitem  name = "globalClockArea_jtag/n566"  />
-        <nitem  name = "globalClockArea_jtag/n567"  />
-        <nitem  name = "globalClockArea_jtag/n568"  />
-        <nitem  name = "globalClockArea_jtag/n569"  />
-        <nitem  name = "globalClockArea_jtag/n570"  />
-        <nitem  name = "globalClockArea_jtag/n571"  />
-        <nitem  name = "globalClockArea_jtag/n572"  />
-        <nitem  name = "globalClockArea_jtag/n573"  />
+        <nitem  name = "globalClockArea_jtag/n383"  />
+        <nitem  name = "globalClockArea_jtag/n486"  />
+        <nitem  name = "globalClockArea_jtag/n487"  />
+        <nitem  name = "globalClockArea_jtag/n488"  />
+        <nitem  name = "globalClockArea_jtag/n489"  />
+        <nitem  name = "globalClockArea_jtag/n490"  />
+        <nitem  name = "globalClockArea_jtag/n491"  />
+        <nitem  name = "globalClockArea_jtag/n492"  />
+        <nitem  name = "globalClockArea_jtag/n493"  />
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/mux_76"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/mux_60"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d1[7]"  direction = "in"  />
         <pitem  name = "d1[6]"  direction = "in"  />
@@ -3152,28 +2639,59 @@
         <nitem  name = "globalClockArea_jtag/_zz_5[3]"  />
         <nitem  name = "globalClockArea_jtag/_zz_5[2]"  />
         <nitem  name = "globalClockArea_jtag/_zz_5[1]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_209"  />
-        <nitem  name = "globalClockArea_jtag/n566"  />
-        <nitem  name = "globalClockArea_jtag/n567"  />
-        <nitem  name = "globalClockArea_jtag/n568"  />
-        <nitem  name = "globalClockArea_jtag/n569"  />
-        <nitem  name = "globalClockArea_jtag/n570"  />
-        <nitem  name = "globalClockArea_jtag/n571"  />
-        <nitem  name = "globalClockArea_jtag/n572"  />
-        <nitem  name = "globalClockArea_jtag/n573"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_252[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_252[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_252[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_252[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_252[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_252[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_252[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_252[0]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_185"  />
+        <nitem  name = "globalClockArea_jtag/n486"  />
+        <nitem  name = "globalClockArea_jtag/n487"  />
+        <nitem  name = "globalClockArea_jtag/n488"  />
+        <nitem  name = "globalClockArea_jtag/n489"  />
+        <nitem  name = "globalClockArea_jtag/n490"  />
+        <nitem  name = "globalClockArea_jtag/n491"  />
+        <nitem  name = "globalClockArea_jtag/n492"  />
+        <nitem  name = "globalClockArea_jtag/n493"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_228[7]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_228[6]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_228[5]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_228[4]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_228[3]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_228[2]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_228[1]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_228[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/mux_78"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/equal_61"  library = "work"  arch = ""  type = "comb">
         <pins>
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "globalClockArea_jtag/pwr"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[3]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[1]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[0]"  />
+        <nitem  name = "globalClockArea_jtag/n504"  />
+        </nets>
+    </instance>
+
+    <instance  name = "globalClockArea_jtag/mux_62"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
         <pitem  name = "d1[7]"  direction = "in"  />
         <pitem  name = "d1[6]"  direction = "in"  />
         <pitem  name = "d1[5]"  direction = "in"  />
@@ -3182,14 +2700,6 @@
         <pitem  name = "d1[2]"  direction = "in"  />
         <pitem  name = "d1[1]"  direction = "in"  />
         <pitem  name = "d1[0]"  direction = "in"  />
-        <pitem  name = "d0[7]"  direction = "in"  />
-        <pitem  name = "d0[6]"  direction = "in"  />
-        <pitem  name = "d0[5]"  direction = "in"  />
-        <pitem  name = "d0[4]"  direction = "in"  />
-        <pitem  name = "d0[3]"  direction = "in"  />
-        <pitem  name = "d0[2]"  direction = "in"  />
-        <pitem  name = "d0[1]"  direction = "in"  />
-        <pitem  name = "d0[0]"  direction = "in"  />
         <pitem  name = "cond"  direction = "in"  />
         <pitem  name = "o[7]"  direction = "out"  />
         <pitem  name = "o[6]"  direction = "out"  />
@@ -3202,6 +2712,14 @@
         </pins>
 
         <nets>
+        <nitem  name = "globalClockArea_jtag_io_leds[7]"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[6]"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[5]"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[4]"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[3]"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[0]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_leds[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_leds[1]"  />
         <nitem  name = "globalClockArea_jtag/_zz_5[7]"  />
         <nitem  name = "globalClockArea_jtag/_zz_5[6]"  />
         <nitem  name = "globalClockArea_jtag/_zz_5[5]"  />
@@ -3210,23 +2728,15 @@
         <nitem  name = "globalClockArea_jtag/_zz_5[2]"  />
         <nitem  name = "globalClockArea_jtag/_zz_5[1]"  />
         <nitem  name = "globalClockArea_jtag/_zz_5[0]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[0]"  />
-        <nitem  name = "globalClockArea_jtag/n373"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_260[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_260[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_260[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_260[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_260[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_260[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_260[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_260[0]"  />
+        <nitem  name = "globalClockArea_jtag/n504"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_236[7]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_236[6]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_236[5]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_236[4]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_236[3]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_236[2]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_236[1]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_236[0]"  />
         </nets>
     </instance>
 
@@ -3269,36 +2779,36 @@
         <nitem  name = "globalClockArea_jtag/_zz_5[2]"  />
         <nitem  name = "globalClockArea_jtag/_zz_5[1]"  />
         <nitem  name = "globalClockArea_jtag/_zz_5[0]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_252[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_252[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_252[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_252[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_252[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_252[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_252[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_252[0]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_158[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_158[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_158[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_158[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_158[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_158[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_158[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_158[0]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_228[7]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_228[6]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_228[5]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_228[4]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_228[3]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_228[2]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_228[1]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_228[0]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_174[7]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_174[6]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_174[5]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_174[4]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_174[3]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_174[2]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_174[1]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_174[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/_zz_6_7__I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_jtag/io_leds_7__I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
-        <pitem  name = "cond"  direction = "in"  />
         <pitem  name = "d0[7]"  direction = "in"  />
         <pitem  name = "d0[6]"  direction = "in"  />
         <pitem  name = "d0[5]"  direction = "in"  />
         <pitem  name = "d0[4]"  direction = "in"  />
         <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
         <pitem  name = "d0[2]"  direction = "in"  />
         <pitem  name = "d0[1]"  direction = "in"  />
-        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
         <pitem  name = "d1[7]"  direction = "in"  />
         <pitem  name = "d1[6]"  direction = "in"  />
         <pitem  name = "d1[5]"  direction = "in"  />
@@ -3318,260 +2828,35 @@
         </pins>
 
         <nets>
+        <nitem  name = "globalClockArea_jtag_io_leds[7]"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[6]"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[5]"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[4]"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[3]"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[0]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_leds[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_leds[1]"  />
         <nitem  name = "globalClockArea_jtag/_zz_4"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[0]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_260[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_260[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_260[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_260[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_260[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_260[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_260[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_260[0]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_166[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_166[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_166[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_166[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_166[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_166[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_166[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_166[0]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_236[7]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_236[6]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_236[5]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_236[4]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_236[3]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_236[2]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_236[1]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_236[0]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_60[7]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_60[6]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_60[5]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_60[4]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_60[3]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_60[2]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_60[1]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_60[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/mux_82"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "d0[7]"  direction = "in"  />
-        <pitem  name = "d0[6]"  direction = "in"  />
-        <pitem  name = "d0[5]"  direction = "in"  />
-        <pitem  name = "d0[4]"  direction = "in"  />
-        <pitem  name = "d0[3]"  direction = "in"  />
-        <pitem  name = "d0[2]"  direction = "in"  />
-        <pitem  name = "d0[1]"  direction = "in"  />
-        <pitem  name = "d0[0]"  direction = "in"  />
-        <pitem  name = "d1[7]"  direction = "in"  />
-        <pitem  name = "d1[6]"  direction = "in"  />
-        <pitem  name = "d1[5]"  direction = "in"  />
-        <pitem  name = "d1[4]"  direction = "in"  />
-        <pitem  name = "d1[3]"  direction = "in"  />
-        <pitem  name = "d1[2]"  direction = "in"  />
-        <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
-        <pitem  name = "cond"  direction = "in"  />
-        <pitem  name = "o[7]"  direction = "out"  />
-        <pitem  name = "o[6]"  direction = "out"  />
-        <pitem  name = "o[5]"  direction = "out"  />
-        <pitem  name = "o[4]"  direction = "out"  />
-        <pitem  name = "o[3]"  direction = "out"  />
-        <pitem  name = "o[2]"  direction = "out"  />
-        <pitem  name = "o[1]"  direction = "out"  />
-        <pitem  name = "o[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "globalClockArea_jtag/_zz_8[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[0]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_9[0]"  />
-        <nitem  name = "globalClockArea_jtag/n463"  />
-        <nitem  name = "globalClockArea_jtag/n614"  />
-        <nitem  name = "globalClockArea_jtag/n615"  />
-        <nitem  name = "globalClockArea_jtag/n616"  />
-        <nitem  name = "globalClockArea_jtag/n617"  />
-        <nitem  name = "globalClockArea_jtag/n618"  />
-        <nitem  name = "globalClockArea_jtag/n619"  />
-        <nitem  name = "globalClockArea_jtag/n620"  />
-        <nitem  name = "globalClockArea_jtag/n621"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/mux_84"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "d1[7]"  direction = "in"  />
-        <pitem  name = "d1[6]"  direction = "in"  />
-        <pitem  name = "d1[5]"  direction = "in"  />
-        <pitem  name = "d1[4]"  direction = "in"  />
-        <pitem  name = "d1[3]"  direction = "in"  />
-        <pitem  name = "d1[2]"  direction = "in"  />
-        <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
-        <pitem  name = "cond"  direction = "in"  />
-        <pitem  name = "d0[7]"  direction = "in"  />
-        <pitem  name = "d0[6]"  direction = "in"  />
-        <pitem  name = "d0[5]"  direction = "in"  />
-        <pitem  name = "d0[4]"  direction = "in"  />
-        <pitem  name = "d0[3]"  direction = "in"  />
-        <pitem  name = "d0[2]"  direction = "in"  />
-        <pitem  name = "d0[1]"  direction = "in"  />
-        <pitem  name = "d0[0]"  direction = "in"  />
-        <pitem  name = "o[7]"  direction = "out"  />
-        <pitem  name = "o[6]"  direction = "out"  />
-        <pitem  name = "o[5]"  direction = "out"  />
-        <pitem  name = "o[4]"  direction = "out"  />
-        <pitem  name = "o[3]"  direction = "out"  />
-        <pitem  name = "o[2]"  direction = "out"  />
-        <pitem  name = "o[1]"  direction = "out"  />
-        <pitem  name = "o[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "io_jtag_tdi"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[1]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_209"  />
-        <nitem  name = "globalClockArea_jtag/n614"  />
-        <nitem  name = "globalClockArea_jtag/n615"  />
-        <nitem  name = "globalClockArea_jtag/n616"  />
-        <nitem  name = "globalClockArea_jtag/n617"  />
-        <nitem  name = "globalClockArea_jtag/n618"  />
-        <nitem  name = "globalClockArea_jtag/n619"  />
-        <nitem  name = "globalClockArea_jtag/n620"  />
-        <nitem  name = "globalClockArea_jtag/n621"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_268[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_268[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_268[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_268[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_268[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_268[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_268[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_268[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/_zz_8_7__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "cond"  direction = "in"  />
-        <pitem  name = "d0[7]"  direction = "in"  />
-        <pitem  name = "d0[6]"  direction = "in"  />
-        <pitem  name = "d0[5]"  direction = "in"  />
-        <pitem  name = "d0[4]"  direction = "in"  />
-        <pitem  name = "d0[3]"  direction = "in"  />
-        <pitem  name = "d0[2]"  direction = "in"  />
-        <pitem  name = "d0[1]"  direction = "in"  />
-        <pitem  name = "d0[0]"  direction = "in"  />
-        <pitem  name = "d1[7]"  direction = "in"  />
-        <pitem  name = "d1[6]"  direction = "in"  />
-        <pitem  name = "d1[5]"  direction = "in"  />
-        <pitem  name = "d1[4]"  direction = "in"  />
-        <pitem  name = "d1[3]"  direction = "in"  />
-        <pitem  name = "d1[2]"  direction = "in"  />
-        <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
-        <pitem  name = "o[7]"  direction = "out"  />
-        <pitem  name = "o[6]"  direction = "out"  />
-        <pitem  name = "o[5]"  direction = "out"  />
-        <pitem  name = "o[4]"  direction = "out"  />
-        <pitem  name = "o[3]"  direction = "out"  />
-        <pitem  name = "o[2]"  direction = "out"  />
-        <pitem  name = "o[1]"  direction = "out"  />
-        <pitem  name = "o[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "globalClockArea_jtag/_zz_7"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[0]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_268[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_268[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_268[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_268[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_268[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_268[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_268[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_268[0]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_174[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_174[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_174[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_174[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_174[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_174[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_174[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_174[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/ctrl_buf_I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "a1"  direction = "in"  />
-        <pitem  name = "c"  direction = "in"  />
-        <pitem  name = "a0"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "io_jtag2_tdo"  />
-        <nitem  name = "globalClockArea_jtag/_zz_11"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_buf"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_buf2_N_280"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/ctrl_tap_fsm_state"  library = "work"  arch = ""  type = "reg">
-        <pins>
-        <pitem  name = "reset[0]"  direction = "in"  />
-        <pitem  name = "reset[1]"  direction = "in"  />
-        <pitem  name = "reset[2]"  direction = "in"  />
-        <pitem  name = "reset[3]"  direction = "in"  />
-        <pitem  name = "set[0]"  direction = "in"  />
-        <pitem  name = "set[1]"  direction = "in"  />
-        <pitem  name = "set[2]"  direction = "in"  />
-        <pitem  name = "set[3]"  direction = "in"  />
-        <pitem  name = "clock"  direction = "in"  />
-        <pitem  name = "d[3]"  direction = "in"  />
-        <pitem  name = "d[2]"  direction = "in"  />
-        <pitem  name = "d[1]"  direction = "in"  />
-        <pitem  name = "d[0]"  direction = "in"  />
-        <pitem  name = "q[3]"  direction = "out"  />
-        <pitem  name = "q[2]"  direction = "out"  />
-        <pitem  name = "q[1]"  direction = "out"  />
-        <pitem  name = "q[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "globalClockArea_jtag/gnd"  />
-        <nitem  name = "io_jtag_tck"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext[3]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext[2]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext[1]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext[0]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[3]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[2]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[1]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/ctrl_tap_bypass_105"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "globalClockArea_jtag/ctrl_tap_bypass_91"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "r"  direction = "in"  />
         <pitem  name = "s"  direction = "in"  />
@@ -3590,14 +2875,14 @@
 
     <instance  name = "globalClockArea_jtag/ctrl_tap_instructionShift"  library = "work"  arch = ""  type = "reg">
         <pins>
-        <pitem  name = "set[0]"  direction = "in"  />
-        <pitem  name = "set[1]"  direction = "in"  />
-        <pitem  name = "set[2]"  direction = "in"  />
-        <pitem  name = "set[3]"  direction = "in"  />
-        <pitem  name = "set[4]"  direction = "in"  />
         <pitem  name = "set[5]"  direction = "in"  />
         <pitem  name = "set[6]"  direction = "in"  />
         <pitem  name = "set[7]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
         <pitem  name = "reset[7]"  direction = "in"  />
         <pitem  name = "reset[6]"  direction = "in"  />
         <pitem  name = "reset[5]"  direction = "in"  />
@@ -3636,14 +2921,14 @@
         <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift[2]"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift[1]"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift[0]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_118[7]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_118[6]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_118[5]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_118[4]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_118[3]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_118[2]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_118[1]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_118[0]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_134[7]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_134[6]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_134[5]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_134[4]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_134[3]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_134[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_134[1]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_134[0]"  />
         </nets>
     </instance>
 
@@ -3695,14 +2980,14 @@
         <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction[2]"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction[1]"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction[0]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_110[7]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_110[6]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_110[5]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_110[4]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_110[3]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_110[2]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_110[1]"  />
-        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_110[0]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_126[7]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_126[6]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_126[5]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_126[4]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_126[3]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_126[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_126[1]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instruction_7__N_126[0]"  />
         </nets>
     </instance>
 
@@ -3874,38 +3159,38 @@
         <nitem  name = "globalClockArea_jtag/_zz_3[2]"  />
         <nitem  name = "globalClockArea_jtag/_zz_3[1]"  />
         <nitem  name = "globalClockArea_jtag/_zz_3[0]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[31]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[30]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[29]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[28]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[27]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[26]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[25]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[24]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[23]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[22]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[21]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[20]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[19]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[18]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[17]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[16]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[15]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[14]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[13]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[12]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[11]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[10]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[9]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[8]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_126[0]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[31]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[30]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[29]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[28]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[27]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[26]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[25]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[24]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[23]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[22]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[21]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[20]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[19]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[18]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[17]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[16]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[15]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[14]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[13]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[12]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[11]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[10]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[9]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[8]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[7]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[6]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[5]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[4]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[3]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[2]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[1]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_3_31__N_142[0]"  />
         </nets>
     </instance>
 
@@ -3957,14 +3242,14 @@
         <nitem  name = "globalClockArea_jtag/_zz_5[2]"  />
         <nitem  name = "globalClockArea_jtag/_zz_5[1]"  />
         <nitem  name = "globalClockArea_jtag/_zz_5[0]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_158[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_158[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_158[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_158[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_158[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_158[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_158[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_158[0]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_174[7]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_174[6]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_174[5]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_174[4]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_174[3]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_174[2]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_174[1]"  />
+        <nitem  name = "globalClockArea_jtag/_zz_5_7__N_174[0]"  />
         </nets>
     </instance>
 
@@ -3992,9 +3277,9 @@
         <pitem  name = "q[5]"  direction = "out"  />
         <pitem  name = "q[4]"  direction = "out"  />
         <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
         <pitem  name = "q[2]"  direction = "out"  />
         <pitem  name = "q[1]"  direction = "out"  />
-        <pitem  name = "q[0]"  direction = "out"  />
         <pitem  name = "d[7]"  direction = "in"  />
         <pitem  name = "d[6]"  direction = "in"  />
         <pitem  name = "d[5]"  direction = "in"  />
@@ -4008,85 +3293,26 @@
         <nets>
         <nitem  name = "globalClockArea_jtag/gnd"  />
         <nitem  name = "io_jtag_tck"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[0]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_166[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_166[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_166[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_166[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_166[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_166[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_166[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6_7__N_166[0]"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[7]"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[6]"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[5]"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[4]"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[3]"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[0]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_leds[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_leds[1]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_60[7]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_60[6]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_60[5]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_60[4]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_60[3]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_60[2]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_60[1]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_7__N_60[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/_zz_8"  library = "work"  arch = ""  type = "reg">
-        <pins>
-        <pitem  name = "reset[0]"  direction = "in"  />
-        <pitem  name = "reset[1]"  direction = "in"  />
-        <pitem  name = "reset[2]"  direction = "in"  />
-        <pitem  name = "reset[3]"  direction = "in"  />
-        <pitem  name = "reset[4]"  direction = "in"  />
-        <pitem  name = "reset[5]"  direction = "in"  />
-        <pitem  name = "reset[6]"  direction = "in"  />
-        <pitem  name = "reset[7]"  direction = "in"  />
-        <pitem  name = "set[0]"  direction = "in"  />
-        <pitem  name = "set[1]"  direction = "in"  />
-        <pitem  name = "set[2]"  direction = "in"  />
-        <pitem  name = "set[3]"  direction = "in"  />
-        <pitem  name = "set[4]"  direction = "in"  />
-        <pitem  name = "set[5]"  direction = "in"  />
-        <pitem  name = "set[6]"  direction = "in"  />
-        <pitem  name = "set[7]"  direction = "in"  />
-        <pitem  name = "clock"  direction = "in"  />
-        <pitem  name = "q[7]"  direction = "out"  />
-        <pitem  name = "q[6]"  direction = "out"  />
-        <pitem  name = "q[5]"  direction = "out"  />
-        <pitem  name = "q[4]"  direction = "out"  />
-        <pitem  name = "q[3]"  direction = "out"  />
-        <pitem  name = "q[2]"  direction = "out"  />
-        <pitem  name = "q[1]"  direction = "out"  />
-        <pitem  name = "q[0]"  direction = "out"  />
-        <pitem  name = "d[7]"  direction = "in"  />
-        <pitem  name = "d[6]"  direction = "in"  />
-        <pitem  name = "d[5]"  direction = "in"  />
-        <pitem  name = "d[4]"  direction = "in"  />
-        <pitem  name = "d[3]"  direction = "in"  />
-        <pitem  name = "d[2]"  direction = "in"  />
-        <pitem  name = "d[1]"  direction = "in"  />
-        <pitem  name = "d[0]"  direction = "in"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "globalClockArea_jtag/gnd"  />
-        <nitem  name = "io_jtag_tck"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8[0]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_174[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_174[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_174[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_174[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_174[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_174[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_174[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_8_7__N_174[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "globalClockArea_jtag/ctrl_tap_tdoUnbufferd_regNext_112"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "globalClockArea_jtag/ctrl_tap_tdoUnbufferd_regNext_97"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "r"  direction = "in"  />
         <pitem  name = "s"  direction = "in"  />
@@ -4099,7 +3325,7 @@
         <nitem  name = "globalClockArea_jtag/gnd"  />
         <nitem  name = "globalClockArea_jtag/internalJtag_tdo"  />
         <nitem  name = "globalClockArea_jtag/ctrl_tap_tdoUnbufferd"  />
-        <nitem  name = "globalClockArea_jtag/io_jtag_tck_N_278"  />
+        <nitem  name = "globalClockArea_jtag/io_jtag_tck_N_264"  />
         </nets>
     </instance>
 
@@ -4111,37 +3337,29 @@
 
         <nets>
         <nitem  name = "io_jtag_tck"  />
-        <nitem  name = "globalClockArea_jtag/io_jtag_tck_N_278"  />
+        <nitem  name = "globalClockArea_jtag/io_jtag_tck_N_264"  />
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_jtag/ctrl_leds"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "globalClockArea_jtag/_zz_7"  library = "work"  arch = ""  type = "reg">
         <pins>
-        <pitem  name = "set[7]"  direction = "in"  />
-        <pitem  name = "set[6]"  direction = "in"  />
-        <pitem  name = "set[5]"  direction = "in"  />
-        <pitem  name = "set[4]"  direction = "in"  />
-        <pitem  name = "set[3]"  direction = "in"  />
-        <pitem  name = "set[2]"  direction = "in"  />
-        <pitem  name = "set[1]"  direction = "in"  />
         <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[4]"  direction = "in"  />
+        <pitem  name = "set[5]"  direction = "in"  />
+        <pitem  name = "set[6]"  direction = "in"  />
+        <pitem  name = "set[7]"  direction = "in"  />
         <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
         <pitem  name = "q[7]"  direction = "out"  />
         <pitem  name = "q[6]"  direction = "out"  />
         <pitem  name = "q[5]"  direction = "out"  />
         <pitem  name = "q[4]"  direction = "out"  />
         <pitem  name = "q[3]"  direction = "out"  />
         <pitem  name = "q[2]"  direction = "out"  />
-        <pitem  name = "q[1]"  direction = "out"  />
-        <pitem  name = "q[0]"  direction = "out"  />
-        <pitem  name = "d[7]"  direction = "in"  />
-        <pitem  name = "d[6]"  direction = "in"  />
-        <pitem  name = "d[5]"  direction = "in"  />
-        <pitem  name = "d[4]"  direction = "in"  />
-        <pitem  name = "d[3]"  direction = "in"  />
-        <pitem  name = "d[2]"  direction = "in"  />
-        <pitem  name = "d[1]"  direction = "in"  />
-        <pitem  name = "d[0]"  direction = "in"  />
         <pitem  name = "reset[7]"  direction = "in"  />
         <pitem  name = "reset[6]"  direction = "in"  />
         <pitem  name = "reset[5]"  direction = "in"  />
@@ -4150,55 +3368,373 @@
         <pitem  name = "reset[2]"  direction = "in"  />
         <pitem  name = "reset[1]"  direction = "in"  />
         <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "d[7]"  direction = "in"  />
+        <pitem  name = "d[6]"  direction = "in"  />
+        <pitem  name = "d[5]"  direction = "in"  />
+        <pitem  name = "d[4]"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
         </pins>
 
         <nets>
         <nitem  name = "globalClockArea_jtag/gnd"  />
         <nitem  name = "io_jtag_tck"  />
-        <nitem  name = "globalClockArea_jtag_io_leds[7]"  />
-        <nitem  name = "globalClockArea_jtag_io_leds[6]"  />
-        <nitem  name = "globalClockArea_jtag_io_leds[5]"  />
-        <nitem  name = "globalClockArea_jtag_io_leds[4]"  />
-        <nitem  name = "globalClockArea_jtag_io_leds[3]"  />
         <nitem  name = "globalClockArea_jtag_io_leds[2]"  />
         <nitem  name = "globalClockArea_jtag_io_leds[1]"  />
-        <nitem  name = "globalClockArea_jtag_io_leds[0]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[7]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[6]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[5]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[4]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[3]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[2]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[1]"  />
-        <nitem  name = "globalClockArea_jtag/_zz_6[0]"  />
-        <nitem  name = "globalClockArea_jtag/io_reset_N_61"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_chain[7]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_chain[6]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_chain[5]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_chain[4]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_chain[3]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_chain[2]"  />
+        <nitem  name = "globalClockArea_jtag/io_reset_N_77"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_68[7]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_68[6]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_68[5]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_68[4]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_68[3]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_68[2]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_68[1]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_68[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "globalClockArea_jtag/io_reset_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "io_reset"  />
+        <nitem  name = "globalClockArea_jtag/io_reset_N_77"  />
+        </nets>
+    </instance>
+
+    <instance  name = "globalClockArea_jtag/ctrl_tap_fsm_state_3__I_0_116"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "globalClockArea_jtag/gnd"  />
+        <nitem  name = "globalClockArea_jtag/pwr"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[3]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[1]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[0]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_184"  />
+        </nets>
+    </instance>
+
+    <instance  name = "globalClockArea_jtag/and_77"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "globalClockArea_jtag/gnd"  />
+        <nitem  name = "globalClockArea_jtag/pwr"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift[7]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift[6]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift[5]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift[4]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift[3]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift[1]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift[0]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_254[7]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_254[6]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_254[5]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_254[4]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_254[3]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_254[2]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_254[1]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_254[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "globalClockArea_jtag/io_leds_2__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "globalClockArea_jtag/gnd"  />
+        <nitem  name = "globalClockArea_jtag/pwr"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_254[7]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_254[6]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_254[5]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_254[4]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_254[3]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_254[2]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_254[1]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_254[0]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_253"  />
+        </nets>
+    </instance>
+
+    <instance  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_184_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift_7__N_184"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_253"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_252"  />
+        </nets>
+    </instance>
+
+    <instance  name = "globalClockArea_jtag/and_80"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "b[7]"  direction = "in"  />
+        <pitem  name = "b[6]"  direction = "in"  />
+        <pitem  name = "b[5]"  direction = "in"  />
+        <pitem  name = "b[4]"  direction = "in"  />
+        <pitem  name = "b[3]"  direction = "in"  />
+        <pitem  name = "b[2]"  direction = "in"  />
+        <pitem  name = "b[1]"  direction = "in"  />
+        <pitem  name = "b[0]"  direction = "in"  />
+        <pitem  name = "a[7]"  direction = "in"  />
+        <pitem  name = "a[6]"  direction = "in"  />
+        <pitem  name = "a[5]"  direction = "in"  />
+        <pitem  name = "a[4]"  direction = "in"  />
+        <pitem  name = "a[3]"  direction = "in"  />
+        <pitem  name = "a[2]"  direction = "in"  />
+        <pitem  name = "a[1]"  direction = "in"  />
+        <pitem  name = "a[0]"  direction = "in"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "globalClockArea_jtag/gnd"  />
+        <nitem  name = "globalClockArea_jtag/pwr"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift[7]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift[6]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift[5]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift[4]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift[3]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift[1]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_instructionShift[0]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_244[7]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_244[6]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_244[5]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_244[4]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_244[3]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_244[2]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_244[1]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_244[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "globalClockArea_jtag/ctrl_chain_7__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "globalClockArea_jtag_io_leds[2]"  />
+        <nitem  name = "globalClockArea_jtag_io_leds[1]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_chain[7]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_chain[6]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_chain[5]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_chain[4]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_chain[3]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_chain[2]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_252"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_244[7]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_244[6]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_244[5]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_244[4]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_244[3]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_244[2]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_244[1]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_244[0]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_68[7]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_68[6]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_68[5]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_68[4]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_68[3]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_68[2]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_68[1]"  />
+        <nitem  name = "globalClockArea_jtag/io_leds_2__N_68[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "globalClockArea_jtag/io_jtag1_tdo_regNext_99"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "clk"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "globalClockArea_jtag/gnd"  />
+        <nitem  name = "io_jtag1_tdo"  />
+        <nitem  name = "globalClockArea_jtag/io_jtag1_tdo_regNext"  />
+        <nitem  name = "globalClockArea_jtag/io_jtag_tck_N_264"  />
+        </nets>
+    </instance>
+
+    <instance  name = "globalClockArea_jtag/io_jtag2_tdo_regNext_100"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "clk"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "globalClockArea_jtag/gnd"  />
+        <nitem  name = "io_jtag2_tdo"  />
+        <nitem  name = "globalClockArea_jtag/io_jtag2_tdo_regNext"  />
+        <nitem  name = "globalClockArea_jtag/io_jtag_tck_N_264"  />
+        </nets>
+    </instance>
+
+    <instance  name = "globalClockArea_jtag/ctrl_tap_fsm_state"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "set[3]"  direction = "in"  />
+        <pitem  name = "set[2]"  direction = "in"  />
+        <pitem  name = "set[1]"  direction = "in"  />
+        <pitem  name = "set[0]"  direction = "in"  />
+        <pitem  name = "reset[3]"  direction = "in"  />
+        <pitem  name = "reset[2]"  direction = "in"  />
+        <pitem  name = "reset[1]"  direction = "in"  />
+        <pitem  name = "reset[0]"  direction = "in"  />
+        <pitem  name = "clock"  direction = "in"  />
+        <pitem  name = "d[3]"  direction = "in"  />
+        <pitem  name = "d[2]"  direction = "in"  />
+        <pitem  name = "d[1]"  direction = "in"  />
+        <pitem  name = "d[0]"  direction = "in"  />
+        <pitem  name = "q[3]"  direction = "out"  />
+        <pitem  name = "q[2]"  direction = "out"  />
+        <pitem  name = "q[1]"  direction = "out"  />
+        <pitem  name = "q[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "globalClockArea_jtag/gnd"  />
+        <nitem  name = "io_jtag_tck"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext[3]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext[1]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_stateNext[0]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[3]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[2]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[1]"  />
+        <nitem  name = "globalClockArea_jtag/ctrl_tap_fsm_state[0]"  />
         </nets>
     </instance>
 
     <instance  name = "globalClockArea_jtag"  />
     <instance  name = "globalClockArea_toggler"  />
     <!--
-        REG instances in netlist: 17
+        REG instances in netlist: 14
     -->
 
     <regs>
         <reg  name = "globalClockArea_toggler/timeout_counter_value"  />
         <reg  name = "globalClockArea_toggler/toggle_23"  />
         <reg  name = "globalClockArea_toggler/timeout_state_21"  />
-        <reg  name = "globalClockArea_jtag/ctrl_chain"  />
-        <reg  name = "globalClockArea_jtag/ctrl_buf_101"  />
-        <reg  name = "globalClockArea_jtag/_zz_9"  />
-        <reg  name = "globalClockArea_jtag/ctrl_buf2_103"  />
-        <reg  name = "globalClockArea_jtag/ctrl_tap_fsm_state"  />
-        <reg  name = "globalClockArea_jtag/ctrl_tap_bypass_105"  />
+        <reg  name = "globalClockArea_jtag/ctrl_tap_bypass_91"  />
         <reg  name = "globalClockArea_jtag/ctrl_tap_instructionShift"  />
         <reg  name = "globalClockArea_jtag/ctrl_tap_instruction"  />
         <reg  name = "globalClockArea_jtag/_zz_3"  />
         <reg  name = "globalClockArea_jtag/_zz_5"  />
         <reg  name = "globalClockArea_jtag/_zz_6"  />
-        <reg  name = "globalClockArea_jtag/_zz_8"  />
-        <reg  name = "globalClockArea_jtag/ctrl_tap_tdoUnbufferd_regNext_112"  />
-        <reg  name = "globalClockArea_jtag/ctrl_leds"  />
+        <reg  name = "globalClockArea_jtag/ctrl_tap_tdoUnbufferd_regNext_97"  />
+        <reg  name = "globalClockArea_jtag/_zz_7"  />
+        <reg  name = "globalClockArea_jtag/io_jtag1_tdo_regNext_99"  />
+        <reg  name = "globalClockArea_jtag/io_jtag2_tdo_regNext_100"  />
+        <reg  name = "globalClockArea_jtag/ctrl_tap_fsm_state"  />
     </regs>
 
     <!--

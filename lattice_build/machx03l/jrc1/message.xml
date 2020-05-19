@@ -42,10 +42,10 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(449): </Dynamic>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(446): </Dynamic>
             <Dynamic>Toggler</Dynamic>
             <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
-            <Navigation>449</Navigation>
+            <Navigation>446</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
@@ -54,14 +54,6 @@
             <Dynamic>JtagBackplane</Dynamic>
             <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
             <Navigation>96</Navigation>
-        </Message>
-        <Message>
-            <ID>35935013</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(384): </Dynamic>
-            <Dynamic>\globalClockArea_jtag/_zz_9_i7</Dynamic>
-            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
-            <Navigation>384</Navigation>
         </Message>
         <Message>
             <ID>35001611</ID>
