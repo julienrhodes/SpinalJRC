@@ -10,6 +10,10 @@ Build against Dev branch of SpinalHDL
 1. `cd SpinalJRC; sbt`
 1. `run mylib.MyTopLevelSim`
 
+References
+==========
+[SVF Spec] (http://www.jtagtest.com/pdf/svf_specification.pdf)
+
 Spinal Base Project
 ============
 This repository is a base SBT project added to help non Scala/SBT native people in their first steps.
