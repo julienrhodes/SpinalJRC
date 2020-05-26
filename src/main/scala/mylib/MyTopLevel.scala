@@ -20,6 +20,7 @@ package mylib
 
 import spinal.core._
 import spinal.lib._
+import spinal.lib.io._
 import spinal.lib.com.jtag._
 
 import scala.util.Random
@@ -80,8 +81,8 @@ class MyTopLevel extends Component {
   val io = new Bundle {
     val reset   = in Bool
     val jtag    = slave(Jtag())
-    val jtag1   = master(Jtag())
-    val jtag2   = master(Jtag())
+    val jtag1   = master(TriState(master(Jtag())))
+    val jtag2   = master(TriState(master(Jtag())))
     val leds    = out Bits(8 bit)
   }
 
@@ -109,8 +110,8 @@ class MyTopLevel extends Component {
 class JtagBackplane extends Component {
   val io = new Bundle {
     val jtag    = slave(Jtag())
-    val jtag1   = master(Jtag())
-    val jtag2   = master(Jtag())
+    val jtag1   = master(TriState(master(Jtag())))
+    val jtag2   = master(TriState(master(Jtag())))
     val leds    = out Bits(8 bit)
   }
 
@@ -142,46 +143,53 @@ class JtagBackplane extends Component {
     
     io.jtag.tdo := internalJtag.tdo
     //io.jtag.tdo := tap.tdoUnbufferd
-    // TODO: Tri-state is the correct setting
+
     // JTAG 1
-    io.jtag1.tck := False
-    io.jtag1.tms := False
-    io.jtag1.tdi := False
+    io.jtag1.writeEnable := False
+    // Doesn't matter!
+    io.jtag1.write.tck := False
+    io.jtag1.write.tms := False
+    io.jtag1.write.tdi := False
+    io.jtag1.write.tdo := False
 
     // Enable buffer
     when(chain(0)){
       // Chain it in!
+      io.jtag1.writeEnable := True
       io.leds(1) := True
-      io.jtag1.tdi := internalJtag.tdo
+      io.jtag1.write.tdi := internalJtag.tdo
       //io.jtag1.tdi := tap.tdoUnbufferd
-      io.jtag.tdo := ClockDomain.current.withRevertedClockEdge()(RegNext(io.jtag1.tdo))
+      io.jtag.tdo := ClockDomain.current.withRevertedClockEdge()(RegNext(io.jtag1.read.tdo))
 
-      io.jtag1.tck := io.jtag.tck
-      io.jtag1.tms := io.jtag.tms
+      io.jtag1.write.tck := io.jtag.tck
+      io.jtag1.write.tms := io.jtag.tms
 
     }.otherwise {
       io.leds(1) := False
     }
     
     // JTAG 2
-    io.jtag2.tck := False
-    io.jtag2.tms := False
-    io.jtag2.tdi := False
+    io.jtag2.writeEnable := False
+    io.jtag2.write.tck := False
+    io.jtag2.write.tms := False
+    io.jtag2.write.tdi := False
+    io.jtag2.write.tdo := False
 
     // Enable buffer
     when(chain(1)){
       io.leds(2) := True
+      io.jtag2.writeEnable := True
       // Chain it in!
-      io.jtag2.tdi := internalJtag.tdo
-      //io.jtag2.tdi := tap.tdoUnbufferd
+      io.jtag2.write.tdi := internalJtag.tdo
+      //io.jtag2.write.tdi := tap.tdoUnbufferd
 
-      io.jtag.tdo := ClockDomain.current.withRevertedClockEdge()(RegNext(io.jtag2.tdo))
+      io.jtag.tdo := ClockDomain.current.withRevertedClockEdge()(RegNext(io.jtag2.read.tdo))
       when(chain(0)) {
-        io.jtag2.tdi := ClockDomain.current.withRevertedClockEdge()(RegNext(io.jtag1.tdo))
+        io.jtag2.write.tdi := ClockDomain.current.withRevertedClockEdge()(RegNext(io.jtag1.read.tdo))
       }
 
-      io.jtag2.tck := io.jtag.tck
-      io.jtag2.tms := io.jtag.tms
+      io.jtag2.write.tck := io.jtag.tck
+      io.jtag2.write.tms := io.jtag.tms
 
     }.otherwise {
       io.leds(2) := False
@@ -221,7 +229,7 @@ object MyBlinkyVerilog {
 //Generate the MyTopLevel's Verilog
 object MyTopLevelVerilog {
   def main(args: Array[String]) {
-    SpinalVerilog(new MyTopLevel)
+    SpinalVerilog(InOutWrapper(new MyTopLevel))
   }
 }
 

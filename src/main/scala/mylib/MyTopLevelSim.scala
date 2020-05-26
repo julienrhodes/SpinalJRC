@@ -2,6 +2,7 @@ package mylib
 
 import spinal.core._
 import spinal.lib._
+import spinal.lib.io.InOutWrapper
 import spinal.sim._
 import spinal.core.sim._
 import spinal.lib.com.jtag._
@@ -44,13 +45,13 @@ object MyTopLevelSim {
         while(true) {
           // TDI is sampled on the rising clock edge
           dut.ctrl.clockDomain.waitRisingEdge(1)
-          if (dut.io.jtag1.tdi.toBoolean)
+          if (dut.io.jtag1.write.tdi.toBoolean)
           {
             data |= 1 << 8
           }
           // TDO is updated on the falling clock edge
           dut.ctrl.clockDomain.waitFallingEdge(1)
-          dut.io.jtag1.tdo #= ((data & 1) == 1)
+          dut.io.jtag1.read.tdo #= ((data & 1) == 1)
           data = data >> 1
         }
       }
