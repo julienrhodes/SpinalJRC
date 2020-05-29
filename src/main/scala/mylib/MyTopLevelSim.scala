@@ -1,14 +1,80 @@
 package mylib
 
 import spinal.core._
-import spinal.lib._
-import spinal.lib.io.InOutWrapper
 import spinal.sim._
 import spinal.core.sim._
+import spinal.lib._
 import spinal.lib.com.jtag._
+import spinal.lib.io._
 
 import scala.util.Random
 
+object JtagChainerSim {
+  def main(args: Array[String]) {
+    val compiled = SimConfig.withWave.compile{
+      val dut = InOutWrapper(new JtagChainerTest)
+      dut.chainer.io.child(0).simPublic()
+      dut.chainer.io.child(1).simPublic()
+      dut
+    }
+    compiled.doSim("JtagChainer") { dut =>
+
+      val jtagClk = dut.chainer.jtagClkArea.clockDomain
+      jtagClk.forkStimulus(20)
+
+      dut.chainer.io.select #= 0
+      dut.chainer.io.primary.tms #= false
+      dut.chainer.io.primary.tdi #= false
+      jtagClk.waitSampling(3)
+      dut.chainer.io.primary.tdi #= true
+      jtagClk.waitSampling()
+      dut.chainer.io.primary.tdi #= false
+      jtagClk.waitSampling()
+      jtagClk.waitSampling(4)
+
+      fork {
+        while(true) {
+          jtagClk.waitSampling()
+          dut.chainer.io.child(0).read.tdo #= dut.chainer.io.child(0).write.tdi.toBoolean
+          dut.chainer.io.child(1).read.tdo #= dut.chainer.io.child(1).write.tdi.toBoolean
+        }
+      }
+
+      // Enable chain 1
+      assert(dut.chainer.io.primary.tdo.toBoolean == false)
+      dut.chainer.io.select #= 1
+      dut.chainer.io.primary.tms #= true
+      dut.chainer.io.primary.tdi #= true
+      jtagClk.waitSampling(2) // Delayed by 1.5 (negedge)
+      assert(dut.chainer.io.primary.tdo.toBoolean == true)
+      dut.chainer.io.primary.tms #= false
+      dut.chainer.io.primary.tdi #= false
+      jtagClk.waitSampling(4)
+
+      // Enable chain 2
+      assert(dut.chainer.io.primary.tdo.toBoolean == false)
+      dut.chainer.io.select #= 2
+      dut.chainer.io.primary.tms #= true
+      dut.chainer.io.primary.tdi #= true
+      jtagClk.waitSampling(2) // Delayed by 1.5 (negedge)
+      assert(dut.chainer.io.primary.tdo.toBoolean == true)
+      dut.chainer.io.primary.tms #= false
+      dut.chainer.io.primary.tdi #= false
+      jtagClk.waitSampling(4)
+
+      // Enable chain 1 & 2
+      assert(dut.chainer.io.primary.tdo.toBoolean == false)
+      dut.chainer.io.select #= 3
+      dut.chainer.io.primary.tms #= true
+      dut.chainer.io.primary.tdi #= true
+      jtagClk.waitSampling(3) // Delayed by 2.5 (negedge)
+      assert(dut.chainer.io.primary.tdo.toBoolean == true)
+      dut.chainer.io.primary.tms #= false
+      dut.chainer.io.primary.tdi #= false
+      jtagClk.waitSampling(4)
+    }
+  }
+}
 
 //MyTopLevel's testbench
 object MyTopLevelSim {

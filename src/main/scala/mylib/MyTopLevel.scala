@@ -106,6 +106,59 @@ class MyTopLevel extends Component {
   }
 }
 
+class JtagChainerTest extends Component {
+  val chainer = new JtagChainer(2)
+}
+
+class JtagChainer(chains: Int) extends Area {
+  val io = new Bundle {
+    val primary = slave(Jtag())
+    val select  = in Bits(chains bits)
+    val child   = Vec(TriState(master(Jtag())), chains)
+  }
+
+  val jtagClkArea = new ClockingArea(ClockDomain(io.primary.tck, ClockDomain.current.reset)) {
+    io.primary.tdo := ClockDomain.current.withRevertedClockEdge()(RegNext(io.primary.tdi))
+
+
+    val buf = B(0, chains bits)
+
+    for(i <- 0 until chains) {
+      io.child(i).read.tdo := False
+      io.child(i).writeEnable := False
+      io.child(i).write.tdi := io.primary.tdi
+      io.child(i).write.tck := io.primary.tck
+      io.child(i).write.tms := io.primary.tms
+      io.child(i).write.tdo := False // Doesn't matter, always an input
+    }
+
+    for(i <- 0 until chains) {
+      when(io.select(i)) {
+        io.child(i).writeEnable := True
+        buf(i) := ClockDomain.current.withRevertedClockEdge()(RegNext(io.child(i).read.tdo))
+        //io.primary.tdo := ClockDomain.current.withRevertedClockEdge()(RegNext(io.child(0).read.tdo))
+        
+        // TODO TDO seems to be an output register, which means child.tdo -> buf -> primary.tdo is one delay too many
+        io.primary.tdo := buf(i)
+
+
+        for(j <- 0 until i) {
+          io.child(i).write.tdi := io.primary.tdi
+          when(io.select(j)) {
+            io.child(i).write.tdi := buf(j)
+          }
+
+        }
+
+      }
+    }
+    // The first selected child should have
+    // io.child(1).write.tdi := io.primary.tdi
+    // The next selected child should have
+    // io.child(3).write.tdi := buf(1)
+  }
+}
+
 // Must conform to ARM Debug Interface "DR scan chain and DR registers"
 class JtagBackplane extends Component {
   val io = new Bundle {
@@ -223,6 +276,12 @@ class Blinky extends Component {
 object MyBlinkyVerilog {
   def main(args: Array[String]) {
     SpinalVerilog(new Blinky)
+  }
+}
+
+object MyJtagChainerVerilog {
+  def main(args: Array[String]) {
+    SpinalVerilog(new JtagChainerTest)
   }
 }
 
