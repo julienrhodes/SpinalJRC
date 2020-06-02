@@ -194,6 +194,7 @@ class JtagBackplane extends Component {
 
     io.leds := leds
     
+    //val chainer = new JtagChainer(2)
     io.jtag.tdo := internalJtag.tdo
     //io.jtag.tdo := tap.tdoUnbufferd
 

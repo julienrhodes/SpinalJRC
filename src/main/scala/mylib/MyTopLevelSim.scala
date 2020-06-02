@@ -49,8 +49,9 @@ object JtagChainerSim {
       jtagClk.waitSampling(4)
 
       // A shift register for every child chain
-      val shift_register : Array[ShiftReg] = Array(new ShiftReg(jtagClk, 1), new ShiftReg(jtagClk, 1))
+      val shift_register : Array[ShiftReg] = new Array(2)// = Array(new ShiftReg(jtagClk, 1), new ShiftReg(jtagClk, 1))
       for (i <- 0 until 2) {
+        shift_register(i) = new ShiftReg(jtagClk, 8)
         fork {
           while(true) {
             if(dut.chainer.io.child(i).writeEnable.toBoolean) {
@@ -63,51 +64,54 @@ object JtagChainerSim {
         }
       }
 
-      // Enable chain 1
-      assert(dut.chainer.io.primary.tdo.toBoolean == false)
-      dut.chainer.io.select #= 1
-      dut.chainer.io.primary.tms #= true
-      dut.chainer.io.primary.tdi #= true
-      jtagClk.waitSampling(3) // Delayed by 2.5 (negedge)
-      assert(shift_register(0).data == 1)
-      // Flush
-      dut.chainer.io.primary.tms #= false
-      dut.chainer.io.primary.tdi #= false
-      jtagClk.waitSampling(4)
+      def enableChain(jtagClk: ClockDomain, jtag: Jtag, chainSelect: Bits, childChain: Int) {
+        assert(jtag.tdo.toBoolean == false)
+        chainSelect #= childChain
+        jtag.tdi #= true
+        jtagClk.waitSampling(1)
+
+        // Validate shift register receives True when expected
+        for (i <- 0 until chainSelect.getWidth) {
+          if((childChain & (1 << i)) > 0) {
+            jtagClk.waitSampling(shift_register(i).length) // Delayed by 2 (negedge)
+            val tmp = shift_register(i).data
+            assert((shift_register(i).data & 1) == 0)
+            jtagClk.waitSampling(1)
+            // 1s are fully shifted in to childChain
+            assert((shift_register(i).data & 1) == 1)
+          }
+        }
+      }
+
+      def flush(jtagClk: ClockDomain, jtag: Jtag) {
+        jtag.tdi #= false
+        for (i <- 0 until shift_register.length) {
+          jtagClk.waitSampling(shift_register(i).length + 1)
+        }
+      }
+
+      enableChain(jtagClk, dut.chainer.io.primary, dut.chainer.io.select, 1)
+      flush(jtagClk, dut.chainer.io.primary)
 
       // Enable chain 2
-      assert(shift_register(0).data == 0)
-      assert(dut.chainer.io.primary.tdo.toBoolean == false)
-      dut.chainer.io.select #= 2
-      dut.chainer.io.primary.tms #= true
-      dut.chainer.io.primary.tdi #= true
-      jtagClk.waitSampling(3) // Delayed by 2.5 (negedge)
-      assert(shift_register(0).data == 0)
-      assert(shift_register(1).data == 1)
-      // Flush
-      dut.chainer.io.primary.tms #= false
-      dut.chainer.io.primary.tdi #= false
-      jtagClk.waitSampling(4)
+      enableChain(jtagClk, dut.chainer.io.primary, dut.chainer.io.select, 2)
 
-      // Enable chain 1 & 2
-      assert(dut.chainer.io.primary.tdo.toBoolean == false)
-      dut.chainer.io.select #= 3
-      dut.chainer.io.primary.tms #= true
-      dut.chainer.io.primary.tdi #= true
-      jtagClk.waitSampling(3) // Delayed by 2.5 (negedge)
-      assert(shift_register(0).data == 1)
-      assert(shift_register(1).data == 0)
-      jtagClk.waitSampling(2) // Delayed by 2 (negedge)
-      assert(shift_register(0).data == 1)
-      assert(shift_register(1).data == 1)
       // Check output
       assert(dut.chainer.io.primary.tdo.toBoolean == false)
       jtagClk.waitSampling(1) // Delayed by 1 (negedge)
       assert(dut.chainer.io.primary.tdo.toBoolean == true)
-      // Flush
-      dut.chainer.io.primary.tms #= false
-      dut.chainer.io.primary.tdi #= false
-      jtagClk.waitSampling(4)
+
+      flush(jtagClk, dut.chainer.io.primary)
+
+      // Enable chain 1 & 2
+      enableChain(jtagClk, dut.chainer.io.primary, dut.chainer.io.select, 1 | 2)
+
+      // Check output
+      assert(dut.chainer.io.primary.tdo.toBoolean == false)
+      jtagClk.waitSampling(1) // Delayed by 1 (negedge)
+      assert(dut.chainer.io.primary.tdo.toBoolean == true)
+
+      flush(jtagClk, dut.chainer.io.primary)
     }
   }
 }
@@ -141,20 +145,11 @@ object MyTopLevelSim {
       dut.io.jtag.tdi #= false
       dut.io.jtag.tms #= false
 
+      val jtag1Shift = new ShiftReg(dut.ctrl.clockDomain, 8)
       // 8 bit shift register port for JTAG1
       fork {
-        var data = 0
         while(true) {
-          // TDI is sampled on the rising clock edge
-          dut.ctrl.clockDomain.waitRisingEdge(1)
-          if (dut.io.jtag1.write.tdi.toBoolean)
-          {
-            data |= 1 << 8
-          }
-          // TDO is updated on the falling clock edge
-          dut.ctrl.clockDomain.waitFallingEdge(1)
-          dut.io.jtag1.read.tdo #= ((data & 1) == 1)
-          data = data >> 1
+          jtag1Shift.shift(dut.io.jtag1.write.tdi, dut.io.jtag1.read.tdo)
         }
       }
 
@@ -247,6 +242,7 @@ object MyTopLevelSim {
 
       var ledState = dut.io.leds.toInt
       assert(ledState.&(2) == 0, f"Unexpected LED: $ledState%X")
+
       // ENABLE JTAG 1
       // Shift 9 into IR
       shiftOut = shift_register(9, 8)
@@ -272,8 +268,15 @@ object MyTopLevelSim {
 
       // Test Chaining in bypass (a 2 clock delay)
       // The loopback is a delay, and there's a buffer on the inside that is also a delay
-      shiftOut = shift(0xA1, 8 + 11) >> 11
+      shiftOut = shift(0xA1, 8 + 10) >> 10
+      assert(jtag1Shift.data == 0, f"Unexpected data in jtag1 shift register")
       assert(shiftOut == 0xA1, f"Unexpected idle pass through with jtag1: $shiftOut%X")
+
+      // Switch to shift DR
+      tms_shift("100")
+      shiftOut = shift(0xA2A1, 17)
+      val shifty = jtag1Shift.data
+      assert(jtag1Shift.data == 0xA1, f"Unexpected data in jtag1 shift register: $shifty%X")
 
     }
   }
