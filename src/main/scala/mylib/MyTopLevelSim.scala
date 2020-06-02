@@ -9,6 +9,22 @@ import spinal.lib.io._
 
 import scala.util.Random
 
+class ShiftReg(clockDomain: ClockDomain, val length: Int) {
+  var data  = 0
+  def shift(src: Bool, dest: Bool) {
+    // TDI is sampled on the rising clock edge
+    clockDomain.waitRisingEdge(1)
+    if (src.toBoolean)
+    {
+      data |= 1 << length
+    }
+    // TDO is updated on the falling clock edge
+    clockDomain.waitFallingEdge(1)
+    data = data >> 1
+    dest #= ((data & 1) == 1)
+  }
+}
+
 object JtagChainerSim {
   def main(args: Array[String]) {
     val compiled = SimConfig.withWave.compile{
@@ -32,11 +48,18 @@ object JtagChainerSim {
       jtagClk.waitSampling()
       jtagClk.waitSampling(4)
 
-      fork {
-        while(true) {
-          jtagClk.waitSampling()
-          dut.chainer.io.child(0).read.tdo #= dut.chainer.io.child(0).write.tdi.toBoolean
-          dut.chainer.io.child(1).read.tdo #= dut.chainer.io.child(1).write.tdi.toBoolean
+      // A shift register for every child chain
+      val shift_register : Array[ShiftReg] = Array(new ShiftReg(jtagClk, 1), new ShiftReg(jtagClk, 1))
+      for (i <- 0 until 2) {
+        fork {
+          while(true) {
+            if(dut.chainer.io.child(i).writeEnable.toBoolean) {
+              shift_register(i).shift(dut.chainer.io.child(i).write.tdi, dut.chainer.io.child(i).read.tdo)
+            }
+            else {
+              jtagClk.waitSampling()
+            }
+          }
         }
       }
 
@@ -45,19 +68,23 @@ object JtagChainerSim {
       dut.chainer.io.select #= 1
       dut.chainer.io.primary.tms #= true
       dut.chainer.io.primary.tdi #= true
-      jtagClk.waitSampling(2) // Delayed by 1.5 (negedge)
-      assert(dut.chainer.io.primary.tdo.toBoolean == true)
+      jtagClk.waitSampling(3) // Delayed by 2.5 (negedge)
+      assert(shift_register(0).data == 1)
+      // Flush
       dut.chainer.io.primary.tms #= false
       dut.chainer.io.primary.tdi #= false
       jtagClk.waitSampling(4)
 
       // Enable chain 2
+      assert(shift_register(0).data == 0)
       assert(dut.chainer.io.primary.tdo.toBoolean == false)
       dut.chainer.io.select #= 2
       dut.chainer.io.primary.tms #= true
       dut.chainer.io.primary.tdi #= true
-      jtagClk.waitSampling(2) // Delayed by 1.5 (negedge)
-      assert(dut.chainer.io.primary.tdo.toBoolean == true)
+      jtagClk.waitSampling(3) // Delayed by 2.5 (negedge)
+      assert(shift_register(0).data == 0)
+      assert(shift_register(1).data == 1)
+      // Flush
       dut.chainer.io.primary.tms #= false
       dut.chainer.io.primary.tdi #= false
       jtagClk.waitSampling(4)
@@ -68,7 +95,16 @@ object JtagChainerSim {
       dut.chainer.io.primary.tms #= true
       dut.chainer.io.primary.tdi #= true
       jtagClk.waitSampling(3) // Delayed by 2.5 (negedge)
+      assert(shift_register(0).data == 1)
+      assert(shift_register(1).data == 0)
+      jtagClk.waitSampling(2) // Delayed by 2 (negedge)
+      assert(shift_register(0).data == 1)
+      assert(shift_register(1).data == 1)
+      // Check output
+      assert(dut.chainer.io.primary.tdo.toBoolean == false)
+      jtagClk.waitSampling(1) // Delayed by 1 (negedge)
       assert(dut.chainer.io.primary.tdo.toBoolean == true)
+      // Flush
       dut.chainer.io.primary.tms #= false
       dut.chainer.io.primary.tdi #= false
       jtagClk.waitSampling(4)
