@@ -26,36 +26,36 @@ class ShiftReg(clockDomain: ClockDomain, val length: Int) {
 }
 
 object JtagChainerSim {
+  val chainQuantity = 3
   def main(args: Array[String]) {
     val compiled = SimConfig.withWave.compile{
-      val dut = InOutWrapper(new JtagChainerTest)
-      dut.chainer.io.child(0).simPublic()
-      dut.chainer.io.child(1).simPublic()
+      //val dut = InOutWrapper(new JtagChainerTest(2))
+      val dut = new JtagChainer(chainQuantity)
       dut
     }
     compiled.doSim("JtagChainer") { dut =>
 
-      val jtagClk = dut.chainer.jtagClkArea.clockDomain
+      val jtagClk = dut.jtagClkArea.clockDomain
       jtagClk.forkStimulus(20)
 
-      dut.chainer.io.select #= 0
-      dut.chainer.io.primary.tms #= false
-      dut.chainer.io.primary.tdi #= false
+      dut.io.select #= 0
+      dut.io.primary.tms #= false
+      dut.io.primary.tdi #= false
       jtagClk.waitSampling(3)
-      dut.chainer.io.primary.tdi #= true
+      dut.io.primary.tdi #= true
       jtagClk.waitSampling()
-      dut.chainer.io.primary.tdi #= false
+      dut.io.primary.tdi #= false
       jtagClk.waitSampling()
       jtagClk.waitSampling(4)
 
       // A shift register for every child chain
-      val shift_register : Array[ShiftReg] = new Array(2)// = Array(new ShiftReg(jtagClk, 1), new ShiftReg(jtagClk, 1))
-      for (i <- 0 until 2) {
+      val shift_register : Array[ShiftReg] = new Array(chainQuantity)// = Array(new ShiftReg(jtagClk, 1), new ShiftReg(jtagClk, 1))
+      for (i <- 0 until chainQuantity) {
         shift_register(i) = new ShiftReg(jtagClk, 8)
         fork {
           while(true) {
-            if(dut.chainer.io.child(i).writeEnable.toBoolean) {
-              shift_register(i).shift(dut.chainer.io.child(i).write.tdi, dut.chainer.io.child(i).read.tdo)
+            if(dut.io.child(i).writeEnable.toBoolean) {
+              shift_register(i).shift(dut.io.child(i).write.tdi, dut.io.child(i).read.tdo)
             }
             else {
               jtagClk.waitSampling()
@@ -90,28 +90,28 @@ object JtagChainerSim {
         }
       }
 
-      enableChain(jtagClk, dut.chainer.io.primary, dut.chainer.io.select, 1)
-      flush(jtagClk, dut.chainer.io.primary)
+      enableChain(jtagClk, dut.io.primary, dut.io.select, 1)
+      flush(jtagClk, dut.io.primary)
 
       // Enable chain 2
-      enableChain(jtagClk, dut.chainer.io.primary, dut.chainer.io.select, 2)
+      enableChain(jtagClk, dut.io.primary, dut.io.select, 2)
 
       // Check output
-      assert(dut.chainer.io.primary.tdo.toBoolean == false)
+      assert(dut.io.primary.tdo.toBoolean == false)
       jtagClk.waitSampling(1) // Delayed by 1 (negedge)
-      assert(dut.chainer.io.primary.tdo.toBoolean == true)
+      assert(dut.io.primary.tdo.toBoolean == true)
 
-      flush(jtagClk, dut.chainer.io.primary)
+      flush(jtagClk, dut.io.primary)
 
       // Enable chain 1 & 2
-      enableChain(jtagClk, dut.chainer.io.primary, dut.chainer.io.select, 1 | 2)
+      enableChain(jtagClk, dut.io.primary, dut.io.select, 1 | 2)
 
       // Check output
-      assert(dut.chainer.io.primary.tdo.toBoolean == false)
+      assert(dut.io.primary.tdo.toBoolean == false)
       jtagClk.waitSampling(1) // Delayed by 1 (negedge)
-      assert(dut.chainer.io.primary.tdo.toBoolean == true)
+      assert(dut.io.primary.tdo.toBoolean == true)
 
-      flush(jtagClk, dut.chainer.io.primary)
+      flush(jtagClk, dut.io.primary)
     }
   }
 }

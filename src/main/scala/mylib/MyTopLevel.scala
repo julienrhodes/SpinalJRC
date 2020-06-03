@@ -106,25 +106,33 @@ class MyTopLevel extends Component {
   }
 }
 
-class JtagChainerTest extends Component {
-  val chainer = new JtagChainer(2)
-}
-
-class JtagChainer(chains: Int) extends Area {
+class JtagChainerTest(chains: Int) extends Component {
   val io = new Bundle {
     val primary = slave(Jtag())
     val select  = in Bits(chains bits)
-    val child   = Vec(TriState(master(Jtag())), chains)
+    val child   = Vec(master(TriState(master(Jtag()))), chains)
   }
+  val jtagClkArea = new ClockingArea(ClockDomain(io.primary.tck, ClockDomain.current.reset)) {
+    val chainer = new JtagChainer(chains)
+    chainer.io.primary <> io.primary
+    chainer.io.select <> io.select
+    chainer.io.child <> io.child
+  }
+}
+
+class JtagChainer(chains: Int) extends Component {
+  val io = new Bundle {
+    val primary = slave(Jtag())
+    val select  = in Bits(chains bits)
+    val child   = Vec(master(TriState(master(Jtag()))), chains)
+  }
+
 
   val jtagClkArea = new ClockingArea(ClockDomain(io.primary.tck, ClockDomain.current.reset)) {
     io.primary.tdo := ClockDomain.current.withRevertedClockEdge()(RegNext(io.primary.tdi))
-
-
     val buf = B(0, chains bits)
 
     for(i <- 0 until chains) {
-      io.child(i).read.tdo := False
       io.child(i).writeEnable := False
       io.child(i).write.tdi := io.primary.tdi
       io.child(i).write.tck := io.primary.tck
@@ -135,27 +143,24 @@ class JtagChainer(chains: Int) extends Area {
     for(i <- 0 until chains) {
       when(io.select(i)) {
         io.child(i).writeEnable := True
-        buf(i) := ClockDomain.current.withRevertedClockEdge()(RegNext(io.child(i).read.tdo))
-        //io.primary.tdo := ClockDomain.current.withRevertedClockEdge()(RegNext(io.child(0).read.tdo))
+        // every child has an output buffer for chaining to the next child
+        val bufferedChildTdo = ClockDomain.current.withRevertedClockEdge()(RegNext(io.child(i).read.tdo))
+        buf(i) := bufferedChildTdo
         
-        // TODO TDO seems to be an output register, which means child.tdo -> buf -> primary.tdo is one delay too many
-        io.primary.tdo := buf(i)
+        // primary tdo will be set to the last selected child's output (last assignment wins)
+        io.primary.tdo := bufferedChildTdo
 
+        // tdi defaults to io.primary.tdi
+        io.child(i).write.tdi := io.primary.tdi
 
+        // tdi is set to the buf of the most immediately selected child earlier in the chain
         for(j <- 0 until i) {
-          io.child(i).write.tdi := io.primary.tdi
           when(io.select(j)) {
             io.child(i).write.tdi := buf(j)
           }
-
         }
-
       }
     }
-    // The first selected child should have
-    // io.child(1).write.tdi := io.primary.tdi
-    // The next selected child should have
-    // io.child(3).write.tdi := buf(1)
   }
 }
 
@@ -282,7 +287,7 @@ object MyBlinkyVerilog {
 
 object MyJtagChainerVerilog {
   def main(args: Array[String]) {
-    SpinalVerilog(new JtagChainerTest)
+    SpinalVerilog(InOutWrapper(new JtagChainerTest(2)))
   }
 }
 
