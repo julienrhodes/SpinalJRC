@@ -36,23 +36,18 @@ object JtagChainerSim {
     compiled.doSim("JtagChainer") { dut =>
 
       val jtagClk = dut.jtagClkArea.clockDomain
-      jtagClk.forkStimulus(20)
-
+      dut.io.primary.tdi #= false
       dut.io.select #= 0
-      dut.io.primary.tms #= false
-      dut.io.primary.tdi #= false
-      jtagClk.waitSampling(3)
-      dut.io.primary.tdi #= true
-      jtagClk.waitSampling()
-      dut.io.primary.tdi #= false
-      jtagClk.waitSampling()
-      jtagClk.waitSampling(4)
+      jtagClk.forkStimulus(20)
+      // Flush anything left from reset state
+      jtagClk.waitSampling(2)
 
       // A shift register for every child chain
       val shift_register : Array[ShiftReg] = new Array(chainQuantity)// = Array(new ShiftReg(jtagClk, 1), new ShiftReg(jtagClk, 1))
       for (i <- 0 until chainQuantity) {
         shift_register(i) = new ShiftReg(jtagClk, 8)
         fork {
+          jtagClk.waitSampling()
           while(true) {
             if(dut.io.child(i).writeEnable.toBoolean) {
               shift_register(i).shift(dut.io.child(i).write.tdi, dut.io.child(i).read.tdo)
@@ -122,56 +117,57 @@ object MyTopLevelSim {
   def main(args: Array[String]) {
     val compiled = SimConfig.withConfig(myConfig).withWave.compile{
       class Test extends Component {
-        val foo = new JtagBackplane
+        val bar = new JtagBackplane
       }
       val dut = new Test
+      dut.bar.ctrl.chainSelect.simPublic()
       dut
     }
 
-    compiled.doSim("JtagBackPlane") { dut =>
+    compiled.doSim("JtagBackPlane") { foo =>
+      val dut = foo.bar
+      val jtagClk = dut.ctrl.clockDomain
+
       //Fork a process to generate the reset and the clock on the dut
-      // dut.clockDomain.forkStimulus(10)
-      //ClockDomain(dut.io.OSC, dut.io.reset).forkStimulus(10)
-      //ClockDomain(ClockDomain, dut.io.coreReset).forkStimulus(10)
-      dut.foo.ctrl.clockDomain.forkStimulus(10)
-      //dut.ctrl.clockDomain.forkStimulus(10)
+      jtagClk.forkStimulus(10)
 
-      fork {
-        dut.foo.ctrl.clockDomain.waitRisingEdge(1)
-        dut.foo.ctrl.clockDomain.assertReset()
-        dut.foo.ctrl.clockDomain.waitRisingEdge(1)
-        dut.foo.ctrl.clockDomain.deassertReset()
-      }
+      dut.io.jtag.tdi #= false
+      dut.io.jtag.tms #= false
 
-      //dut.clockDomain.frequency = ClockDomain.FixedFrequency(12 MHz)
-      //dut.clockDomain.forkStimulus(10)
+      // Perform reset
+      jtagClk.waitRisingEdge(1)
+      jtagClk.assertReset()
+      jtagClk.waitRisingEdge(1)
+      jtagClk.deassertReset()
+      jtagClk.waitSampling()
 
-      dut.foo.io.jtag.tdi #= false
-      dut.foo.io.jtag.tms #= false
-
-      val jtag1Shift = new ShiftReg(dut.foo.ctrl.clockDomain, 8)
       // 8 bit shift register port for JTAG1
+      val child0Shift = new ShiftReg(jtagClk, length=8)
+
+      // Setup fork for the shift register on child(0)
       fork {
         while(true) {
-          jtag1Shift.shift(dut.foo.io.child(0).write.tdi, dut.foo.io.child(0).read.tdo)
+          if(dut.io.child(0).writeEnable.toBoolean) {
+            child0Shift.shift(dut.io.child(0).write.tdi, dut.io.child(0).read.tdo)
+          }
+          else {
+            jtagClk.waitSampling()
+          }
         }
       }
 
-      dut.foo.ctrl.clockDomain.waitSampling(3)
-
-      /*
       def tms_shift(data : String) : Unit = {
         for( i <- data ) {
           dut.io.jtag.tms #= (i.toString.toInt == 1)
-          dut.ctrl.clockDomain.waitSampling()
+          jtagClk.waitSampling()
         }
       }
 
       def shift(data : Int, size : Int) : Int = {
         var dataOut : Int = 0
-        for( i <- 0 to (size - 1) ) {
+        for( i <- 0 until size ) {
           dut.io.jtag.tdi #= ((data >> i) & 1) == 1
-          dut.ctrl.clockDomain.waitSampling()
+          jtagClk.waitSampling()
           if (dut.io.jtag.tdo.toBoolean) {
             dataOut |= 1 << i
           }
@@ -188,7 +184,7 @@ object MyTopLevelSim {
         // the last digit is shifted during TMS transition
         // Exit SHIFT
         dut.io.jtag.tms #= true
-        dut.ctrl.clockDomain.waitSampling()
+        jtagClk.waitSampling()
         // Collect the last bit
         if (dut.io.jtag.tdo.toBoolean) {
           dataOut |= 1 << (size - 1)
@@ -202,10 +198,10 @@ object MyTopLevelSim {
       // Shift 4 into IR
       var shiftOut = shift_register(4, 8)
       assert(shiftOut == 0x4, f"Unexpected IR: $shiftOut%X")
-      //shift_register(List(false, false, true, false, false, false, false))
 
       // Exit IR -> Update IR -> IDLE
       tms_shift("10")
+      jtagClk.waitSampling()
 
       // Switch to shift DR
       tms_shift("100")
@@ -231,9 +227,12 @@ object MyTopLevelSim {
       shiftOut = shift(0xFF, 8)
       assert(shiftOut == 0xFE, f"Unexpected bypass: $shiftOut%X")
 
-      // Test bypass (a single clock delay)
-      shiftOut = shift(0x13, 8 + 1) >> 1
-      assert(shiftOut == 0x13, f"Unexpected idle pass through: $shiftOut%X")
+      // Test Chaining in bypass (a 1 clock delay)
+      // There's a bypass buffer inside the tap controller
+      shiftOut = shift(0xA1, 9) >> 1
+      assert(shiftOut == 0xA1, f"Unexpected idle pass through with jtag1: $shiftOut%X")
+      var shifty = child0Shift.data
+      assert(shifty == 0, f"Unexpected data in jtag1 shift register: $shifty%X")
 
       // Switch to shift IR
       tms_shift("1100")
@@ -245,44 +244,27 @@ object MyTopLevelSim {
       shiftOut = shift(0x0, 16)
       assert(shiftOut == 0x00FF, f"Unexpected IR: $shiftOut%X")
 
-      var ledState = dut.io.leds.toInt
-      assert(ledState.&(2) == 0, f"Unexpected LED: $ledState%X")
+      var chainSelect = dut.ctrl.chainSelect.toInt
+      assert(dut.ctrl.chainSelect.toInt == 0, f"Unexpected chain selection: $chainSelect%X")
 
       // ENABLE JTAG 1
       // Shift 9 into IR
       shiftOut = shift_register(9, 8)
 
-      ledState = dut.io.leds.toInt
-      assert(ledState.&(2) == 0, f"Unexpected LED: $ledState%X")
       // Exit IR -> Update IR -> IDLE
       tms_shift("10")
-      dut.ctrl.clockDomain.waitSampling(2)
+      jtagClk.waitSampling(2)
+      assert(dut.ctrl.chainSelect.toInt == 1, f"Unexpected chain selection: $chainSelect%X")
 
-      ledState = dut.io.leds.toInt
-      assert(ledState.&(2) == 2, f"Unexpected LED: $ledState%X")
-
-      // // Switch to shift DR
-      // tms_shift("100")
-
-      // // Read TDO out of DR (chain reg)
-      // shiftOut = shift_register(0x1, 8)
-      // //assert(shiftOut == 0, f"Unexpected chain value: $shiftOut%X")
-
-      //  // Exit DR -> Update DR -> IDLE
-      //  tms_shift("10")
-
-      // Test Chaining in bypass (a 2 clock delay)
-      // The loopback is a delay, and there's a buffer on the inside that is also a delay
-      shiftOut = shift(0xA1, 8 + 10) >> 10
-      assert(jtag1Shift.data == 0, f"Unexpected data in jtag1 shift register")
+      // Test Chaining into jtag child 1
+      // Tap has a posedge bypass buffer, so the delay is 1.5 (rounds to 2 clocks after switching to negedge)
+      shiftOut = shift(0xA1, 10)
+      shifty = child0Shift.data
+      assert(shifty == 0xA1, f"Unexpected data in jtag1 shift register: $shifty%X")
+      // The output of the chainer (a negedge buf register) is fed directly to tdo
+      shiftOut = shift(0x00, 8)
       assert(shiftOut == 0xA1, f"Unexpected idle pass through with jtag1: $shiftOut%X")
 
-      // Switch to shift DR
-      tms_shift("100")
-      shiftOut = shift(0xA2A1, 17)
-      val shifty = jtag1Shift.data
-      assert(jtag1Shift.data == 0xA1, f"Unexpected data in jtag1 shift register: $shifty%X")
-      */
 
     }
   }

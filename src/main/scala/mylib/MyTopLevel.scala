@@ -122,7 +122,9 @@ class JtagChainer(chains: Int) extends Component {
 
 
   val jtagClkArea = new ClockingArea(ClockDomain(io.primary.tck, ClockDomain.current.reset)) {
-    io.primary.tdo := ClockDomain.current.withRevertedClockEdge()(RegNext(io.primary.tdi))
+    // ASSUMPTION: The tdi signal is already from a negedge buffer.
+    io.primary.tdo := io.primary.tdi
+    //io.primary.tdo := ClockDomain.current.withRevertedClockEdge()(RegNext(io.primary.tdi))
     val buf = B(0, chains bits)
 
     for(i <- 0 until chains) {
