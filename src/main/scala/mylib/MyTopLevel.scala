@@ -80,10 +80,6 @@ class OSCH() extends BlackBox {
 class MyTopLevel extends Component {
   val io = new Bundle {
     val reset   = in Bool
-    val jtag    = slave(Jtag())
-    val jtag1   = master(TriState(master(Jtag())))
-    val jtag2   = master(TriState(master(Jtag())))
-    val leds    = out Bits(8 bit)
   }
 
   // Setup internal oscillator as the clock source
@@ -96,13 +92,10 @@ class MyTopLevel extends Component {
     frequency=ClockDomain.FixedFrequency(12 MHz),
     config=ClockDomainConfig(resetKind = ASYNC, resetActiveLevel = LOW))
 
+  val jtag = new JtagBackplane()
   val globalClockArea = new ClockingArea(globalClock) {
     val toggler = new Toggler()
-    val jtag = new JtagBackplane()
-    io.jtag <> jtag.io.jtag
-    io.jtag1 <> jtag.io.jtag1
-    io.jtag2 <> jtag.io.jtag2
-    io.leds := ~jtag.io.leds ^ toggler.io.led.asBits.resize(8 bit)
+    //io.leds := ~jtag.io.leds ^ toggler.io.led.asBits.resize(8 bit)
   }
 }
 
@@ -165,19 +158,14 @@ class JtagChainer(chains: Int) extends Component {
 }
 
 // Must conform to ARM Debug Interface "DR scan chain and DR registers"
-class JtagBackplane extends Component {
+class JtagBackplane extends Area {
+  val chains = 2
   val io = new Bundle {
     val jtag    = slave(Jtag())
-    val jtag1   = master(TriState(master(Jtag())))
-    val jtag2   = master(TriState(master(Jtag())))
+    val child   = Vec(master(TriState(master(Jtag()))), chains)
     val leds    = out Bits(8 bit)
   }
 
-  val internalJtag = cloneOf(io.jtag)
-  internalJtag.tck := io.jtag.tck
-  internalJtag.tms := io.jtag.tms
-  internalJtag.tdi := io.jtag.tdi
-  // tdo is assigned below depending on the JTAG chaining
 
   val currentClk = ClockDomain.current
   // Define JTAG TAP
@@ -185,74 +173,38 @@ class JtagBackplane extends Component {
   val ctrl = new ClockingArea(ClockDomain(io.jtag.tck, currentClk.reset,
       config=ClockDomainConfig(resetKind = ASYNC, resetActiveLevel = LOW))) {
     //val leds = Bits(8 bits)
-    val leds = Bits(8 bits)
-    val chain = Bits(8 bits)
 
-    val tap = new MyJtagTap(internalJtag, 8)
+    val jtagPreTap = cloneOf(io.jtag)
+    jtagPreTap.tck := io.jtag.tck
+    jtagPreTap.tms := io.jtag.tms
+    jtagPreTap.tdi := io.jtag.tdi
+    // tdo comes from the tap controller below
+    //
+    val leds = Bits(8 bits)
+    val chainSelect = Bits(8 bits)
+
+    val tap = new MyJtagTap(jtagPreTap, 8)
     val idcodeArea = tap.read(B"x413bd043")(instructionId = 4)
     val ledArea = tap.write(leds)(instructionId = 7)
     val chainArea = tap.writeMasked(
-      data = chain,
-      dataMask = B(0x7, 8 bits),//~B(chainInstructionMask, widthOf(chain) bits), // 0x7
-      dataInit = B(widthOf(chain) bits, default -> false)
+      data = chainSelect,
+      dataMask = B(0x7, 8 bits),//~B(chainInstructionMask, widthOf(chainSelect) bits), // 0x7
+      dataInit = B(widthOf(chainSelect) bits, default -> false)
     )(instructionId = 0x8, instructionMask = 0xF8)
 
     io.leds := leds
+
+    val jtagPostTap = cloneOf(jtagPreTap)
+    jtagPostTap.tdi := jtagPreTap.tdo
+    jtagPostTap.tck := jtagPreTap.tck
+    jtagPostTap.tms := jtagPreTap.tms
     
-    //val chainer = new JtagChainer(2)
-    io.jtag.tdo := internalJtag.tdo
-    //io.jtag.tdo := tap.tdoUnbufferd
+    val chainer = new JtagChainer(chains)
+    chainer.io.primary <> jtagPostTap
+    chainer.io.select := chainSelect.resize(chains)
+    chainer.io.child <> io.child
 
-    // JTAG 1
-    io.jtag1.writeEnable := False
-    // Doesn't matter!
-    io.jtag1.write.tck := False
-    io.jtag1.write.tms := False
-    io.jtag1.write.tdi := False
-    io.jtag1.write.tdo := False
-
-    // Enable buffer
-    when(chain(0)){
-      // Chain it in!
-      io.jtag1.writeEnable := True
-      io.leds(1) := True
-      io.jtag1.write.tdi := internalJtag.tdo
-      //io.jtag1.tdi := tap.tdoUnbufferd
-      io.jtag.tdo := ClockDomain.current.withRevertedClockEdge()(RegNext(io.jtag1.read.tdo))
-
-      io.jtag1.write.tck := io.jtag.tck
-      io.jtag1.write.tms := io.jtag.tms
-
-    }.otherwise {
-      io.leds(1) := False
-    }
-    
-    // JTAG 2
-    io.jtag2.writeEnable := False
-    io.jtag2.write.tck := False
-    io.jtag2.write.tms := False
-    io.jtag2.write.tdi := False
-    io.jtag2.write.tdo := False
-
-    // Enable buffer
-    when(chain(1)){
-      io.leds(2) := True
-      io.jtag2.writeEnable := True
-      // Chain it in!
-      io.jtag2.write.tdi := internalJtag.tdo
-      //io.jtag2.write.tdi := tap.tdoUnbufferd
-
-      io.jtag.tdo := ClockDomain.current.withRevertedClockEdge()(RegNext(io.jtag2.read.tdo))
-      when(chain(0)) {
-        io.jtag2.write.tdi := ClockDomain.current.withRevertedClockEdge()(RegNext(io.jtag1.read.tdo))
-      }
-
-      io.jtag2.write.tck := io.jtag.tck
-      io.jtag2.write.tms := io.jtag.tms
-
-    }.otherwise {
-      io.leds(2) := False
-    }
+    io.jtag.tdo := jtagPostTap.tdo
   }
 }
 
@@ -310,8 +262,8 @@ object MyTopLevelVhdl {
 object MySpinalConfig extends SpinalConfig(defaultConfigForClockDomains = ClockDomainConfig(resetKind = SYNC))
 
 //Generate the MyTopLevel's Verilog using the above custom configuration.
-object MyTopLevelVerilogWithCustomConfig {
-  def main(args: Array[String]) {
-    MySpinalConfig.generateVerilog(new JtagBackplane)
-  }
-}
+// object MyTopLevelVerilogWithCustomConfig {
+//   def main(args: Array[String]) {
+//     MySpinalConfig.generateVerilog(new JtagBackplane)
+//   }
+// }

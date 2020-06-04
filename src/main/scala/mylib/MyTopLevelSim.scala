@@ -121,7 +121,10 @@ object MyTopLevelSim {
   val myConfig = SpinalConfig(defaultClockDomainFrequency = FixedFrequency(12.09 MHz))
   def main(args: Array[String]) {
     val compiled = SimConfig.withConfig(myConfig).withWave.compile{
-      val dut = new JtagBackplane
+      class Test extends Component {
+        val foo = new JtagBackplane
+      }
+      val dut = new Test
       dut
     }
 
@@ -130,31 +133,33 @@ object MyTopLevelSim {
       // dut.clockDomain.forkStimulus(10)
       //ClockDomain(dut.io.OSC, dut.io.reset).forkStimulus(10)
       //ClockDomain(ClockDomain, dut.io.coreReset).forkStimulus(10)
-      dut.ctrl.clockDomain.forkStimulus(10)
+      dut.foo.ctrl.clockDomain.forkStimulus(10)
+      //dut.ctrl.clockDomain.forkStimulus(10)
 
       fork {
-        dut.ctrl.clockDomain.waitRisingEdge(1)
-        dut.ctrl.clockDomain.assertReset()
-        dut.ctrl.clockDomain.waitRisingEdge(1)
-        dut.ctrl.clockDomain.deassertReset()
+        dut.foo.ctrl.clockDomain.waitRisingEdge(1)
+        dut.foo.ctrl.clockDomain.assertReset()
+        dut.foo.ctrl.clockDomain.waitRisingEdge(1)
+        dut.foo.ctrl.clockDomain.deassertReset()
       }
 
       //dut.clockDomain.frequency = ClockDomain.FixedFrequency(12 MHz)
       //dut.clockDomain.forkStimulus(10)
 
-      dut.io.jtag.tdi #= false
-      dut.io.jtag.tms #= false
+      dut.foo.io.jtag.tdi #= false
+      dut.foo.io.jtag.tms #= false
 
-      val jtag1Shift = new ShiftReg(dut.ctrl.clockDomain, 8)
+      val jtag1Shift = new ShiftReg(dut.foo.ctrl.clockDomain, 8)
       // 8 bit shift register port for JTAG1
       fork {
         while(true) {
-          jtag1Shift.shift(dut.io.jtag1.write.tdi, dut.io.jtag1.read.tdo)
+          jtag1Shift.shift(dut.foo.io.child(0).write.tdi, dut.foo.io.child(0).read.tdo)
         }
       }
 
-      dut.ctrl.clockDomain.waitSampling(3)
+      dut.foo.ctrl.clockDomain.waitSampling(3)
 
+      /*
       def tms_shift(data : String) : Unit = {
         for( i <- data ) {
           dut.io.jtag.tms #= (i.toString.toInt == 1)
@@ -277,6 +282,7 @@ object MyTopLevelSim {
       shiftOut = shift(0xA2A1, 17)
       val shifty = jtag1Shift.data
       assert(jtag1Shift.data == 0xA1, f"Unexpected data in jtag1 shift register: $shifty%X")
+      */
 
     }
   }
