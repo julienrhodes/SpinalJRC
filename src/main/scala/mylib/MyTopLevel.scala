@@ -43,6 +43,7 @@ class Toggler extends Component {
 
 class MyJtagTap(jtag: Jtag, instructionWidth: Int) extends JtagTap(jtag, instructionWidth) {
 
+  /*
   def writeMasked[T <: Data](data: T, dataMask: T, dataInit: T)(instructionId: Int, instructionMask: Int) = {
     val area = {
       val store = Reg(Bits(widthOf(data) bits)) init(dataInit.asBits)
@@ -51,6 +52,12 @@ class MyJtagTap(jtag: Jtag, instructionWidth: Int) extends JtagTap(jtag, instruc
       }
       data.assignFromBits(store)
     }
+    area
+  }
+  */
+  def writeInit[T <: Data](data: T, dataInit: T, cleanUpdate: Boolean = true)(instructionId: Int) = {
+    val area = new JtagTapInstructionWrite(data, cleanUpdate, readable = true){store.init(dataInit.asBits)}
+    map(area.ctrl, instructionId)
     area
   }
 
@@ -162,19 +169,18 @@ class JtagChainer(chains: Int) extends Component {
 // Must conform to ARM Debug Interface "DR scan chain and DR registers"
 class JtagBackplane extends Area {
   val chains = 2
+  val gpioWidth = 4
   val io = new Bundle {
     val jtag    = slave(Jtag())
     val child   = Vec(master(TriState(master(Jtag()))), chains)
-    val leds    = out Bits(8 bit)
+    val gpio   = Vec(master(TriStateArray(gpioWidth)), chains)
   }
-
 
   val currentClk = ClockDomain.current
   // Define JTAG TAP
   // TODO: Use reset signal
   val ctrl = new ClockingArea(ClockDomain(io.jtag.tck, currentClk.reset,
       config=ClockDomainConfig(resetKind = ASYNC, resetActiveLevel = LOW))) {
-    //val leds = Bits(8 bits)
 
     val jtagPreTap = cloneOf(io.jtag)
     jtagPreTap.tck := io.jtag.tck
@@ -182,19 +188,26 @@ class JtagBackplane extends Area {
     jtagPreTap.tdi := io.jtag.tdi
     // tdo comes from the tap controller below
     //
-    val leds = Bits(8 bits)
     val chainSelect = Bits(8 bits)
 
     val tap = new MyJtagTap(jtagPreTap, 8)
     val idcodeArea = tap.read(B"x413bd043")(instructionId = 4)
-    val ledArea = tap.write(leds)(instructionId = 7)
-    val chainArea = tap.writeMasked(
-      data = chainSelect,
-      dataMask = B(0x7, 8 bits),//~B(chainInstructionMask, widthOf(chainSelect) bits), // 0x7
-      dataInit = B(widthOf(chainSelect) bits, default -> false)
-    )(instructionId = 0x8, instructionMask = 0xF8)
+    val chainArea = tap.writeInit(data=chainSelect, dataInit=B(0, widthOf(chainSelect) bits))(instructionId = 8)
 
-    io.leds := leds
+    val gpioBaseInstr = 9
+    val regCount = 3
+    for (i <- 0 until chains) {
+      val baseInstr = gpioBaseInstr + i * regCount
+      val init = B(0, widthOf(io.gpio(i).writeEnable) bits)
+      val gpioEnable = tap.writeInit(data=io.gpio(i).writeEnable, dataInit=init)(instructionId=baseInstr)
+      val gpioRead = tap.read(data=io.gpio(i).read)(instructionId=baseInstr + 1)
+      val gpioWrite = tap.writeInit(data=io.gpio(i).write, dataInit=init)(instructionId=baseInstr + 2)
+    }
+    // val chainArea = tap.writeMasked(
+    //   data = chainSelect,
+    //   dataMask = B(0x7, 8 bits),//~B(chainInstructionMask, widthOf(chainSelect) bits), // 0x7
+    //   dataInit = B(widthOf(chainSelect) bits, default -> false)
+    // )(instructionId = 0x8, instructionMask = 0xF8)
 
     val jtagPostTap = cloneOf(jtagPreTap)
     jtagPostTap.tdi := jtagPreTap.tdo

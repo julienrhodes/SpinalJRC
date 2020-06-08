@@ -156,113 +156,136 @@ object MyTopLevelSim {
         }
       }
 
-      def tms_shift(data : String) : Unit = {
-        for( i <- data ) {
-          dut.io.jtag.tms #= (i.toString.toInt == 1)
-          jtagClk.waitSampling()
-        }
-      }
-
-      def shift(data : Int, size : Int) : Int = {
-        var dataOut : Int = 0
-        for( i <- 0 until size ) {
-          dut.io.jtag.tdi #= ((data >> i) & 1) == 1
-          jtagClk.waitSampling()
-          if (dut.io.jtag.tdo.toBoolean) {
-            dataOut |= 1 << i
+      class JtagStateController(jtag: Jtag) {
+        def tms_shift(data : String) : Unit = {
+          for( i <- data ) {
+            jtag.tms #= (i.toString.toInt == 1)
+            jtagClk.waitSampling()
           }
         }
-        return dataOut
-      }
-
-      def shift_register(data : Int, size : Int) : Int = {
-        var dataOut : Int = 0
-        dataOut = shift(data, size - 1)
-
-        dut.io.jtag.tdi #= ((data >> (size - 1)) & 1) == 1
-
-        // the last digit is shifted during TMS transition
-        // Exit SHIFT
-        dut.io.jtag.tms #= true
-        jtagClk.waitSampling()
-        // Collect the last bit
-        if (dut.io.jtag.tdo.toBoolean) {
-          dataOut |= 1 << (size - 1)
+        def from_shift_to_idle() {
+          tms_shift("10")
         }
-        return dataOut
+        def from_idle_to_dr() {
+          tms_shift("100")
+        }
+        def from_idle_to_ir() {
+          tms_shift("1100")
+        }
+        def reset() {
+        }
+
+        def shift(data : Int, size : Int) : Int = {
+          var dataOut : Int = 0
+          for( i <- 0 until size ) {
+            jtag.tdi #= ((data >> i) & 1) == 1
+            jtagClk.waitSampling()
+            if (jtag.tdo.toBoolean) {
+              dataOut |= 1 << i
+            }
+          }
+          return dataOut
+        }
+
+        def shift_register(data : Int, size : Int) : Int = {
+          var dataOut : Int = 0
+          dataOut = shift(data, size - 1)
+
+          jtag.tdi #= ((data >> (size - 1)) & 1) == 1
+
+          // the last digit is shifted during TMS transition
+          // Exit SHIFT
+          jtag.tms #= true
+          jtagClk.waitSampling()
+          // Collect the last bit
+          if (jtag.tdo.toBoolean) {
+            dataOut |= 1 << (size - 1)
+          }
+          return dataOut
+        }
       }
+
+      val jtagCont = new JtagStateController(dut.io.jtag)
 
       // Switch to shift IR
-      tms_shift("1100")
+      jtagCont.from_idle_to_ir()
       
       // Shift 4 into IR
-      var shiftOut = shift_register(4, 8)
+      var shiftOut = jtagCont.shift_register(4, 8)
       assert(shiftOut == 0x4, f"Unexpected IR: $shiftOut%X")
 
       // Exit IR -> Update IR -> IDLE
-      tms_shift("10")
+      jtagCont.from_shift_to_idle()
       jtagClk.waitSampling()
 
       // Switch to shift DR
-      tms_shift("100")
+      jtagCont.from_idle_to_dr()
 
       // Read TDO out of DR
-      shiftOut = shift_register(0xFFFFFFFF, 32)
+      shiftOut = jtagCont.shift_register(0xFFFFFFFF, 32)
       assert(shiftOut == 0x413BD043, f"Unexpected ID: $shiftOut%X")
 
       // Exit DR -> Update DR -> IDLE
-      tms_shift("10")
+      jtagCont.from_shift_to_idle()
 
       // Switch to shift IR
-      tms_shift("1100")
+      jtagCont.from_idle_to_ir()
 
       // Bypass
-      shiftOut = shift_register(0xFF, 8)
+      shiftOut = jtagCont.shift_register(0xFF, 8)
       assert(shiftOut == 0x4, f"Unexpected IR: $shiftOut%X")
       
       // Exit IR -> Update IR -> IDLE
-      tms_shift("10")
+      jtagCont.from_shift_to_idle()
 
-      shift(0x00, 8)
-      shiftOut = shift(0xFF, 8)
+      jtagCont.shift(0x00, 8)
+      shiftOut = jtagCont.shift(0xFF, 8)
       assert(shiftOut == 0xFE, f"Unexpected bypass: $shiftOut%X")
 
       // Test Chaining in bypass (a 1 clock delay)
       // There's a bypass buffer inside the tap controller
-      shiftOut = shift(0xA1, 9) >> 1
+      shiftOut = jtagCont.shift(0xA1, 9) >> 1
       assert(shiftOut == 0xA1, f"Unexpected idle pass through with jtag1: $shiftOut%X")
       var shifty = child0Shift.data
       assert(shifty == 0, f"Unexpected data in jtag1 shift register: $shifty%X")
 
       // Switch to shift IR
-      tms_shift("1100")
+      jtagCont.from_idle_to_ir()
 
       // Confirm IR is 8 bits
       // Flush with 1s
-      shiftOut = shift(0xFFFF, 16)
+      shiftOut = jtagCont.shift(0xFFFF, 16)
       // Flush with 0s
-      shiftOut = shift(0x0, 16)
+      shiftOut = jtagCont.shift(0x0, 16)
       assert(shiftOut == 0x00FF, f"Unexpected IR: $shiftOut%X")
+
+      // Instruction chainArea
+      jtagCont.shift_register(0x08, 8)
+      // Exit IR -> Update IR -> IDLE
+      jtagCont.from_shift_to_idle()
+
+      // Switch to shift DR
+      jtagCont.from_idle_to_dr()
 
       var chainSelect = dut.ctrl.chainSelect.toInt
       assert(dut.ctrl.chainSelect.toInt == 0, f"Unexpected chain selection: $chainSelect%X")
 
       // ENABLE JTAG 1
-      // Shift 9 into IR
-      shiftOut = shift_register(9, 8)
+      // Shift 1 into DR
+      jtagCont.shift_register(1, 8)
 
-      // Exit IR -> Update IR -> IDLE
-      tms_shift("10")
+      // Exit DR -> Update DR -> IDLE
+      jtagCont.from_shift_to_idle()
       jtagClk.waitSampling(2)
       assert(dut.ctrl.chainSelect.toInt == 1, f"Unexpected chain selection: $chainSelect%X")
 
       // Test Chaining into jtag child 1
       // Tap has a posedge bypass buffer, so the delay is 1.5 (rounds to 2 clocks after switching to negedge)
-      shiftOut = shift(0xA1, 10)
+      shiftOut = jtagCont.shift(0xA1, 10)
       shifty = child0Shift.data
       assert(shifty == 0xA1, f"Unexpected data in jtag1 shift register: $shifty%X")
       // The output of the chainer (a negedge buf register) is fed directly to tdo
-      shiftOut = shift(0x00, 8)
+      shiftOut = jtagCont.shift(0x00, 8)
       assert(shiftOut == 0xA1, f"Unexpected idle pass through with jtag1: $shiftOut%X")
 
 
