@@ -6,42 +6,41 @@ Performance Grade:      5
 PACKAGE:          CABGA256
 Package Status:                     Final          Version 1.16
 
-Tue May 19 10:23:58 2020
+Thu Jun 11 15:50:21 2020
 
 Pinout by Port Name:
-+--------------+----------+--------------+-------+-----------+-----------+------------------------------------+
-| Port Name    | Pin/Bank | Buffer Type  | Site  | PG Enable | BC Enable | Properties                         |
-+--------------+----------+--------------+-------+-----------+-----------+------------------------------------+
-| io_jtag1_tck | B16/1    | LVCMOS33_OUT | PR2D  |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW      |
-| io_jtag1_tdi | F14/1    | LVCMOS33_OUT | PR7A  |           |           | DRIVE:8mA PULL:UP SLEW:SLOW        |
-| io_jtag1_tdo | E14/1    | LVCMOS33_IN  | PR3B  |           |           | CLAMP:ON HYSTERESIS:SMALL          |
-| io_jtag1_tms | C15/1    | LVCMOS33_OUT | PR2C  |           |           | DRIVE:8mA PULL:UP SLEW:SLOW        |
-| io_jtag2_tck | K14/1    | LVCMOS33_OUT | PR17A |           |           | DRIVE:16mA OPENDRAIN:ON SLEW:SLOW  |
-| io_jtag2_tdi | T9/2     | LVCMOS33_OUT | PB23A |           |           | DRIVE:16mA OPENDRAIN:ON SLEW:SLOW  |
-| io_jtag2_tdo | M8/2     | LVCMOS33_IN  | PB21A |           |           | CLAMP:ON HYSTERESIS:SMALL          |
-| io_jtag2_tms | P9/2     | LVCMOS33_OUT | PB23B |           |           | DRIVE:16mA OPENDRAIN:ON SLEW:SLOW  |
-| io_jtag_tck  | A7/0     | LVCMOS33_IN  | PT17C |           |           | CLAMP:ON HYSTERESIS:SMALL          |
-| io_jtag_tdi  | A6/0     | LVCMOS33_IN  | PT14D |           |           | CLAMP:ON HYSTERESIS:SMALL          |
-| io_jtag_tdo  | C6/0     | LVCMOS33_OUT | PT14C |           |           | DRIVE:16mA OPENDRAIN:ON SLEW:SLOW  |
-| io_jtag_tms  | B8/0     | LVCMOS33_IN  | PT17D |           |           | CLAMP:ON HYSTERESIS:SMALL          |
-| io_leds[0]   | H11/1    | LVCMOS33_OUT | PR16C |           |           | DRIVE:8mA PULL:UP SLEW:SLOW        |
-| io_leds[1]   | J13/1    | LVCMOS33_OUT | PR16D |           |           | DRIVE:8mA PULL:UP SLEW:SLOW        |
-| io_leds[2]   | J11/1    | LVCMOS33_OUT | PR17C |           |           | DRIVE:8mA PULL:UP SLEW:SLOW        |
-| io_leds[3]   | L12/1    | LVCMOS33_OUT | PR17D |           |           | DRIVE:8mA PULL:UP SLEW:SLOW        |
-| io_leds[4]   | K11/1    | LVCMOS33_OUT | PR21C |           |           | DRIVE:8mA PULL:UP SLEW:SLOW        |
-| io_leds[5]   | L13/1    | LVCMOS33_OUT | PR21D |           |           | DRIVE:8mA PULL:UP SLEW:SLOW        |
-| io_leds[6]   | N15/1    | LVCMOS33_OUT | PR23C |           |           | DRIVE:8mA PULL:UP SLEW:SLOW        |
-| io_leds[7]   | P16/1    | LVCMOS33_OUT | PR23D |           |           | DRIVE:8mA PULL:UP SLEW:SLOW        |
-| io_reset     | B3/0     | LVCMOS33_IN  | PT9C  |           |           | CLAMP:ON HYSTERESIS:SMALL          |
-+--------------+----------+--------------+-------+-----------+-----------+------------------------------------+
++---------------------+----------+---------------+-------+-----------+-----------+----------------------------------------------------------+
+| Port Name           | Pin/Bank | Buffer Type   | Site  | PG Enable | BC Enable | Properties                                               |
++---------------------+----------+---------------+-------+-----------+-----------+----------------------------------------------------------+
+| jtag_io_child_0_tck | C6/0     | LVCMOS25_OUT  | PT14C |           |           | DRIVE:8mA SLEW:SLOW                                      |
+| jtag_io_child_0_tdi | D6/0     | LVCMOS25_OUT  | PT14A |           |           | DRIVE:8mA SLEW:SLOW                                      |
+| jtag_io_child_0_tdo | C7/0     | LVCMOS25_BIDI | PT15B |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_child_0_tms | A6/0     | LVCMOS25_OUT  | PT14D |           |           | DRIVE:8mA SLEW:SLOW                                      |
+| jtag_io_child_1_tck | A5/0     | LVCMOS25_OUT  | PT11A |           |           | DRIVE:8mA SLEW:SLOW                                      |
+| jtag_io_child_1_tdi | E7/0     | LVCMOS25_OUT  | PT14B |           |           | DRIVE:8mA SLEW:SLOW                                      |
+| jtag_io_child_1_tdo | B7/0     | LVCMOS25_BIDI | PT15A |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_child_1_tms | A3/0     | LVCMOS25_OUT  | PT12A |           |           | DRIVE:8mA SLEW:SLOW                                      |
+| jtag_io_gpio_0[0]   | F7/0     | LVCMOS25_BIDI | PT17A |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_gpio_0[1]   | C8/0     | LVCMOS25_BIDI | PT18A |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_gpio_0[2]   | E8/0     | LVCMOS25_BIDI | PT17B |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_gpio_0[3]   | A8/0     | LVCMOS25_BIDI | PT18B |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_gpio_1[0]   | B8/0     | LVCMOS25_BIDI | PT17D |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_gpio_1[1]   | A7/0     | LVCMOS25_BIDI | PT17C |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_gpio_1[2]   | D7/0     | LVCMOS25_BIDI | PT16B |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_gpio_1[3]   | E6/0     | LVCMOS25_BIDI | PT16A |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_jtag_tck    | T9/2     | LVCMOS25_IN   | PB23A |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                      |
+| jtag_io_jtag_tdi    | E9/0     | LVCMOS25_IN   | PT21B |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                      |
+| jtag_io_jtag_tdo    | B4/0     | LVCMOS25_OUT  | PT12B |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| jtag_io_jtag_tms    | B6/0     | LVCMOS25_IN   | PT11B |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                      |
+| reset               | B3/0     | LVCMOS25_IN   | PT9C  |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                      |
++---------------------+----------+---------------+-------+-----------+-----------+----------------------------------------------------------+
 
 Vccio by Bank:
 +------+-------+
 | Bank | Vccio |
 +------+-------+
-| 0    | 3.3V  |
-| 1    | 3.3V  |
-| 2    | 3.3V  |
+| 0    | 2.5V  |
+| 2    | 2.5V  |
 +------+-------+
 
 Vref by Bank:
@@ -54,12 +53,12 @@ Pinout by Pin Number:
 +----------+-----------------------+------------+---------------+-------+----------------+-----------+-----------+
 | Pin/Bank | Pin Info              | Preference | Buffer Type   | Site  | Dual Function  | PG Enable | BC Enable |
 +----------+-----------------------+------------+---------------+-------+----------------+-----------+-----------+
-| A3/0     |     unused, PULL:DOWN |            |               | PT12A |                |           |           |
+| A3/0     | jtag_io_child_1_tms   |            | LVCMOS25_OUT  | PT12A |                |           |           |
 | A4/0     |     unused, PULL:DOWN |            |               | PT10A |                |           |           |
-| A5/0     |     unused, PULL:DOWN |            |               | PT11A |                |           |           |
-| A6/0     | io_jtag_tdi           | LOCATED    | LVCMOS33_IN   | PT14D | TDI            |           |           |
-| A7/0     | io_jtag_tck           | LOCATED    | LVCMOS33_IN   | PT17C | TCK            |           |           |
-| A8/0     |     unused, PULL:DOWN |            |               | PT18B | PCLKC0_1       |           |           |
+| A5/0     | jtag_io_child_1_tck   |            | LVCMOS25_OUT  | PT11A |                |           |           |
+| A6/0     | jtag_io_child_0_tms   |            | LVCMOS25_OUT  | PT14D | TDI            |           |           |
+| A7/0     | jtag_io_gpio_1[1]     |            | LVCMOS25_BIDI | PT17C | TCK            |           |           |
+| A8/0     | jtag_io_gpio_0[3]     |            | LVCMOS25_BIDI | PT18B | PCLKC0_1       |           |           |
 | A9/0     |     unused, PULL:DOWN |            |               | PT22C | SCL/PCLKT0_0   |           |           |
 | A10/0    |     unused, PULL:DOWN |            |               | PT25B |                |           |           |
 | A11/0    |     unused, PULL:DOWN |            |               | PT28A |                |           |           |
@@ -68,38 +67,38 @@ Pinout by Pin Number:
 | A14/0    |     unused, PULL:DOWN |            |               | PT34B |                |           |           |
 | A15/0    |     unused, PULL:DOWN |            |               | PT36B |                |           |           |
 | B1/5     |     unused, PULL:DOWN |            |               | PL2C  |                |           |           |
-| B3/0     | io_reset              | LOCATED    | LVCMOS33_IN   | PT9C  |                |           |           |
-| B4/0     |     unused, PULL:DOWN |            |               | PT12B |                |           |           |
+| B3/0     | reset                 |            | LVCMOS25_IN   | PT9C  |                |           |           |
+| B4/0     | jtag_io_jtag_tdo      |            | LVCMOS25_OUT  | PT12B |                |           |           |
 | B5/0     |     unused, PULL:DOWN |            |               | PT9B  |                |           |           |
-| B6/0     |     unused, PULL:DOWN |            |               | PT11B |                |           |           |
-| B7/0     |     unused, PULL:DOWN |            |               | PT15A |                |           |           |
-| B8/0     | io_jtag_tms           | LOCATED    | LVCMOS33_IN   | PT17D | TMS            |           |           |
+| B6/0     | jtag_io_jtag_tms      |            | LVCMOS25_IN   | PT11B |                |           |           |
+| B7/0     | jtag_io_child_1_tdo   |            | LVCMOS25_BIDI | PT15A |                |           |           |
+| B8/0     | jtag_io_gpio_1[0]     |            | LVCMOS25_BIDI | PT17D | TMS            |           |           |
 | B9/0     |     unused, PULL:DOWN |            |               | PT25A |                |           |           |
 | B10/0    |     unused, PULL:DOWN |            |               | PT27D | PROGRAMN       |           |           |
 | B11/0    |     unused, PULL:DOWN |            |               | PT33A |                |           |           |
 | B12/0    |     unused, PULL:DOWN |            |               | PT35B |                |           |           |
 | B13/0    |     unused, PULL:DOWN |            |               | PT34A |                |           |           |
 | B14/0    |     unused, PULL:DOWN |            |               | PT36A |                |           |           |
-| B16/1    | io_jtag1_tck          | LOCATED    | LVCMOS33_OUT  | PR2D  |                |           |           |
+| B16/1    |     unused, PULL:DOWN |            |               | PR2D  |                |           |           |
 | C1/5     |     unused, PULL:DOWN |            |               | PL4C  |                |           |           |
 | C2/5     |     unused, PULL:DOWN |            |               | PL2D  |                |           |           |
 | C4/0     |     unused, PULL:DOWN |            |               | PT9A  |                |           |           |
 | C5/0     |     unused, PULL:DOWN |            |               | PT10B |                |           |           |
-| C6/0     | io_jtag_tdo           | LOCATED    | LVCMOS33_OUT  | PT14C | TDO            |           |           |
-| C7/0     |     unused, PULL:DOWN |            |               | PT15B |                |           |           |
-| C8/0     |     unused, PULL:DOWN |            |               | PT18A | PCLKT0_1       |           |           |
+| C6/0     | jtag_io_child_0_tck   |            | LVCMOS25_OUT  | PT14C | TDO            |           |           |
+| C7/0     | jtag_io_child_0_tdo   |            | LVCMOS25_BIDI | PT15B |                |           |           |
+| C8/0     | jtag_io_gpio_0[1]     |            | LVCMOS25_BIDI | PT18A | PCLKT0_1       |           |           |
 | C9/0     |     unused, PULL:DOWN |            |               | PT22D | SDA/PCLKC0_0   |           |           |
 | C10/0    | Reserved: sysCONFIG   |            |               | PT27C | JTAGENB        |           |           |
 | C11/0    |     unused, PULL:DOWN |            |               | PT28B |                |           |           |
 | C12/0    |     unused, PULL:DOWN |            |               | PT35A |                |           |           |
 | C13/0    |     unused, PULL:DOWN |            |               | PT36D | DONE           |           |           |
-| C15/1    | io_jtag1_tms          | LOCATED    | LVCMOS33_OUT  | PR2C  |                |           |           |
+| C15/1    |     unused, PULL:DOWN |            |               | PR2C  |                |           |           |
 | C16/1    |     unused, PULL:DOWN |            |               | PR4C  |                |           |           |
 | D1/5     |     unused, PULL:DOWN |            |               | PL3B  | L_GPLLC_FB     |           |           |
 | D2/5     |     unused, PULL:DOWN |            |               | PL4D  |                |           |           |
 | D3/5     |     unused, PULL:DOWN |            |               | PL3A  | L_GPLLT_FB     |           |           |
-| D6/0     |     unused, PULL:DOWN |            |               | PT14A |                |           |           |
-| D7/0     |     unused, PULL:DOWN |            |               | PT16B |                |           |           |
+| D6/0     | jtag_io_child_0_tdi   |            | LVCMOS25_OUT  | PT14A |                |           |           |
+| D7/0     | jtag_io_gpio_1[2]     |            | LVCMOS25_BIDI | PT16B |                |           |           |
 | D8/0     |     unused, PULL:DOWN |            |               | PT21A |                |           |           |
 | D9/0     |     unused, PULL:DOWN |            |               | PT22B |                |           |           |
 | D10/0    |     unused, PULL:DOWN |            |               | PT27A |                |           |           |
@@ -110,13 +109,13 @@ Pinout by Pin Number:
 | E1/5     |     unused, PULL:DOWN |            |               | PL6A  | PCLKT5_0       |           |           |
 | E2/5     |     unused, PULL:DOWN |            |               | PL4A  | L_GPLLT_IN     |           |           |
 | E3/5     |     unused, PULL:DOWN |            |               | PL4B  | L_GPLLC_IN     |           |           |
-| E6/0     |     unused, PULL:DOWN |            |               | PT16A |                |           |           |
-| E7/0     |     unused, PULL:DOWN |            |               | PT14B |                |           |           |
-| E8/0     |     unused, PULL:DOWN |            |               | PT17B |                |           |           |
-| E9/0     |     unused, PULL:DOWN |            |               | PT21B |                |           |           |
+| E6/0     | jtag_io_gpio_1[3]     |            | LVCMOS25_BIDI | PT16A |                |           |           |
+| E7/0     | jtag_io_child_1_tdi   |            | LVCMOS25_OUT  | PT14B |                |           |           |
+| E8/0     | jtag_io_gpio_0[2]     |            | LVCMOS25_BIDI | PT17B |                |           |           |
+| E9/0     | jtag_io_jtag_tdi      |            | LVCMOS25_IN   | PT21B |                |           |           |
 | E10/0    |     unused, PULL:DOWN |            |               | PT27B |                |           |           |
 | E11/0    |     unused, PULL:DOWN |            |               | PT26B |                |           |           |
-| E14/1    | io_jtag1_tdo          | LOCATED    | LVCMOS33_IN   | PR3B  | R_GPLLC_IN/DQ0 |           |           |
+| E14/1    |     unused, PULL:DOWN |            |               | PR3B  | R_GPLLC_IN/DQ0 |           |           |
 | E15/1    |     unused, PULL:DOWN |            |               | PR2B  | R_GPLLC_FB/DQ0 |           |           |
 | E16/1    |     unused, PULL:DOWN |            |               | PR5A  | DQ0            |           |           |
 | F1/5     |     unused, PULL:DOWN |            |               | PL8B  |                |           |           |
@@ -124,13 +123,13 @@ Pinout by Pin Number:
 | F3/5     |     unused, PULL:DOWN |            |               | PL8A  |                |           |           |
 | F4/5     |     unused, PULL:DOWN |            |               | PL6C  |                |           |           |
 | F5/5     |     unused, PULL:DOWN |            |               | PL9C  |                |           |           |
-| F7/0     |     unused, PULL:DOWN |            |               | PT17A |                |           |           |
+| F7/0     | jtag_io_gpio_0[0]     |            | LVCMOS25_BIDI | PT17A |                |           |           |
 | F8/0     |     unused, PULL:DOWN |            |               | PT22A |                |           |           |
 | F9/0     |     unused, PULL:DOWN |            |               | PT26A |                |           |           |
 | F10/0    |     unused, PULL:DOWN |            |               | PT32A |                |           |           |
 | F12/1    |     unused, PULL:DOWN |            |               | PR7C  |                |           |           |
 | F13/1    |     unused, PULL:DOWN |            |               | PR6C  |                |           |           |
-| F14/1    | io_jtag1_tdi          | LOCATED    | LVCMOS33_OUT  | PR7A  | DQ0            |           |           |
+| F14/1    |     unused, PULL:DOWN |            |               | PR7A  | DQ0            |           |           |
 | F15/1    |     unused, PULL:DOWN |            |               | PR5B  | DQ0            |           |           |
 | F16/1    |     unused, PULL:DOWN |            |               | PR7B  | DQ0            |           |           |
 | G1/4     |     unused, PULL:DOWN |            |               | PL10A |                |           |           |
@@ -151,7 +150,7 @@ Pinout by Pin Number:
 | H4/4     |     unused, PULL:DOWN |            |               | PL10C |                |           |           |
 | H5/4     |     unused, PULL:DOWN |            |               | PL15C |                |           |           |
 | H6/5     |     unused, PULL:DOWN |            |               | PL9D  |                |           |           |
-| H11/1    | io_leds[0]            | LOCATED    | LVCMOS33_OUT  | PR16C |                |           |           |
+| H11/1    |     unused, PULL:DOWN |            |               | PR16C |                |           |           |
 | H12/1    |     unused, PULL:DOWN |            |               | PR10D |                |           |           |
 | H13/1    |     unused, PULL:DOWN |            |               | PR11C |                |           |           |
 | H14/1    |     unused, PULL:DOWN |            |               | PR12A | PCLKT1_0/DQ0   |           |           |
@@ -163,9 +162,9 @@ Pinout by Pin Number:
 | J4/4     |     unused, PULL:DOWN |            |               | PL15D |                |           |           |
 | J5/4     |     unused, PULL:DOWN |            |               | PL16C |                |           |           |
 | J6/4     |     unused, PULL:DOWN |            |               | PL10D |                |           |           |
-| J11/1    | io_leds[2]            | LOCATED    | LVCMOS33_OUT  | PR17C |                |           |           |
+| J11/1    |     unused, PULL:DOWN |            |               | PR17C |                |           |           |
 | J12/1    |     unused, PULL:DOWN |            |               | PR11D |                |           |           |
-| J13/1    | io_leds[1]            | LOCATED    | LVCMOS33_OUT  | PR16D |                |           |           |
+| J13/1    |     unused, PULL:DOWN |            |               | PR16D |                |           |           |
 | J14/1    |     unused, PULL:DOWN |            |               | PR15B |                |           |           |
 | J15/1    |     unused, PULL:DOWN |            |               | PR16A | DQS1           |           |           |
 | J16/1    |     unused, PULL:DOWN |            |               | PR15A |                |           |           |
@@ -175,10 +174,10 @@ Pinout by Pin Number:
 | K4/3     |     unused, PULL:DOWN |            |               | PL19C |                |           |           |
 | K5/3     |     unused, PULL:DOWN |            |               | PL21C |                |           |           |
 | K6/4     |     unused, PULL:DOWN |            |               | PL16D |                |           |           |
-| K11/1    | io_leds[4]            | LOCATED    | LVCMOS33_OUT  | PR21C |                |           |           |
+| K11/1    |     unused, PULL:DOWN |            |               | PR21C |                |           |           |
 | K12/1    |     unused, PULL:DOWN |            |               | PR19D | DQ1            |           |           |
 | K13/1    |     unused, PULL:DOWN |            |               | PR19C | DQ1            |           |           |
-| K14/1    | io_jtag2_tck          |            | LVCMOS33_OUT  | PR17A | DQ1            |           |           |
+| K14/1    |     unused, PULL:DOWN |            |               | PR17A | DQ1            |           |           |
 | K15/1    |     unused, PULL:DOWN |            |               | PR17B | DQ1            |           |           |
 | K16/1    |     unused, PULL:DOWN |            |               | PR16B | DQS1N          |           |           |
 | L1/3     |     unused, PULL:DOWN |            |               | PL19A |                |           |           |
@@ -190,8 +189,8 @@ Pinout by Pin Number:
 | L8/2     |     unused, PULL:DOWN |            |               | PB15B |                |           |           |
 | L9/2     |     unused, PULL:DOWN |            |               | PB18D |                |           |           |
 | L10/2    |     unused, PULL:DOWN |            |               | PB26D |                |           |           |
-| L12/1    | io_leds[3]            | LOCATED    | LVCMOS33_OUT  | PR17D |                |           |           |
-| L13/1    | io_leds[5]            | LOCATED    | LVCMOS33_OUT  | PR21D |                |           |           |
+| L12/1    |     unused, PULL:DOWN |            |               | PR17D |                |           |           |
+| L13/1    |     unused, PULL:DOWN |            |               | PR21D |                |           |           |
 | L14/1    |     unused, PULL:DOWN |            |               | PR18B | DQ1            |           |           |
 | L15/1    |     unused, PULL:DOWN |            |               | PR21A | DQ1            |           |           |
 | L16/1    |     unused, PULL:DOWN |            |               | PR18A | DQ1            |           |           |
@@ -200,7 +199,7 @@ Pinout by Pin Number:
 | M3/3     |     unused, PULL:DOWN |            |               | PL24A |                |           |           |
 | M6/2     |     unused, PULL:DOWN |            |               | PB15A |                |           |           |
 | M7/2     |     unused, PULL:DOWN |            |               | PB13C |                |           |           |
-| M8/2     | io_jtag2_tdo          |            | LVCMOS33_IN   | PB21A |                |           |           |
+| M8/2     |     unused, PULL:DOWN |            |               | PB21A |                |           |           |
 | M9/2     |     unused, PULL:DOWN |            |               | PB26C |                |           |           |
 | M10/2    |     unused, PULL:DOWN |            |               | PB31C |                |           |           |
 | M11/2    |     unused, PULL:DOWN |            |               | PB28B |                |           |           |
@@ -217,22 +216,22 @@ Pinout by Pin Number:
 | N10/2    |     unused, PULL:DOWN |            |               | PB28A |                |           |           |
 | N11/2    |     unused, PULL:DOWN |            |               | PB31D |                |           |           |
 | N14/1    |     unused, PULL:DOWN |            |               | PR24B | DQ1            |           |           |
-| N15/1    | io_leds[6]            | LOCATED    | LVCMOS33_OUT  | PR23C |                |           |           |
+| N15/1    |     unused, PULL:DOWN |            |               | PR23C |                |           |           |
 | N16/1    |     unused, PULL:DOWN |            |               | PR24A | DQ1            |           |           |
 | P1/3     |     unused, PULL:DOWN |            |               | PL23D |                |           |           |
 | P2/3     |     unused, PULL:DOWN |            |               | PL25D |                |           |           |
 | P4/2     |     unused, PULL:DOWN |            |               | PB4A  |                |           |           |
 | P5/2     |     unused, PULL:DOWN |            |               | PB6B  |                |           |           |
-| P6/2     | Reserved: sysCONFIG   |            | LVCMOS33_BIDI | PB12A | MCLK/CCLK      |           |           |
+| P6/2     | Reserved: sysCONFIG   |            | LVCMOS25_BIDI | PB12A | MCLK/CCLK      |           |           |
 | P7/2     |     unused, PULL:DOWN |            |               | PB13B |                |           |           |
 | P8/2     |     unused, PULL:DOWN |            |               | PB18A |                |           |           |
-| P9/2     | io_jtag2_tms          |            | LVCMOS33_OUT  | PB23B | PCLKC2_1       |           |           |
+| P9/2     |     unused, PULL:DOWN |            |               | PB23B | PCLKC2_1       |           |           |
 | P10/2    |     unused, PULL:DOWN |            |               | PB29A |                |           |           |
 | P11/2    |     unused, PULL:DOWN |            |               | PB31B |                |           |           |
 | P12/2    |     unused, PULL:DOWN |            |               | PB37A |                |           |           |
-| P13/2    | Reserved: sysCONFIG   |            | LVCMOS33_BIDI | PB38B | SI/SISPI       |           |           |
+| P13/2    | Reserved: sysCONFIG   |            | LVCMOS25_BIDI | PB38B | SI/SISPI       |           |           |
 | P15/1    |     unused, PULL:DOWN |            |               | PR25C |                |           |           |
-| P16/1    | io_leds[7]            | LOCATED    | LVCMOS33_OUT  | PR23D |                |           |           |
+| P16/1    |     unused, PULL:DOWN |            |               | PR23D |                |           |           |
 | PB6C/2   |     unused, PULL:DOWN |            |               | PB6C  |                |           |           |
 | PB6D/2   |     unused, PULL:DOWN |            |               | PB6D  |                |           |           |
 | PB7C/2   |     unused, PULL:DOWN |            |               | PB7C  |                |           |           |
@@ -365,14 +364,14 @@ Pinout by Pin Number:
 | R1/3     |     unused, PULL:DOWN |            |               | PL25C |                |           |           |
 | R3/2     |     unused, PULL:DOWN |            |               | PB4D  |                |           |           |
 | R4/2     |     unused, PULL:DOWN |            |               | PB7B  |                |           |           |
-| R5/2     | Reserved: sysCONFIG   |            | LVCMOS33_OUT  | PB6A  | CSSPIN         |           |           |
+| R5/2     | Reserved: sysCONFIG   |            | LVCMOS25_OUT  | PB6A  | CSSPIN         |           |           |
 | R6/2     |     unused, PULL:DOWN |            |               | PB9B  |                |           |           |
 | R7/2     |     unused, PULL:DOWN |            |               | PB13A |                |           |           |
 | R8/2     |     unused, PULL:DOWN |            |               | PB16B | PCLKC2_0       |           |           |
 | R9/2     |     unused, PULL:DOWN |            |               | PB26A |                |           |           |
 | R10/2    |     unused, PULL:DOWN |            |               | PB29B |                |           |           |
 | R11/2    |     unused, PULL:DOWN |            |               | PB35A |                |           |           |
-| R12/2    | Reserved: sysCONFIG   |            | LVCMOS33_IN   | PB38A | SN             |           |           |
+| R12/2    | Reserved: sysCONFIG   |            | LVCMOS25_IN   | PB38A | SN             |           |           |
 | R13/2    |     unused, PULL:DOWN |            |               | PB34A |                |           |           |
 | R14/2    |     unused, PULL:DOWN |            |               | PB38D |                |           |           |
 | R16/1    |     unused, PULL:DOWN |            |               | PR25D |                |           |           |
@@ -380,10 +379,10 @@ Pinout by Pin Number:
 | T3/2     |     unused, PULL:DOWN |            |               | PB7A  |                |           |           |
 | T4/2     |     unused, PULL:DOWN |            |               | PB4B  |                |           |           |
 | T5/2     |     unused, PULL:DOWN |            |               | PB9A  |                |           |           |
-| T6/2     | Reserved: sysCONFIG   |            | LVCMOS33_BIDI | PB12B | SO/SPISO       |           |           |
+| T6/2     | Reserved: sysCONFIG   |            | LVCMOS25_BIDI | PB12B | SO/SPISO       |           |           |
 | T7/2     |     unused, PULL:DOWN |            |               | PB16A | PCLKT2_0       |           |           |
 | T8/2     |     unused, PULL:DOWN |            |               | PB18B |                |           |           |
-| T9/2     | io_jtag2_tdi          |            | LVCMOS33_OUT  | PB23A | PCLKT2_1       |           |           |
+| T9/2     | jtag_io_jtag_tck      |            | LVCMOS25_IN   | PB23A | PCLKT2_1       |           |           |
 | T10/2    |     unused, PULL:DOWN |            |               | PB26B |                |           |           |
 | T11/2    |     unused, PULL:DOWN |            |               | PB31A |                |           |           |
 | T12/2    |     unused, PULL:DOWN |            |               | PB35B |                |           |           |
@@ -397,11 +396,11 @@ sysCONFIG Pins:
 | Pad Name | sysCONFIG Pin Name        | sysCONFIG Settings                            | Pin/Bank | Buffer Type   | Config Pull Mode  |
 +----------+---------------------------+-----------------------------------------------+----------+---------------+-------------------+
 | PT27C    | JTAGENB/MD6/TDIR          | JTAG_PORT=DISABLE                             | C10/0    |               | PULLDOWN          |
-| PB6A     | CSSPIN/MD4/TDOB           | MASTER_SPI_PORT=ENABLE                        | R5/2     | LVCMOS33_OUT  | PULLUP            |
-| PB12A    | MCLK/CCLK                 | MASTER_SPI_PORT=ENABLE, SLAVE_SPI_PORT=ENABLE | P6/2     | LVCMOS33_BIDI | PULLUP            |
-| PB12B    | SO/SPISO/IO1/MD1/TDIL     | MASTER_SPI_PORT=ENABLE, SLAVE_SPI_PORT=ENABLE | T6/2     | LVCMOS33_BIDI | NO pull up/down   |
-| PB38B    | SI/SISPI/IO0/MD0/TDOR     | MASTER_SPI_PORT=ENABLE, SLAVE_SPI_PORT=ENABLE | P13/2    | LVCMOS33_BIDI | NO pull up/down   |
-| PB38A    | SN/MD5/SCAN_SHFT_ENB/TDIB | SLAVE_SPI_PORT=ENABLE                         | R12/2    | LVCMOS33_IN   | PULLUP            |
+| PB6A     | CSSPIN/MD4/TDOB           | MASTER_SPI_PORT=ENABLE                        | R5/2     | LVCMOS25_OUT  | PULLUP            |
+| PB12A    | MCLK/CCLK                 | MASTER_SPI_PORT=ENABLE, SLAVE_SPI_PORT=ENABLE | P6/2     | LVCMOS25_BIDI | PULLUP            |
+| PB12B    | SO/SPISO/IO1/MD1/TDIL     | MASTER_SPI_PORT=ENABLE, SLAVE_SPI_PORT=ENABLE | T6/2     | LVCMOS25_BIDI | NO pull up/down   |
+| PB38B    | SI/SISPI/IO0/MD0/TDOR     | MASTER_SPI_PORT=ENABLE, SLAVE_SPI_PORT=ENABLE | P13/2    | LVCMOS25_BIDI | NO pull up/down   |
+| PB38A    | SN/MD5/SCAN_SHFT_ENB/TDIB | SLAVE_SPI_PORT=ENABLE                         | R12/2    | LVCMOS25_IN   | PULLUP            |
 +----------+---------------------------+-----------------------------------------------+----------+---------------+-------------------+
 
 Dedicated sysCONFIG Pins:
@@ -410,27 +409,27 @@ Dedicated sysCONFIG Pins:
 List of All Pins' Locate Preferences Based on Final Placement After PAR 
 to Help Users Lock Down ALL the Pins Easily (by Simply Copy & Paste): 
 
-LOCATE  COMP  "io_jtag1_tck"  SITE  "B16";
-LOCATE  COMP  "io_jtag1_tdi"  SITE  "F14";
-LOCATE  COMP  "io_jtag1_tdo"  SITE  "E14";
-LOCATE  COMP  "io_jtag1_tms"  SITE  "C15";
-LOCATE  COMP  "io_jtag2_tck"  SITE  "K14";
-LOCATE  COMP  "io_jtag2_tdi"  SITE  "T9";
-LOCATE  COMP  "io_jtag2_tdo"  SITE  "M8";
-LOCATE  COMP  "io_jtag2_tms"  SITE  "P9";
-LOCATE  COMP  "io_jtag_tck"  SITE  "A7";
-LOCATE  COMP  "io_jtag_tdi"  SITE  "A6";
-LOCATE  COMP  "io_jtag_tdo"  SITE  "C6";
-LOCATE  COMP  "io_jtag_tms"  SITE  "B8";
-LOCATE  COMP  "io_leds[0]"  SITE  "H11";
-LOCATE  COMP  "io_leds[1]"  SITE  "J13";
-LOCATE  COMP  "io_leds[2]"  SITE  "J11";
-LOCATE  COMP  "io_leds[3]"  SITE  "L12";
-LOCATE  COMP  "io_leds[4]"  SITE  "K11";
-LOCATE  COMP  "io_leds[5]"  SITE  "L13";
-LOCATE  COMP  "io_leds[6]"  SITE  "N15";
-LOCATE  COMP  "io_leds[7]"  SITE  "P16";
-LOCATE  COMP  "io_reset"  SITE  "B3";
+LOCATE  COMP  "jtag_io_child_0_tck"  SITE  "C6";
+LOCATE  COMP  "jtag_io_child_0_tdi"  SITE  "D6";
+LOCATE  COMP  "jtag_io_child_0_tdo"  SITE  "C7";
+LOCATE  COMP  "jtag_io_child_0_tms"  SITE  "A6";
+LOCATE  COMP  "jtag_io_child_1_tck"  SITE  "A5";
+LOCATE  COMP  "jtag_io_child_1_tdi"  SITE  "E7";
+LOCATE  COMP  "jtag_io_child_1_tdo"  SITE  "B7";
+LOCATE  COMP  "jtag_io_child_1_tms"  SITE  "A3";
+LOCATE  COMP  "jtag_io_gpio_0[0]"  SITE  "F7";
+LOCATE  COMP  "jtag_io_gpio_0[1]"  SITE  "C8";
+LOCATE  COMP  "jtag_io_gpio_0[2]"  SITE  "E8";
+LOCATE  COMP  "jtag_io_gpio_0[3]"  SITE  "A8";
+LOCATE  COMP  "jtag_io_gpio_1[0]"  SITE  "B8";
+LOCATE  COMP  "jtag_io_gpio_1[1]"  SITE  "A7";
+LOCATE  COMP  "jtag_io_gpio_1[2]"  SITE  "D7";
+LOCATE  COMP  "jtag_io_gpio_1[3]"  SITE  "E6";
+LOCATE  COMP  "jtag_io_jtag_tck"  SITE  "T9";
+LOCATE  COMP  "jtag_io_jtag_tdi"  SITE  "E9";
+LOCATE  COMP  "jtag_io_jtag_tdo"  SITE  "B4";
+LOCATE  COMP  "jtag_io_jtag_tms"  SITE  "B6";
+LOCATE  COMP  "reset"  SITE  "B3";
 
 
 
@@ -442,5 +441,5 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Tue May 19 10:23:58 2020
+Thu Jun 11 15:50:21 2020
 

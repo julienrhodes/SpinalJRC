@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Tue May 19 10:23:50 2020
+Thu Jun 11 15:50:16 2020
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -18,218 +18,125 @@ Report level:    verbose report, limited to 3 items per constraint
 
 
 ================================================================================
-Constraint: create_clock -period 5.000000 -name clk1 [get_nets osc_OSC]
-            865 items scored, 550 timing errors detected.
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets jtag_io_jtag_tck_c]
+            2020 items scored, 1534 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Error:  The following path violates requirements by 3.642ns
+Error:  The following path violates requirements by 6.961ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1S3IX    CK             \globalClockArea_toggler/timeout_counter_value_215__i7  (from osc_OSC +)
-   Destination:    FD1S3IX    CD             \globalClockArea_toggler/timeout_counter_value_215__i0  (to osc_OSC +)
+   Source:         FD1P3IX    CK             jtag_ctrl_tap_instruction_i4  (from jtag_io_jtag_tck_c +)
+   Destination:    FD1S3AX    D              jtag_ctrl_tap_tdoUnbufferd_regNext_209  (to jtag_io_jtag_tck_c -)
 
-   Delay:                   8.496ns  (31.1% logic, 68.9% route), 6 logic levels.
-
- Constraint Details:
-
-      8.496ns data_path \globalClockArea_toggler/timeout_counter_value_215__i7 to \globalClockArea_toggler/timeout_counter_value_215__i0 violates
-      5.000ns delay constraint less
-      0.146ns L_S requirement (totaling 4.854ns) by 3.642ns
-
- Path Details: \globalClockArea_toggler/timeout_counter_value_215__i7 to \globalClockArea_toggler/timeout_counter_value_215__i0
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.403             CK to Q              \globalClockArea_toggler/timeout_counter_value_215__i7 (from osc_OSC)
-Route         2   e 1.002                                  \globalClockArea_toggler/timeout_counter_value[7]
-LUT4        ---     0.448              A to Z              \globalClockArea_toggler/i1235_4_lut
-Route         1   e 0.788                                  \globalClockArea_toggler/n1368
-LUT4        ---     0.448              C to Z              \globalClockArea_toggler/i9_4_lut
-Route         1   e 0.788                                  \globalClockArea_toggler/n26
-LUT4        ---     0.448              C to Z              \globalClockArea_toggler/i15_4_lut
-Route         1   e 0.788                                  \globalClockArea_toggler/n32
-LUT4        ---     0.448              B to Z              \globalClockArea_toggler/i16_4_lut
-Route         2   e 0.954                                  \globalClockArea_toggler/timeout_counter_willOverflowIfInc
-LUT4        ---     0.448              B to Z              \globalClockArea_toggler/i1_2_lut
-Route        23   e 1.533                                  \globalClockArea_toggler/n69
-                  --------
-                    8.496  (31.1% logic, 68.9% route), 6 logic levels.
-
-
-Error:  The following path violates requirements by 3.642ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1S3IX    CK             \globalClockArea_toggler/timeout_counter_value_215__i7  (from osc_OSC +)
-   Destination:    FD1S3IX    CD             \globalClockArea_toggler/timeout_counter_value_215__i1  (to osc_OSC +)
-
-   Delay:                   8.496ns  (31.1% logic, 68.9% route), 6 logic levels.
+   Delay:                   9.315ns  (32.9% logic, 67.1% route), 8 logic levels.
 
  Constraint Details:
 
-      8.496ns data_path \globalClockArea_toggler/timeout_counter_value_215__i7 to \globalClockArea_toggler/timeout_counter_value_215__i1 violates
-      5.000ns delay constraint less
-      0.146ns L_S requirement (totaling 4.854ns) by 3.642ns
-
- Path Details: \globalClockArea_toggler/timeout_counter_value_215__i7 to \globalClockArea_toggler/timeout_counter_value_215__i1
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.403             CK to Q              \globalClockArea_toggler/timeout_counter_value_215__i7 (from osc_OSC)
-Route         2   e 1.002                                  \globalClockArea_toggler/timeout_counter_value[7]
-LUT4        ---     0.448              A to Z              \globalClockArea_toggler/i1235_4_lut
-Route         1   e 0.788                                  \globalClockArea_toggler/n1368
-LUT4        ---     0.448              C to Z              \globalClockArea_toggler/i9_4_lut
-Route         1   e 0.788                                  \globalClockArea_toggler/n26
-LUT4        ---     0.448              C to Z              \globalClockArea_toggler/i15_4_lut
-Route         1   e 0.788                                  \globalClockArea_toggler/n32
-LUT4        ---     0.448              B to Z              \globalClockArea_toggler/i16_4_lut
-Route         2   e 0.954                                  \globalClockArea_toggler/timeout_counter_willOverflowIfInc
-LUT4        ---     0.448              B to Z              \globalClockArea_toggler/i1_2_lut
-Route        23   e 1.533                                  \globalClockArea_toggler/n69
-                  --------
-                    8.496  (31.1% logic, 68.9% route), 6 logic levels.
-
-
-Error:  The following path violates requirements by 3.642ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1S3IX    CK             \globalClockArea_toggler/timeout_counter_value_215__i7  (from osc_OSC +)
-   Destination:    FD1S3IX    CD             \globalClockArea_toggler/timeout_counter_value_215__i2  (to osc_OSC +)
-
-   Delay:                   8.496ns  (31.1% logic, 68.9% route), 6 logic levels.
-
- Constraint Details:
-
-      8.496ns data_path \globalClockArea_toggler/timeout_counter_value_215__i7 to \globalClockArea_toggler/timeout_counter_value_215__i2 violates
-      5.000ns delay constraint less
-      0.146ns L_S requirement (totaling 4.854ns) by 3.642ns
-
- Path Details: \globalClockArea_toggler/timeout_counter_value_215__i7 to \globalClockArea_toggler/timeout_counter_value_215__i2
-
-   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.403             CK to Q              \globalClockArea_toggler/timeout_counter_value_215__i7 (from osc_OSC)
-Route         2   e 1.002                                  \globalClockArea_toggler/timeout_counter_value[7]
-LUT4        ---     0.448              A to Z              \globalClockArea_toggler/i1235_4_lut
-Route         1   e 0.788                                  \globalClockArea_toggler/n1368
-LUT4        ---     0.448              C to Z              \globalClockArea_toggler/i9_4_lut
-Route         1   e 0.788                                  \globalClockArea_toggler/n26
-LUT4        ---     0.448              C to Z              \globalClockArea_toggler/i15_4_lut
-Route         1   e 0.788                                  \globalClockArea_toggler/n32
-LUT4        ---     0.448              B to Z              \globalClockArea_toggler/i16_4_lut
-Route         2   e 0.954                                  \globalClockArea_toggler/timeout_counter_willOverflowIfInc
-LUT4        ---     0.448              B to Z              \globalClockArea_toggler/i1_2_lut
-Route        23   e 1.533                                  \globalClockArea_toggler/n69
-                  --------
-                    8.496  (31.1% logic, 68.9% route), 6 logic levels.
-
-Warning: 8.642 ns is the maximum delay for this constraint.
-
-
-
-================================================================================
-Constraint: create_clock -period 5.000000 -name clk0 [get_nets io_jtag_tck_c]
-            1263 items scored, 898 timing errors detected.
---------------------------------------------------------------------------------
-
-
-Error:  The following path violates requirements by 4.381ns
-
- Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
-
-   Source:         FD1P3JX    CK             \globalClockArea_jtag/ctrl_tap_instruction_i2  (from io_jtag_tck_c +)
-   Destination:    FD1S3AX    D              \globalClockArea_jtag/ctrl_tap_tdoUnbufferd_regNext_97  (to io_jtag_tck_c -)
-
-   Delay:                   6.735ns  (32.6% logic, 67.4% route), 5 logic levels.
-
- Constraint Details:
-
-      6.735ns data_path \globalClockArea_jtag/ctrl_tap_instruction_i2 to \globalClockArea_jtag/ctrl_tap_tdoUnbufferd_regNext_97 violates
+      9.315ns data_path jtag_ctrl_tap_instruction_i4 to jtag_ctrl_tap_tdoUnbufferd_regNext_209 violates
       2.500ns delay constraint less
-      0.146ns L_S requirement (totaling 2.354ns) by 4.381ns
+      0.146ns L_S requirement (totaling 2.354ns) by 6.961ns
 
- Path Details: \globalClockArea_jtag/ctrl_tap_instruction_i2 to \globalClockArea_jtag/ctrl_tap_tdoUnbufferd_regNext_97
+ Path Details: jtag_ctrl_tap_instruction_i4 to jtag_ctrl_tap_tdoUnbufferd_regNext_209
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.403             CK to Q              \globalClockArea_jtag/ctrl_tap_instruction_i2 (from io_jtag_tck_c)
-Route         2   e 1.002                                  \globalClockArea_jtag/ctrl_tap_instruction[2]
-LUT4        ---     0.448              C to Z              \globalClockArea_jtag/i4_4_lut
-Route         1   e 0.788                                  \globalClockArea_jtag/n10_adj_269
-LUT4        ---     0.448              B to Z              \globalClockArea_jtag/i5_3_lut
-Route         5   e 1.174                                  \globalClockArea_jtag/n1338
-LUT4        ---     0.448              B to Z              \globalClockArea_jtag/n1551_bdd_4_lut
-Route         1   e 0.788                                  \globalClockArea_jtag/n1569
-LUT4        ---     0.448              A to Z              \globalClockArea_jtag/n1554_bdd_3_lut
-Route         1   e 0.788                                  \globalClockArea_jtag/ctrl_tap_tdoUnbufferd
+L_CO        ---     0.403             CK to Q              jtag_ctrl_tap_instruction_i4 (from jtag_io_jtag_tck_c)
+Route         2   e 1.002                                  jtag_ctrl_tap_instruction[4]
+LUT4        ---     0.448              C to Z              i3_4_lut_adj_23
+Route         4   e 1.120                                  n2876
+LUT4        ---     0.448              B to Z              i1_2_lut_adj_22
+Route         2   e 0.954                                  n2891
+LUT4        ---     0.448              B to Z              i1_4_lut_adj_16
+Route         1   e 0.788                                  n2893
+MUXL5       ---     0.212             SD to Z              mux_483_i1
+Route         1   e 0.788                                  n1347
+LUT4        ---     0.448              C to Z              n17_bdd_2_lut_2104_3_lut
+Route         1   e 0.788                                  n3039
+LUT4        ---     0.448              D to Z              n3039_bdd_3_lut_4_lut
+Route         1   e 0.020                                  n3040
+MUXL5       ---     0.212           ALUT to Z              i2093
+Route         1   e 0.788                                  jtag_ctrl_tap_tdoUnbufferd
                   --------
-                    6.735  (32.6% logic, 67.4% route), 5 logic levels.
+                    9.315  (32.9% logic, 67.1% route), 8 logic levels.
 
 
-Error:  The following path violates requirements by 4.381ns
+Error:  The following path violates requirements by 6.961ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1P3IX    CK             \globalClockArea_jtag/ctrl_tap_instruction_i7  (from io_jtag_tck_c +)
-   Destination:    FD1S3AX    D              \globalClockArea_jtag/ctrl_tap_tdoUnbufferd_regNext_97  (to io_jtag_tck_c -)
+   Source:         FD1P3IX    CK             jtag_ctrl_tap_instruction_i5  (from jtag_io_jtag_tck_c +)
+   Destination:    FD1S3AX    D              jtag_ctrl_tap_tdoUnbufferd_regNext_209  (to jtag_io_jtag_tck_c -)
 
-   Delay:                   6.735ns  (32.6% logic, 67.4% route), 5 logic levels.
+   Delay:                   9.315ns  (32.9% logic, 67.1% route), 8 logic levels.
 
  Constraint Details:
 
-      6.735ns data_path \globalClockArea_jtag/ctrl_tap_instruction_i7 to \globalClockArea_jtag/ctrl_tap_tdoUnbufferd_regNext_97 violates
+      9.315ns data_path jtag_ctrl_tap_instruction_i5 to jtag_ctrl_tap_tdoUnbufferd_regNext_209 violates
       2.500ns delay constraint less
-      0.146ns L_S requirement (totaling 2.354ns) by 4.381ns
+      0.146ns L_S requirement (totaling 2.354ns) by 6.961ns
 
- Path Details: \globalClockArea_jtag/ctrl_tap_instruction_i7 to \globalClockArea_jtag/ctrl_tap_tdoUnbufferd_regNext_97
+ Path Details: jtag_ctrl_tap_instruction_i5 to jtag_ctrl_tap_tdoUnbufferd_regNext_209
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.403             CK to Q              \globalClockArea_jtag/ctrl_tap_instruction_i7 (from io_jtag_tck_c)
-Route         2   e 1.002                                  \globalClockArea_jtag/ctrl_tap_instruction[7]
-LUT4        ---     0.448              D to Z              \globalClockArea_jtag/i4_4_lut
-Route         1   e 0.788                                  \globalClockArea_jtag/n10_adj_269
-LUT4        ---     0.448              B to Z              \globalClockArea_jtag/i5_3_lut
-Route         5   e 1.174                                  \globalClockArea_jtag/n1338
-LUT4        ---     0.448              B to Z              \globalClockArea_jtag/n1551_bdd_4_lut
-Route         1   e 0.788                                  \globalClockArea_jtag/n1569
-LUT4        ---     0.448              A to Z              \globalClockArea_jtag/n1554_bdd_3_lut
-Route         1   e 0.788                                  \globalClockArea_jtag/ctrl_tap_tdoUnbufferd
+L_CO        ---     0.403             CK to Q              jtag_ctrl_tap_instruction_i5 (from jtag_io_jtag_tck_c)
+Route         2   e 1.002                                  jtag_ctrl_tap_instruction[5]
+LUT4        ---     0.448              D to Z              i3_4_lut_adj_23
+Route         4   e 1.120                                  n2876
+LUT4        ---     0.448              B to Z              i1_2_lut_adj_22
+Route         2   e 0.954                                  n2891
+LUT4        ---     0.448              B to Z              i1_4_lut_adj_16
+Route         1   e 0.788                                  n2893
+MUXL5       ---     0.212             SD to Z              mux_483_i1
+Route         1   e 0.788                                  n1347
+LUT4        ---     0.448              C to Z              n17_bdd_2_lut_2104_3_lut
+Route         1   e 0.788                                  n3039
+LUT4        ---     0.448              D to Z              n3039_bdd_3_lut_4_lut
+Route         1   e 0.020                                  n3040
+MUXL5       ---     0.212           ALUT to Z              i2093
+Route         1   e 0.788                                  jtag_ctrl_tap_tdoUnbufferd
                   --------
-                    6.735  (32.6% logic, 67.4% route), 5 logic levels.
+                    9.315  (32.9% logic, 67.1% route), 8 logic levels.
 
 
-Error:  The following path violates requirements by 4.381ns
+Error:  The following path violates requirements by 6.961ns
 
  Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
 
-   Source:         FD1P3IX    CK             \globalClockArea_jtag/ctrl_tap_instruction_i4  (from io_jtag_tck_c +)
-   Destination:    FD1S3AX    D              \globalClockArea_jtag/ctrl_tap_tdoUnbufferd_regNext_97  (to io_jtag_tck_c -)
+   Source:         FD1P3IX    CK             jtag_ctrl_tap_instruction_i6  (from jtag_io_jtag_tck_c +)
+   Destination:    FD1S3AX    D              jtag_ctrl_tap_tdoUnbufferd_regNext_209  (to jtag_io_jtag_tck_c -)
 
-   Delay:                   6.735ns  (32.6% logic, 67.4% route), 5 logic levels.
+   Delay:                   9.315ns  (32.9% logic, 67.1% route), 8 logic levels.
 
  Constraint Details:
 
-      6.735ns data_path \globalClockArea_jtag/ctrl_tap_instruction_i4 to \globalClockArea_jtag/ctrl_tap_tdoUnbufferd_regNext_97 violates
+      9.315ns data_path jtag_ctrl_tap_instruction_i6 to jtag_ctrl_tap_tdoUnbufferd_regNext_209 violates
       2.500ns delay constraint less
-      0.146ns L_S requirement (totaling 2.354ns) by 4.381ns
+      0.146ns L_S requirement (totaling 2.354ns) by 6.961ns
 
- Path Details: \globalClockArea_jtag/ctrl_tap_instruction_i4 to \globalClockArea_jtag/ctrl_tap_tdoUnbufferd_regNext_97
+ Path Details: jtag_ctrl_tap_instruction_i6 to jtag_ctrl_tap_tdoUnbufferd_regNext_209
 
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
-L_CO        ---     0.403             CK to Q              \globalClockArea_jtag/ctrl_tap_instruction_i4 (from io_jtag_tck_c)
-Route         2   e 1.002                                  \globalClockArea_jtag/ctrl_tap_instruction[4]
-LUT4        ---     0.448              B to Z              \globalClockArea_jtag/i4_4_lut
-Route         1   e 0.788                                  \globalClockArea_jtag/n10_adj_269
-LUT4        ---     0.448              B to Z              \globalClockArea_jtag/i5_3_lut
-Route         5   e 1.174                                  \globalClockArea_jtag/n1338
-LUT4        ---     0.448              B to Z              \globalClockArea_jtag/n1551_bdd_4_lut
-Route         1   e 0.788                                  \globalClockArea_jtag/n1569
-LUT4        ---     0.448              A to Z              \globalClockArea_jtag/n1554_bdd_3_lut
-Route         1   e 0.788                                  \globalClockArea_jtag/ctrl_tap_tdoUnbufferd
+L_CO        ---     0.403             CK to Q              jtag_ctrl_tap_instruction_i6 (from jtag_io_jtag_tck_c)
+Route         2   e 1.002                                  jtag_ctrl_tap_instruction[6]
+LUT4        ---     0.448              B to Z              i3_4_lut_adj_23
+Route         4   e 1.120                                  n2876
+LUT4        ---     0.448              B to Z              i1_2_lut_adj_22
+Route         2   e 0.954                                  n2891
+LUT4        ---     0.448              B to Z              i1_4_lut_adj_16
+Route         1   e 0.788                                  n2893
+MUXL5       ---     0.212             SD to Z              mux_483_i1
+Route         1   e 0.788                                  n1347
+LUT4        ---     0.448              C to Z              n17_bdd_2_lut_2104_3_lut
+Route         1   e 0.788                                  n3039
+LUT4        ---     0.448              D to Z              n3039_bdd_3_lut_4_lut
+Route         1   e 0.020                                  n3040
+MUXL5       ---     0.212           ALUT to Z              i2093
+Route         1   e 0.788                                  jtag_ctrl_tap_tdoUnbufferd
                   --------
-                    6.735  (32.6% logic, 67.4% route), 5 logic levels.
+                    9.315  (32.9% logic, 67.1% route), 8 logic levels.
 
-Warning: 6.881 ns is the maximum delay for this constraint.
+Warning: 9.461 ns is the maximum delay for this constraint.
 
 
 Timing Report Summary
@@ -239,40 +146,35 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets osc_OSC]                 |     5.000 ns|     8.642 ns|     6 *
-                                        |             |             |
-create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets io_jtag_tck_c]           |     5.000 ns|    13.762 ns|     5 *
+clk0 [get_nets jtag_io_jtag_tck_c]      |     5.000 ns|    18.922 ns|     8 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
 
-2 constraints not met.
+1 constraints not met.
 
 --------------------------------------------------------------------------------
 Critical Nets                           |   Loads|  Errors| % of total
 --------------------------------------------------------------------------------
-\globalClockArea_toggler/timeout_counter|        |        |
-_willOverflowIfInc                      |       2|     542|     37.43%
+jtag_io_jtag_tck_c_enable_96            |      33|     497|     32.40%
                                         |        |        |
-\globalClockArea_toggler/n69            |      23|     529|     36.53%
+n3087                                   |       4|     469|     30.57%
                                         |        |        |
-\globalClockArea_jtag/n1338             |       5|     408|     28.18%
+n2876                                   |       4|     436|     28.42%
                                         |        |        |
-\globalClockArea_toggler/n32            |       1|     358|     24.72%
+n1706                                   |      19|     247|     16.10%
                                         |        |        |
-\globalClockArea_jtag/io_jtag_tck_c_enab|        |        |
-le_57                                   |      32|     288|     19.89%
+jtag_ctrl_tap_fsm_state[1]              |      23|     242|     15.78%
                                         |        |        |
-\globalClockArea_jtag/n10_adj_269       |       1|     272|     18.78%
+jtag_ctrl_tap_fsm_state[2]              |      31|     230|     14.99%
                                         |        |        |
-\globalClockArea_toggler/n26            |       1|     216|     14.92%
+jtag_ctrl_tap_fsm_state[3]              |      24|     223|     14.54%
                                         |        |        |
-\globalClockArea_jtag/n502              |      19|     190|     13.12%
+n1651                                   |       5|     216|     14.08%
                                         |        |        |
-\globalClockArea_jtag/n1577             |      15|     159|     10.98%
+n3089                                   |       3|     192|     12.52%
                                         |        |        |
-\globalClockArea_jtag/n1573             |       1|     152|     10.50%
+jtag_ctrl_chainArea_ctrl_capture        |      45|     180|     11.73%
                                         |        |        |
 --------------------------------------------------------------------------------
 
@@ -280,10 +182,10 @@ le_57                                   |      32|     288|     19.89%
 Timing summary:
 ---------------
 
-Timing errors: 1448  Score: 2310363
+Timing errors: 1534  Score: 2376894
 
-Constraints cover  2128 paths, 226 nets, and 676 connections (91.8% coverage)
+Constraints cover  2020 paths, 243 nets, and 808 connections (91.1% coverage)
 
 
-Peak memory: 203735040 bytes, TRCE: 757760 bytes, DLYMAN: 0 bytes
+Peak memory: 204255232 bytes, TRCE: 1613824 bytes, DLYMAN: 0 bytes
 CPU_TIME_REPORT: 0 secs 

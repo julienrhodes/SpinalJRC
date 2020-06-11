@@ -1,0 +1,181 @@
+--------------------------------------------------------------------------------
+Lattice Synthesis Timing Report, Version  
+Thu Jun 11 15:57:16 2020
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+
+Report Information
+------------------
+Design:     MyTopLevel
+Constraint file:  
+Report level:    verbose report, limited to 3 items per constraint
+--------------------------------------------------------------------------------
+
+
+
+================================================================================
+Constraint: create_clock -period 5.000000 -name clk0 [get_nets jtag_io_jtag_tck_c]
+            1378 items scored, 1119 timing errors detected.
+--------------------------------------------------------------------------------
+
+
+Error:  The following path violates requirements by 6.272ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             jtag_ctrl_tap_instruction_i0  (from jtag_io_jtag_tck_c +)
+   Destination:    FD1S3AX    D              jtag_ctrl_tap_tdoUnbufferd_regNext_134  (to jtag_io_jtag_tck_c -)
+
+   Delay:                   8.612ns  (30.8% logic, 69.2% route), 6 logic levels.
+
+ Constraint Details:
+
+      8.612ns data_path jtag_ctrl_tap_instruction_i0 to jtag_ctrl_tap_tdoUnbufferd_regNext_134 violates
+      2.500ns delay constraint less
+      0.160ns L_S requirement (totaling 2.340ns) by 6.272ns
+
+ Path Details: jtag_ctrl_tap_instruction_i0 to jtag_ctrl_tap_tdoUnbufferd_regNext_134
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              jtag_ctrl_tap_instruction_i0 (from jtag_io_jtag_tck_c)
+Route        10   e 1.662                                  jtag_ctrl_tap_instruction[0]
+LUT4        ---     0.493              B to Z              i1_2_lut_rep_67
+Route         2   e 1.141                                  n2294
+LUT4        ---     0.493              D to Z              i3_4_lut_adj_12
+Route         3   e 1.258                                  n15
+LUT4        ---     0.493              C to Z              mux_350_i1_3_lut
+Route         1   e 0.941                                  jtag_ctrl_tap_tdoDr
+LUT4        ---     0.493              A to Z              i1194_4_lut
+Route         1   e 0.020                                  n1639
+MUXL5       ---     0.233           ALUT to Z              i895
+Route         1   e 0.941                                  jtag_ctrl_tap_tdoUnbufferd
+                  --------
+                    8.612  (30.8% logic, 69.2% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 6.242ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             jtag_ctrl_tap_instruction_i1  (from jtag_io_jtag_tck_c +)
+   Destination:    FD1S3AX    D              jtag_ctrl_tap_tdoUnbufferd_regNext_134  (to jtag_io_jtag_tck_c -)
+
+   Delay:                   8.582ns  (30.9% logic, 69.1% route), 6 logic levels.
+
+ Constraint Details:
+
+      8.582ns data_path jtag_ctrl_tap_instruction_i1 to jtag_ctrl_tap_tdoUnbufferd_regNext_134 violates
+      2.500ns delay constraint less
+      0.160ns L_S requirement (totaling 2.340ns) by 6.242ns
+
+ Path Details: jtag_ctrl_tap_instruction_i1 to jtag_ctrl_tap_tdoUnbufferd_regNext_134
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              jtag_ctrl_tap_instruction_i1 (from jtag_io_jtag_tck_c)
+Route         9   e 1.632                                  jtag_ctrl_tap_instruction[1]
+LUT4        ---     0.493              A to Z              i1_2_lut_rep_67
+Route         2   e 1.141                                  n2294
+LUT4        ---     0.493              D to Z              i3_4_lut_adj_12
+Route         3   e 1.258                                  n15
+LUT4        ---     0.493              C to Z              mux_350_i1_3_lut
+Route         1   e 0.941                                  jtag_ctrl_tap_tdoDr
+LUT4        ---     0.493              A to Z              i1194_4_lut
+Route         1   e 0.020                                  n1639
+MUXL5       ---     0.233           ALUT to Z              i895
+Route         1   e 0.941                                  jtag_ctrl_tap_tdoUnbufferd
+                  --------
+                    8.582  (30.9% logic, 69.1% route), 6 logic levels.
+
+
+Error:  The following path violates requirements by 6.008ns
+
+ Logical Details:  Cell type  Pin type       Cell name  (clock net +/-)
+
+   Source:         FD1P3IX    CK             jtag_ctrl_tap_instruction_i0  (from jtag_io_jtag_tck_c +)
+   Destination:    FD1S3AX    D              jtag_ctrl_tap_tdoUnbufferd_regNext_134  (to jtag_io_jtag_tck_c -)
+
+   Delay:                   8.348ns  (34.5% logic, 65.5% route), 7 logic levels.
+
+ Constraint Details:
+
+      8.348ns data_path jtag_ctrl_tap_instruction_i0 to jtag_ctrl_tap_tdoUnbufferd_regNext_134 violates
+      2.500ns delay constraint less
+      0.160ns L_S requirement (totaling 2.340ns) by 6.008ns
+
+ Path Details: jtag_ctrl_tap_instruction_i0 to jtag_ctrl_tap_tdoUnbufferd_regNext_134
+
+   Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
+L_CO        ---     0.444             CK to Q              jtag_ctrl_tap_instruction_i0 (from jtag_io_jtag_tck_c)
+Route        10   e 1.662                                  jtag_ctrl_tap_instruction[0]
+LUT4        ---     0.493              C to Z              i1361_3_lut
+Route         1   e 0.020                                  n2103
+MUXL5       ---     0.233           ALUT to Z              i1362
+Route         1   e 0.941                                  n2104
+LUT4        ---     0.493              A to Z              i2_4_lut
+Route         1   e 0.941                                  n2077
+LUT4        ---     0.493              B to Z              mux_350_i1_3_lut
+Route         1   e 0.941                                  jtag_ctrl_tap_tdoDr
+LUT4        ---     0.493              A to Z              i1194_4_lut
+Route         1   e 0.020                                  n1639
+MUXL5       ---     0.233           ALUT to Z              i895
+Route         1   e 0.941                                  jtag_ctrl_tap_tdoUnbufferd
+                  --------
+                    8.348  (34.5% logic, 65.5% route), 7 logic levels.
+
+Warning: 8.772 ns is the maximum delay for this constraint.
+
+
+Timing Report Summary
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets jtag_io_jtag_tck_c]      |     5.000 ns|    17.544 ns|     6 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+--------------------------------------------------------------------------------
+Critical Nets                           |   Loads|  Errors| % of total
+--------------------------------------------------------------------------------
+n15                                     |       3|     416|     37.18%
+                                        |        |        |
+jtag_io_jtag_tck_c_enable_66            |      32|     352|     31.46%
+                                        |        |        |
+n14                                     |       3|     316|     28.24%
+                                        |        |        |
+n1336                                   |      19|     228|     20.38%
+                                        |        |        |
+n2288                                   |       5|     156|     13.94%
+                                        |        |        |
+jtag_ctrl_tap_fsm_state[2]              |      29|     144|     12.87%
+                                        |        |        |
+jtag_ctrl_tap_fsm_state[3]              |      22|     144|     12.87%
+                                        |        |        |
+jtag_ctrl_tap_fsm_state[1]              |      38|     121|     10.81%
+                                        |        |        |
+n2286                                   |       3|     120|     10.72%
+                                        |        |        |
+n2294                                   |       2|     120|     10.72%
+                                        |        |        |
+--------------------------------------------------------------------------------
+
+
+Timing summary:
+---------------
+
+Timing errors: 1119  Score: 2443194
+
+Constraints cover  1378 paths, 180 nets, and 605 connections (94.2% coverage)
+
+
+Peak memory: 184872960 bytes, TRCE: 897024 bytes, DLYMAN: 0 bytes
+CPU_TIME_REPORT: 0 secs 

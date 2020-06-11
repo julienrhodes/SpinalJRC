@@ -9,9 +9,283 @@
     </Task>
     <Task name="Map">
         <Message>
+            <ID>1100300</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(21): Semantic error in &quot;DEFINE PORT GROUP &quot;jtag&quot; &quot;io_jtag_tms&quot; 
+&quot;io_jtag_tdi&quot; 
+&quot;io_jtag_tdo&quot; ;&quot;: </Dynamic>
+            <Dynamic>&quot;io_jtag_tms&quot; matches no ports in the design. &quot;io_jtag_tdi&quot; matches no ports in the design. &quot;io_jtag_tdo&quot; matches no ports in the design. </Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>21</Navigation>
+        </Message>
+        <Message>
+            <ID>1100641</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(22): Semantic error in &quot;IOBUF GROUP &quot;jtag&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
+            <Dynamic>Group &quot;jtag&quot;, has not been defined.</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>22</Navigation>
+        </Message>
+        <Message>
+            <ID>1100300</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(31): Semantic error in &quot;DEFINE PORT GROUP &quot;leds&quot; &quot;io_leds[7]&quot; 
+&quot;io_leds[6]&quot; 
+&quot;io_leds[5]&quot; 
+&quot;io_leds[4]&quot; 
+&quot;io_leds[3]&quot; 
+&quot;io_leds[2]&quot; 
+&quot;io_leds[1]&quot; 
+&quot;io_leds[0]&quot; ;&quot;: </Dynamic>
+            <Dynamic>&quot;io_leds[7]&quot; matches no ports in the design. &quot;io_leds[6]&quot; matches no ports in the design. &quot;io_leds[5]&quot; matches no ports in the design. &quot;io_leds[4]&quot; matches no ports in the design. &quot;io_leds[3]&quot; matches no ports in the design. &quot;io_leds[2]&quot; matches no ports in the design. &quot;io_leds[1]&quot; matches no ports in the design. &quot;io_leds[0]&quot; matches no ports in the design. </Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>31</Navigation>
+        </Message>
+        <Message>
+            <ID>1100300</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(35): Semantic error in &quot;DEFINE PORT GROUP &quot;jtag1&quot; &quot;io_jtag1_tms&quot; 
+&quot;io_jtag1_tdi&quot; 
+&quot;io_jtag1_tck&quot; 
+&quot;io_jtag1_tdo&quot; ;&quot;: </Dynamic>
+            <Dynamic>&quot;io_jtag1_tms&quot; matches no ports in the design. &quot;io_jtag1_tdi&quot; matches no ports in the design. &quot;io_jtag1_tck&quot; matches no ports in the design. &quot;io_jtag1_tdo&quot; matches no ports in the design. </Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>35</Navigation>
+        </Message>
+        <Message>
+            <ID>1100641</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(36): Semantic error in &quot;IOBUF GROUP &quot;jtag1&quot; PULLMODE=UP IO_TYPE=LVCMOS33 OPENDRAIN=OFF ;&quot;: </Dynamic>
+            <Dynamic>Group &quot;jtag1&quot;, has not been defined.</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>36</Navigation>
+        </Message>
+        <Message>
+            <ID>1100300</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(42): Semantic error in &quot;DEFINE PORT GROUP &quot;jtag2&quot; &quot;io_jtag2_tms&quot; 
+&quot;io_jtag2_tdi&quot; 
+&quot;io_jtag2_tck&quot; 
+&quot;io_jtag2_tdo&quot; ;&quot;: </Dynamic>
+            <Dynamic>&quot;io_jtag2_tms&quot; matches no ports in the design. &quot;io_jtag2_tdi&quot; matches no ports in the design. &quot;io_jtag2_tck&quot; matches no ports in the design. &quot;io_jtag2_tdo&quot; matches no ports in the design. </Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>42</Navigation>
+        </Message>
+        <Message>
+            <ID>1100641</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(43): Semantic error in &quot;IOBUF GROUP &quot;jtag2&quot; PULLMODE=NONE IO_TYPE=LVCMOS33 OPENDRAIN=ON ;&quot;: </Dynamic>
+            <Dynamic>Group &quot;jtag2&quot;, has not been defined.</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>43</Navigation>
+        </Message>
+        <Message>
+            <ID>1100641</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(45): Semantic error in &quot;IOBUF GROUP &quot;leds&quot; IO_TYPE=LVCMOS33 PULLMODE=UP ;&quot;: </Dynamic>
+            <Dynamic>Group &quot;leds&quot;, has not been defined.</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>45</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(4): Semantic error in &quot;LOCATE COMP &quot;io_jtag_tdi&quot; SITE &quot;A6&quot; ;&quot;: </Dynamic>
+            <Dynamic>io_jtag_tdi</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>4</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(5): Semantic error in &quot;LOCATE COMP &quot;io_jtag_tck&quot; SITE &quot;A7&quot; ;&quot;: </Dynamic>
+            <Dynamic>io_jtag_tck</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>5</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(6): Semantic error in &quot;LOCATE COMP &quot;io_jtag_tdo&quot; SITE &quot;C6&quot; ;&quot;: </Dynamic>
+            <Dynamic>io_jtag_tdo</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>6</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(7): Semantic error in &quot;LOCATE COMP &quot;io_jtag_tms&quot; SITE &quot;B8&quot; ;&quot;: </Dynamic>
+            <Dynamic>io_jtag_tms</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>7</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(8): Semantic error in &quot;LOCATE COMP &quot;io_leds[0]&quot; SITE &quot;H11&quot; ;&quot;: </Dynamic>
+            <Dynamic>io_leds[0]</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>8</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(9): Semantic error in &quot;LOCATE COMP &quot;io_leds[1]&quot; SITE &quot;J13&quot; ;&quot;: </Dynamic>
+            <Dynamic>io_leds[1]</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>9</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(10): Semantic error in &quot;LOCATE COMP &quot;io_leds[2]&quot; SITE &quot;J11&quot; ;&quot;: </Dynamic>
+            <Dynamic>io_leds[2]</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>10</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(11): Semantic error in &quot;LOCATE COMP &quot;io_leds[3]&quot; SITE &quot;L12&quot; ;&quot;: </Dynamic>
+            <Dynamic>io_leds[3]</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>11</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(12): Semantic error in &quot;LOCATE COMP &quot;io_leds[4]&quot; SITE &quot;K11&quot; ;&quot;: </Dynamic>
+            <Dynamic>io_leds[4]</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>12</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(13): Semantic error in &quot;LOCATE COMP &quot;io_leds[5]&quot; SITE &quot;L13&quot; ;&quot;: </Dynamic>
+            <Dynamic>io_leds[5]</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>13</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(14): Semantic error in &quot;LOCATE COMP &quot;io_leds[6]&quot; SITE &quot;N15&quot; ;&quot;: </Dynamic>
+            <Dynamic>io_leds[6]</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>14</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(15): Semantic error in &quot;LOCATE COMP &quot;io_leds[7]&quot; SITE &quot;P16&quot; ;&quot;: </Dynamic>
+            <Dynamic>io_leds[7]</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>15</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(16): Semantic error in &quot;IOBUF PORT &quot;io_reset&quot; PULLMODE=NONE IO_TYPE=LVCMOS33 ;&quot;: </Dynamic>
+            <Dynamic>io_reset</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>16</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(17): Semantic error in &quot;IOBUF PORT &quot;io_jtag_tck&quot; IO_TYPE=LVCMOS33 DRIVE=NA SLEWRATE=NA PULLMODE=NONE ;&quot;: </Dynamic>
+            <Dynamic>io_jtag_tck</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>17</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(18): Semantic error in &quot;IOBUF PORT &quot;io_jtag_tdi&quot; DRIVE=NA PULLMODE=NONE IO_TYPE=LVCMOS33 ;&quot;: </Dynamic>
+            <Dynamic>io_jtag_tdi</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>18</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(23): Semantic error in &quot;IOBUF PORT &quot;io_jtag_tdo&quot; PULLMODE=NONE IO_TYPE=LVCMOS33 OPENDRAIN=ON ;&quot;: </Dynamic>
+            <Dynamic>io_jtag_tdo</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>23</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(37): Semantic error in &quot;IOBUF PORT &quot;io_jtag1_tck&quot; PULLMODE=DOWN IO_TYPE=LVCMOS33 ;&quot;: </Dynamic>
+            <Dynamic>io_jtag1_tck</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>37</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(38): Semantic error in &quot;IOBUF PORT &quot;io_jtag1_tdo&quot; DRIVE=NA PULLMODE=NONE IO_TYPE=LVCMOS33 ;&quot;: </Dynamic>
+            <Dynamic>io_jtag1_tdo</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>38</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(44): Semantic error in &quot;IOBUF PORT &quot;io_jtag2_tdo&quot; DRIVE=NA PULLMODE=NONE IO_TYPE=LVCMOS33 ;&quot;: </Dynamic>
+            <Dynamic>io_jtag2_tdo</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>44</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(47): Semantic error in &quot;LOCATE COMP &quot;io_jtag1_tck&quot; SITE &quot;B16&quot; ;&quot;: </Dynamic>
+            <Dynamic>io_jtag1_tck</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>47</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(48): Semantic error in &quot;LOCATE COMP &quot;io_jtag1_tdi&quot; SITE &quot;F14&quot; ;&quot;: </Dynamic>
+            <Dynamic>io_jtag1_tdi</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>48</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(49): Semantic error in &quot;LOCATE COMP &quot;io_jtag1_tms&quot; SITE &quot;C15&quot; ;&quot;: </Dynamic>
+            <Dynamic>io_jtag1_tms</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>49</Navigation>
+        </Message>
+        <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf(50): Semantic error in &quot;LOCATE COMP &quot;io_jtag1_tdo&quot; SITE &quot;E14&quot; ;&quot;: </Dynamic>
+            <Dynamic>io_jtag1_tdo</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/machx03l.lpf</Navigation>
+            <Navigation>50</Navigation>
+        </Message>
+        <Message>
+            <ID>1166064</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>input</Dynamic>
+            <Dynamic>io_reset</Dynamic>
+        </Message>
+        <Message>
             <ID>52101186</ID>
             <Severity>Warning</Severity>
             <Dynamic>MachXO3L</Dynamic>
+        </Message>
+        <Message>
+            <ID>51001046</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>io_reset</Dynamic>
         </Message>
     </Task>
     <Task name="Lattice_Synthesis">
@@ -42,22 +316,66 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(446): </Dynamic>
-            <Dynamic>Toggler</Dynamic>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(739): </Dynamic>
+            <Dynamic>JtagChainer</Dynamic>
             <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
-            <Navigation>446</Navigation>
+            <Navigation>739</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(96): </Dynamic>
-            <Dynamic>JtagBackplane</Dynamic>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(664): </Dynamic>
+            <Dynamic>Toggler</Dynamic>
             <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
-            <Navigation>96</Navigation>
+            <Navigation>664</Navigation>
+        </Message>
+        <Message>
+            <ID>35935034</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(187): </Dynamic>
+            <Dynamic>globalClockArea_toggler</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
+            <Navigation>187</Navigation>
+        </Message>
+        <Message>
+            <ID>35935034</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(156): </Dynamic>
+            <Dynamic>osc</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
+            <Navigation>156</Navigation>
+        </Message>
+        <Message>
+            <ID>35002005</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>io_reset</Dynamic>
+        </Message>
+        <Message>
+            <ID>35002005</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>io_reset</Dynamic>
         </Message>
         <Message>
             <ID>35001611</ID>
             <Severity>Warning</Severity>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>io_reset</Dynamic>
+            <Navigation>io_reset</Navigation>
+        </Message>
+        <Message>
+            <ID>1166064</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>input</Dynamic>
+            <Dynamic>io_reset</Dynamic>
+        </Message>
+        <Message>
+            <ID>1163101</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>2</Dynamic>
         </Message>
     </Task>
     <Task name="PAR">
@@ -74,20 +392,6 @@
         <Message>
             <ID>61061045</ID>
             <Severity>Warning</Severity>
-        </Message>
-        <Message>
-            <ID>61061008</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>io_jtag_tck_c</Dynamic>
-            <Dynamic>Primary</Dynamic>
-            <Dynamic>io_jtag_tck</Dynamic>
-            <Dynamic>A7</Dynamic>
-            <Dynamic>Primary</Dynamic>
-        </Message>
-        <Message>
-            <ID>62061008</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>io_jtag_tck_c</Dynamic>
         </Message>
     </Task>
     <Task name="Jedecgen">

@@ -3,29 +3,18 @@ Report for cell MyTopLevel
    Instance path: MyTopLevel
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      67.00        100.0
-                                  LUT4	     109.00        100.0
+                                  SLIC	      66.00        100.0
+                                  LUT4	     129.00        100.0
                                  IOBUF	         21        100.0
-                                PFUREG	         99        100.0
-                                RIPPLE	         12        100.0
+                                PFUREG	        112        100.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                               Toggler	          1        26.6
-                         JtagBackplane	          1        69.4
+                           JtagChainer	          1         2.0
 ---------------------------------------------------
-Report for cell Toggler
-   Instance path: MyTopLevel/globalClockArea_toggler
+Report for cell JtagChainer
+   Instance path: MyTopLevel/jtag_ctrl_chainer
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      17.83        26.6
-                                  LUT4	      12.00        11.0
-                                PFUREG	         25        25.3
-                                RIPPLE	         12        100.0
----------------------------------------------------
-Report for cell JtagBackplane
-   Instance path: MyTopLevel/globalClockArea_jtag
-                     Cell usage:
-                                  cell	      count    Res Usage(%)
-                                  SLIC	      46.50        69.4
-                                  LUT4	      89.00        81.7
-                                PFUREG	         74        74.7
+                                  SLIC	       1.33         2.0
+                                  LUT4	       3.00         2.3
+                                PFUREG	          2         1.8

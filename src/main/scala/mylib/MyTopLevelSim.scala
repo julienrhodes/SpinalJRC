@@ -169,7 +169,7 @@ object MyTopLevelSim {
   def main(args: Array[String]) {
     val compiled = SimConfig.withConfig(myConfig).withWave.compile{
       class Test extends Component {
-        val bar = new JtagBackplane
+        val bar = new JtagBackplane(2, 4)
       }
       val dut = new Test
       dut.bar.ctrl.chainSelect.simPublic()

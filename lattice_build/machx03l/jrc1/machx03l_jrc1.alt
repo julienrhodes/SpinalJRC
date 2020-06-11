@@ -1,30 +1,30 @@
 NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
 NOTE All Rights Reserved *
-NOTE DATE CREATED: Tue May 19 10:24:07 2020 *
+NOTE DATE CREATED: Thu Jun 11 15:50:27 2020 *
 NOTE DESIGN NAME: MyTopLevel *
 NOTE DEVICE NAME: LCMXO3L-6900C-5CABGA256 *
 NOTE PIN ASSIGNMENTS *
-NOTE PINS io_jtag_tdo : C6 : out *
-NOTE PINS io_jtag1_tms : C15 : out *
-NOTE PINS io_jtag1_tdi : F14 : out *
-NOTE PINS io_jtag1_tck : B16 : out *
-NOTE PINS io_jtag2_tms : P9 : out *
-NOTE PINS io_jtag2_tdi : T9 : out *
-NOTE PINS io_jtag2_tck : K14 : out *
-NOTE PINS io_leds[7] : P16 : out *
-NOTE PINS io_leds[6] : N15 : out *
-NOTE PINS io_leds[5] : L13 : out *
-NOTE PINS io_leds[4] : K11 : out *
-NOTE PINS io_leds[3] : L12 : out *
-NOTE PINS io_leds[2] : J11 : out *
-NOTE PINS io_leds[1] : J13 : out *
-NOTE PINS io_leds[0] : H11 : out *
-NOTE PINS io_reset : B3 : in *
-NOTE PINS io_jtag_tms : B8 : in *
-NOTE PINS io_jtag_tdi : A6 : in *
-NOTE PINS io_jtag_tck : A7 : in *
-NOTE PINS io_jtag1_tdo : E14 : in *
-NOTE PINS io_jtag2_tdo : M8 : in *
+NOTE PINS jtag_io_child_0_tdo : C7 : inout *
+NOTE PINS reset : B3 : in *
+NOTE PINS jtag_io_jtag_tck : T9 : in *
+NOTE PINS jtag_io_jtag_tdi : E9 : in *
+NOTE PINS jtag_io_jtag_tms : B6 : in *
+NOTE PINS jtag_io_child_1_tck : A5 : out *
+NOTE PINS jtag_io_child_1_tdi : E7 : out *
+NOTE PINS jtag_io_child_1_tms : A3 : out *
+NOTE PINS jtag_io_child_0_tck : C6 : out *
+NOTE PINS jtag_io_child_0_tdi : D6 : out *
+NOTE PINS jtag_io_child_0_tms : A6 : out *
+NOTE PINS jtag_io_jtag_tdo : B4 : out *
+NOTE PINS jtag_io_gpio_1[0] : B8 : inout *
+NOTE PINS jtag_io_gpio_1[1] : A7 : inout *
+NOTE PINS jtag_io_gpio_1[2] : D7 : inout *
+NOTE PINS jtag_io_gpio_1[3] : E6 : inout *
+NOTE PINS jtag_io_gpio_0[0] : F7 : inout *
+NOTE PINS jtag_io_gpio_0[1] : C8 : inout *
+NOTE PINS jtag_io_gpio_0[2] : E8 : inout *
+NOTE PINS jtag_io_gpio_0[3] : A8 : inout *
+NOTE PINS jtag_io_child_1_tdo : B7 : inout *
 NOTE PINS SYSCONFIG_PIN_CSSPIN : R5 : out *
 NOTE PINS SYSCONFIG_PIN_MCLK : P6 : inout *
 NOTE PINS SYSCONFIG_PIN_SO : T6 : inout *

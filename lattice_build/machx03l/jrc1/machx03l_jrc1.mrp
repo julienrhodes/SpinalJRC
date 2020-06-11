@@ -15,22 +15,22 @@ Target Vendor:  LATTICE
 Target Device:  LCMXO3L-6900CCABGA256
 Target Performance:   5
 Mapper:  xo3c00a,  version:  Diamond (64-bit) 3.11.0.396.4
-Mapped on:  05/19/20  10:23:51
+Mapped on:  06/11/20  15:50:17
 
 Design Summary
 --------------
 
-   Number of registers:     99 out of  7485 (1%)
-      PFU registers:           99 out of  6864 (1%)
+   Number of registers:    112 out of  7485 (1%)
+      PFU registers:          112 out of  6864 (2%)
       PIO registers:            0 out of   621 (0%)
-   Number of SLICEs:        67 out of  3432 (2%)
-      SLICEs as Logic/ROM:     67 out of  3432 (2%)
+   Number of SLICEs:        66 out of  3432 (2%)
+      SLICEs as Logic/ROM:     66 out of  3432 (2%)
       SLICEs as RAM:            0 out of  2574 (0%)
-      SLICEs as Carry:         12 out of  3432 (0%)
-   Number of LUT4s:        133 out of  6864 (2%)
-      Number used as logic LUTs:        109
+      SLICEs as Carry:          0 out of  3432 (0%)
+   Number of LUT4s:        129 out of  6864 (2%)
+      Number used as logic LUTs:        129
       Number used as distributed RAM:     0
-      Number used as ripple logic:       24
+      Number used as ripple logic:        0
       Number used as shift registers:     0
    Number of PIO sites used: 21 + 1(JTAGENB) out of 207 (11%)
    Number of block RAMs:  0 out of 26 (0%)
@@ -38,7 +38,7 @@ Design Summary
    EFB used :        No
    JTAG used :       No
    Readback used :   No
-   Oscillator used : Yes
+   Oscillator used : No
    Startup used :    No
    POR :             On
    Bandgap :         On
@@ -57,62 +57,246 @@ Design Summary
      distributed RAMs) + 2*(Number of ripple logic)
       2. Number of logic LUT4s does not include count of distributed RAM and
      ripple logic.
-   Number of clocks:  2
-     Net osc_OSC: 14 loads, 14 rising, 0 falling (Driver: osc )
-     Net io_jtag_tck_c: 44 loads, 42 rising, 2 falling (Driver: PIO io_jtag_tck
+   Number of clocks:  1
+     Net jtag_io_jtag_tck_c: 64 loads, 62 rising, 2 falling (Driver: PIO
+     jtag_io_jtag_tck )
 
                                     Page 1
 
 
 
 
-Design:  MyTopLevel                                    Date:  05/19/20  10:23:51
+Design:  MyTopLevel                                    Date:  06/11/20  15:50:17
 
 Design Summary (cont)
 ---------------------
-     )
-   Number of Clock Enables:  7
-     Net globalClockArea_toggler/timeout_counter_willOverflowIfInc: 1 loads, 1
-     LSLICEs
-     Net globalClockArea_jtag/io_jtag_tck_c_enable_31: 4 loads, 4 LSLICEs
-     Net globalClockArea_jtag/io_jtag_tck_c_enable_25: 4 loads, 4 LSLICEs
-     Net globalClockArea_jtag/io_jtag_tck_c_enable_18: 1 loads, 1 LSLICEs
-     Net globalClockArea_jtag/io_jtag_tck_c_enable_57: 19 loads, 19 LSLICEs
-     Net globalClockArea_jtag/io_jtag_tck_c_enable_38: 4 loads, 4 LSLICEs
-     Net globalClockArea_jtag/io_jtag_tck_c_enable_58: 1 loads, 1 LSLICEs
-   Number of LSRs:  4
-     Net globalClockArea_toggler/n69: 12 loads, 12 LSLICEs
-     Net globalClockArea_toggler/timeout_state: 1 loads, 1 LSLICEs
-     Net globalClockArea_jtag/n1574: 8 loads, 8 LSLICEs
-     Net globalClockArea_jtag/n502: 10 loads, 10 LSLICEs
+   Number of Clock Enables:  15
+     Net jtag_io_jtag_tck_c_enable_73: 4 loads, 4 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_65: 2 loads, 2 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_22: 2 loads, 2 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_21: 2 loads, 2 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_20: 2 loads, 2 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_49: 4 loads, 4 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_27: 2 loads, 2 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_37: 2 loads, 2 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_33: 2 loads, 2 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_68: 2 loads, 2 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_62: 2 loads, 2 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_59: 2 loads, 2 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_96: 19 loads, 19 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_83: 1 loads, 1 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_82: 5 loads, 5 LSLICEs
+   Number of LSRs:  3
+     Net n1674: 5 loads, 5 LSLICEs
+     Net n1706: 10 loads, 10 LSLICEs
+     Net n1308: 3 loads, 3 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net globalClockArea_jtag/ctrl_tap_fsm_state_0: 39 loads
-     Net globalClockArea_jtag/ctrl_tap_fsm_state_2: 27 loads
-     Net globalClockArea_jtag/n1578: 21 loads
-     Net globalClockArea_jtag/ctrl_tap_fsm_state_1: 20 loads
-     Net globalClockArea_jtag/ctrl_tap_fsm_state_3: 20 loads
-     Net globalClockArea_jtag/io_jtag_tck_c_enable_57: 19 loads
-     Net globalClockArea_jtag/n1577: 15 loads
-     Net globalClockArea_toggler/n69: 12 loads
-     Net ctrl_tap_fsm_stateNext_3__N_78_c_3: 10 loads
-     Net globalClockArea_jtag/n502: 10 loads
+     Net jtag_ctrl_chainArea_ctrl_capture: 45 loads
+     Net jtag_ctrl_tap_fsm_state_0: 38 loads
+     Net n3088: 32 loads
+     Net jtag_ctrl_tap_fsm_state_2: 31 loads
+     Net jtag_ctrl_tap_fsm_state_3: 24 loads
+     Net jtag_ctrl_tap_fsm_state_1: 23 loads
+     Net jtag_io_jtag_tck_c_enable_96: 20 loads
+     Net jtag_ctrl_tap_instruction_1: 17 loads
+     Net jtag_ctrl_tap_instruction_0: 16 loads
+     Net jtag_ctrl_tap_instruction_2: 16 loads
 
 
 
 
-   Number of warnings:  1
+   Number of warnings:  34
    Number of errors:    0
      
 
 Design Errors/Warnings
 ----------------------
 
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(21): Semantic error in "DEFINE PORT GROUP "jtag" "io_jtag_tms"
+     "io_jtag_tdi" 
+     "io_jtag_tdo" ;": "io_jtag_tms" matches no ports in the design.
+     "io_jtag_tdi" matches no ports in the design. "io_jtag_tdo" matches no
+     ports in the design.  This preference has been disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(22): Semantic error in "IOBUF GROUP "jtag" IO_TYPE=LVCMOS33
+     PULLMODE=NONE ;": Group "jtag", has not been defined. This preference has
+     been disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(31): Semantic error in "DEFINE PORT GROUP "leds" "io_leds[7]" 
+     "io_leds[6]" 
+
+                                    Page 2
+
+
+
+
+Design:  MyTopLevel                                    Date:  06/11/20  15:50:17
+
+Design Errors/Warnings (cont)
+-----------------------------
+     "io_leds[5]" 
+     "io_leds[4]" 
+     "io_leds[3]" 
+     "io_leds[2]" 
+     "io_leds[1]" 
+     "io_leds[0]" ;": "io_leds[7]" matches no ports in the design. "io_leds[6]"
+     matches no ports in the design. "io_leds[5]" matches no ports in the
+     design. "io_leds[4]" matches no ports in the design. "io_leds[3]" matches
+     no ports in the design. "io_leds[2]" matches no ports in the design.
+     "io_leds[1]" matches no ports in the design. "io_leds[0]" matches no ports
+     in the design.  This preference has been disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(35): Semantic error in "DEFINE PORT GROUP "jtag1"
+     "io_jtag1_tms" 
+     "io_jtag1_tdi" 
+     "io_jtag1_tck" 
+     "io_jtag1_tdo" ;": "io_jtag1_tms" matches no ports in the design.
+     "io_jtag1_tdi" matches no ports in the design. "io_jtag1_tck" matches no
+     ports in the design. "io_jtag1_tdo" matches no ports in the design.  This
+     preference has been disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(36): Semantic error in "IOBUF GROUP "jtag1" PULLMODE=UP
+     IO_TYPE=LVCMOS33 OPENDRAIN=OFF ;": Group "jtag1", has not been defined.
+     This preference has been disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(42): Semantic error in "DEFINE PORT GROUP "jtag2"
+     "io_jtag2_tms" 
+     "io_jtag2_tdi" 
+     "io_jtag2_tck" 
+     "io_jtag2_tdo" ;": "io_jtag2_tms" matches no ports in the design.
+     "io_jtag2_tdi" matches no ports in the design. "io_jtag2_tck" matches no
+     ports in the design. "io_jtag2_tdo" matches no ports in the design.  This
+     preference has been disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(43): Semantic error in "IOBUF GROUP "jtag2" PULLMODE=NONE
+     IO_TYPE=LVCMOS33 OPENDRAIN=ON ;": Group "jtag2", has not been defined. This
+     preference has been disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(45): Semantic error in "IOBUF GROUP "leds" IO_TYPE=LVCMOS33
+     PULLMODE=UP ;": Group "leds", has not been defined. This preference has
+     been disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(4): Semantic error in "LOCATE COMP "io_jtag_tdi" SITE "A6" ;":
+     COMP "io_jtag_tdi" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(5): Semantic error in "LOCATE COMP "io_jtag_tck" SITE "A7" ;":
+     COMP "io_jtag_tck" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(6): Semantic error in "LOCATE COMP "io_jtag_tdo" SITE "C6" ;":
+     COMP "io_jtag_tdo" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(7): Semantic error in "LOCATE COMP "io_jtag_tms" SITE "B8" ;":
+     COMP "io_jtag_tms" cannot be found in design. This preference has been
+
+                                    Page 3
+
+
+
+
+Design:  MyTopLevel                                    Date:  06/11/20  15:50:17
+
+Design Errors/Warnings (cont)
+-----------------------------
+     disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(8): Semantic error in "LOCATE COMP "io_leds[0]" SITE "H11" ;":
+     COMP "io_leds[0]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(9): Semantic error in "LOCATE COMP "io_leds[1]" SITE "J13" ;":
+     COMP "io_leds[1]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(10): Semantic error in "LOCATE COMP "io_leds[2]" SITE "J11" ;":
+     COMP "io_leds[2]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(11): Semantic error in "LOCATE COMP "io_leds[3]" SITE "L12" ;":
+     COMP "io_leds[3]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(12): Semantic error in "LOCATE COMP "io_leds[4]" SITE "K11" ;":
+     COMP "io_leds[4]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(13): Semantic error in "LOCATE COMP "io_leds[5]" SITE "L13" ;":
+     COMP "io_leds[5]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(14): Semantic error in "LOCATE COMP "io_leds[6]" SITE "N15" ;":
+     COMP "io_leds[6]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(15): Semantic error in "LOCATE COMP "io_leds[7]" SITE "P16" ;":
+     COMP "io_leds[7]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(16): Semantic error in "IOBUF PORT "io_reset" PULLMODE=NONE
+     IO_TYPE=LVCMOS33 ;": Port "io_reset" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(17): Semantic error in "IOBUF PORT "io_jtag_tck"
+     IO_TYPE=LVCMOS33 DRIVE=NA SLEWRATE=NA PULLMODE=NONE ;": Port "io_jtag_tck"
+     does not exist in the design. This preference has been disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(18): Semantic error in "IOBUF PORT "io_jtag_tdi" DRIVE=NA
+     PULLMODE=NONE IO_TYPE=LVCMOS33 ;": Port "io_jtag_tdi" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(23): Semantic error in "IOBUF PORT "io_jtag_tdo" PULLMODE=NONE
+     IO_TYPE=LVCMOS33 OPENDRAIN=ON ;": Port "io_jtag_tdo" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(37): Semantic error in "IOBUF PORT "io_jtag1_tck" PULLMODE=DOWN
+     IO_TYPE=LVCMOS33 ;": Port "io_jtag1_tck" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(38): Semantic error in "IOBUF PORT "io_jtag1_tdo" DRIVE=NA
+     PULLMODE=NONE IO_TYPE=LVCMOS33 ;": Port "io_jtag1_tdo" does not exist in
+
+                                    Page 4
+
+
+
+
+Design:  MyTopLevel                                    Date:  06/11/20  15:50:17
+
+Design Errors/Warnings (cont)
+-----------------------------
+     the design. This preference has been disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(44): Semantic error in "IOBUF PORT "io_jtag2_tdo" DRIVE=NA
+     PULLMODE=NONE IO_TYPE=LVCMOS33 ;": Port "io_jtag2_tdo" does not exist in
+     the design. This preference has been disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(47): Semantic error in "LOCATE COMP "io_jtag1_tck" SITE "B16"
+     ;": COMP "io_jtag1_tck" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(48): Semantic error in "LOCATE COMP "io_jtag1_tdi" SITE "F14"
+     ;": COMP "io_jtag1_tdi" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(49): Semantic error in "LOCATE COMP "io_jtag1_tms" SITE "C15"
+     ;": COMP "io_jtag1_tms" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx03l/m
+     achx03l.lpf(50): Semantic error in "LOCATE COMP "io_jtag1_tdo" SITE "E14"
+     ;": COMP "io_jtag1_tdo" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: input pad net 'io_reset' has no legal load.
 WARNING - map: The JTAG port has been disabled in this project and JTAG pins
      will be configured as General Purpose IO.  You have to use JTAGENB pin in
      hardware to change the personality of the port from JTAG pins to general
      purpose IO.  Reference MachXO3L Handbook for details on dual function JTAG
      port.
+WARNING - map: IO buffer missing for top level port io_reset...logic will be
+     discarded.
 
 IO (PIO) Attributes
 -------------------
@@ -121,107 +305,105 @@ IO (PIO) Attributes
 | IO Name             | Direction | Levelmode | IO         |
 |                     |           |  IO_TYPE  | Register   |
 +---------------------+-----------+-----------+------------+
-| io_jtag_tdo         | OUTPUT    | LVCMOS33  |            |
+| jtag_io_child_0_tdo | BIDIR     | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| io_jtag1_tms        | OUTPUT    | LVCMOS33  |            |
+| reset               | INPUT     | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| io_jtag1_tdi        | OUTPUT    | LVCMOS33  |            |
+| jtag_io_jtag_tck    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_jtag_tdi    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_jtag_tms    | INPUT     | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_child_1_tck | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_child_1_tdi | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_child_1_tms | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_child_0_tck | OUTPUT    | LVCMOS25  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_child_0_tdi | OUTPUT    | LVCMOS25  |            |
 
-                                    Page 2
+                                    Page 5
 
 
 
 
-Design:  MyTopLevel                                    Date:  05/19/20  10:23:51
+Design:  MyTopLevel                                    Date:  06/11/20  15:50:17
 
 IO (PIO) Attributes (cont)
 --------------------------
 +---------------------+-----------+-----------+------------+
-| io_jtag1_tck        | OUTPUT    | LVCMOS33  |            |
+| jtag_io_child_0_tms | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| io_jtag2_tms        | OUTPUT    | LVCMOS33  |            |
+| jtag_io_jtag_tdo    | OUTPUT    | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| io_jtag2_tdi        | OUTPUT    | LVCMOS33  |            |
+| jtag_io_gpio_1[0]   | BIDIR     | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| io_jtag2_tck        | OUTPUT    | LVCMOS33  |            |
+| jtag_io_gpio_1[1]   | BIDIR     | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| io_leds[7]          | OUTPUT    | LVCMOS33  |            |
+| jtag_io_gpio_1[2]   | BIDIR     | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| io_leds[6]          | OUTPUT    | LVCMOS33  |            |
+| jtag_io_gpio_1[3]   | BIDIR     | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| io_leds[5]          | OUTPUT    | LVCMOS33  |            |
+| jtag_io_gpio_0[0]   | BIDIR     | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| io_leds[4]          | OUTPUT    | LVCMOS33  |            |
+| jtag_io_gpio_0[1]   | BIDIR     | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| io_leds[3]          | OUTPUT    | LVCMOS33  |            |
+| jtag_io_gpio_0[2]   | BIDIR     | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| io_leds[2]          | OUTPUT    | LVCMOS33  |            |
+| jtag_io_gpio_0[3]   | BIDIR     | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
-| io_leds[1]          | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| io_leds[0]          | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| io_reset            | INPUT     | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| io_jtag_tms         | INPUT     | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| io_jtag_tdi         | INPUT     | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| io_jtag_tck         | INPUT     | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| io_jtag1_tdo        | INPUT     | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| io_jtag2_tdo        | INPUT     | LVCMOS33  |            |
+| jtag_io_child_1_tdo | BIDIR     | LVCMOS25  |            |
 +---------------------+-----------+-----------+------------+
 
 Removed logic
 -------------
 
-Block i1391 undriven or does not drive anything - clipped.
-Signal io_jtag_tck_N_264 was merged into signal io_jtag_tck_c
-Signal GND_net undriven or does not drive anything - clipped.
+Block i2160 undriven or does not drive anything - clipped.
+Signal jtag_io_jtag_tck_N_249 was merged into signal jtag_io_jtag_tck_c
+Signal n1545 was merged into signal _zz_61_1
+Signal n1542 was merged into signal _zz_61_0
+Signal n1533 was merged into signal _zz_8
+Signal n1535 was merged into signal _zz_1
+Signal n1537 was merged into signal _zz_2
+Signal n1539 was merged into signal _zz_3
+Signal n1541 was merged into signal _zz_4
+Signal n1527 was merged into signal _zz_5
+Signal n1529 was merged into signal _zz_6
+Signal n1531 was merged into signal _zz_7
 Signal VCC_net undriven or does not drive anything - clipped.
-Signal globalClockArea_toggler/timeout_counter_value_215_add_4_1/S0 undriven or
-     does not drive anything - clipped.
-Signal globalClockArea_toggler/timeout_counter_value_215_add_4_1/CI undriven or
-     does not drive anything - clipped.
-Signal globalClockArea_toggler/timeout_counter_value_215_add_4_23/CO undriven or
-     does not drive anything - clipped.
-Block i1393 was optimized away.
-Block i1 was optimized away.
+Block i2157 was optimized away.
+Block i634_1_lut was optimized away.
+Block i633_1_lut was optimized away.
+Block i638_1_lut was optimized away.
+Block i639_1_lut was optimized away.
+Block i640_1_lut was optimized away.
+Block i641_1_lut was optimized away.
+Block i642_1_lut was optimized away.
+Block i635_1_lut was optimized away.
+Block i636_1_lut was optimized away.
+Block i637_1_lut was optimized away.
 
      
 
 
-                                    Page 3
+
+
+                                    Page 6
 
 
 
 
-Design:  MyTopLevel                                    Date:  05/19/20  10:23:51
-
-OSC Summary
------------
-
-OSC 1:                                     Pin/Node Value
-  OSC Instance Name:                                osc
-  OSC Type:                                         OSCH
-  STDBY Input:                                      NONE
-  OSC Output:                              NODE     osc_OSC
-  OSC Nominal Frequency (MHz):                      12.09
-
-ASIC Components
----------------
-
-Instance Name: osc
-         Type: OSCH
+Design:  MyTopLevel                                    Date:  06/11/20  15:50:17
 
 GSR Usage
 ---------
 
 GSR Component:
    The Global Set Reset (GSR) resource has been used to implement a global reset
-        of the design. The reset signal used for GSR control is 'io_reset_c'.
+        of the design. The reset signal used for GSR control is 'reset_c'.
         
 
      GSR Property:
@@ -234,149 +416,126 @@ GSR Component:
 -------------------------------------
 
      These components have the GSR property set to DISABLED. The components will
-     not respond to the reset signal 'io_reset_c' via the GSR component.
+     not respond to the reset signal 'reset_c' via the GSR component.
 
      Type and number of components of the type: 
-   Register = 73 
+   Register = 88 
 
      Type and instance name of component: 
-   Register : globalClockArea_toggler/toggle_23
-   Register : globalClockArea_jtag/ctrl_tap_fsm_state_i3
-   Register : globalClockArea_jtag/ctrl_tap_fsm_state_i2
-   Register : globalClockArea_jtag/ctrl_tap_fsm_state_i1
-   Register : globalClockArea_jtag/ctrl_tap_instructionShift_i0
-   Register : globalClockArea_jtag/ctrl_tap_bypass_91
-   Register : globalClockArea_jtag/ctrl_tap_instruction_i0
-   Register : globalClockArea_jtag/_zz_6_i0_i0
-   Register : globalClockArea_jtag/_zz_3_i0_i0
-   Register : globalClockArea_jtag/ctrl_tap_tdoUnbufferd_regNext_97
-   Register : globalClockArea_jtag/ctrl_tap_fsm_state_i0
-   Register : globalClockArea_jtag/io_jtag1_tdo_regNext_99
-   Register : globalClockArea_jtag/io_jtag2_tdo_regNext_100
-   Register : globalClockArea_jtag/_zz_3_i0_i30
-   Register : globalClockArea_jtag/_zz_5_i0_i0
-   Register : globalClockArea_jtag/_zz_3_i0_i24
-   Register : globalClockArea_jtag/_zz_3_i0_i21
-   Register : globalClockArea_jtag/_zz_3_i0_i20
+   Register : jtag_ctrl_tap_instructionShift_i3
+   Register : _zz_58_i0_i3
+   Register : _zz_58_i0_i2
+   Register : jtag_ctrl_tap_instructionShift_i2
+   Register : _zz_58_i0_i1
+   Register : jtag_ctrl_tap_instructionShift_i1
+   Register : _zz_55_i0_i3
+   Register : _zz_55_i0_i2
+   Register : _zz_55_i0_i1
+   Register : _zz_53_i0_i3
+   Register : _zz_53_i0_i2
+   Register : _zz_53_i0_i1
+   Register : jtag_ctrl_tap_instruction_i7
+   Register : _zz_50_i0_i3
+   Register : _zz_50_i0_i2
+   Register : jtag_ctrl_tap_instruction_i6
+   Register : jtag_ctrl_tap_instructionShift_i0
+   Register : jtag_ctrl_tap_bypass_198
+   Register : jtag_ctrl_tap_instruction_i0
+   Register : _zz_45_i0_i0
+   Register : _zz_47_i0_i0
+   Register : _zz_50_i0_i0
+   Register : _zz_53_i0_i0
+   Register : _zz_55_i0_i0
+   Register : _zz_58_i0_i0
+   Register : jtag_ctrl_tap_tdoUnbufferd_regNext_209
+   Register : _zz_50_i0_i1
+   Register : _zz_43_i0_i0
+   Register : jtag_ctrl_tap_fsm_state_i0
+   Register : _zz_47_i0_i3
+   Register : _zz_43_i0_i26
+   Register : _zz_47_i0_i2
+   Register : _zz_47_i0_i1
+   Register : jtag_ctrl_tap_instructionShift_i4
 
-                                    Page 4
+                                    Page 7
 
 
 
 
-Design:  MyTopLevel                                    Date:  05/19/20  10:23:51
+Design:  MyTopLevel                                    Date:  06/11/20  15:50:17
 
 GSR Usage (cont)
 ----------------
-   Register : globalClockArea_jtag/_zz_3_i0_i19
-   Register : globalClockArea_jtag/_zz_3_i0_i17
-   Register : globalClockArea_jtag/_zz_3_i0_i16
-   Register : globalClockArea_jtag/_zz_3_i0_i15
-   Register : globalClockArea_jtag/_zz_3_i0_i14
-   Register : globalClockArea_jtag/_zz_3_i0_i12
-   Register : globalClockArea_jtag/_zz_3_i0_i6
-   Register : globalClockArea_jtag/_zz_3_i0_i1
-   Register : globalClockArea_jtag/_zz_6_i0_i7
-   Register : globalClockArea_jtag/_zz_6_i0_i6
-   Register : globalClockArea_jtag/_zz_6_i0_i5
-   Register : globalClockArea_jtag/_zz_6_i0_i4
-   Register : globalClockArea_jtag/_zz_6_i0_i3
-   Register : globalClockArea_jtag/_zz_6_i0_i2
-   Register : globalClockArea_jtag/_zz_6_i0_i1
-   Register : globalClockArea_jtag/ctrl_tap_instruction_i7
-   Register : globalClockArea_jtag/ctrl_tap_instruction_i6
-   Register : globalClockArea_jtag/ctrl_tap_instruction_i5
-   Register : globalClockArea_jtag/ctrl_tap_instruction_i4
-   Register : globalClockArea_jtag/ctrl_tap_instruction_i3
-   Register : globalClockArea_jtag/ctrl_tap_instruction_i1
-   Register : globalClockArea_jtag/ctrl_tap_instructionShift_i7
-   Register : globalClockArea_jtag/ctrl_tap_instructionShift_i6
-   Register : globalClockArea_jtag/ctrl_tap_instructionShift_i5
-   Register : globalClockArea_jtag/ctrl_tap_instructionShift_i4
-   Register : globalClockArea_jtag/ctrl_tap_instructionShift_i3
-   Register : globalClockArea_jtag/ctrl_tap_instructionShift_i2
-   Register : globalClockArea_jtag/ctrl_tap_instructionShift_i1
-   Register : globalClockArea_jtag/_zz_5_i0_i1
-   Register : globalClockArea_jtag/_zz_5_i0_i2
-   Register : globalClockArea_jtag/_zz_5_i0_i3
-   Register : globalClockArea_jtag/_zz_5_i0_i4
-   Register : globalClockArea_jtag/_zz_5_i0_i5
-   Register : globalClockArea_jtag/_zz_5_i0_i6
-   Register : globalClockArea_jtag/_zz_5_i0_i7
-   Register : globalClockArea_jtag/_zz_3_i0_i31
-   Register : globalClockArea_jtag/_zz_3_i0_i29
-   Register : globalClockArea_jtag/_zz_3_i0_i28
-   Register : globalClockArea_jtag/_zz_3_i0_i27
-   Register : globalClockArea_jtag/_zz_3_i0_i26
-   Register : globalClockArea_jtag/_zz_3_i0_i25
-   Register : globalClockArea_jtag/_zz_3_i0_i23
-   Register : globalClockArea_jtag/_zz_3_i0_i22
-   Register : globalClockArea_jtag/_zz_3_i0_i18
-   Register : globalClockArea_jtag/_zz_3_i0_i13
-   Register : globalClockArea_jtag/_zz_3_i0_i11
-   Register : globalClockArea_jtag/_zz_3_i0_i10
-   Register : globalClockArea_jtag/_zz_3_i0_i9
-   Register : globalClockArea_jtag/_zz_3_i0_i8
-   Register : globalClockArea_jtag/_zz_3_i0_i7
-   Register : globalClockArea_jtag/_zz_3_i0_i5
-   Register : globalClockArea_jtag/_zz_3_i0_i4
-   Register : globalClockArea_jtag/_zz_3_i0_i3
-   Register : globalClockArea_jtag/_zz_3_i0_i2
-   Register : globalClockArea_jtag/ctrl_tap_instruction_i2
-
-
-                                    Page 5
+   Register : _zz_43_i0_i27
+   Register : _zz_45_i0_i3
+   Register : _zz_45_i0_i2
+   Register : _zz_45_i0_i1
+   Register : jtag_ctrl_tap_instruction_i5
+   Register : _zz_43_i0_i23
+   Register : _zz_43_i0_i28
+   Register : jtag_ctrl_tap_instruction_i4
+   Register : jtag_ctrl_tap_fsm_state_i3
+   Register : _zz_43_i0_i29
+   Register : jtag_ctrl_tap_instruction_i3
+   Register : jtag_ctrl_tap_fsm_state_i2
+   Register : jtag_ctrl_tap_fsm_state_i1
+   Register : _zz_43_i0_i30
+   Register : _zz_43_i0_i24
+   Register : _zz_43_i0_i21
+   Register : _zz_43_i0_i20
+   Register : _zz_43_i0_i19
+   Register : jtag_ctrl_tap_instruction_i1
+   Register : _zz_43_i0_i17
+   Register : _zz_43_i0_i16
+   Register : _zz_43_i0_i15
+   Register : _zz_43_i0_i14
+   Register : jtag_ctrl_tap_instructionShift_i7
+   Register : _zz_43_i0_i12
+   Register : jtag_ctrl_tap_instructionShift_i6
+   Register : _zz_43_i0_i6
+   Register : jtag_ctrl_tap_instructionShift_i5
+   Register : _zz_43_i0_i1
+   Register : jtag_ctrl_chainArea_shifter__i0
+   Register : jtag_ctrl_chainArea_shifter__i1
+   Register : _zz_43_i0_i31
+   Register : jtag_ctrl_chainArea_shifter__i2
+   Register : jtag_ctrl_chainArea_shifter__i3
+   Register : jtag_ctrl_chainArea_shifter__i4
+   Register : jtag_ctrl_chainArea_shifter__i5
+   Register : jtag_ctrl_chainArea_shifter__i6
+   Register : jtag_ctrl_chainArea_shifter__i7
+   Register : jtag_ctrl_tap_instruction_i2
+   Register : _zz_43_i0_i25
+   Register : _zz_43_i0_i22
+   Register : _zz_43_i0_i18
+   Register : _zz_43_i0_i13
+   Register : _zz_43_i0_i11
+   Register : _zz_43_i0_i10
+   Register : _zz_43_i0_i9
+   Register : _zz_43_i0_i8
+   Register : _zz_43_i0_i7
+   Register : _zz_43_i0_i5
+   Register : _zz_43_i0_i4
+   Register : _zz_43_i0_i3
+   Register : _zz_43_i0_i2
+   Register : jtag_ctrl_chainer/io_child_1_read_tdo_regNext_15
+   Register : jtag_ctrl_chainer/io_child_0_read_tdo_regNext_14
 
 
 
+                                    Page 8
 
-Design:  MyTopLevel                                    Date:  05/19/20  10:23:51
 
-GSR Usage (cont)
-----------------
-     Components with synchronous local reset also reset by asynchronous GSR
-----------------------------------------------------------------------
 
-     These components have the GSR property set to ENABLED and the local reset
-     is synchronous. The components will respond to the synchronous local reset
-     and to the unrelated asynchronous reset signal 'io_reset_c' via the GSR
-     component.
 
-     Type and number of components of the type: 
-   Register = 24 
-
-     Type and instance name of component: 
-   Register : globalClockArea_toggler/timeout_counter_value_215__i0
-   Register : globalClockArea_toggler/timeout_state_21
-   Register : globalClockArea_toggler/timeout_counter_value_215__i1
-   Register : globalClockArea_toggler/timeout_counter_value_215__i2
-   Register : globalClockArea_toggler/timeout_counter_value_215__i3
-   Register : globalClockArea_toggler/timeout_counter_value_215__i4
-   Register : globalClockArea_toggler/timeout_counter_value_215__i5
-   Register : globalClockArea_toggler/timeout_counter_value_215__i6
-   Register : globalClockArea_toggler/timeout_counter_value_215__i7
-   Register : globalClockArea_toggler/timeout_counter_value_215__i8
-   Register : globalClockArea_toggler/timeout_counter_value_215__i9
-   Register : globalClockArea_toggler/timeout_counter_value_215__i10
-   Register : globalClockArea_toggler/timeout_counter_value_215__i11
-   Register : globalClockArea_toggler/timeout_counter_value_215__i12
-   Register : globalClockArea_toggler/timeout_counter_value_215__i13
-   Register : globalClockArea_toggler/timeout_counter_value_215__i14
-   Register : globalClockArea_toggler/timeout_counter_value_215__i15
-   Register : globalClockArea_toggler/timeout_counter_value_215__i16
-   Register : globalClockArea_toggler/timeout_counter_value_215__i17
-   Register : globalClockArea_toggler/timeout_counter_value_215__i18
-   Register : globalClockArea_toggler/timeout_counter_value_215__i19
-   Register : globalClockArea_toggler/timeout_counter_value_215__i20
-   Register : globalClockArea_toggler/timeout_counter_value_215__i21
-   Register : globalClockArea_toggler/timeout_counter_value_215__i22
+Design:  MyTopLevel                                    Date:  06/11/20  15:50:17
 
 Run Time and Memory Usage
 -------------------------
 
    Total CPU Time: 0 secs  
    Total REAL Time: 0 secs  
-   Peak Memory Usage: 196 MB
+   Peak Memory Usage: 169 MB
         
 
 
@@ -391,7 +550,46 @@ Run Time and Memory Usage
 
 
 
-                                    Page 6
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 9
 
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.

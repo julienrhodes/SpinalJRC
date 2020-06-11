@@ -99,7 +99,7 @@ class MyTopLevel extends Component {
     frequency=ClockDomain.FixedFrequency(12 MHz),
     config=ClockDomainConfig(resetKind = ASYNC, resetActiveLevel = LOW))
 
-  val jtag = new JtagBackplane()
+  val jtag = new JtagBackplane(1, 2)
   val globalClockArea = new ClockingArea(globalClock) {
     val toggler = new Toggler()
     //io.leds := ~jtag.io.leds ^ toggler.io.led.asBits.resize(8 bit)
@@ -167,9 +167,7 @@ class JtagChainer(chains: Int) extends Component {
 }
 
 // Must conform to ARM Debug Interface "DR scan chain and DR registers"
-class JtagBackplane extends Area {
-  val chains = 2
-  val gpioWidth = 4
+class JtagBackplane(chains : Int, gpioWidth : Int) extends Area {
   val io = new Bundle {
     val jtag    = slave(Jtag())
     val child   = Vec(master(TriState(master(Jtag()))), chains)
