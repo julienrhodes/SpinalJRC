@@ -198,9 +198,9 @@ class JtagBackplane extends Area {
     val regCount = 3
     for (i <- 0 until chains) {
       val baseInstr = gpioBaseInstr + i * regCount
-      val init = B(0, widthOf(io.gpio(i).writeEnable) bits)
-      val gpioEnable = tap.writeInit(data=io.gpio(i).writeEnable, dataInit=init)(instructionId=baseInstr)
-      val gpioRead = tap.read(data=io.gpio(i).read)(instructionId=baseInstr + 1)
+      val init = B(0, widthOf(io.gpio(i).write) bits)
+      val gpioRead = tap.read(data=io.gpio(i).read)(instructionId=baseInstr)
+      val gpioWriteEnable = tap.writeInit(data=io.gpio(i).writeEnable, dataInit=init)(instructionId=baseInstr + 1)
       val gpioWrite = tap.writeInit(data=io.gpio(i).write, dataInit=init)(instructionId=baseInstr + 2)
     }
     // val chainArea = tap.writeMasked(

@@ -25,6 +25,58 @@ class ShiftReg(clockDomain: ClockDomain, val length: Int) {
   }
 }
 
+class JtagStateController(jtag: Jtag, jtagClk: ClockDomain) {
+  def tms_shift(data : String) : Unit = {
+    for( i <- data ) {
+      jtag.tms #= (i.toString.toInt == 1)
+      jtagClk.waitSampling()
+    }
+  }
+  def from_shift_to_idle() {
+    tms_shift("10")
+  }
+  def from_idle_to_dr() {
+    tms_shift("100")
+  }
+  def from_idle_to_ir() {
+    tms_shift("1100")
+  }
+  def reset() {
+  }
+
+  def shift(data : Int, size : Int) : Int = {
+    var dataOut : Int = 0
+    for( i <- 0 until size ) {
+      jtagClk.waitFallingEdge()
+      jtag.tdi #= ((data >> i) & 1) == 1
+      jtagClk.waitRisingEdge()
+      if (jtag.tdo.toBoolean) {
+        dataOut |= 1 << i
+      }
+    }
+    return dataOut
+  }
+
+  def shift_register(data : Int, size : Int) : Int = {
+    var dataOut : Int = 0
+    dataOut = shift(data, size - 1)
+
+    jtagClk.waitFallingEdge()
+    jtag.tdi #= ((data >> (size - 1)) & 1) == 1
+
+    // the last digit is shifted during TMS transition
+    // Exit SHIFT
+    jtag.tms #= true
+    jtagClk.waitRisingEdge()
+    // Collect the last bit
+    if (jtag.tdo.toBoolean) {
+      dataOut |= 1 << (size - 1)
+    }
+    return dataOut
+  }
+}
+
+
 object JtagChainerSim {
   val chainQuantity = 3
   def main(args: Array[String]) {
@@ -124,6 +176,77 @@ object MyTopLevelSim {
       dut
     }
 
+
+    compiled.doSim("Gpios") { foo =>
+      val dut = foo.bar
+      val jtagClk = dut.ctrl.clockDomain
+
+      //Fork a process to generate the reset and the clock on the dut
+      jtagClk.forkStimulus(10)
+
+      dut.io.jtag.tdi #= false
+      dut.io.jtag.tms #= false
+
+      // Perform reset
+      jtagClk.waitRisingEdge(1)
+      jtagClk.assertReset()
+      jtagClk.waitRisingEdge(1)
+      jtagClk.deassertReset()
+      jtagClk.waitSampling()
+
+      val jtagCont = new JtagStateController(dut.io.jtag, jtagClk)
+      
+      // GPIO READ TEST
+      // Switch to shift IR
+      jtagCont.from_idle_to_ir()
+      // Shift 9 into IR (read GPIO for child 0)
+      var shiftOut = jtagCont.shift_register(9, 8)
+      jtagCont.from_shift_to_idle()
+
+      // Set gpio input to 1
+      dut.io.gpio(0).read #= 1
+      jtagCont.from_idle_to_dr()
+      shiftOut = jtagCont.shift_register(0x00, 4)
+      assert(shiftOut == 1,  f"Unexpected ID: $shiftOut%X")
+      jtagCont.from_shift_to_idle()
+
+      // Set gpio input to 12
+      dut.io.gpio(0).read #= 0xC
+      // Latch gpio read into DR
+      jtagCont.from_idle_to_dr()
+      shiftOut = jtagCont.shift_register(0x00, 4)
+      assert(shiftOut == 0xC,  f"Unexpected ID: $shiftOut%X")
+      jtagCont.from_shift_to_idle()
+
+      // GPIO WRITENENABLE TEST
+      // Switch to shift IR
+      jtagCont.from_idle_to_ir()
+      // Shift 10 into IR (writeEnable GPIO for child 0)
+      shiftOut = jtagCont.shift_register(10, 8)
+      jtagCont.from_shift_to_idle()
+
+      jtagCont.from_idle_to_dr()
+      shiftOut = jtagCont.shift_register(5, 4)
+      assert(shiftOut == 0)
+      jtagCont.from_shift_to_idle()
+      jtagClk.waitSampling(1)
+      assert(dut.io.gpio(0).writeEnable.toInt == 5)
+
+      // GPIO WRITE TEST
+      // Switch to shift IR
+      jtagCont.from_idle_to_ir()
+      // Shift 11 into IR (writeEnable GPIO for child 0)
+      shiftOut = jtagCont.shift_register(11, 8)
+      jtagCont.from_shift_to_idle()
+
+      jtagCont.from_idle_to_dr()
+      shiftOut = jtagCont.shift_register(4, 4)
+      assert(shiftOut == 0)
+      jtagCont.from_shift_to_idle()
+      jtagClk.waitSampling(1)
+      assert(dut.io.gpio(0).write.toInt.&(5) == 4)
+    }
+
     compiled.doSim("JtagBackPlane") { foo =>
       val dut = foo.bar
       val jtagClk = dut.ctrl.clockDomain
@@ -156,57 +279,7 @@ object MyTopLevelSim {
         }
       }
 
-      class JtagStateController(jtag: Jtag) {
-        def tms_shift(data : String) : Unit = {
-          for( i <- data ) {
-            jtag.tms #= (i.toString.toInt == 1)
-            jtagClk.waitSampling()
-          }
-        }
-        def from_shift_to_idle() {
-          tms_shift("10")
-        }
-        def from_idle_to_dr() {
-          tms_shift("100")
-        }
-        def from_idle_to_ir() {
-          tms_shift("1100")
-        }
-        def reset() {
-        }
-
-        def shift(data : Int, size : Int) : Int = {
-          var dataOut : Int = 0
-          for( i <- 0 until size ) {
-            jtag.tdi #= ((data >> i) & 1) == 1
-            jtagClk.waitSampling()
-            if (jtag.tdo.toBoolean) {
-              dataOut |= 1 << i
-            }
-          }
-          return dataOut
-        }
-
-        def shift_register(data : Int, size : Int) : Int = {
-          var dataOut : Int = 0
-          dataOut = shift(data, size - 1)
-
-          jtag.tdi #= ((data >> (size - 1)) & 1) == 1
-
-          // the last digit is shifted during TMS transition
-          // Exit SHIFT
-          jtag.tms #= true
-          jtagClk.waitSampling()
-          // Collect the last bit
-          if (jtag.tdo.toBoolean) {
-            dataOut |= 1 << (size - 1)
-          }
-          return dataOut
-        }
-      }
-
-      val jtagCont = new JtagStateController(dut.io.jtag)
-
+      val jtagCont = new JtagStateController(dut.io.jtag, jtagClk)
       // Switch to shift IR
       jtagCont.from_idle_to_ir()
       
