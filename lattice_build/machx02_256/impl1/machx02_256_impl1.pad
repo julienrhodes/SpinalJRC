@@ -1,0 +1,142 @@
+PAD Specification File
+***************************
+
+PART TYPE:        LCMXO2-256HC
+Performance Grade:      4
+PACKAGE:          QFN32
+Package Status:                     Final          Version 1.41
+
+Fri Jun 12 16:04:11 2020
+
+Pinout by Port Name:
++---------------------+----------+---------------+------+-----------+-----------+----------------------------------------------------------+
+| Port Name           | Pin/Bank | Buffer Type   | Site | PG Enable | BC Enable | Properties                                               |
++---------------------+----------+---------------+------+-----------+-----------+----------------------------------------------------------+
+| io_toggle           | 27/0     | LVCMOS33_OUT  | PT8D |           |           | DRIVE:8mA SLEW:SLOW                                      |
+| jtag_io_child_0_tck | 11/2     | LVCMOS33_OUT  | PB4A |           |           | DRIVE:8mA SLEW:SLOW                                      |
+| jtag_io_child_0_tdi | 8/2      | LVCMOS33_OUT  | PB2A |           |           | DRIVE:8mA SLEW:SLOW                                      |
+| jtag_io_child_0_tdo | 10/2     | LVCMOS33_BIDI | PB2D |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_child_0_tms | 9/2      | LVCMOS33_OUT  | PB2C |           |           | DRIVE:8mA SLEW:SLOW                                      |
+| jtag_io_gpio_0[0]   | 13/2     | LVCMOS33_BIDI | PB4C |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_gpio_0[1]   | 14/2     | LVCMOS33_BIDI | PB4D |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_jtag_tck    | 30/0     | LVCMOS33_IN   | PT7A |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                      |
+| jtag_io_jtag_tdi    | 32/0     | LVCMOS33_IN   | PT6D |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                      |
+| jtag_io_jtag_tdo    | 1/0      | LVCMOS33_OUT  | PT6C |           |           | DRIVE:8mA PULL:DOWN SLEW:SLOW                            |
+| jtag_io_jtag_tms    | 29/0     | LVCMOS33_IN   | PT7B |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                      |
+| reset               | 23/0     | LVCMOS33_IN   | PT9D |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL                        |
++---------------------+----------+---------------+------+-----------+-----------+----------------------------------------------------------+
+
+Vccio by Bank:
++------+-------+
+| Bank | Vccio |
++------+-------+
+| 0    | 3.3V  |
+| 2    | 3.3V  |
++------+-------+
+
+Vref by Bank:
++------+-----+-----------------+---------+
+| Vref | Pin | Bank # / Vref # | Load(s) |
++------+-----+-----------------+---------+
++------+-----+-----------------+---------+
+
+Pinout by Pin Number:
++----------+-----------------------+------------+---------------+------+---------------+-----------+-----------+
+| Pin/Bank | Pin Info              | Preference | Buffer Type   | Site | Dual Function | PG Enable | BC Enable |
++----------+-----------------------+------------+---------------+------+---------------+-----------+-----------+
+| 1/0      | jtag_io_jtag_tdo      | LOCATED    | LVCMOS33_OUT  | PT6C | TDO           |           |           |
+| 4/3      |     unused, PULL:DOWN |            |               | PL5C | PCLKT3_0      |           |           |
+| 5/3      |     unused, PULL:DOWN |            |               | PL5D | PCLKC3_0      |           |           |
+| 8/2      | jtag_io_child_0_tdi   | LOCATED    | LVCMOS33_OUT  | PB2A | CSSPIN        |           |           |
+| 9/2      | jtag_io_child_0_tms   | LOCATED    | LVCMOS33_OUT  | PB2C | MCLK/CCLK     |           |           |
+| 10/2     | jtag_io_child_0_tdo   | LOCATED    | LVCMOS33_BIDI | PB2D | SO/SPISO      |           |           |
+| 11/2     | jtag_io_child_0_tck   | LOCATED    | LVCMOS33_OUT  | PB4A | PCLKT2_0      |           |           |
+| 12/2     |     unused, PULL:DOWN |            |               | PB4B | PCLKC2_0      |           |           |
+| 13/2     | jtag_io_gpio_0[0]     | LOCATED    | LVCMOS33_BIDI | PB4C | PCLKT2_1      |           |           |
+| 14/2     | jtag_io_gpio_0[1]     | LOCATED    | LVCMOS33_BIDI | PB4D | PCLKC2_1      |           |           |
+| 16/2     |     unused, PULL:DOWN |            |               | PB9A | SN            |           |           |
+| 17/2     |     unused, PULL:DOWN |            |               | PB9B | SI/SISPI      |           |           |
+| 20/1     |     unused, PULL:DOWN |            |               | PR5B | PCLKC1_0      |           |           |
+| 21/1     |     unused, PULL:DOWN |            |               | PR5A | PCLKT1_0      |           |           |
+| 23/0     | reset                 | LOCATED    | LVCMOS33_IN   | PT9D | DONE          |           |           |
+| 25/0     |     unused, PULL:DOWN |            |               | PT9B | PROGRAMN      |           |           |
+| 26/0     | Reserved: sysCONFIG   |            |               | PT9A | JTAGENB       |           |           |
+| 27/0     | io_toggle             | LOCATED    | LVCMOS33_OUT  | PT8D | SDA/PCLKC0_0  |           |           |
+| 28/0     |     unused, PULL:DOWN |            |               | PT8C | SCL/PCLKT0_0  |           |           |
+| 29/0     | jtag_io_jtag_tms      | LOCATED    | LVCMOS33_IN   | PT7B | TMS           |           |           |
+| 30/0     | jtag_io_jtag_tck      | LOCATED    | LVCMOS33_IN   | PT7A | TCK           |           |           |
+| 32/0     | jtag_io_jtag_tdi      | LOCATED    | LVCMOS33_IN   | PT6D | TDI           |           |           |
+| PB2B/2   |     unused, PULL:DOWN |            |               | PB2B |               |           |           |
+| PB7A/2   |     unused, PULL:DOWN |            |               | PB7A |               |           |           |
+| PB7B/2   |     unused, PULL:DOWN |            |               | PB7B |               |           |           |
+| PB7C/2   |     unused, PULL:DOWN |            |               | PB7C |               |           |           |
+| PB7D/2   |     unused, PULL:DOWN |            |               | PB7D |               |           |           |
+| PL2A/3   |     unused, PULL:DOWN |            |               | PL2A |               |           |           |
+| PL2B/3   |     unused, PULL:DOWN |            |               | PL2B |               |           |           |
+| PL2C/3   |     unused, PULL:DOWN |            |               | PL2C | PCLKT3_2      |           |           |
+| PL2D/3   |     unused, PULL:DOWN |            |               | PL2D | PCLKC3_2      |           |           |
+| PL3A/3   |     unused, PULL:DOWN |            |               | PL3A |               |           |           |
+| PL3B/3   |     unused, PULL:DOWN |            |               | PL3B |               |           |           |
+| PL3C/3   |     unused, PULL:DOWN |            |               | PL3C | PCLKT3_1      |           |           |
+| PL3D/3   |     unused, PULL:DOWN |            |               | PL3D | PCLKC3_1      |           |           |
+| PL5A/3   |     unused, PULL:DOWN |            |               | PL5A |               |           |           |
+| PL5B/3   |     unused, PULL:DOWN |            |               | PL5B |               |           |           |
+| PL6A/3   |     unused, PULL:DOWN |            |               | PL6A |               |           |           |
+| PL6B/3   |     unused, PULL:DOWN |            |               | PL6B |               |           |           |
+| PR2A/1   |     unused, PULL:DOWN |            |               | PR2A |               |           |           |
+| PR2B/1   |     unused, PULL:DOWN |            |               | PR2B |               |           |           |
+| PR3A/1   |     unused, PULL:DOWN |            |               | PR3A |               |           |           |
+| PR3B/1   |     unused, PULL:DOWN |            |               | PR3B |               |           |           |
+| PR3C/1   |     unused, PULL:DOWN |            |               | PR3C |               |           |           |
+| PR3D/1   |     unused, PULL:DOWN |            |               | PR3D |               |           |           |
+| PR5C/1   |     unused, PULL:DOWN |            |               | PR5C |               |           |           |
+| PR5D/1   |     unused, PULL:DOWN |            |               | PR5D |               |           |           |
+| PR6A/1   |     unused, PULL:DOWN |            |               | PR6A |               |           |           |
+| PR6B/1   |     unused, PULL:DOWN |            |               | PR6B |               |           |           |
+| PR6C/1   |     unused, PULL:DOWN |            |               | PR6C |               |           |           |
+| PR6D/1   |     unused, PULL:DOWN |            |               | PR6D |               |           |           |
+| PT6A/0   |     unused, PULL:DOWN |            |               | PT6A |               |           |           |
+| PT6B/0   |     unused, PULL:DOWN |            |               | PT6B |               |           |           |
+| PT8A/0   |     unused, PULL:DOWN |            |               | PT8A | PCLKT0_1      |           |           |
+| PT8B/0   |     unused, PULL:DOWN |            |               | PT8B | PCLKC0_1      |           |           |
+| PT9C/0   |     unused, PULL:DOWN |            |               | PT9C | INITN         |           |           |
++----------+-----------------------+------------+---------------+------+---------------+-----------+-----------+
+
+sysCONFIG Pins:
++----------+--------------------+--------------------+----------+-------------+-------------------+
+| Pad Name | sysCONFIG Pin Name | sysCONFIG Settings | Pin/Bank | Buffer Type | Config Pull Mode  |
++----------+--------------------+--------------------+----------+-------------+-------------------+
+| PT9A     | JTAGENB/MD6/TDIR   | JTAG_PORT=DISABLE  | 26/0     |             | PULLDOWN          |
++----------+--------------------+--------------------+----------+-------------+-------------------+
+
+Dedicated sysCONFIG Pins:
+
+
+List of All Pins' Locate Preferences Based on Final Placement After PAR 
+to Help Users Lock Down ALL the Pins Easily (by Simply Copy & Paste): 
+
+LOCATE  COMP  "io_toggle"  SITE  "27";
+LOCATE  COMP  "jtag_io_child_0_tck"  SITE  "11";
+LOCATE  COMP  "jtag_io_child_0_tdi"  SITE  "8";
+LOCATE  COMP  "jtag_io_child_0_tdo"  SITE  "10";
+LOCATE  COMP  "jtag_io_child_0_tms"  SITE  "9";
+LOCATE  COMP  "jtag_io_gpio_0[0]"  SITE  "13";
+LOCATE  COMP  "jtag_io_gpio_0[1]"  SITE  "14";
+LOCATE  COMP  "jtag_io_jtag_tck"  SITE  "30";
+LOCATE  COMP  "jtag_io_jtag_tdi"  SITE  "32";
+LOCATE  COMP  "jtag_io_jtag_tdo"  SITE  "1";
+LOCATE  COMP  "jtag_io_jtag_tms"  SITE  "29";
+LOCATE  COMP  "reset"  SITE  "23";
+
+
+
+
+
+PAR: Place And Route Diamond (64-bit) 3.11.0.396.4.
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+Fri Jun 12 16:04:11 2020
+

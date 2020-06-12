@@ -29,12 +29,12 @@ import scala.util.Random
 
 class Toggler extends Component {
   val io = new Bundle {
-    val led = out Bool
+    val toggle = out Bool
   }
   val toggle = Reg(False)
   val timeout = Timeout(500 ms)
 
-  io.led := toggle
+  io.toggle := toggle
   when(timeout) {
     toggle := ~toggle
     timeout.clear()
@@ -86,7 +86,7 @@ class OSCH() extends BlackBox {
 
 class MyTopLevel extends Component {
   val io = new Bundle {
-    val reset   = in Bool
+    val toggle = out Bool
   }
 
   // Setup internal oscillator as the clock source
@@ -94,15 +94,14 @@ class MyTopLevel extends Component {
   osc.io.STDBY := False
   osc.addAttribute("NOM_FREQ", "12.09")
 
-  //val globalClock = ClockDomain(osc.io.OSC, io.reset,
-  val globalClock = ClockDomain(osc.io.OSC, io.reset,
+  val globalClock = ClockDomain(osc.io.OSC, ClockDomain.current.reset,
     frequency=ClockDomain.FixedFrequency(12 MHz),
     config=ClockDomainConfig(resetKind = ASYNC, resetActiveLevel = LOW))
 
   val jtag = new JtagBackplane(1, 2)
   val globalClockArea = new ClockingArea(globalClock) {
     val toggler = new Toggler()
-    //io.leds := ~jtag.io.leds ^ toggler.io.led.asBits.resize(8 bit)
+    io.toggle := toggler.io.toggle
   }
 }
 
@@ -238,7 +237,7 @@ class Blinky extends Component {
     val toggler = new Toggler()
     val ledReg = Reg(B(8 bits, default -> True))
     ledReg.setAll()
-    ledReg(1) := toggler.io.led
+    ledReg(1) := toggler.io.toggle
     io.leds := ledReg
   }
 

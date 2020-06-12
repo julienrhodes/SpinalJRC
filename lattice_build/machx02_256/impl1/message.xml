@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <BaliMessageLog>
+    <Task name="Bitgen">
+        <Message>
+            <ID>1083783</ID>
+            <Severity>Error</Severity>
+        </Message>
+    </Task>
+    <Task name="Map">
+        <Message>
+            <ID>52101186</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>MachXO2</Dynamic>
+        </Message>
+        <Message>
+            <ID>52101110</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>MachXO2</Dynamic>
+            <Dynamic>MachXO2</Dynamic>
+        </Message>
+    </Task>
     <Task name="Lattice_Synthesis">
         <Message>
             <ID>35002000</ID>
@@ -28,66 +47,49 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(550): </Dynamic>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(551): </Dynamic>
             <Dynamic>JtagChainer</Dynamic>
             <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
-            <Navigation>550</Navigation>
+            <Navigation>551</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(475): </Dynamic>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(476): </Dynamic>
             <Dynamic>Toggler</Dynamic>
             <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
-            <Navigation>475</Navigation>
-        </Message>
-        <Message>
-            <ID>35935034</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(138): </Dynamic>
-            <Dynamic>globalClockArea_toggler</Dynamic>
-            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
-            <Navigation>138</Navigation>
-        </Message>
-        <Message>
-            <ID>35935034</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(116): </Dynamic>
-            <Dynamic>osc</Dynamic>
-            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
-            <Navigation>116</Navigation>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>io_reset</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>io_reset</Dynamic>
+            <Navigation>476</Navigation>
         </Message>
         <Message>
             <ID>35001611</ID>
             <Severity>Warning</Severity>
         </Message>
+    </Task>
+    <Task name="PAR">
         <Message>
-            <ID>1166052</ID>
+            <ID>61061044</ID>
             <Severity>Warning</Severity>
-            <Dynamic>logical</Dynamic>
-            <Dynamic>io_reset</Dynamic>
-            <Navigation>io_reset</Navigation>
+            <Dynamic>MachXO2</Dynamic>
         </Message>
         <Message>
-            <ID>1166064</ID>
+            <ID>61061008</ID>
             <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>io_reset</Dynamic>
+            <Dynamic>jtag_io_jtag_tck_c</Dynamic>
+            <Dynamic>Primary</Dynamic>
+            <Dynamic>jtag_io_jtag_tck</Dynamic>
+            <Dynamic>30</Dynamic>
+            <Dynamic>Primary</Dynamic>
         </Message>
         <Message>
-            <ID>1163101</ID>
+            <ID>62061008</ID>
             <Severity>Warning</Severity>
-            <Dynamic>2</Dynamic>
+            <Dynamic>jtag_io_jtag_tck_c</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Jedecgen">
+        <Message>
+            <ID>1083784</ID>
+            <Severity>Warning</Severity>
         </Message>
     </Task>
 </BaliMessageLog>

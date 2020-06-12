@@ -1,0 +1,11 @@
+#Start recording tcl command: 6/11/2020 15:54:07
+#Project Location: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256; Project name: machx02_256
+prj_project new -name "machx02_256" -impl "impl1" -dev LCMXO2-256HC-4SG32C -synthesis "lse"
+prj_src add "/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v"
+prj_project save
+prj_run Synthesis -impl impl1 -task Lattice_Synthesis
+prj_run Synthesis -impl impl1 -task Lattice_Synthesis
+prj_run Synthesis -impl impl1 -task Lattice_Synthesis
+prj_project save
+prj_project close
+#Stop recording: 6/12/2020 16:01:57

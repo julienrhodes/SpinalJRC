@@ -1,0 +1,31 @@
+---------------------------------------------------
+Report for cell MyTopLevel
+   Instance path: MyTopLevel
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      69.00        100.0
+                                  LUT4	     109.00        100.0
+                                 IOBUF	         12        100.0
+                                PFUREG	        106        100.0
+                                RIPPLE	         12        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                               Toggler	          1        22.8
+                           JtagChainer	          1         0.7
+---------------------------------------------------
+Report for cell Toggler
+   Instance path: MyTopLevel/globalClockArea_toggler
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      15.75        22.8
+                                  LUT4	      10.00         9.2
+                                PFUREG	         25        23.6
+                                RIPPLE	         12        100.0
+---------------------------------------------------
+Report for cell JtagChainer
+   Instance path: MyTopLevel/jtag_ctrl_chainer
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       0.50         0.7
+                                  LUT4	       1.00         0.9
+                                PFUREG	          1         0.9

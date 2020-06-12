@@ -316,66 +316,22 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(739): </Dynamic>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(551): </Dynamic>
             <Dynamic>JtagChainer</Dynamic>
             <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
-            <Navigation>739</Navigation>
+            <Navigation>551</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(664): </Dynamic>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(476): </Dynamic>
             <Dynamic>Toggler</Dynamic>
             <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
-            <Navigation>664</Navigation>
-        </Message>
-        <Message>
-            <ID>35935034</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(187): </Dynamic>
-            <Dynamic>globalClockArea_toggler</Dynamic>
-            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
-            <Navigation>187</Navigation>
-        </Message>
-        <Message>
-            <ID>35935034</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(156): </Dynamic>
-            <Dynamic>osc</Dynamic>
-            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
-            <Navigation>156</Navigation>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>io_reset</Dynamic>
-        </Message>
-        <Message>
-            <ID>35002005</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>io_reset</Dynamic>
+            <Navigation>476</Navigation>
         </Message>
         <Message>
             <ID>35001611</ID>
             <Severity>Warning</Severity>
-        </Message>
-        <Message>
-            <ID>1166052</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>logical</Dynamic>
-            <Dynamic>io_reset</Dynamic>
-            <Navigation>io_reset</Navigation>
-        </Message>
-        <Message>
-            <ID>1166064</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>input</Dynamic>
-            <Dynamic>io_reset</Dynamic>
-        </Message>
-        <Message>
-            <ID>1163101</ID>
-            <Severity>Warning</Severity>
-            <Dynamic>2</Dynamic>
         </Message>
     </Task>
     <Task name="PAR">

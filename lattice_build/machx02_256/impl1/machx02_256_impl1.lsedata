@@ -24,7 +24,7 @@
     -->
 
     <pins>
-        <pitem  name = "io_reset"  direction = "in"  />
+        <pitem  name = "io_toggle"  direction = "out"  />
         <pitem  name = "jtag_io_jtag_tms"  direction = "in"  />
         <pitem  name = "jtag_io_jtag_tdi"  direction = "in"  />
         <pitem  name = "jtag_io_jtag_tdo"  direction = "out"  />
@@ -655,15 +655,15 @@
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_toggler/io_reset_I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_toggler/reset_I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "i"  direction = "in"  />
         <pitem  name = "o"  direction = "out"  />
         </pins>
 
         <nets>
-        <nitem  name = "io_reset"  />
-        <nitem  name = "globalClockArea_toggler/io_reset_N_227"  />
+        <nitem  name = "reset"  />
+        <nitem  name = "globalClockArea_toggler/reset_N_227"  />
         </nets>
     </instance>
 
@@ -2545,7 +2545,7 @@
         <nitem  name = "globalClockArea_toggler/gnd"  />
         <nitem  name = "osc_OSC"  />
         <nitem  name = "globalClockArea_toggler/timeout_state"  />
-        <nitem  name = "globalClockArea_toggler/io_reset_N_227"  />
+        <nitem  name = "globalClockArea_toggler/reset_N_227"  />
         <nitem  name = "globalClockArea_toggler/timeout_state_N_252"  />
         </nets>
     </instance>
@@ -2605,9 +2605,9 @@
 
         <nets>
         <nitem  name = "globalClockArea_toggler/gnd"  />
-        <nitem  name = "globalClockArea_toggler/io_led"  />
+        <nitem  name = "io_toggle"  />
         <nitem  name = "osc_OSC"  />
-        <nitem  name = "globalClockArea_toggler/io_led_N_251"  />
+        <nitem  name = "globalClockArea_toggler/io_toggle_N_251"  />
         </nets>
     </instance>
 
@@ -2779,7 +2779,7 @@
         <nitem  name = "globalClockArea_toggler/timeout_counter_value[2]"  />
         <nitem  name = "globalClockArea_toggler/timeout_counter_value[1]"  />
         <nitem  name = "globalClockArea_toggler/timeout_counter_value[0]"  />
-        <nitem  name = "globalClockArea_toggler/io_reset_N_227"  />
+        <nitem  name = "globalClockArea_toggler/reset_N_227"  />
         </nets>
     </instance>
 
@@ -3608,7 +3608,7 @@
         </nets>
     </instance>
 
-    <instance  name = "globalClockArea_toggler/io_led_I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "globalClockArea_toggler/io_toggle_I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
@@ -3616,9 +3616,9 @@
         </pins>
 
         <nets>
-        <nitem  name = "globalClockArea_toggler/io_led"  />
+        <nitem  name = "io_toggle"  />
         <nitem  name = "globalClockArea_toggler/timeout_state"  />
-        <nitem  name = "globalClockArea_toggler/io_led_N_251"  />
+        <nitem  name = "globalClockArea_toggler/io_toggle_N_251"  />
         </nets>
     </instance>
 
