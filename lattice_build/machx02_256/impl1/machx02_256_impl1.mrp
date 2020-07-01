@@ -16,7 +16,7 @@ Target Vendor:  LATTICE
 Target Device:  LCMXO2-256HCQFN32
 Target Performance:   4
 Mapper:  xo2c00,  version:  Diamond (64-bit) 3.11.0.396.4
-Mapped on:  06/12/20  16:04:06
+Mapped on:  06/25/20  15:51:18
 
 Design Summary
 --------------
@@ -66,7 +66,7 @@ Design Summary
 
 
 
-Design:  MyTopLevel                                    Date:  06/12/20  16:04:06
+Design:  MyTopLevel                                    Date:  06/25/20  15:51:18
 
 Design Summary (cont)
 ---------------------
@@ -132,7 +132,7 @@ IO (PIO) Attributes
 
 
 
-Design:  MyTopLevel                                    Date:  06/12/20  16:04:06
+Design:  MyTopLevel                                    Date:  06/25/20  15:51:18
 
 IO (PIO) Attributes (cont)
 --------------------------
@@ -198,7 +198,7 @@ OSC 1:                                     Pin/Node Value
 
 
 
-Design:  MyTopLevel                                    Date:  06/12/20  16:04:06
+Design:  MyTopLevel                                    Date:  06/25/20  15:51:18
 
 ASIC Components
 ---------------
@@ -264,7 +264,7 @@ GSR Component:
 
 
 
-Design:  MyTopLevel                                    Date:  06/12/20  16:04:06
+Design:  MyTopLevel                                    Date:  06/25/20  15:51:18
 
 GSR Usage (cont)
 ----------------
@@ -330,7 +330,7 @@ GSR Usage (cont)
 
 
 
-Design:  MyTopLevel                                    Date:  06/12/20  16:04:06
+Design:  MyTopLevel                                    Date:  06/25/20  15:51:18
 
 GSR Usage (cont)
 ----------------

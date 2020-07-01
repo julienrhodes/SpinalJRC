@@ -12,7 +12,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Jun 12 16:03:22 2020
+Mon Jun 22 14:40:04 2020
 
 
 Command: bitgen -g RamCfg:Reset -path /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256 -w -jedec -gui -msgset /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/promote.xml machx02_256_impl1.ncd machx02_256_impl1.prf 
@@ -31,7 +31,60 @@ Performance Hardware Data Status:   Final          Version 34.4.
 Running DRC.
 DRC detected 0 errors and 0 warnings.
 Reading Preference File from machx02_256_impl1.prf.
-ERROR - All configuration ports of the design have been disabled. If this is correct, change the Bitstream Setting MUX_CONFIGURATION_PORTS to ENABLE.
+WARNING - All configuration ports of the design could be disabled.
+
+<A name="bgn_ps"></A>
+<B><U><big>Preference Summary:</big></U></B>
+
++---------------------------------+---------------------------------+
+|  Preference                     |  Current Setting                |
++---------------------------------+---------------------------------+
+|                         RamCfg  |                        Reset**  |
++---------------------------------+---------------------------------+
+|                     MCCLK_FREQ  |                         2.08**  |
++---------------------------------+---------------------------------+
+|                  CONFIG_SECURE  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                          INBUF  |                           ON**  |
++---------------------------------+---------------------------------+
+|                      JTAG_PORT  |                        DISABLE  |
++---------------------------------+---------------------------------+
+|                       SDM_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                 SLAVE_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                MASTER_SPI_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                       I2C_PORT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|        MUX_CONFIGURATION_PORTS  |                         ENABLE  |
++---------------------------------+---------------------------------+
+|                  CONFIGURATION  |                          CFG**  |
++---------------------------------+---------------------------------+
+|                COMPRESS_CONFIG  |                           ON**  |
++---------------------------------+---------------------------------+
+|                        MY_ASSP  |                          OFF**  |
++---------------------------------+---------------------------------+
+|               ONE_TIME_PROGRAM  |                          OFF**  |
++---------------------------------+---------------------------------+
+|                 ENABLE_TRANSFR  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|                  SHAREDEBRINIT  |                      DISABLE**  |
++---------------------------------+---------------------------------+
+|            BACKGROUND_RECONFIG  |                          OFF**  |
++---------------------------------+---------------------------------+
+ *  Default setting.
+ ** The specified setting matches the default setting.
+
+
+Creating bit map...
+ 
+Bitstream Status: Final           Version 1.95.
+ 
+Saving bit stream in "machx02_256_impl1.jed".
+Total CPU Time: 1 secs 
+Total REAL Time: 2 secs 
+Peak Memory Usage: 361 MB
 
 
 
