@@ -1,8 +1,17 @@
 ## Demos
 
+### Enable JTAG Child 1
+```bash
+$ openocd -f probe-ftdi.cfg  -c "init;shutdown"
+$ openocd -f machx02-soft.cfg -c "init;svf enable_jtag1_child.svf;shutdown"
+$ openocd -f probe-ftdi.cfg  -c "init;shutdown"
+$ openocd -f machx02-soft.cfg -c "init;svf disable_jtag1_child.svf;shutdown"
+$ openocd -f probe-ftdi.cfg  -c "init;shutdown"
+```
+
 ### Blinky on pin 13 (marked pin 1 on TinyFPGA AX1).
 
-$ openocd -f machx02-blinky.cfg 
+$ openocd -f machx02-soft.cfg -c "init;svf gpio_0_blinky.svf;shutdown"
 Open On-Chip Debugger 0.10.0+dev-00973-g80f1a92b (2019-12-05-09:20)
 Licensed under GNU GPL v2
 For bug reports, read

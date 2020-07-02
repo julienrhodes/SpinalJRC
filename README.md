@@ -2,6 +2,17 @@ Based on the SpinalHDL Template Repo
 ====================================
 git@github.com:SpinalHDL/SpinalTemplateSbt.git
 
+The TinyFPGA AX1 Build (machx02_256)
+====================================
+
+Pinouts
+PB3 TDO 10
+PA13 TMS 9
+PA14 TCK 11
+PA15 TDI 8
+GPIO_0 13
+GPIO_1 14
+
 Build against Dev branch of SpinalHDL
 =====================================
 
