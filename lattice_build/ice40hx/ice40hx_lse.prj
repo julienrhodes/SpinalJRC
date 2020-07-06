@@ -1,5 +1,5 @@
 #-- Lattice, Inc.
-#-- Project file /home/julien/Documents/git/3rd/SpinalTemplateSbt/lattice_build/ice40hx/ice40hx_lse.prj
+#-- Project file /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/ice40hx/ice40hx_lse.prj
 
 #device
 -a SBTiCE40
@@ -28,8 +28,8 @@
 -fix_gated_clocks 1
 -loop_limit 1950
 
--ver "../../MyTopLevel.v"
--p "/home/julien/Documents/git/3rd/SpinalTemplateSbt/lattice_build/ice40hx"
+-ver "../../JtagBackplane.v"
+-p "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/ice40hx"
 
 #set result format/file last
 -output_edif ice40hx_Implmnt/ice40hx.edf

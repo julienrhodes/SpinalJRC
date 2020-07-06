@@ -2,7 +2,7 @@
 #-- Project file /home/julien/Documents/git/3rd/SpinalTemplateSbt/lattice_build/ice40hx/ice40hx_syn.prj
 #project files
 
-add_file -verilog -lib work "../../MyTopLevel.v" 
+add_file -verilog -lib work "../../JtagBackplane.v" 
 #implementation: "ice40hx_Implmnt"
 impl -add ice40hx_Implmnt -type fpga
 
