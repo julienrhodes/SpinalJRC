@@ -1,15 +1,15 @@
 ----------------------------------------------------------------------
 Report for cell MyTopLevel.TECH
-Register bits:  95 of 1280 (7.422%)
+Register bits:  87 of 1280 (6.797%)
 I/O cells:      0
                                   Cell usage:
                                cell     count   Res Usage(%)
                            SB_CARRY        22          100.0
-                             SB_DFF        24          100.0
-                            SB_DFFE        46          100.0
+                             SB_DFF        27          100.0
+                            SB_DFFE        35          100.0
                             SB_DFFN         1          100.0
                             SB_DFFR        24          100.0
                            SB_GB_IO         2          100.0
                               SB_IO        12          100.0
-                            SB_LUT4       147          100.0
-                              TOTAL       278
+                            SB_LUT4       135          100.0
+                              TOTAL       258

@@ -109,7 +109,7 @@ class JtagChainerTest(chains: Int) extends Component {
   val io = new Bundle {
     val primary = slave(Jtag())
     val select  = in Bits(chains bits)
-    val child   = Vec(master(TriState(master(Jtag()))), chains)
+    val child   = Vec(master(TriStateJtag()), chains)
   }
   val jtagClkArea = new ClockingArea(ClockDomain(io.primary.tck, ClockDomain.current.reset)) {
     val chainer = new JtagChainer(chains)
@@ -119,11 +119,26 @@ class JtagChainerTest(chains: Int) extends Component {
   }
 }
 
+case class TriStateJtag() extends Bundle with IMasterSlave {
+  val read,write = Jtag()
+  val writeEnable = Bool
+  //val tms = Bool
+  //val tdi = Bool
+  //val tdo = Bool
+  //val tck = Bool
+
+  override def asMaster(): Unit = {
+    out(write.tms, write.tdi, write.tck, writeEnable)
+    in(read, write.tdo)
+  }
+
+}
+
 class JtagChainer(chains: Int) extends Component {
   val io = new Bundle {
     val primary = slave(Jtag())
     val select  = in Bits(chains bits)
-    val child   = Vec(master(TriState(master(Jtag()))), chains)
+    val child   = Vec(master(TriStateJtag()), chains)
   }
 
 
@@ -138,7 +153,6 @@ class JtagChainer(chains: Int) extends Component {
       io.child(i).write.tdi := io.primary.tdi
       io.child(i).write.tck := io.primary.tck
       io.child(i).write.tms := io.primary.tms
-      io.child(i).write.tdo := False // Doesn't matter, always an input
     }
 
     for(i <- 0 until chains) {
@@ -169,7 +183,7 @@ class JtagChainer(chains: Int) extends Component {
 class JtagBackplane(chains : Int, gpioWidth : Int) extends Area {
   val io = new Bundle {
     val jtag    = slave(Jtag())
-    val child   = Vec(master(TriState(master(Jtag()))), chains)
+    val child   = Vec(master(TriStateJtag()), chains)
     val gpio   = Vec(master(TriStateArray(gpioWidth)), chains)
   }
 
