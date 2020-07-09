@@ -101,8 +101,8 @@ object JtagChainerSim {
         fork {
           jtagClk.waitSampling()
           while(true) {
-            if(dut.io.child(i).writeEnable.toBoolean) {
-              shift_register(i).shift(dut.io.child(i).write.tdi, dut.io.child(i).read.tdo)
+            if(dut.io.child(i).tristate.writeEnable.toBoolean) {
+              shift_register(i).shift(dut.io.child(i).tristate.write.tdi, dut.io.child(i).read.tdo)
             }
             else {
               jtagClk.waitSampling()
@@ -270,8 +270,8 @@ object MyTopLevelSim {
       // Setup fork for the shift register on child(0)
       fork {
         while(true) {
-          if(dut.io.child(0).writeEnable.toBoolean) {
-            child0Shift.shift(dut.io.child(0).write.tdi, dut.io.child(0).read.tdo)
+          if(dut.io.child(0).tristate.writeEnable.toBoolean) {
+            child0Shift.shift(dut.io.child(0).tristate.write.tdi, dut.io.child(0).read.tdo)
           }
           else {
             jtagClk.waitSampling()

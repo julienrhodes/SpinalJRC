@@ -119,17 +119,22 @@ class JtagChainerTest(chains: Int) extends Component {
   }
 }
 
+class JtagOut extends Bundle {
+    val tms = out Bool
+    val tdi = out Bool
+    val tck = out Bool
+}
+
 case class TriStateJtag() extends Bundle with IMasterSlave {
-  val read,write = Jtag()
-  val writeEnable = Bool
-  //val tms = Bool
-  //val tdi = Bool
-  //val tdo = Bool
-  //val tck = Bool
+  // InOutWrapper doesn't seem to do the conversion without .asOutput
+  val tristate = TriStateOutput(new JtagOut).setPartialName("")
+  val read = new Bundle {
+    val tdo = in Bool
+  }.setPartialName("")
 
   override def asMaster(): Unit = {
-    out(write.tms, write.tdi, write.tck, writeEnable)
-    in(read, write.tdo)
+    out(tristate)
+    in(read.tdo)
   }
 
 }
@@ -149,15 +154,15 @@ class JtagChainer(chains: Int) extends Component {
     val buf = B(0, chains bits)
 
     for(i <- 0 until chains) {
-      io.child(i).writeEnable := False
-      io.child(i).write.tdi := io.primary.tdi
-      io.child(i).write.tck := io.primary.tck
-      io.child(i).write.tms := io.primary.tms
+      io.child(i).tristate.writeEnable := False
+      io.child(i).tristate.write.tdi := io.primary.tdi
+      io.child(i).tristate.write.tck := io.primary.tck
+      io.child(i).tristate.write.tms := io.primary.tms
     }
 
     for(i <- 0 until chains) {
       when(io.select(i)) {
-        io.child(i).writeEnable := True
+        io.child(i).tristate.writeEnable := True
         // every child has an output buffer for chaining to the next child
         val bufferedChildTdo = ClockDomain.current.withRevertedClockEdge()(RegNext(io.child(i).read.tdo))
         buf(i) := bufferedChildTdo
@@ -166,12 +171,12 @@ class JtagChainer(chains: Int) extends Component {
         io.primary.tdo := bufferedChildTdo
 
         // tdi defaults to io.primary.tdi
-        io.child(i).write.tdi := io.primary.tdi
+        io.child(i).tristate.write.tdi := io.primary.tdi
 
         // tdi is set to the buf of the most immediately selected child earlier in the chain
         for(j <- 0 until i) {
           when(io.select(j)) {
-            io.child(i).write.tdi := buf(j)
+            io.child(i).tristate.write.tdi := buf(j)
           }
         }
       }
