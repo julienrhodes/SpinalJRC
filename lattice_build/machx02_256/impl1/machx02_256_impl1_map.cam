@@ -1,24 +1,24 @@
 [ START MERGED ]
 jtag_io_jtag_tck_N_195 jtag_io_jtag_tck_c
-n1217 _zz_31_0
-n1213 _zz_1
-n1215 _zz_2
+n1206 _zz_1
+n1208 _zz_2
+n1211 _zz_25_0
 [ END MERGED ]
 [ START CLIPPED ]
+GND_net
 VCC_net
-globalClockArea_toggler/timeout_counter_value_411_add_4_23/CO
-globalClockArea_toggler/timeout_counter_value_411_add_4_1/S0
-globalClockArea_toggler/timeout_counter_value_411_add_4_1/CI
+globalClockArea_toggler/timeout_counter_value_407_add_4_23/CO
+globalClockArea_toggler/timeout_counter_value_407_add_4_1/S0
+globalClockArea_toggler/timeout_counter_value_407_add_4_1/CI
 [ END CLIPPED ]
 [ START OSC ]
 osc_OSC 12.09
 [ END OSC ]
 [ START DESIGN PREFS ]
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.11.0.396.4 -- WARNING: Map write only section -- Thu Jun 25 15:51:18 2020
+# map:  version Diamond (64-bit) 3.11.0.396.4 -- WARNING: Map write only section -- Wed Jul  8 21:58:08 2020
 
 SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=DISABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=ENABLE BACKGROUND_RECONFIG=OFF INBUF=ON ;
-LOCATE COMP "jtag_io_child_0_tdo" SITE "10" ;
 LOCATE COMP "jtag_io_gpio_0[1]" SITE "14" ;
 LOCATE COMP "jtag_io_gpio_0[0]" SITE "13" ;
 LOCATE COMP "io_toggle" SITE "27" ;
@@ -29,6 +29,7 @@ LOCATE COMP "jtag_io_child_0_tck" SITE "11" ;
 LOCATE COMP "jtag_io_jtag_tms" SITE "29" ;
 LOCATE COMP "jtag_io_jtag_tdi" SITE "32" ;
 LOCATE COMP "jtag_io_jtag_tck" SITE "30" ;
+LOCATE COMP "jtag_io_child_0_tdo" SITE "10" ;
 LOCATE COMP "reset" SITE "23" ;
 FREQUENCY NET "osc_OSC" 12.090000 MHz ;
 SCHEMATIC END ;

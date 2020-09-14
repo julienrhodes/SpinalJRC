@@ -6,7 +6,7 @@ Performance Grade:      4
 PACKAGE:          QFN32
 Package Status:                     Final          Version 1.41
 
-Thu Jun 25 15:51:25 2020
+Wed Jul  8 21:58:13 2020
 
 Pinout by Port Name:
 +---------------------+----------+---------------+------+-----------+-----------+----------------------------------------------------------+
@@ -15,7 +15,7 @@ Pinout by Port Name:
 | io_toggle           | 27/0     | LVCMOS33_OUT  | PT8D |           |           | DRIVE:8mA SLEW:SLOW                                      |
 | jtag_io_child_0_tck | 11/2     | LVCMOS33_OUT  | PB4A |           |           | DRIVE:8mA SLEW:SLOW                                      |
 | jtag_io_child_0_tdi | 8/2      | LVCMOS33_OUT  | PB2A |           |           | DRIVE:8mA SLEW:SLOW                                      |
-| jtag_io_child_0_tdo | 10/2     | LVCMOS33_BIDI | PB2D |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_child_0_tdo | 10/2     | LVCMOS33_IN   | PB2D |           |           | PULL:DOWN CLAMP:ON HYSTERESIS:SMALL                      |
 | jtag_io_child_0_tms | 9/2      | LVCMOS33_OUT  | PB2C |           |           | DRIVE:8mA SLEW:SLOW                                      |
 | jtag_io_gpio_0[0]   | 13/2     | LVCMOS33_BIDI | PB4C |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
 | jtag_io_gpio_0[1]   | 14/2     | LVCMOS33_BIDI | PB4D |           |           | DRIVE:8mA PULL:DOWN CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
@@ -49,7 +49,7 @@ Pinout by Pin Number:
 | 5/3      |     unused, PULL:DOWN |            |               | PL5D | PCLKC3_0      |           |           |
 | 8/2      | jtag_io_child_0_tdi   | LOCATED    | LVCMOS33_OUT  | PB2A | CSSPIN        |           |           |
 | 9/2      | jtag_io_child_0_tms   | LOCATED    | LVCMOS33_OUT  | PB2C | MCLK/CCLK     |           |           |
-| 10/2     | jtag_io_child_0_tdo   | LOCATED    | LVCMOS33_BIDI | PB2D | SO/SPISO      |           |           |
+| 10/2     | jtag_io_child_0_tdo   | LOCATED    | LVCMOS33_IN   | PB2D | SO/SPISO      |           |           |
 | 11/2     | jtag_io_child_0_tck   | LOCATED    | LVCMOS33_OUT  | PB4A | PCLKT2_0      |           |           |
 | 12/2     |     unused, PULL:DOWN |            |               | PB4B | PCLKC2_0      |           |           |
 | 13/2     | jtag_io_gpio_0[0]     | LOCATED    | LVCMOS33_BIDI | PB4C | PCLKT2_1      |           |           |
@@ -138,5 +138,5 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Jun 25 15:51:25 2020
+Wed Jul  8 21:58:13 2020
 

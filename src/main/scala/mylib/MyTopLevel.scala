@@ -126,7 +126,6 @@ class JtagOut extends Bundle {
 }
 
 case class TriStateJtag() extends Bundle with IMasterSlave {
-  // InOutWrapper doesn't seem to do the conversion without .asOutput
   val tristate = TriStateOutput(new JtagOut).setPartialName("")
   val read = new Bundle {
     val tdo = in Bool
@@ -150,6 +149,7 @@ class JtagChainer(chains: Int) extends Component {
   val jtagClkArea = new ClockingArea(ClockDomain(io.primary.tck, ClockDomain.current.reset)) {
     // ASSUMPTION: The tdi signal is already from a negedge buffer.
     io.primary.tdo := io.primary.tdi
+    // This is safer but appears to create an unnecessary buffer.
     //io.primary.tdo := ClockDomain.current.withRevertedClockEdge()(RegNext(io.primary.tdi))
     val buf = B(0, chains bits)
 
@@ -198,18 +198,21 @@ class JtagBackplane(chains : Int, gpioWidth : Int) extends Area {
   val ctrl = new ClockingArea(ClockDomain(io.jtag.tck, currentClk.reset,
       config=ClockDomainConfig(resetKind = ASYNC, resetActiveLevel = LOW))) {
 
+    // Define a clone of all the inputs of io.jtag
+    // tdo is wired to the jtagPostTap bundle
     val jtagPreTap = cloneOf(io.jtag)
     jtagPreTap.tck := io.jtag.tck
     jtagPreTap.tms := io.jtag.tms
     jtagPreTap.tdi := io.jtag.tdi
-    // tdo comes from the tap controller below
-    //
+
     val chainSelect = Bits(8 bits)
 
+    // Define the TAP controller with configuration and control registers
     val tap = new MyJtagTap(jtagPreTap, 8)
     val idcodeArea = tap.read(B"x413bd043")(instructionId = 4)
     val chainArea = tap.writeInit(data=chainSelect, dataInit=B(0, widthOf(chainSelect) bits))(instructionId = 8)
 
+    // Define the GPIO registers and assign them to `tap`
     val gpioBaseInstr = 9
     val regCount = 3
     for (i <- 0 until chains) {
@@ -225,16 +228,19 @@ class JtagBackplane(chains : Int, gpioWidth : Int) extends Area {
     //   dataInit = B(widthOf(chainSelect) bits, default -> false)
     // )(instructionId = 0x8, instructionMask = 0xF8)
 
+    // Define the jtag signals exiting the TAP controller for use with the next item in the JTAG chain
     val jtagPostTap = cloneOf(jtagPreTap)
     jtagPostTap.tdi := jtagPreTap.tdo
     jtagPostTap.tck := jtagPreTap.tck
     jtagPostTap.tms := jtagPreTap.tms
     
+    // The JtagChainer is next in the chain and will chain together 0 to `chains` down-stream JTAG chains
     val chainer = new JtagChainer(chains)
     chainer.io.primary <> jtagPostTap
     chainer.io.select := chainSelect.resize(chains)
     chainer.io.child <> io.child
 
+    // The output of chainer is to be passed out of the JtagChainer module
     io.jtag.tdo := jtagPostTap.tdo
   }
 }

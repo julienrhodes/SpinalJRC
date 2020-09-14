@@ -47,18 +47,18 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(551): </Dynamic>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(527): </Dynamic>
             <Dynamic>JtagChainer</Dynamic>
             <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
-            <Navigation>551</Navigation>
+            <Navigation>527</Navigation>
         </Message>
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(476): </Dynamic>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(452): </Dynamic>
             <Dynamic>Toggler</Dynamic>
             <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
-            <Navigation>476</Navigation>
+            <Navigation>452</Navigation>
         </Message>
         <Message>
             <ID>35001611</ID>

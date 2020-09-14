@@ -9,6 +9,9 @@
         <Source name="machx02_256.lpf" type="Logic Preference" type_short="LPF">
             <Options/>
         </Source>
+        <Source name="nv.xcf" type="Programming Project File" type_short="Programming">
+            <Options/>
+        </Source>
     </Implementation>
     <Strategy name="Strategy1" file="machx02_2561.sty"/>
 </BaliProject>

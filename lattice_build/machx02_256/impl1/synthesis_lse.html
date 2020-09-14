@@ -14,7 +14,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Thu Jun 25 15:51:17 2020
+Wed Jul  8 21:58:07 2020
 
 
 Command Line:  synthesis -f machx02_256_impl1_lattice.synproj -gui -msgset /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/promote.xml 
@@ -90,8 +90,8 @@ Analyzing Verilog file /usr/local/diamond/3.11_x64/ispfpga/userware/unix/SYNTHES
 Top module name (Verilog): MyTopLevel
 INFO - synthesis: /home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(25): compiling module MyTopLevel. VERI-1018
 INFO - synthesis: /usr/local/diamond/3.11_x64/ispfpga/userware/unix/SYNTHESIS_HEADERS/machxo2.v(1793): compiling module OSCH. VERI-1018
-INFO - synthesis: /home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(551): compiling module JtagChainer. VERI-1018
-INFO - synthesis: /home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(476): compiling module Toggler. VERI-1018
+INFO - synthesis: /home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(527): compiling module JtagChainer. VERI-1018
+INFO - synthesis: /home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(452): compiling module Toggler. VERI-1018
 Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'...
@@ -117,7 +117,7 @@ Writing NGD file machx02_256_impl1.ngd.
 
 ################### Begin Area Report (MyTopLevel)######################
 Number of register bits => 106 of 322 (32 % )
-BB => 3
+BB => 2
 CCU2D => 12
 FD1P3AX => 39
 FD1P3IX => 27
@@ -125,7 +125,7 @@ FD1P3JX => 1
 FD1S3AX => 13
 FD1S3IX => 26
 GSR => 1
-IB => 4
+IB => 5
 INV => 1
 LUT4 => 111
 OB => 2
@@ -148,7 +148,7 @@ Number of Clock Enables: 11
 Top 10 highest fanout Clock Enables:
   Net : jtag_io_jtag_tck_c_enable_66, loads : 33
   Net : jtag_io_jtag_tck_c_enable_19, loads : 8
-  Net : jtag_io_jtag_tck_c_enable_47, loads : 8
+  Net : jtag_io_jtag_tck_c_enable_48, loads : 8
   Net : jtag_io_jtag_tck_c_enable_28, loads : 7
   Net : jtag_io_jtag_tck_c_enable_11, loads : 2
   Net : jtag_io_jtag_tck_c_enable_10, loads : 2
@@ -163,11 +163,11 @@ Top 10 highest fanout non-clock nets:
   Net : jtag_io_jtag_tck_c_enable_66, loads : 33
   Net : jtag_ctrl_tap_fsm_state_2, loads : 32
   Net : jtag_ctrl_tap_fsm_state_3, loads : 23
-  Net : globalClockArea_toggler/n847, loads : 23
-  Net : n1360, loads : 19
-  Net : n2419, loads : 14
-  Net : n2412, loads : 14
-  Net : n2410, loads : 14
+  Net : globalClockArea_toggler/n842, loads : 23
+  Net : n1351, loads : 19
+  Net : n2439, loads : 14
+  Net : n2432, loads : 14
+  Net : n2430, loads : 14
 ################### End Clock Report ##################
 
 <A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
@@ -188,10 +188,10 @@ clk0 [get_nets jtag_io_jtag_tck_c]      |  200.000 MHz|   51.329 MHz|     7 *
 2 constraints not met.
 
 
-Peak Memory Usage: 178.816  MB
+Peak Memory Usage: 178.852  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 0.623  secs
+Elapsed CPU time for LSE flow : 0.572  secs
 --------------------------------------------------------------
 
 
