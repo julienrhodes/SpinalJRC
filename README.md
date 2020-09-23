@@ -1,9 +1,75 @@
-Based on the SpinalHDL Template Repo
-====================================
+# Based on the SpinalHDL Template Repo
 git@github.com:SpinalHDL/SpinalTemplateSbt.git
 
-The TinyFPGA AX1 Build (machx02_256)
-====================================
+# Build for 820-01151
+Target: Mach X02 640HC-4SG48C
+
+Populate with 22ohm:
+R112 - R115, R200, R295
+R302, R304, R306, R308, R310, R312
+
+Connections
+* Use standard Samtec 10-pin JTAG header, see pinout below
+* Additionally, connect ISPen line for managing JTAG_SOFTn (JTAGEN) pin (set HIGH for programming) to P9 or pad of R321
+
+Pinout
+JTAG clk is also on PT9C for optimal internal fanout
+
+## PDM Child
+PB4A TDO
+PB4B TDI
+PB6A TCK
+PB6B TRST
+PB6C TMS
+PB6D NRST
+
+## RIO Child
+PR3C TDO
+PR3D TDI
+PR5C TCK
+PR5D TRST
+PR6C TMS
+PR7B JTAG_EN
+PR7C JTAG_BCE
+
+## Using The FT2232H Mini-module as a Programmer
+
+Use the file ft2232_lattice.ftconf checked in to openocd-scripts:
+[values]
+vendor_id = 0x0403
+product_id = 0x6010
+type = 0x0700
+self_powered = False
+remote_wakeup = False
+power_max = 500
+has_serial = False
+suspend_pull_down = False
+out_isochronous = False
+in_isochronous = False
+usb_version = 0x1111
+manufacturer = Lattice
+product = Lattice XO3L Starter Kit
+serial = 
+
+pip3 install pyFTDI
+ftconf.py --vidpid 0403:6010 -i ft2232_lattice.cfg ftdi:///0 -u
+
+### Mini-module to JTAG Pinout
+
+Header Pin | Description | JTAG Connector
+--- | --- | ---
+CN2-2 |  GND | 3, 5, 9
+CN2-7 |  AD0/TCK | 4
+CN2-10 | AD1/TDI | 6
+CN2-9 |  AD2/TDO | 8
+CN2-12 | AD3/TMS  | 2
+CN2-11 | VIO/(input) | 1
+CN2-14 | GPIOL0/D4/ISPEN | None 
+CN2-13 | GPIOL1 | None
+CN2-16 | GPIOL2 | None
+CN2-15 | GPIOL3 | None
+
+# The TinyFPGA AX1 Build (machx02_256)
 
 Pinouts
 PB3 TDO 10
@@ -13,20 +79,17 @@ PA15 TDI 8
 GPIO_0 13
 GPIO_1 14
 
-Build against Dev branch of SpinalHDL
-=====================================
+# Build against Dev branch of SpinalHDL
 
 1. `git clone git@github.com:SpinalHDL/SpinalHDL.git -b dev`
 1. `sbt clean publishLocal` Unreleased v1.4.1 is now published locally
 1. `cd SpinalJRC; sbt`
 1. `run mylib.MyTopLevelSim`
 
-References
-==========
+# References
 [SVF Spec] (http://www.jtagtest.com/pdf/svf_specification.pdf)
 
-Spinal Base Project
-============
+# Spinal Base Project
 This repository is a base SBT project added to help non Scala/SBT native people in their first steps.
 
 Just one important note, you need a java JDK >= 8
