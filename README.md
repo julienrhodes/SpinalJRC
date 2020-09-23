@@ -16,25 +16,26 @@ Pinout
 JTAG clk is also on PT9C for optimal internal fanout
 
 ## PDM Child
-PB4A TDO
-PB4B TDI
-PB6A TCK
-PB6B TRST
-PB6C TMS
-PB6D NRST
-
-## RIO Child
-PR3C TDO
-PR3D TDI
-PR5C TCK
-PR5D TRST
-PR6C TMS
-PR7B JTAG_EN
-PR7C JTAG_BCE
+FPGA Pin | Description
+--- | ---
+PB4A | PDM TDO
+PB4B | PDM TDI
+PB6A | PDM TCK
+PB6B | PDM TRST
+PB6C | PDM TMS
+PB6D | PDM NRST
+PR3C | RIO TDO
+PR3D | RIO TDI
+PR5C | RIO TCK
+PR5D | RIO TRST
+PR6C | RIO TMS
+PR7B | RIO JTAG_EN
+PR7C | RIO JTAG_BCE
 
 ## Using The FT2232H Mini-module as a Programmer
 
 Use the file ft2232_lattice.ftconf checked in to openocd-scripts:
+```ini
 [values]
 vendor_id = 0x0403
 product_id = 0x6010
@@ -50,9 +51,12 @@ usb_version = 0x1111
 manufacturer = Lattice
 product = Lattice XO3L Starter Kit
 serial = 
+```
 
+```bash
 pip3 install pyFTDI
 ftconf.py --vidpid 0403:6010 -i ft2232_lattice.cfg ftdi:///0 -u
+```
 
 ### Mini-module to JTAG Pinout
 
@@ -69,15 +73,17 @@ CN2-13 | GPIOL1 | None
 CN2-16 | GPIOL2 | None
 CN2-15 | GPIOL3 | None
 
-# The TinyFPGA AX1 Build (machx02_256)
+# The TinyFPGA AX1 Build (machx02_256) for Development
 
 Pinouts
-PB3 TDO 10
-PA13 TMS 9
-PA14 TCK 11
-PA15 TDI 8
-GPIO_0 13
-GPIO_1 14
+Pin | Description | Number
+--- | --- | ---
+PB3 | TDO | 10
+PA13 | TMS | 9
+PA14 | TCK | 11
+PA15 | TDI | 8
+GPIO_0 | | 13
+GPIO_1 | | 14
 
 # Build against Dev branch of SpinalHDL
 
