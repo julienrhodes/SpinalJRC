@@ -62,7 +62,8 @@ ftconf.py --vidpid 0403:6010 -i ft2232_lattice.cfg ftdi:///0 -u
 
 Header Pin | Description | JTAG Connector
 --- | --- | ---
-CN2-2 |  GND | 3, 5, 9
+CN2-1,3,5 |  3.3V | 
+CN2-2,4,6 |  GND | 3, 5, 9
 CN2-7 |  AD0/TCK | 4
 CN2-10 | AD1/TDI | 6
 CN2-9 |  AD2/TDO | 8
