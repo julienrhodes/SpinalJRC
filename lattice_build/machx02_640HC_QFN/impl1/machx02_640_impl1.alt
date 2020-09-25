@@ -1,0 +1,37 @@
+NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
+NOTE All Rights Reserved *
+NOTE DATE CREATED: Fri Sep 25 10:58:11 2020 *
+NOTE DESIGN NAME: MyTopLevel *
+NOTE DEVICE NAME: LCMXO2-640HC-4QFN48 *
+NOTE PIN ASSIGNMENTS *
+NOTE PINS jtag_io_gpio_0[3] : 27 : inout *
+NOTE PINS reset : 5 : in *
+NOTE PINS jtag_io_child_2_tdo : 2 : in *
+NOTE PINS jtag_io_child_1_tdo : 14 : in *
+NOTE PINS jtag_io_child_0_tdo : 36 : in *
+NOTE PINS jtag_io_jtag_tck : 43 : in *
+NOTE PINS jtag_io_jtag_tdi : 47 : in *
+NOTE PINS jtag_io_jtag_tms : 44 : in *
+NOTE PINS jtag_io_child_2_tck : 4 : out *
+NOTE PINS jtag_io_child_2_tdi : 3 : out *
+NOTE PINS jtag_io_child_2_tms : 7 : out *
+NOTE PINS jtag_io_child_1_tck : 16 : out *
+NOTE PINS jtag_io_child_1_tdi : 15 : out *
+NOTE PINS jtag_io_child_1_tms : 18 : out *
+NOTE PINS jtag_io_child_0_tck : 34 : out *
+NOTE PINS jtag_io_child_0_tdi : 35 : out *
+NOTE PINS jtag_io_child_0_tms : 32 : out *
+NOTE PINS jtag_io_jtag_tdo : 48 : out *
+NOTE PINS jtag_io_gpio_2[0] : 8 : inout *
+NOTE PINS jtag_io_gpio_2[1] : 9 : inout *
+NOTE PINS jtag_io_gpio_2[2] : 10 : inout *
+NOTE PINS jtag_io_gpio_2[3] : 11 : inout *
+NOTE PINS jtag_io_gpio_1[0] : 19 : inout *
+NOTE PINS jtag_io_gpio_1[1] : 20 : inout *
+NOTE PINS jtag_io_gpio_1[2] : 21 : inout *
+NOTE PINS jtag_io_gpio_1[3] : 23 : inout *
+NOTE PINS jtag_io_gpio_0[0] : 31 : inout *
+NOTE PINS jtag_io_gpio_0[1] : 29 : inout *
+NOTE PINS jtag_io_gpio_0[2] : 28 : inout *
+NOTE CONFIGURATION MODE: NONE *
+NOTE COMPRESSION: on *

@@ -1,0 +1,6 @@
+#Start recording tcl command: 9/23/2020 10:19:15
+#Project Location: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN; Project name: machx02_640
+prj_project new -name "machx02_640" -impl "impl1" -dev LCMXO2-640HC-4SG48C -synthesis "lse"
+prj_project save
+prj_project close
+#Stop recording: 9/23/2020 10:20:27

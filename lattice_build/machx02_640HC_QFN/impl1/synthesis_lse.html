@@ -1,0 +1,254 @@
+<HTML>
+<HEAD><TITLE>Synthesis and Ngdbuild Report</TITLE>
+<STYLE TYPE="text/css">
+<!--
+ body,pre{    font-family:'Courier New', monospace;    color: #000000;    font-size:88%;    background-color: #ffffff;}h1 {    font-weight: bold;    margin-top: 24px;    margin-bottom: 10px;    border-bottom: 3px solid #000;    font-size: 1em;}h2 {    font-weight: bold;    margin-top: 18px;    margin-bottom: 5px;    font-size: 0.90em;}h3 {    font-weight: bold;    margin-top: 12px;    margin-bottom: 5px;    font-size: 0.80em;}p {    font-size:78%;}P.Table {    margin-top: 4px;    margin-bottom: 4px;    margin-right: 4px;    margin-left: 4px;}table{    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    border-collapse: collapse;}th {    font-weight:bold;    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    text-align:left;    font-size:78%;}td {    padding: 4px;    border-width: 1px 1px 1px 1px;    border-style: solid solid solid solid;    border-color: black black black black;    vertical-align:top;    font-size:78%;}a {    color:#013C9A;    text-decoration:none;}a:visited {    color:#013C9A;}a:hover, a:active {    text-decoration:underline;    color:#5BAFD4;}.pass{background-color: #00ff00;}.fail{background-color: #ff0000;}.comment{    font-size: 90%;    font-style: italic;}
+-->
+</STYLE>
+</HEAD>
+<PRE><A name="Syn"></A><B><U><big>Synthesis and Ngdbuild  Report</big></U></B>
+synthesis:  version Diamond (64-bit) 3.11.0.396.4
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
+Fri Sep 25 10:49:26 2020
+
+
+Command Line:  synthesis -f machx02_640_impl1_lattice.synproj -gui -msgset /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/promote.xml 
+
+Synthesis options:
+The -a option is MachXO2.
+The -s option is 4.
+The -t option is QFN48.
+The -d option is LCMXO2-640HC.
+Using package QFN48.
+Using performance grade 4.
+                                                          
+
+##########################################################
+
+### Lattice Family : MachXO2
+
+### Device  : LCMXO2-640HC
+
+### Package : QFN48
+
+### Speed   : 4
+
+##########################################################
+
+                                                          
+
+INFO - synthesis: User-Selected Strategy Settings
+Optimization goal = Balanced
+Top-level module name = MyTopLevel.
+Target frequency = 200.000000 MHz.
+Maximum fanout = 1000.
+Timing path count = 3
+BRAM utilization = 100.000000 %
+DSP usage = true
+DSP utilization = 100.000000 %
+fsm_encoding_style = auto
+resolve_mixed_drivers = 0
+fix_gated_clocks = 1
+
+Mux style = Auto
+Use Carry Chain = true
+carry_chain_length = 0
+Loop Limit = 1950.
+Use IO Insertion = TRUE
+Use IO Reg = AUTO
+
+Resource Sharing = TRUE
+Propagate Constants = TRUE
+Remove Duplicate Registers = TRUE
+force_gsr = auto
+ROM style = auto
+RAM style = auto
+The -comp option is FALSE.
+The -syn option is FALSE.
+-p /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN (searchpath added)
+-p /usr/local/diamond/3.11_x64/ispfpga/xo2c00/data (searchpath added)
+-p /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/impl1 (searchpath added)
+-p /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN (searchpath added)
+Verilog design file = /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/MyTopLevel.v
+NGD file = machx02_640_impl1.ngd
+-sdc option: SDC file input not used.
+-lpf option: Output file option is ON.
+Hardtimer checking is enabled (default). The -dt option is not used.
+The -r option is OFF. [ Remove LOC Properties is OFF. ]
+Technology check ok...
+
+Analyzing Verilog file /usr/local/diamond/3.11_x64/ispfpga/userware/unix/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Compile design.
+Compile Design Begin
+Analyzing Verilog file /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/MyTopLevel.v. VERI-1482
+Analyzing Verilog file /usr/local/diamond/3.11_x64/ispfpga/userware/unix/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
+Top module name (Verilog): MyTopLevel
+INFO - synthesis: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/MyTopLevel.v(25): compiling module MyTopLevel. VERI-1018
+INFO - synthesis: /usr/local/diamond/3.11_x64/ispfpga/userware/unix/SYNTHESIS_HEADERS/machxo2.v(1793): compiling module OSCH. VERI-1018
+INFO - synthesis: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/MyTopLevel.v(756): compiling module JtagChainer. VERI-1018
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+Loading device for application map from file 'xo2c640.nph' in environment: /usr/local/diamond/3.11_x64/ispfpga.
+Package Status:                     Final          Version 1.39.
+Top-level module name = MyTopLevel.
+WARNING - synthesis: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/MyTopLevel.v(171): Removing unused instance osc. VDB-5034
+######## Converting I/O port jtag_io_child_0_tms to output.
+######## Converting I/O port jtag_io_child_0_tdi to output.
+######## Converting I/O port jtag_io_child_0_tck to output.
+######## Converting I/O port jtag_io_child_1_tms to output.
+######## Converting I/O port jtag_io_child_1_tdi to output.
+######## Converting I/O port jtag_io_child_1_tck to output.
+######## Converting I/O port jtag_io_child_2_tms to output.
+######## Converting I/O port jtag_io_child_2_tdi to output.
+######## Converting I/O port jtag_io_child_2_tck to output.
+
+
+
+GSR instance connected to net reset_c.
+Applying 200.000000 MHz constraint to all clocks
+
+WARNING - synthesis: No user .sdc file.
+Results of NGD DRC are available in MyTopLevel_drc.log.
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
+Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+WARNING - synthesis: logical net 'GND_net' has no load.
+WARNING - synthesis: DRC complete with 1 warnings.
+All blocks are expanded and NGD expansion is successful.
+Writing NGD file machx02_640_impl1.ngd.
+
+################### Begin Area Report (MyTopLevel)######################
+Number of register bits => 133 of 760 (17 % )
+BB => 12
+FD1P3AX => 89
+FD1P3IX => 26
+FD1P3JX => 1
+FD1S3AX => 14
+FD1S3IX => 3
+GSR => 1
+IB => 7
+INV => 1
+L6MUX21 => 1
+LUT4 => 173
+OB => 1
+OBZ => 9
+PFUMX => 11
+################### End Area Report ##################
+
+################### Begin BlackBox Report ######################
+TSALL => 1
+################### End BlackBox Report ##################
+
+################### Begin Clock Report ######################
+Clock Nets
+Number of Clocks: 1
+  Net : jtag_io_jtag_tck_c, loads : 133
+Clock Enable Nets
+Number of Clock Enables: 20
+Top 10 highest fanout Clock Enables:
+  Net : jtag_io_jtag_tck_c_enable_116, loads : 32
+  Net : jtag_io_jtag_tck_c_enable_59, loads : 8
+  Net : jtag_io_jtag_tck_c_enable_99, loads : 8
+  Net : jtag_io_jtag_tck_c_enable_30, loads : 7
+  Net : jtag_io_jtag_tck_c_enable_79, loads : 4
+  Net : jtag_io_jtag_tck_c_enable_75, loads : 4
+  Net : jtag_io_jtag_tck_c_enable_48, loads : 4
+  Net : jtag_io_jtag_tck_c_enable_72, loads : 4
+  Net : jtag_io_jtag_tck_c_enable_43, loads : 4
+  Net : jtag_io_jtag_tck_c_enable_62, loads : 4
+Highest fanout non-clock nets
+Top 10 highest fanout non-clock nets:
+  Net : n3061, loads : 45
+  Net : n3060, loads : 44
+  Net : jtag_ctrl_tap_fsm_state_2, loads : 42
+  Net : jtag_ctrl_tap_fsm_state_0, loads : 39
+  Net : jtag_io_jtag_tck_c_enable_116, loads : 32
+  Net : jtag_ctrl_tap_fsm_state_1, loads : 21
+  Net : jtag_ctrl_tap_fsm_state_3, loads : 20
+  Net : n1980, loads : 19
+  Net : jtag_ctrl_tap_instruction_2, loads : 16
+  Net : jtag_ctrl_tap_instruction_0, loads : 15
+################### End Clock Report ##################
+
+<A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
+--------------
+--------------------------------------------------------------------------------
+Constraint                              |   Constraint|       Actual|Levels
+--------------------------------------------------------------------------------
+                                        |             |             |
+create_clock -period 5.000000 -name     |             |             |
+clk0 [get_nets jtag_io_jtag_tck_c]      |  200.000 MHz|   47.755 MHz|     8 *
+                                        |             |             |
+--------------------------------------------------------------------------------
+
+
+1 constraints not met.
+
+
+Peak Memory Usage: 180.160  MB
+
+--------------------------------------------------------------
+Elapsed CPU time for LSE flow : 0.587  secs
+--------------------------------------------------------------
+
+
+
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+<BR>
+</PRE></FONT>
+</BODY>
+</HTML>

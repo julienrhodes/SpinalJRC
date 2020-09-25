@@ -1,0 +1,69 @@
+SCHEMATIC START ;
+# map:  version Diamond (64-bit) 3.11.0.396.4 -- WARNING: Map write only section -- Fri Sep 25 10:57:16 2020
+
+SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=DISABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=ENABLE BACKGROUND_RECONFIG=OFF INBUF=ON ;
+LOCATE COMP "jtag_io_gpio_0[3]" SITE "27" ;
+LOCATE COMP "jtag_io_child_2_tdo" SITE "2" ;
+LOCATE COMP "jtag_io_child_1_tdo" SITE "14" ;
+LOCATE COMP "jtag_io_child_0_tdo" SITE "36" ;
+LOCATE COMP "jtag_io_jtag_tck" SITE "43" ;
+LOCATE COMP "jtag_io_jtag_tdi" SITE "47" ;
+LOCATE COMP "jtag_io_jtag_tms" SITE "44" ;
+LOCATE COMP "jtag_io_child_2_tck" SITE "4" ;
+LOCATE COMP "jtag_io_child_2_tdi" SITE "3" ;
+LOCATE COMP "jtag_io_child_2_tms" SITE "7" ;
+LOCATE COMP "jtag_io_child_1_tck" SITE "16" ;
+LOCATE COMP "jtag_io_child_1_tdi" SITE "15" ;
+LOCATE COMP "jtag_io_child_1_tms" SITE "18" ;
+LOCATE COMP "jtag_io_child_0_tck" SITE "34" ;
+LOCATE COMP "jtag_io_child_0_tdi" SITE "35" ;
+LOCATE COMP "jtag_io_child_0_tms" SITE "32" ;
+LOCATE COMP "jtag_io_jtag_tdo" SITE "48" ;
+LOCATE COMP "jtag_io_gpio_2[0]" SITE "8" ;
+LOCATE COMP "jtag_io_gpio_2[1]" SITE "9" ;
+LOCATE COMP "jtag_io_gpio_2[2]" SITE "10" ;
+LOCATE COMP "jtag_io_gpio_2[3]" SITE "11" ;
+LOCATE COMP "jtag_io_gpio_1[0]" SITE "19" ;
+LOCATE COMP "jtag_io_gpio_1[1]" SITE "20" ;
+LOCATE COMP "jtag_io_gpio_1[2]" SITE "21" ;
+LOCATE COMP "jtag_io_gpio_1[3]" SITE "23" ;
+LOCATE COMP "jtag_io_gpio_0[0]" SITE "31" ;
+LOCATE COMP "jtag_io_gpio_0[1]" SITE "29" ;
+LOCATE COMP "jtag_io_gpio_0[2]" SITE "28" ;
+SCHEMATIC END ;
+BLOCK RESETPATHS ;
+BLOCK ASYNCPATHS ;
+DEFINE PORT GROUP "parent" "jtag_io_jtag_tdi" 
+"jtag_io_jtag_tck" 
+"jtag_io_jtag_tms" 
+"jtag_io_jtag_tdo" ;
+DEFINE PORT GROUP "child_0" "jtag_io_child_0_tdo" 
+"jtag_io_child_0_tdi" 
+"jtag_io_child_0_tms" 
+"jtag_io_child_0_tck" 
+"jtag_io_gpio_0[0]" 
+"jtag_io_gpio_0[1]" 
+"jtag_io_gpio_0[2]" 
+"jtag_io_gpio_0[3]" ;
+DEFINE PORT GROUP "child_1" "jtag_io_child_1_tdo" 
+"jtag_io_child_1_tdi" 
+"jtag_io_child_1_tms" 
+"jtag_io_child_1_tck" 
+"jtag_io_gpio_1[0]" 
+"jtag_io_gpio_1[1]" 
+"jtag_io_gpio_1[2]" 
+"jtag_io_gpio_1[3]" ;
+DEFINE PORT GROUP "child_2" "jtag_io_child_2_tdo" 
+"jtag_io_child_2_tdi" 
+"jtag_io_child_2_tms" 
+"jtag_io_child_2_tck" 
+"jtag_io_gpio_2[0]" 
+"jtag_io_gpio_2[1]" 
+"jtag_io_gpio_2[2]" 
+"jtag_io_gpio_2[3]" ;
+COMMERCIAL ;
+
+// No timing preferences found. TRCE invokes auto-generation of timing preferences
+// Section Autogen
+FREQUENCY NET "jtag_io_jtag_tck_c" 164.799 MHz ;
+// End Section Autogen

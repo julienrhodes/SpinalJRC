@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.4.1    git head : 7bd45f3ec4adb4e3ae8b019eb79d09811eabaf5e
 // Component : MyTopLevel
-// Git hash  : 5cc1a166bb1aebce4c87079c9ec794d6bfb88fa6
+// Git hash  : db2a449497624051a9a2cef5915416fd1824c96b
 
 
 `define JtagState_binary_sequential_type [3:0]
@@ -23,7 +23,6 @@
 
 
 module MyTopLevel (
-  output              io_toggle,
   input               jtag_io_jtag_tms,
   input               jtag_io_jtag_tdi,
   output              jtag_io_jtag_tdo,
@@ -44,7 +43,6 @@ module MyTopLevel (
   wire                jtag_ctrl_chainer_io_child_0_write_tdi;
   wire                jtag_ctrl_chainer_io_child_0_write_tck;
   wire                jtag_ctrl_chainer_io_child_0_writeEnable;
-  wire                globalClockArea_toggler_io_toggle;
   reg                 _zz_1;
   reg                 _zz_2;
   reg                 _zz_3;
@@ -119,11 +117,6 @@ module MyTopLevel (
     .io_child_0_writeEnable    (jtag_ctrl_chainer_io_child_0_writeEnable  ), //o
     .io_child_0_tdo            (jtag_io_child_0_tdo                       ), //i
     .reset                     (reset                                     )  //i
-  );
-  Toggler globalClockArea_toggler (
-    .io_toggle    (globalClockArea_toggler_io_toggle  ), //o
-    .OSC          (osc_OSC                            ), //i
-    .reset        (reset                              )  //i
   );
   assign jtag_io_child_0_tms = _zz_5 ? _zz_6 : 1'bz;
   assign jtag_io_child_0_tdi = _zz_4 ? _zz_7 : 1'bz;
@@ -352,7 +345,6 @@ module MyTopLevel (
   assign _zz_8 = jtag_ctrl_chainer_io_child_0_write_tck;
   assign _zz_9 = jtag_ctrl_chainer_io_child_0_writeEnable;
   assign jtag_io_jtag_tdo = jtag_ctrl_jtagPostTap_tdo;
-  assign io_toggle = globalClockArea_toggler_io_toggle;
   assign _zz_10 = jtag_io_gpio_0;
   always @ (posedge jtag_io_jtag_tck) begin
     jtag_ctrl_tap_fsm_state <= jtag_ctrl_tap_fsm_stateNext;
@@ -443,81 +435,6 @@ module MyTopLevel (
           _zz_23 <= _zz_22;
         end
       end
-    end
-  end
-
-
-endmodule
-
-module Toggler (
-  output              io_toggle,
-  input               OSC,
-  input               reset
-);
-  wire       [0:0]    _zz_1;
-  wire       [22:0]   _zz_2;
-  reg                 toggle;
-  reg                 timeout_state;
-  reg                 timeout_stateRise;
-  wire                timeout_counter_willIncrement;
-  reg                 timeout_counter_willClear;
-  reg        [22:0]   timeout_counter_valueNext;
-  reg        [22:0]   timeout_counter_value;
-  wire                timeout_counter_willOverflowIfInc;
-  wire                timeout_counter_willOverflow;
-
-  assign _zz_1 = timeout_counter_willIncrement;
-  assign _zz_2 = {22'd0, _zz_1};
-  always @ (*) begin
-    timeout_stateRise = 1'b0;
-    if(timeout_counter_willOverflow)begin
-      timeout_stateRise = (! timeout_state);
-    end
-    if(timeout_state)begin
-      timeout_stateRise = 1'b0;
-    end
-  end
-
-  always @ (*) begin
-    timeout_counter_willClear = 1'b0;
-    if(timeout_state)begin
-      timeout_counter_willClear = 1'b1;
-    end
-  end
-
-  assign timeout_counter_willOverflowIfInc = (timeout_counter_value == 23'h5b8d7f);
-  assign timeout_counter_willOverflow = (timeout_counter_willOverflowIfInc && timeout_counter_willIncrement);
-  always @ (*) begin
-    if(timeout_counter_willOverflow)begin
-      timeout_counter_valueNext = 23'h0;
-    end else begin
-      timeout_counter_valueNext = (timeout_counter_value + _zz_2);
-    end
-    if(timeout_counter_willClear)begin
-      timeout_counter_valueNext = 23'h0;
-    end
-  end
-
-  assign timeout_counter_willIncrement = 1'b1;
-  assign io_toggle = toggle;
-  always @ (posedge OSC or negedge reset) begin
-    if (!reset) begin
-      timeout_state <= 1'b0;
-      timeout_counter_value <= 23'h0;
-    end else begin
-      timeout_counter_value <= timeout_counter_valueNext;
-      if(timeout_counter_willOverflow)begin
-        timeout_state <= 1'b1;
-      end
-      if(timeout_state)begin
-        timeout_state <= 1'b0;
-      end
-    end
-  end
-
-  always @ (posedge OSC) begin
-    if(timeout_state)begin
-      toggle <= (! toggle);
     end
   end
 

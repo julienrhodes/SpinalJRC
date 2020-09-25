@@ -84,10 +84,17 @@ class OSCH() extends BlackBox {
   noIoPrefix()
 }
 
-class MyTopLevel extends Component {
+class MyTopLevel(chains : Int, gpioWidth : Int) extends Component {
+  /*
+   * Testing with a toggler!
   val io = new Bundle {
     val toggle = out Bool
   }
+  val globalClockArea = new ClockingArea(globalClock) {
+    val toggler = new Toggler()
+    io.toggle := toggler.io.toggle
+  }
+  */
 
   // Setup internal oscillator as the clock source
   val osc = new OSCH()
@@ -98,11 +105,7 @@ class MyTopLevel extends Component {
     frequency=ClockDomain.FixedFrequency(12 MHz),
     config=ClockDomainConfig(resetKind = ASYNC, resetActiveLevel = LOW))
 
-  val jtag = new JtagBackplane(1, 2)
-  val globalClockArea = new ClockingArea(globalClock) {
-    val toggler = new Toggler()
-    io.toggle := toggler.io.toggle
-  }
+  val jtag = new JtagBackplane(chains=chains, gpioWidth=gpioWidth)
 }
 
 class JtagChainerTest(chains: Int) extends Component {
@@ -280,19 +283,23 @@ object MyJtagChainerVerilog {
   }
 }
 
-//Generate the MyTopLevel's Verilog
+object HardwareEvalConfig extends SpinalConfig(mode=Verilog, targetDirectory="lattice_build/machx02_256/")
+object FinalConfig extends SpinalConfig(mode=Verilog, targetDirectory="lattice_build/machx02_640HC_QFN")
+
+// Generate the MyTopLevel's Verilog
 object MyTopLevelVerilog {
   def main(args: Array[String]) {
-    SpinalVerilog(InOutWrapper(new MyTopLevel))
+    HardwareEvalConfig.generate(InOutWrapper(new MyTopLevel(chains=1, gpioWidth=2)))
+    FinalConfig.generate(InOutWrapper(new MyTopLevel(chains=3, gpioWidth=4)))
   }
 }
 
-//Generate the MyTopLevel's VHDL
-object MyTopLevelVhdl {
-  def main(args: Array[String]) {
-    SpinalVhdl(new MyTopLevel)
-  }
-}
+// Generate the MyTopLevel's VHDL
+// object MyTopLevelVhdl {
+//   def main(args: Array[String]) {
+//     SpinalVhdl(new MyTopLevel)
+//   }
+// }
 
 
 //Define a custom SpinalHDL configuration with synchronous reset instead of the default asynchronous one. This configuration can be resued everywhere

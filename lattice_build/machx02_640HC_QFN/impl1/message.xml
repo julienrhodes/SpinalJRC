@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BaliMessageLog>
+    <Task name="Bitgen">
+        <Message>
+            <ID>1083784</ID>
+            <Severity>Warning</Severity>
+        </Message>
+    </Task>
+    <Task name="Map">
+        <Message>
+            <ID>52101186</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>MachXO2</Dynamic>
+        </Message>
+        <Message>
+            <ID>52101110</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>MachXO2</Dynamic>
+            <Dynamic>MachXO2</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Lattice_Synthesis">
+        <Message>
+            <ID>35002000</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35001781</ID>
+            <Severity>Info</Severity>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/MyTopLevel.v(25): </Dynamic>
+            <Dynamic>MyTopLevel</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/MyTopLevel.v</Navigation>
+            <Navigation>25</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/usr/local/diamond/3.11_x64/ispfpga/userware/unix/SYNTHESIS_HEADERS/machxo2.v(1793): </Dynamic>
+            <Dynamic>OSCH</Dynamic>
+            <Navigation>/usr/local/diamond/3.11_x64/ispfpga/userware/unix/SYNTHESIS_HEADERS/machxo2.v</Navigation>
+            <Navigation>1793</Navigation>
+        </Message>
+        <Message>
+            <ID>35901018</ID>
+            <Severity>Info</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/MyTopLevel.v(756): </Dynamic>
+            <Dynamic>JtagChainer</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/MyTopLevel.v</Navigation>
+            <Navigation>756</Navigation>
+        </Message>
+        <Message>
+            <ID>35935034</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/MyTopLevel.v(171): </Dynamic>
+            <Dynamic>osc</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/MyTopLevel.v</Navigation>
+            <Navigation>171</Navigation>
+        </Message>
+        <Message>
+            <ID>35001611</ID>
+            <Severity>Warning</Severity>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>GND_net</Dynamic>
+            <Navigation>GND_net</Navigation>
+        </Message>
+        <Message>
+            <ID>1163101</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>1</Dynamic>
+        </Message>
+    </Task>
+    <Task name="PAR">
+        <Message>
+            <ID>61061044</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>MachXO2</Dynamic>
+        </Message>
+    </Task>
+    <Task name="Jedecgen">
+        <Message>
+            <ID>1083784</ID>
+            <Severity>Warning</Severity>
+        </Message>
+    </Task>
+</BaliMessageLog>

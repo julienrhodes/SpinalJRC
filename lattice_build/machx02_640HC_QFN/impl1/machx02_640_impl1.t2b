@@ -1,0 +1,5 @@
+
+
+-g RamCfg:Reset
+
+-path "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN"  

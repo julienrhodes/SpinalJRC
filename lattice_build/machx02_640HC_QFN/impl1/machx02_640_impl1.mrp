@@ -1,0 +1,468 @@
+
+          Lattice Mapping Report File for Design Module 'MyTopLevel'
+
+
+Design Information
+------------------
+
+Command line:   map -a MachXO2 -p LCMXO2-640HC -t QFN48 -s 4 -oc Commercial
+     machx02_640_impl1.ngd -o machx02_640_impl1_map.ncd -pr
+     machx02_640_impl1.prf -mp machx02_640_impl1.mrp -lpf /home/julien/Documents
+     /git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/impl1/machx02_640_impl1.
+     lpf -lpf /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640
+     HC_QFN/machx02_640.lpf -c 0 -gui -msgset /home/julien/Documents/git/3rd/Spi
+     nalJRC/lattice_build/machx02_640HC_QFN/promote.xml 
+Target Vendor:  LATTICE
+Target Device:  LCMXO2-640HCQFN48
+Target Performance:   4
+Mapper:  xo2c00,  version:  Diamond (64-bit) 3.11.0.396.4
+Mapped on:  09/25/20  10:57:16
+
+Design Summary
+--------------
+
+   Number of registers:    133 out of   760 (18%)
+      PFU registers:          133 out of   640 (21%)
+      PIO registers:            0 out of   120 (0%)
+   Number of SLICEs:        81 out of   320 (25%)
+      SLICEs as Logic/ROM:     81 out of   320 (25%)
+      SLICEs as RAM:            0 out of   240 (0%)
+      SLICEs as Carry:          0 out of   320 (0%)
+   Number of LUT4s:        158 out of   640 (25%)
+      Number used as logic LUTs:        158
+      Number used as distributed RAM:     0
+      Number used as ripple logic:        0
+      Number used as shift registers:     0
+   Number of PIO sites used: 29 + 1(JTAGENB) out of 40 (75%)
+   Number of block RAMs:  0 out of 2 (0%)
+   Number of GSRs:        1 out of 1 (100%)
+   EFB used :        No
+   JTAG used :       No
+   Readback used :   No
+   Oscillator used : No
+   Startup used :    No
+   POR :             On
+   Bandgap :         On
+   Number of Power Controller:  0 out of 1 (0%)
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of DCCA:  0 out of 8 (0%)
+   Number of DCMA:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+   Number of clocks:  1
+     Net jtag_io_jtag_tck_c: 74 loads, 72 rising, 2 falling (Driver: PIO
+     jtag_io_jtag_tck )
+   Number of Clock Enables:  20
+     Net jtag_io_jtag_tck_c_enable_64: 2 loads, 2 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_33: 2 loads, 2 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_91: 2 loads, 2 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_49: 2 loads, 2 LSLICEs
+
+                                    Page 1
+
+
+
+
+Design:  MyTopLevel                                    Date:  09/25/20  10:57:16
+
+Design Summary (cont)
+---------------------
+     Net jtag_io_jtag_tck_c_enable_32: 2 loads, 2 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_48: 2 loads, 2 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_31: 2 loads, 2 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_43: 2 loads, 2 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_44: 2 loads, 2 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_30: 4 loads, 4 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_68: 2 loads, 2 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_79: 2 loads, 2 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_75: 2 loads, 2 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_72: 2 loads, 2 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_62: 2 loads, 2 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_59: 4 loads, 4 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_47: 2 loads, 2 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_116: 19 loads, 19 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_99: 5 loads, 5 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_101: 1 loads, 1 LSLICEs
+   Number of LSRs:  3
+     Net n1937: 5 loads, 5 LSLICEs
+     Net n1980: 10 loads, 10 LSLICEs
+     Net n1486: 3 loads, 3 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net n3061: 45 loads
+     Net n3060: 44 loads
+     Net jtag_ctrl_tap_fsm_state_2: 42 loads
+     Net jtag_ctrl_tap_fsm_state_0: 39 loads
+     Net jtag_ctrl_tap_fsm_state_1: 21 loads
+     Net jtag_ctrl_tap_fsm_state_3: 20 loads
+     Net jtag_io_jtag_tck_c_enable_116: 19 loads
+     Net jtag_ctrl_tap_instruction_2: 16 loads
+     Net jtag_ctrl_tap_instruction_0: 15 loads
+     Net n3071: 15 loads
+
+
+
+
+   Number of warnings:  2
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: The JTAG port has been disabled in this project and JTAG pins
+     will be configured as General Purpose IO.  You have to use JTAGENB pin in
+     hardware to change the personality of the port from JTAG pins to general
+     purpose IO.  Reference MachXO2 Handbook for details on dual function JTAG
+     port.
+WARNING - map: All configuration ports of the design have been disabled.
+     Reference MachXO2 Handbook for information on the Configuration Ports of
+     MachXO2
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+
+                                    Page 2
+
+
+
+
+Design:  MyTopLevel                                    Date:  09/25/20  10:57:16
+
+IO (PIO) Attributes (cont)
+--------------------------
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| jtag_io_gpio_0[3]   | BIDIR     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| reset               | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_child_2_tdo | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_child_1_tdo | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_child_0_tdo | INPUT     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_jtag_tck    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_jtag_tdi    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_jtag_tms    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_child_2_tck | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_child_2_tdi | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_child_2_tms | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_child_1_tck | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_child_1_tdi | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_child_1_tms | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_child_0_tck | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_child_0_tdi | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_child_0_tms | OUTPUT    | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_jtag_tdo    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_gpio_2[0]   | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_gpio_2[1]   | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_gpio_2[2]   | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_gpio_2[3]   | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_gpio_1[0]   | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_gpio_1[1]   | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_gpio_1[2]   | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_gpio_1[3]   | BIDIR     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_gpio_0[0]   | BIDIR     | LVCMOS18  |            |
+
+                                    Page 3
+
+
+
+
+Design:  MyTopLevel                                    Date:  09/25/20  10:57:16
+
+IO (PIO) Attributes (cont)
+--------------------------
++---------------------+-----------+-----------+------------+
+| jtag_io_gpio_0[1]   | BIDIR     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_gpio_0[2]   | BIDIR     | LVCMOS18  |            |
++---------------------+-----------+-----------+------------+
+
+Removed logic
+-------------
+
+Block i2002 undriven or does not drive anything - clipped.
+Block i2001 undriven or does not drive anything - clipped.
+Signal jtag_io_jtag_tck_N_285 was merged into signal jtag_io_jtag_tck_c
+Signal n1760 was merged into signal _zz_5
+Signal n1762 was merged into signal _zz_6
+Signal n1764 was merged into signal _zz_7
+Signal n1766 was merged into signal _zz_8
+Signal n1770 was merged into signal _zz_2
+Signal n1772 was merged into signal _zz_3
+Signal n1774 was merged into signal _zz_4
+Signal n1776 was merged into signal _zz_71_0
+Signal n1779 was merged into signal _zz_71_1
+Signal n1782 was merged into signal _zz_71_2
+Signal n1752 was merged into signal _zz_9
+Signal n1754 was merged into signal _zz_10
+Signal n1756 was merged into signal _zz_11
+Signal n1768 was merged into signal _zz_1
+Signal n1758 was merged into signal _zz_12
+Signal VCC_net undriven or does not drive anything - clipped.
+Signal GND_net undriven or does not drive anything - clipped.
+Block i2004 was optimized away.
+Block i769_1_lut was optimized away.
+Block i770_1_lut was optimized away.
+Block i771_1_lut was optimized away.
+Block i772_1_lut was optimized away.
+Block i774_1_lut was optimized away.
+Block i775_1_lut was optimized away.
+Block i776_1_lut was optimized away.
+Block i778_1_lut was optimized away.
+Block i781_1_lut was optimized away.
+Block i784_1_lut was optimized away.
+Block i765_1_lut was optimized away.
+Block i766_1_lut was optimized away.
+Block i767_1_lut was optimized away.
+Block i773_1_lut was optimized away.
+Block i768_1_lut was optimized away.
+
+     
+
+GSR Usage
+---------
+
+GSR Component:
+   The Global Set Reset (GSR) resource has been used to implement a global reset
+        of the design. The reset signal used for GSR control is 'reset_c'.
+        
+
+
+                                    Page 4
+
+
+
+
+Design:  MyTopLevel                                    Date:  09/25/20  10:57:16
+
+GSR Usage (cont)
+----------------
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+     Components with disabled GSR Property
+-------------------------------------
+
+     These components have the GSR property set to DISABLED. The components will
+     not respond to the reset signal 'reset_c' via the GSR component.
+
+     Type and number of components of the type: 
+   Register = 101 
+
+     Type and instance name of component: 
+   Register : _zz_65_i0_i1
+   Register : _zz_52_i0_i3
+   Register : _zz_52_i0_i2
+   Register : _zz_52_i0_i1
+   Register : _zz_49_i0_i3
+   Register : _zz_49_i0_i2
+   Register : _zz_49_i0_i1
+   Register : _zz_47_i0_i3
+   Register : _zz_47_i0_i2
+   Register : _zz_47_i0_i1
+   Register : jtag_ctrl_tap_instruction_i7
+   Register : jtag_ctrl_tap_instruction_i6
+   Register : jtag_ctrl_tap_instruction_i5
+   Register : jtag_ctrl_tap_instruction_i4
+   Register : jtag_ctrl_tap_instruction_i3
+   Register : _zz_63_i0_i3
+   Register : jtag_ctrl_tap_instruction_i1
+   Register : jtag_ctrl_tap_instructionShift_i7
+   Register : jtag_ctrl_tap_instructionShift_i0
+   Register : jtag_ctrl_tap_instructionShift_i6
+   Register : jtag_ctrl_tap_bypass_250
+   Register : jtag_ctrl_tap_instruction_i0
+   Register : _zz_47_i0_i0
+   Register : _zz_49_i0_i0
+   Register : _zz_52_i0_i0
+   Register : _zz_55_i0_i0
+   Register : _zz_57_i0_i0
+   Register : _zz_60_i0_i0
+   Register : _zz_63_i0_i0
+   Register : _zz_65_i0_i0
+   Register : _zz_68_i0_i0
+   Register : jtag_ctrl_tap_tdoUnbufferd_regNext_264
+   Register : jtag_ctrl_tap_instructionShift_i5
+   Register : jtag_ctrl_tap_instructionShift_i4
+   Register : jtag_ctrl_tap_instructionShift_i3
+   Register : jtag_ctrl_tap_instructionShift_i2
+   Register : jtag_ctrl_tap_instructionShift_i1
+   Register : _zz_45_i0_i0
+   Register : jtag_ctrl_tap_fsm_state_i0
+   Register : _zz_45_i0_i28
+
+                                    Page 5
+
+
+
+
+Design:  MyTopLevel                                    Date:  09/25/20  10:57:16
+
+GSR Usage (cont)
+----------------
+   Register : _zz_68_i0_i3
+   Register : _zz_68_i0_i2
+   Register : _zz_68_i0_i1
+   Register : _zz_65_i0_i3
+   Register : _zz_65_i0_i2
+   Register : _zz_63_i0_i2
+   Register : _zz_45_i0_i29
+   Register : _zz_63_i0_i1
+   Register : _zz_60_i0_i3
+   Register : _zz_45_i0_i31
+   Register : _zz_60_i0_i2
+   Register : _zz_60_i0_i1
+   Register : _zz_57_i0_i3
+   Register : _zz_57_i0_i2
+   Register : _zz_57_i0_i1
+   Register : jtag_ctrl_tap_fsm_state_i3
+   Register : _zz_55_i0_i3
+   Register : jtag_ctrl_tap_fsm_state_i2
+   Register : jtag_ctrl_tap_fsm_state_i1
+   Register : _zz_55_i0_i2
+   Register : _zz_45_i0_i30
+   Register : _zz_55_i0_i1
+   Register : _zz_45_i0_i24
+   Register : _zz_45_i0_i21
+   Register : _zz_45_i0_i20
+   Register : _zz_45_i0_i19
+   Register : _zz_45_i0_i17
+   Register : _zz_45_i0_i16
+   Register : _zz_45_i0_i15
+   Register : _zz_45_i0_i14
+   Register : _zz_45_i0_i12
+   Register : _zz_45_i0_i6
+   Register : _zz_45_i0_i1
+   Register : jtag_ctrl_chainArea_shifter__i0
+   Register : jtag_ctrl_chainArea_shifter__i1
+   Register : jtag_ctrl_chainArea_shifter__i2
+   Register : jtag_ctrl_chainArea_shifter__i3
+   Register : jtag_ctrl_chainArea_shifter__i4
+   Register : jtag_ctrl_chainArea_shifter__i5
+   Register : jtag_ctrl_chainArea_shifter__i6
+   Register : jtag_ctrl_chainArea_shifter__i7
+   Register : _zz_45_i0_i27
+   Register : jtag_ctrl_tap_instruction_i2
+   Register : _zz_45_i0_i26
+   Register : _zz_45_i0_i25
+   Register : _zz_45_i0_i23
+   Register : _zz_45_i0_i22
+   Register : _zz_45_i0_i18
+   Register : _zz_45_i0_i13
+   Register : _zz_45_i0_i11
+   Register : _zz_45_i0_i10
+   Register : _zz_45_i0_i9
+   Register : _zz_45_i0_i8
+   Register : _zz_45_i0_i7
+   Register : _zz_45_i0_i5
+   Register : _zz_45_i0_i4
+
+                                    Page 6
+
+
+
+
+Design:  MyTopLevel                                    Date:  09/25/20  10:57:16
+
+GSR Usage (cont)
+----------------
+   Register : _zz_45_i0_i3
+   Register : _zz_45_i0_i2
+   Register : jtag_ctrl_chainer/io_child_1_tdo_regNext_22
+   Register : jtag_ctrl_chainer/io_child_2_tdo_regNext_23
+   Register : jtag_ctrl_chainer/io_child_0_tdo_regNext_21
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 0 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 155 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                    Page 7
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights
+     reserved.

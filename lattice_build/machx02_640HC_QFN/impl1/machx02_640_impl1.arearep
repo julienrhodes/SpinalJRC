@@ -1,0 +1,32 @@
+----------------------------------------------------------------------
+Report for cell MyTopLevel.TECH
+Register bits:  133 of 760 (17.500%)
+I/O cells:      29
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                                 BB        12          100.0
+                            FD1P3AX        89          100.0
+                            FD1P3IX        26          100.0
+                            FD1P3JX         1          100.0
+                            FD1S3AX        14          100.0
+                            FD1S3IX         3          100.0
+                                GSR         1          100.0
+                                 IB         7          100.0
+                                INV         1          100.0
+                            L6MUX21         1          100.0
+                               LUT4       173          100.0
+                                 OB         1          100.0
+                                OBZ         9          100.0
+                              PFUMX        11          100.0
+SUB MODULES
+                        JtagChainer         1
+                              TOTAL       350
+----------------------------------------------------------------------
+Report for cell JtagChainer.v1
+Instance Path : jtag_ctrl_chainer
+                                  Cell usage:
+                               cell     count   Res Usage(%)
+                            FD1S3AX         3           21.4
+                               LUT4         6            3.5
+                              PFUMX         2           18.2
+                              TOTAL        11
