@@ -60,6 +60,8 @@ ftconf.py --vidpid 0403:6010 -i ft2232_lattice.cfg ftdi:///0 -u
 
 ### Mini-module to JTAG Pinout
 
+Connect VCCIO to 3.3V on the mini-module (e.g. CN2-3 to CN2-11) itself, or use pin 1 of JTAG (should also be 3.3V).
+
 Header Pin | Description | JTAG Connector
 --- | --- | ---
 CN2-1,3,5 |  3.3V | 
@@ -67,6 +69,7 @@ CN2-2,4,6 |  GND | 3, 5, 9
 CN2-7 |  AD0/TCK | 4
 CN2-10 | AD1/TDI | 6
 CN2-9 |  AD2/TDO | 8
+CN2-11,21 | VCCIO  | 
 CN2-12 | AD3/TMS  | 2
 CN2-11 | VIO/(input) | 1
 CN2-14 | GPIOL0/D4/ISPEN | None 
