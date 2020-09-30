@@ -94,7 +94,7 @@ GPIO_1 | | 14
 1. `git clone git@github.com:SpinalHDL/SpinalHDL.git -b dev`
 1. `sbt clean publishLocal` Unreleased v1.4.1 is now published locally
 1. `cd SpinalJRC; sbt`
-1. `run mylib.MyTopLevelSim`
+1. `runMain mylib.MyTopLevelSim`
 
 # References
 [SVF Spec] (http://www.jtagtest.com/pdf/svf_specification.pdf)
@@ -136,7 +136,7 @@ unsetenv VERILATOR_ROOT  # For csh; ignore error if on bash
 unset VERILATOR_ROOT  # For bash
 cd verilator
 git pull        # Make sure we're up-to-date
-git checkout verilator_3_916
+git checkout v3.916
 autoconf        # Create ./configure script
 ./configure
 make -j$(nproc)

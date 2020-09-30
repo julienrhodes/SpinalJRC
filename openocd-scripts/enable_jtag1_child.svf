@@ -4,7 +4,7 @@ ENDDR IDLE;
 FREQUENCY 1000 HZ;
 STATE RESET;
 // IR: idcode
-SIR 8 TDI (04) TDO (04) ;
+SIR 8 TDI (04) TDO (01) ;
 SDR 32 TDI (0) TDO(413bd043) ;
 // IR: bypass
 // SIR 8 TDI (ff) TDO (04) ;
@@ -12,7 +12,7 @@ SDR 32 TDI (0) TDO(413bd043) ;
 // SDR 32 TDI (0010) TDO(0020) ;
 // IR: jtag chain 1 (8 & 1 = 9)
 
-SIR 8 TDI (08) TDO (04) ;
+SIR 8 TDI (08) TDO (01) ;
 
 // 
 SDR 8 TDI (01) TDO (00) ;

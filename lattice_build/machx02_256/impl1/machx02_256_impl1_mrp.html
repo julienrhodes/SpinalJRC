@@ -24,29 +24,29 @@ Target Vendor:  LATTICE
 Target Device:  LCMXO2-256HCQFN32
 Target Performance:   4
 Mapper:  xo2c00,  version:  Diamond (64-bit) 3.11.0.396.4
-Mapped on:  07/08/20  21:58:08
+Mapped on:  09/28/20  21:07:10
 
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of registers:    106 out of   322 (33%)
-      PFU registers:          106 out of   256 (41%)
+   Number of registers:     84 out of   322 (26%)
+      PFU registers:           84 out of   256 (33%)
       PIO registers:            0 out of    66 (0%)
-   Number of SLICEs:        68 out of   128 (53%)
-      SLICEs as Logic/ROM:     68 out of   128 (53%)
+   Number of SLICEs:        52 out of   128 (41%)
+      SLICEs as Logic/ROM:     52 out of   128 (41%)
       SLICEs as RAM:            0 out of    96 (0%)
-      SLICEs as Carry:         12 out of   128 (9%)
-   Number of LUT4s:        132 out of   256 (52%)
-      Number used as logic LUTs:        108
+      SLICEs as Carry:          0 out of   128 (0%)
+   Number of LUT4s:        100 out of   256 (39%)
+      Number used as logic LUTs:        100
       Number used as distributed RAM:     0
-      Number used as ripple logic:       24
+      Number used as ripple logic:        0
       Number used as shift registers:     0
-   Number of PIO sites used: 12 + 1(JTAGENB) out of 22 (59%)
+   Number of PIO sites used: 11 + 1(JTAGENB) out of 22 (55%)
    Number of block RAMs:  0 out of 0
    Number of GSRs:        1 out of 1 (100%)
    EFB used :        No
    JTAG used :       No
    Readback used :   No
-   Oscillator used : Yes
+   Oscillator used : No
    Startup used :    No
    POR :             On
    Bandgap :         On
@@ -59,47 +59,44 @@ Mapped on:  07/08/20  21:58:08
      distributed RAMs) + 2*(Number of ripple logic)
       2. Number of logic LUT4s does not include count of distributed RAM and
      ripple logic.
-   Number of clocks:  2
-     Net jtag_io_jtag_tck_c: 48 loads, 47 rising, 1 falling (Driver: PIO
+   Number of clocks:  1
+     Net jtag_io_jtag_tck_c: 50 loads, 48 rising, 2 falling (Driver: PIO
      jtag_io_jtag_tck )
-     Net osc_OSC: 14 loads, 14 rising, 0 falling (Driver: osc )
    Number of Clock Enables:  11
-     Net jtag_io_jtag_tck_c_enable_1: 1 loads, 1 LSLICEs
-     Net jtag_io_jtag_tck_c_enable_28: 4 loads, 4 LSLICEs
-     Net jtag_io_jtag_tck_c_enable_22: 1 loads, 1 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_14: 4 loads, 4 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_13: 1 loads, 1 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_12: 1 loads, 1 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_25: 4 loads, 4 LSLICEs
 
-     Net jtag_io_jtag_tck_c_enable_21: 1 loads, 1 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_17: 1 loads, 1 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_49: 1 loads, 1 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_30: 1 loads, 1 LSLICEs
      Net jtag_io_jtag_tck_c_enable_20: 1 loads, 1 LSLICEs
-     Net jtag_io_jtag_tck_c_enable_19: 4 loads, 4 LSLICEs
-     Net jtag_io_jtag_tck_c_enable_11: 1 loads, 1 LSLICEs
-     Net jtag_io_jtag_tck_c_enable_10: 1 loads, 1 LSLICEs
-     Net jtag_io_jtag_tck_c_enable_66: 19 loads, 19 LSLICEs
-     Net jtag_io_jtag_tck_c_enable_48: 5 loads, 5 LSLICEs
-     Net globalClockArea_toggler/timeout_counter_willOverflowIfInc: 1 loads, 1
-     LSLICEs
-   Number of LSRs:  5
-     Net n1321: 5 loads, 5 LSLICEs
-     Net n1351: 10 loads, 10 LSLICEs
-     Net n1058: 3 loads, 3 LSLICEs
-     Net globalClockArea_toggler/n842: 12 loads, 12 LSLICEs
-     Net globalClockArea_toggler/timeout_state: 1 loads, 1 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_67: 19 loads, 19 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_47: 5 loads, 5 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_53: 1 loads, 1 LSLICEs
+   Number of LSRs:  4
+     Net n1386: 4 loads, 4 LSLICEs
+     Net n2308: 5 loads, 5 LSLICEs
+     Net n1391: 10 loads, 10 LSLICEs
+     Net n1958: 2 loads, 2 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net jtag_ctrl_tap_fsm_state_0: 40 loads
-     Net jtag_ctrl_tap_fsm_state_1: 37 loads
-     Net jtag_ctrl_tap_fsm_state_2: 32 loads
-     Net jtag_ctrl_tap_fsm_state_3: 23 loads
-     Net jtag_io_jtag_tck_c_enable_66: 20 loads
-     Net n2430: 14 loads
-     Net n2432: 14 loads
-     Net n2439: 14 loads
-     Net globalClockArea_toggler/n842: 12 loads
-     Net jtag_ctrl_tap_instruction_1: 12 loads
+     Net jtag_ctrl_tap_fsm_state_0: 43 loads
+     Net jtag_ctrl_tap_fsm_state_2: 31 loads
+     Net n2305: 27 loads
+     Net jtag_ctrl_tap_fsm_state_3: 24 loads
+     Net jtag_ctrl_tap_fsm_state_1: 22 loads
+     Net jtag_io_jtag_tck_c_enable_67: 19 loads
+     Net n2309: 16 loads
+     Net n2304: 14 loads
+     Net jtag_ctrl_tap_fsm_stateNext_3__N_13_c_3: 10 loads
+     Net jtag_ctrl_tap_instruction_0: 10 loads
 
 
 
 
-   Number of warnings:  2
+   Number of warnings:  4
    Number of errors:    0
      
 
@@ -108,6 +105,14 @@ Mapped on:  07/08/20  21:58:08
 
 <A name="mrp_dwe"></A><B><U><big>Design Errors/Warnings</big></U></B>
 
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_25
+     6/machx02_256.lpf(25): Semantic error in "LOCATE COMP "io_toggle" SITE "27"
+     ;": COMP "io_toggle" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_25
+     6/machx02_256.lpf(26): Semantic error in "IOBUF PORT "io_toggle"
+     IO_TYPE=LVCMOS33 PULLMODE=NONE ;": Port "io_toggle" does not exist in the
+     design. This preference has been disabled.
 WARNING - map: The JTAG port has been disabled in this project and JTAG pins
      will be configured as General Purpose IO.  You have to use JTAGENB pin in
      hardware to change the personality of the port from JTAG pins to general
@@ -122,78 +127,51 @@ WARNING - map: All configuration ports of the design have been disabled.
 <A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
 
 +---------------------+-----------+-----------+------------+
+
 | IO Name             | Direction | Levelmode | IO         |
 |                     |           |  IO_TYPE  | Register   |
 +---------------------+-----------+-----------+------------+
 | jtag_io_gpio_0[1]   | BIDIR     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-
-| jtag_io_gpio_0[0]   | BIDIR     | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| io_toggle           | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| jtag_io_jtag_tdo    | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| jtag_io_child_0_tms | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| jtag_io_child_0_tdi | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| jtag_io_child_0_tck | OUTPUT    | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| jtag_io_jtag_tms    | INPUT     | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| jtag_io_jtag_tdi    | INPUT     | LVCMOS33  |            |
-+---------------------+-----------+-----------+------------+
-| jtag_io_jtag_tck    | INPUT     | LVCMOS33  |            |
+| reset               | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 | jtag_io_child_0_tdo | INPUT     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
-| reset               | INPUT     | LVCMOS33  |            |
+| jtag_io_jtag_tck    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_jtag_tdi    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_jtag_tms    | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_child_0_tck | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_child_0_tdi | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_child_0_tms | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_jtag_tdo    | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| jtag_io_gpio_0[0]   | BIDIR     | LVCMOS33  |            |
 +---------------------+-----------+-----------+------------+
 
 
 
 <A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
 
-Block i1615 undriven or does not drive anything - clipped.
-Signal jtag_io_jtag_tck_N_195 was merged into signal jtag_io_jtag_tck_c
-Signal n1211 was merged into signal _zz_25_0
-Signal n1208 was merged into signal _zz_2
-Signal n1206 was merged into signal _zz_1
-Signal GND_net undriven or does not drive anything - clipped.
+Block i1493 undriven or does not drive anything - clipped.
+Block i1492 undriven or does not drive anything - clipped.
+Signal jtag_io_jtag_tck_N_209 was merged into signal jtag_io_jtag_tck_c
+Signal n1250 was merged into signal _zz_1
+Signal n1252 was merged into signal _zz_2
+Signal n1253 was merged into signal _zz_26_0
 Signal VCC_net undriven or does not drive anything - clipped.
-Signal globalClockArea_toggler/timeout_counter_value_407_add_4_23/CO undriven or
-     does not drive anything - clipped.
-Signal globalClockArea_toggler/timeout_counter_value_407_add_4_1/S0 undriven or
-     does not drive anything - clipped.
-Signal globalClockArea_toggler/timeout_counter_value_407_add_4_1/CI undriven or
-     does not drive anything - clipped.
-Block i1617 was optimized away.
-Block i466_1_lut was optimized away.
-Block i463_1_lut was optimized away.
-Block i462_1_lut was optimized away.
-Block i1 was optimized away.
+Signal GND_net undriven or does not drive anything - clipped.
+Block i1495 was optimized away.
+Block i474_1_lut was optimized away.
+Block i475_1_lut was optimized away.
+Block i476_1_lut was optimized away.
 
      
-
-OSC Summary
------------
-
-OSC 1:                                     Pin/Node Value
-  OSC Instance Name:                                osc
-  OSC Type:                                         OSCH
-  STDBY Input:                                      NONE
-  OSC Output:                              NODE     osc_OSC
-  OSC Nominal Frequency (MHz):                      12.09
-
-
-
-
-<A name="mrp_asic"></A><B><U><big>ASIC Components</big></U></B>
----------------
-
-Instance Name: osc
-         Type: OSCH
 
 
 
@@ -209,6 +187,7 @@ GSR Component:
    The design components with GSR property set to ENABLED will respond to global
         set reset while the components with GSR property set to DISABLED will
         not.
+
         
 
      Components with disabled GSR Property
@@ -218,40 +197,42 @@ GSR Component:
      not respond to the reset signal 'reset_c' via the GSR component.
 
      Type and number of components of the type: 
-   Register = 70 
+   Register = 71 
 
      Type and instance name of component: 
-   Register : jtag_ctrl_tap_instruction_i2
+   Register : _zz_23_i0_i1
+   Register : _zz_20_i0_i1
    Register : jtag_ctrl_tap_instructionShift_i0
-   Register : jtag_ctrl_tap_bypass_122
+   Register : jtag_ctrl_tap_bypass_127
    Register : jtag_ctrl_tap_instruction_i0
-   Register : _zz_17_i0_i0
-   Register : _zz_19_i0_i0
-   Register : _zz_22_i0_i0
-   Register : jtag_ctrl_tap_tdoUnbufferd_regNext_130
-   Register : _zz_15_i0_i0
-   Register : jtag_ctrl_tap_fsm_state_i0
-   Register : _zz_15_i0_i3
-   Register : _zz_22_i0_i1
-   Register : _zz_19_i0_i1
-   Register : _zz_17_i0_i1
+   Register : _zz_18_i0_i0
+   Register : _zz_20_i0_i0
+   Register : _zz_23_i0_i0
+   Register : jtag_ctrl_tap_tdoUnbufferd_regNext_135
+   Register : _zz_18_i0_i1
    Register : jtag_ctrl_tap_instruction_i7
+   Register : jtag_ctrl_tap_instructionShift_i4
    Register : jtag_ctrl_tap_instruction_i6
+   Register : jtag_ctrl_tap_fsm_state_i0
+   Register : jtag_ctrl_tap_instruction_i2
    Register : jtag_ctrl_tap_instruction_i5
    Register : jtag_ctrl_tap_instruction_i4
    Register : jtag_ctrl_tap_instruction_i3
+   Register : _zz_15_i0_i5
    Register : jtag_ctrl_tap_instruction_i1
    Register : jtag_ctrl_tap_instructionShift_i7
    Register : jtag_ctrl_tap_instructionShift_i6
-   Register : jtag_ctrl_tap_instructionShift_i5
-   Register : jtag_ctrl_tap_instructionShift_i4
    Register : jtag_ctrl_tap_instructionShift_i3
-   Register : jtag_ctrl_tap_instructionShift_i2
-   Register : jtag_ctrl_tap_instructionShift_i1
-
-   Register : jtag_ctrl_chainArea_shifter__i0
-   Register : _zz_15_i0_i1
    Register : _zz_15_i0_i6
+   Register : jtag_ctrl_tap_instructionShift_i2
+   Register : _zz_15_i0_i0
+   Register : jtag_ctrl_tap_instructionShift_i5
+   Register : _zz_15_i0_i1
+   Register : jtag_ctrl_tap_instructionShift_i1
+   Register : jtag_ctrl_tap_fsm_state_i3
+   Register : jtag_ctrl_tap_fsm_state_i2
+   Register : jtag_ctrl_tap_fsm_state_i1
+   Register : jtag_ctrl_chainArea_shifter__i0
    Register : _zz_15_i0_i12
    Register : _zz_15_i0_i14
    Register : _zz_15_i0_i15
@@ -262,20 +243,18 @@ GSR Component:
    Register : _zz_15_i0_i21
    Register : _zz_15_i0_i24
    Register : _zz_15_i0_i30
-   Register : jtag_ctrl_tap_fsm_state_i1
-   Register : jtag_ctrl_tap_fsm_state_i2
-   Register : jtag_ctrl_tap_fsm_state_i3
    Register : jtag_ctrl_chainArea_shifter__i1
+
    Register : jtag_ctrl_chainArea_shifter__i2
    Register : jtag_ctrl_chainArea_shifter__i3
    Register : jtag_ctrl_chainArea_shifter__i4
    Register : jtag_ctrl_chainArea_shifter__i5
    Register : jtag_ctrl_chainArea_shifter__i6
    Register : jtag_ctrl_chainArea_shifter__i7
-   Register : _zz_15_i0_i2
-   Register : _zz_15_i0_i4
-   Register : _zz_15_i0_i5
    Register : _zz_15_i0_i7
+   Register : _zz_15_i0_i4
+   Register : _zz_15_i0_i3
+   Register : _zz_15_i0_i2
    Register : _zz_15_i0_i8
    Register : _zz_15_i0_i9
    Register : _zz_15_i0_i10
@@ -290,46 +269,9 @@ GSR Component:
    Register : _zz_15_i0_i28
    Register : _zz_15_i0_i29
    Register : _zz_15_i0_i31
-   Register : globalClockArea_toggler/toggle_23
-   Register : jtag_ctrl_chainer/io_child_0_tdo_regNext_8
-
-     Components with synchronous local reset also reset by asynchronous GSR
-----------------------------------------------------------------------
-
-     These components have the GSR property set to ENABLED and the local reset
-     is synchronous. The components will respond to the synchronous local reset
-     and to the unrelated asynchronous reset signal 'reset_c' via the GSR
-     component.
-
-     Type and number of components of the type: 
-   Register = 24 
-
-     Type and instance name of component: 
-
-   Register : globalClockArea_toggler/timeout_counter_value_407__i21
-   Register : globalClockArea_toggler/timeout_counter_value_407__i20
-   Register : globalClockArea_toggler/timeout_counter_value_407__i19
-   Register : globalClockArea_toggler/timeout_counter_value_407__i18
-   Register : globalClockArea_toggler/timeout_counter_value_407__i17
-   Register : globalClockArea_toggler/timeout_counter_value_407__i16
-   Register : globalClockArea_toggler/timeout_counter_value_407__i15
-   Register : globalClockArea_toggler/timeout_counter_value_407__i14
-   Register : globalClockArea_toggler/timeout_counter_value_407__i13
-   Register : globalClockArea_toggler/timeout_counter_value_407__i12
-   Register : globalClockArea_toggler/timeout_counter_value_407__i11
-   Register : globalClockArea_toggler/timeout_counter_value_407__i10
-   Register : globalClockArea_toggler/timeout_counter_value_407__i9
-   Register : globalClockArea_toggler/timeout_counter_value_407__i8
-   Register : globalClockArea_toggler/timeout_counter_value_407__i7
-   Register : globalClockArea_toggler/timeout_counter_value_407__i6
-   Register : globalClockArea_toggler/timeout_counter_value_407__i5
-   Register : globalClockArea_toggler/timeout_counter_value_407__i4
-   Register : globalClockArea_toggler/timeout_counter_value_407__i3
-   Register : globalClockArea_toggler/timeout_counter_value_407__i2
-   Register : globalClockArea_toggler/timeout_counter_value_407__i0
-   Register : globalClockArea_toggler/timeout_counter_value_407__i1
-   Register : globalClockArea_toggler/timeout_state_21
-   Register : globalClockArea_toggler/timeout_counter_value_407__i22
+   Register : jtag_ctrl_chainer/io_primary_tms_regNext_14
+   Register : jtag_ctrl_chainer/io_child_0_tdo_regNext_15
+   Register : jtag_ctrl_chainer/io_primary_tdi_regNext_1_16
 
 
 
@@ -340,9 +282,6 @@ GSR Component:
    Total REAL Time: 0 secs  
    Peak Memory Usage: 151 MB
         
-
-
-
 
 
 

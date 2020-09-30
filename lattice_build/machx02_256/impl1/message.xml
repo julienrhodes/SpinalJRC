@@ -8,6 +8,22 @@
     </Task>
     <Task name="Map">
         <Message>
+            <ID>1100679</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/machx02_256.lpf(25): Semantic error in &quot;LOCATE COMP &quot;io_toggle&quot; SITE &quot;27&quot; ;&quot;: </Dynamic>
+            <Dynamic>io_toggle</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/machx02_256.lpf</Navigation>
+            <Navigation>25</Navigation>
+        </Message>
+        <Message>
+            <ID>1100644</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/machx02_256.lpf(26): Semantic error in &quot;IOBUF PORT &quot;io_toggle&quot; IO_TYPE=LVCMOS33 PULLMODE=NONE ;&quot;: </Dynamic>
+            <Dynamic>io_toggle</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/machx02_256.lpf</Navigation>
+            <Navigation>26</Navigation>
+        </Message>
+        <Message>
             <ID>52101186</ID>
             <Severity>Warning</Severity>
             <Dynamic>MachXO2</Dynamic>
@@ -31,9 +47,9 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(25): </Dynamic>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/MyTopLevel.v(25): </Dynamic>
             <Dynamic>MyTopLevel</Dynamic>
-            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/MyTopLevel.v</Navigation>
             <Navigation>25</Navigation>
         </Message>
         <Message>
@@ -47,22 +63,34 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(527): </Dynamic>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/MyTopLevel.v(452): </Dynamic>
             <Dynamic>JtagChainer</Dynamic>
-            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
-            <Navigation>527</Navigation>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/MyTopLevel.v</Navigation>
+            <Navigation>452</Navigation>
         </Message>
         <Message>
-            <ID>35901018</ID>
-            <Severity>Info</Severity>
-            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(452): </Dynamic>
-            <Dynamic>Toggler</Dynamic>
-            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v</Navigation>
-            <Navigation>452</Navigation>
+            <ID>35935034</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/MyTopLevel.v(108): </Dynamic>
+            <Dynamic>osc</Dynamic>
+            <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/MyTopLevel.v</Navigation>
+            <Navigation>108</Navigation>
         </Message>
         <Message>
             <ID>35001611</ID>
             <Severity>Warning</Severity>
+        </Message>
+        <Message>
+            <ID>1166052</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>logical</Dynamic>
+            <Dynamic>GND_net</Dynamic>
+            <Navigation>GND_net</Navigation>
+        </Message>
+        <Message>
+            <ID>1163101</ID>
+            <Severity>Warning</Severity>
+            <Dynamic>1</Dynamic>
         </Message>
     </Task>
     <Task name="PAR">

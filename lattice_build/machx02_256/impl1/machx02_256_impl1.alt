@@ -1,20 +1,19 @@
 NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
 NOTE All Rights Reserved *
-NOTE DATE CREATED: Wed Jul  8 21:58:16 2020 *
+NOTE DATE CREATED: Mon Sep 28 21:07:16 2020 *
 NOTE DESIGN NAME: MyTopLevel *
 NOTE DEVICE NAME: LCMXO2-256HC-4QFN32 *
 NOTE PIN ASSIGNMENTS *
 NOTE PINS jtag_io_gpio_0[1] : 14 : inout *
-NOTE PINS jtag_io_gpio_0[0] : 13 : inout *
-NOTE PINS io_toggle : 27 : out *
-NOTE PINS jtag_io_jtag_tdo : 1 : out *
-NOTE PINS jtag_io_child_0_tms : 9 : out *
-NOTE PINS jtag_io_child_0_tdi : 8 : out *
-NOTE PINS jtag_io_child_0_tck : 11 : out *
-NOTE PINS jtag_io_jtag_tms : 29 : in *
-NOTE PINS jtag_io_jtag_tdi : 32 : in *
-NOTE PINS jtag_io_jtag_tck : 30 : in *
-NOTE PINS jtag_io_child_0_tdo : 10 : in *
 NOTE PINS reset : 23 : in *
+NOTE PINS jtag_io_child_0_tdo : 10 : in *
+NOTE PINS jtag_io_jtag_tck : 30 : in *
+NOTE PINS jtag_io_jtag_tdi : 32 : in *
+NOTE PINS jtag_io_jtag_tms : 29 : in *
+NOTE PINS jtag_io_child_0_tck : 11 : out *
+NOTE PINS jtag_io_child_0_tdi : 8 : out *
+NOTE PINS jtag_io_child_0_tms : 9 : out *
+NOTE PINS jtag_io_jtag_tdo : 1 : out *
+NOTE PINS jtag_io_gpio_0[0] : 13 : inout *
 NOTE CONFIGURATION MODE: NONE *
 NOTE COMPRESSION: on *

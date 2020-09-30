@@ -31,7 +31,7 @@
 
 -lpf 1
 -p "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256"
--ver "/home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v"
+-ver "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/MyTopLevel.v"
 -top MyTopLevel
 
 

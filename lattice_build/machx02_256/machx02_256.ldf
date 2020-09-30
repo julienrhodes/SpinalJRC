@@ -3,7 +3,7 @@
     <Options/>
     <Implementation title="impl1" dir="impl1" description="impl1" synthesis="lse" default_strategy="Strategy1">
         <Options def_top="MyTopLevel"/>
-        <Source name="../../MyTopLevel.v" type="Verilog" type_short="Verilog">
+        <Source name="MyTopLevel.v" type="Verilog" type_short="Verilog">
             <Options top_module="MyTopLevel"/>
         </Source>
         <Source name="machx02_256.lpf" type="Logic Preference" type_short="LPF">

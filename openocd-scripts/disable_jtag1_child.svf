@@ -3,5 +3,6 @@ ENDIR IDLE;
 ENDDR IDLE;
 FREQUENCY 1000 HZ;
 STATE RESET;
+// Disable safely (disregard broken chain)
 SIR 8 TDI (08) TDO (00) mask (00) ;
 SDR 8 TDI (00) TDO (01) mask (00) ;

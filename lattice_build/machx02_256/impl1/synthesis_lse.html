@@ -14,7 +14,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Jul  8 21:58:07 2020
+Mon Sep 28 21:07:10 2020
 
 
 Command Line:  synthesis -f machx02_256_impl1_lattice.synproj -gui -msgset /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/promote.xml 
@@ -74,7 +74,7 @@ The -syn option is FALSE.
 -p /usr/local/diamond/3.11_x64/ispfpga/xo2c00/data (searchpath added)
 -p /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/impl1 (searchpath added)
 -p /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256 (searchpath added)
-Verilog design file = /home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v
+Verilog design file = /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/MyTopLevel.v
 NGD file = machx02_256_impl1.ngd
 -sdc option: SDC file input not used.
 -lpf option: Output file option is ON.
@@ -85,19 +85,19 @@ Technology check ok...
 Analyzing Verilog file /usr/local/diamond/3.11_x64/ispfpga/userware/unix/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
 Compile design.
 Compile Design Begin
-Analyzing Verilog file /home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v. VERI-1482
+Analyzing Verilog file /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/MyTopLevel.v. VERI-1482
 Analyzing Verilog file /usr/local/diamond/3.11_x64/ispfpga/userware/unix/SYNTHESIS_HEADERS/machxo2.v. VERI-1482
 Top module name (Verilog): MyTopLevel
-INFO - synthesis: /home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(25): compiling module MyTopLevel. VERI-1018
+INFO - synthesis: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/MyTopLevel.v(25): compiling module MyTopLevel. VERI-1018
 INFO - synthesis: /usr/local/diamond/3.11_x64/ispfpga/userware/unix/SYNTHESIS_HEADERS/machxo2.v(1793): compiling module OSCH. VERI-1018
-INFO - synthesis: /home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(527): compiling module JtagChainer. VERI-1018
-INFO - synthesis: /home/julien/Documents/git/3rd/SpinalJRC/MyTopLevel.v(452): compiling module Toggler. VERI-1018
+INFO - synthesis: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/MyTopLevel.v(452): compiling module JtagChainer. VERI-1018
 Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'...
 Loading device for application map from file 'xo2c256.nph' in environment: /usr/local/diamond/3.11_x64/ispfpga.
 Package Status:                     Final          Version 1.41.
 Top-level module name = MyTopLevel.
+WARNING - synthesis: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/MyTopLevel.v(108): Removing unused instance osc. VDB-5034
 ######## Converting I/O port jtag_io_child_0_tms to output.
 ######## Converting I/O port jtag_io_child_0_tdi to output.
 ######## Converting I/O port jtag_io_child_0_tck to output.
@@ -112,26 +112,27 @@ Results of NGD DRC are available in MyTopLevel_drc.log.
 Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'...
+WARNING - synthesis: logical net 'GND_net' has no load.
+WARNING - synthesis: DRC complete with 1 warnings.
 All blocks are expanded and NGD expansion is successful.
 Writing NGD file machx02_256_impl1.ngd.
 
 ################### Begin Area Report (MyTopLevel)######################
-Number of register bits => 106 of 322 (32 % )
+Number of register bits => 84 of 322 (26 % )
 BB => 2
-CCU2D => 12
-FD1P3AX => 39
-FD1P3IX => 27
+FD1P3AX => 40
+FD1P3IX => 26
 FD1P3JX => 1
-FD1S3AX => 13
-FD1S3IX => 26
+FD1S3AX => 7
+FD1S3IX => 9
+FD1S3JX => 1
 GSR => 1
 IB => 5
 INV => 1
-LUT4 => 111
-OB => 2
+LUT4 => 103
+OB => 1
 OBZ => 3
-OSCH => 1
-PFUMX => 5
+PFUMX => 6
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -140,34 +141,33 @@ TSALL => 1
 
 ################### Begin Clock Report ######################
 Clock Nets
-Number of Clocks: 2
-  Net : jtag_io_jtag_tck_c, loads : 81
-  Net : osc_OSC, loads : 25
+Number of Clocks: 1
+  Net : jtag_io_jtag_tck_c, loads : 83
 Clock Enable Nets
 Number of Clock Enables: 11
 Top 10 highest fanout Clock Enables:
-  Net : jtag_io_jtag_tck_c_enable_66, loads : 33
-  Net : jtag_io_jtag_tck_c_enable_19, loads : 8
-  Net : jtag_io_jtag_tck_c_enable_48, loads : 8
-  Net : jtag_io_jtag_tck_c_enable_28, loads : 7
-  Net : jtag_io_jtag_tck_c_enable_11, loads : 2
-  Net : jtag_io_jtag_tck_c_enable_10, loads : 2
-  Net : jtag_io_jtag_tck_c_enable_21, loads : 2
-  Net : jtag_io_jtag_tck_c_enable_22, loads : 2
-  Net : jtag_io_jtag_tck_c_enable_20, loads : 2
-  Net : globalClockArea_toggler/timeout_counter_willOverflowIfInc, loads : 2
+  Net : jtag_io_jtag_tck_c_enable_67, loads : 32
+  Net : jtag_io_jtag_tck_c_enable_47, loads : 8
+  Net : jtag_io_jtag_tck_c_enable_14, loads : 8
+  Net : jtag_io_jtag_tck_c_enable_25, loads : 7
+  Net : jtag_io_jtag_tck_c_enable_49, loads : 2
+  Net : jtag_io_jtag_tck_c_enable_30, loads : 2
+  Net : jtag_io_jtag_tck_c_enable_12, loads : 2
+  Net : jtag_io_jtag_tck_c_enable_17, loads : 2
+  Net : jtag_io_jtag_tck_c_enable_13, loads : 2
+  Net : jtag_io_jtag_tck_c_enable_20, loads : 1
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : jtag_ctrl_tap_fsm_state_0, loads : 40
-  Net : jtag_ctrl_tap_fsm_state_1, loads : 37
-  Net : jtag_io_jtag_tck_c_enable_66, loads : 33
-  Net : jtag_ctrl_tap_fsm_state_2, loads : 32
-  Net : jtag_ctrl_tap_fsm_state_3, loads : 23
-  Net : globalClockArea_toggler/n842, loads : 23
-  Net : n1351, loads : 19
-  Net : n2439, loads : 14
-  Net : n2432, loads : 14
-  Net : n2430, loads : 14
+  Net : jtag_ctrl_tap_fsm_state_0, loads : 43
+  Net : jtag_io_jtag_tck_c_enable_67, loads : 32
+  Net : jtag_ctrl_tap_fsm_state_2, loads : 31
+  Net : n2305, loads : 27
+  Net : jtag_ctrl_tap_fsm_state_3, loads : 24
+  Net : jtag_ctrl_tap_fsm_state_1, loads : 22
+  Net : n1391, loads : 19
+  Net : n2309, loads : 16
+  Net : n2304, loads : 14
+  Net : jtag_ctrl_tap_instruction_0, loads : 10
 ################### End Clock Report ##################
 
 <A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
@@ -177,21 +177,18 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk1 [get_nets osc_OSC]                 |  200.000 MHz|   99.334 MHz|     6 *
-                                        |             |             |
-create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets jtag_io_jtag_tck_c]      |  200.000 MHz|   51.329 MHz|     7 *
+clk0 [get_nets jtag_io_jtag_tck_c]      |  200.000 MHz|   57.000 MHz|     6 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
 
-2 constraints not met.
+1 constraints not met.
 
 
-Peak Memory Usage: 178.852  MB
+Peak Memory Usage: 178.469  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 0.572  secs
+Elapsed CPU time for LSE flow : 0.480  secs
 --------------------------------------------------------------
 
 
