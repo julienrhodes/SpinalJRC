@@ -33,9 +33,12 @@ class ShiftRegTestBench() extends Component {
 class JtagStateController(jtag: Jtag, jtagClk: ClockDomain) {
   def tms_shift(data : String) : Unit = {
     for( i <- data ) {
+      jtagClk.waitFallingEdge()
       jtag.tms #= (i.toString.toInt == 1)
-      jtagClk.waitSampling()
+      jtagClk.waitRisingEdge()
+      //jtagClk.waitSampling()
     }
+    jtagClk.waitRisingEdge()
   }
   def from_shift_to_idle() {
     tms_shift("10")
@@ -258,9 +261,9 @@ object MyTopLevelSim {
       // Perform reset
       jtagClk.waitRisingEdge(1)
       jtagClk.assertReset()
-      jtagClk.waitRisingEdge(1)
+      jtagClk.waitFallingEdge(1)
       jtagClk.deassertReset()
-      jtagClk.waitSampling()
+      jtagClk.waitFallingEdge(1)
 
       val jtagCont = new JtagStateController(dut.io.jtag, jtagClk)
       
@@ -386,11 +389,11 @@ object MyTopLevelSim {
 
       jtagCont.shift(0x00, 8)
       shiftOut = jtagCont.shift(0xFF, 8)
-      assert(shiftOut == 0xFE, f"Unexpected bypass: $shiftOut%X")
+      assert(shiftOut == 0xFC, f"Unexpected bypass: $shiftOut%X")
 
-      // Test Chaining in bypass (a 1 clock delay)
-      // There's a bypass buffer inside the tap controller
-      shiftOut = jtagCont.shift(0xA1, 9) >> 1
+      // Test Chaining in bypass (a 2 clock delay)
+      // There's synchronization buffer and a bypass buffer inside the tap controller
+      shiftOut = jtagCont.shift(0xA1, 10) >> 2
       assert(shiftOut == 0xA1, f"Unexpected idle pass through with jtag1: $shiftOut%X")
       var shifty = child0Shift.data
       assert(shifty == 0, f"Unexpected data in jtag1 shift register: $shifty%X")
@@ -400,9 +403,9 @@ object MyTopLevelSim {
 
       // Confirm IR is 8 bits
       // Flush with 1s
-      shiftOut = jtagCont.shift(0xFFFF, 16)
+      shiftOut = jtagCont.shift(0xFFFF, 17)
       // Flush with 0s
-      shiftOut = jtagCont.shift(0x0, 16)
+      shiftOut = jtagCont.shift(0x0, 17)
       assert(shiftOut == 0x00FF, f"Unexpected IR: $shiftOut%X")
 
       // Instruction chainArea

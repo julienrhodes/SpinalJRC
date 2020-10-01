@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.4.1    git head : 7bd45f3ec4adb4e3ae8b019eb79d09811eabaf5e
 // Component : MyTopLevel
-// Git hash  : 44c6b6d5a3029ea05668cbfab1c0189506f850cd
+// Git hash  : 61c7be015c59964da4c851c9bc8f6973e7ca8cab
 
 
 `define JtagState_binary_sequential_type [3:0]
@@ -790,7 +790,10 @@ module JtagChainer (
   reg                 io_primary_tdi_regNext;
   reg        [2:0]    jtagClkArea_bufPos;
   reg        [2:0]    jtagClkArea_bufNeg;
+  reg        [2:0]    jtagClkArea_nextWriteEnable_pos;
   reg        [2:0]    jtagClkArea_nextWriteEnable;
+  reg                 jtagClkArea_io_primary_tdi_pos;
+  reg                 jtagClkArea_io_primary_tms_pos;
   reg                 jtagClkArea_io_primary_tdi;
   reg                 jtagClkArea_io_primary_tms;
 
@@ -810,19 +813,6 @@ module JtagChainer (
     end
   end
 
-  always @ (*) begin
-    jtagClkArea_bufPos = 3'b000;
-    if(_zz_1)begin
-      jtagClkArea_bufPos[0] = io_child_0_tdo;
-    end
-    if(_zz_2)begin
-      jtagClkArea_bufPos[1] = io_child_1_tdo;
-    end
-    if(_zz_3)begin
-      jtagClkArea_bufPos[2] = io_child_2_tdo;
-    end
-  end
-
   assign io_child_0_writeEnable = jtagClkArea_nextWriteEnable[0];
   assign io_child_0_write_tdi = jtagClkArea_io_primary_tdi;
   assign io_child_0_write_tms = jtagClkArea_io_primary_tms;
@@ -832,7 +822,7 @@ module JtagChainer (
     io_child_1_write_tdi = jtagClkArea_io_primary_tdi;
     if(_zz_2)begin
       if(io_select[0])begin
-        io_child_1_write_tdi = jtagClkArea_bufNeg[1];
+        io_child_1_write_tdi = jtagClkArea_bufNeg[0];
       end
     end
   end
@@ -844,10 +834,10 @@ module JtagChainer (
     io_child_2_write_tdi = jtagClkArea_io_primary_tdi;
     if(_zz_3)begin
       if(io_select[0])begin
-        io_child_2_write_tdi = jtagClkArea_bufNeg[2];
+        io_child_2_write_tdi = jtagClkArea_bufNeg[0];
       end
       if(io_select[1])begin
-        io_child_2_write_tdi = jtagClkArea_bufNeg[2];
+        io_child_2_write_tdi = jtagClkArea_bufNeg[1];
       end
     end
   end
@@ -857,15 +847,23 @@ module JtagChainer (
   always @ (negedge io_primary_tck) begin
     io_primary_tdi_regNext <= io_primary_tdi;
     jtagClkArea_bufNeg <= jtagClkArea_bufPos;
-    jtagClkArea_io_primary_tdi <= io_primary_tdi;
-    jtagClkArea_io_primary_tms <= io_primary_tdi;
+    jtagClkArea_nextWriteEnable <= jtagClkArea_nextWriteEnable_pos;
+    jtagClkArea_io_primary_tdi <= jtagClkArea_io_primary_tdi_pos;
+    jtagClkArea_io_primary_tms <= jtagClkArea_io_primary_tdi_pos;
   end
 
-  always @ (negedge io_primary_tck or posedge reset) begin
-    if (reset) begin
-      jtagClkArea_nextWriteEnable <= 3'b000;
-    end else begin
-      jtagClkArea_nextWriteEnable <= io_select;
+  always @ (posedge io_primary_tck) begin
+    jtagClkArea_nextWriteEnable_pos <= io_select;
+    jtagClkArea_io_primary_tdi_pos <= io_primary_tdi;
+    jtagClkArea_io_primary_tms_pos <= io_primary_tms;
+    if(_zz_1)begin
+      jtagClkArea_bufPos[0] <= io_child_0_tdo;
+    end
+    if(_zz_2)begin
+      jtagClkArea_bufPos[1] <= io_child_1_tdo;
+    end
+    if(_zz_3)begin
+      jtagClkArea_bufPos[2] <= io_child_2_tdo;
     end
   end
 

@@ -14,7 +14,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Mon Sep 28 21:07:10 2020
+Wed Sep 30 22:10:50 2020
 
 
 Command Line:  synthesis -f machx02_256_impl1_lattice.synproj -gui -msgset /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/promote.xml 
@@ -118,18 +118,18 @@ All blocks are expanded and NGD expansion is successful.
 Writing NGD file machx02_256_impl1.ngd.
 
 ################### Begin Area Report (MyTopLevel)######################
-Number of register bits => 84 of 322 (26 % )
+Number of register bits => 88 of 322 (27 % )
 BB => 2
-FD1P3AX => 40
+FD1P3AX => 41
 FD1P3IX => 26
 FD1P3JX => 1
-FD1S3AX => 7
+FD1S3AX => 10
 FD1S3IX => 9
 FD1S3JX => 1
 GSR => 1
 IB => 5
 INV => 1
-LUT4 => 103
+LUT4 => 108
 OB => 1
 OBZ => 3
 PFUMX => 6
@@ -142,32 +142,32 @@ TSALL => 1
 ################### Begin Clock Report ######################
 Clock Nets
 Number of Clocks: 1
-  Net : jtag_io_jtag_tck_c, loads : 83
+  Net : jtag_io_jtag_tck_c, loads : 85
 Clock Enable Nets
-Number of Clock Enables: 11
+Number of Clock Enables: 12
 Top 10 highest fanout Clock Enables:
   Net : jtag_io_jtag_tck_c_enable_67, loads : 32
   Net : jtag_io_jtag_tck_c_enable_47, loads : 8
   Net : jtag_io_jtag_tck_c_enable_14, loads : 8
   Net : jtag_io_jtag_tck_c_enable_25, loads : 7
   Net : jtag_io_jtag_tck_c_enable_49, loads : 2
-  Net : jtag_io_jtag_tck_c_enable_30, loads : 2
+  Net : jtag_io_jtag_tck_c_enable_13, loads : 2
   Net : jtag_io_jtag_tck_c_enable_12, loads : 2
   Net : jtag_io_jtag_tck_c_enable_17, loads : 2
-  Net : jtag_io_jtag_tck_c_enable_13, loads : 2
-  Net : jtag_io_jtag_tck_c_enable_20, loads : 1
+  Net : jtag_io_jtag_tck_c_enable_28, loads : 2
+  Net : jtag_io_jtag_tck_c_enable_21, loads : 1
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : jtag_ctrl_tap_fsm_state_0, loads : 43
+  Net : jtag_ctrl_tap_fsm_state_0, loads : 34
+  Net : jtag_ctrl_tap_fsm_state_2, loads : 32
   Net : jtag_io_jtag_tck_c_enable_67, loads : 32
-  Net : jtag_ctrl_tap_fsm_state_2, loads : 31
-  Net : n2305, loads : 27
-  Net : jtag_ctrl_tap_fsm_state_3, loads : 24
-  Net : jtag_ctrl_tap_fsm_state_1, loads : 22
-  Net : n1391, loads : 19
-  Net : n2309, loads : 16
-  Net : n2304, loads : 14
-  Net : jtag_ctrl_tap_instruction_0, loads : 10
+  Net : n1874, loads : 27
+  Net : jtag_ctrl_tap_fsm_state_3, loads : 26
+  Net : jtag_ctrl_tap_fsm_state_1, loads : 26
+  Net : n1396, loads : 19
+  Net : n2299, loads : 15
+  Net : n2290, loads : 14
+  Net : n2295, loads : 13
 ################### End Clock Report ##################
 
 <A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
@@ -185,10 +185,10 @@ clk0 [get_nets jtag_io_jtag_tck_c]      |  200.000 MHz|   57.000 MHz|     6 *
 1 constraints not met.
 
 
-Peak Memory Usage: 178.469  MB
+Peak Memory Usage: 178.715  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 0.480  secs
+Elapsed CPU time for LSE flow : 0.488  secs
 --------------------------------------------------------------
 
 

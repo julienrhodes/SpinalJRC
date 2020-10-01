@@ -37,7 +37,7 @@
     </pins>
 
     <!--
-        Instances in netlist: 89
+        Instances in netlist: 93
     -->
 
     <instance  name = "osc"  library = "work"  arch = ""  type = "comb">
@@ -59,7 +59,7 @@
 
         <nets>
         <nitem  name = "jtag_ctrl_chainer_io_child_0_write_tms"  />
-        <nitem  name = "_zz_26[0]"  />
+        <nitem  name = "jtag_ctrl_chainer_io_child_0_writeEnable"  />
         <nitem  name = "jtag_io_child_0_tms"  />
         </nets>
     </instance>
@@ -72,8 +72,8 @@
         </pins>
 
         <nets>
-        <nitem  name = "jtag_ctrl_chainer_io_child_0_write_tdi"  />
-        <nitem  name = "_zz_26[0]"  />
+        <nitem  name = "jtag_ctrl_chainer_io_child_0_write_tms"  />
+        <nitem  name = "jtag_ctrl_chainer_io_child_0_writeEnable"  />
         <nitem  name = "jtag_io_child_0_tdi"  />
         </nets>
     </instance>
@@ -87,7 +87,7 @@
 
         <nets>
         <nitem  name = "jtag_io_jtag_tck"  />
-        <nitem  name = "_zz_26[0]"  />
+        <nitem  name = "jtag_ctrl_chainer_io_child_0_writeEnable"  />
         <nitem  name = "jtag_io_child_0_tck"  />
         </nets>
     </instance>
@@ -120,15 +120,20 @@
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_chainer/io_primary_tck_I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_ctrl_chainer/jtagClkArea_bufNeg[0]_17"  library = "work"  arch = ""  type = "reg">
         <pins>
-        <pitem  name = "i"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "clk"  direction = "in"  />
         </pins>
 
         <nets>
-        <nitem  name = "jtag_io_jtag_tck"  />
-        <nitem  name = "jtag_ctrl_chainer/io_primary_tck_N_219"  />
+        <nitem  name = "jtag_ctrl_chainer/gnd"  />
+        <nitem  name = "jtag_ctrl_chainer/jtagClkArea_bufPos[0]"  />
+        <nitem  name = "jtag_ctrl_chainer/jtagClkArea_bufNeg[0]"  />
+        <nitem  name = "jtag_ctrl_chainer/io_primary_tck_N_220"  />
         </nets>
     </instance>
 
@@ -160,20 +165,20 @@
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_chainer/io_primary_tms_regNext_14"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "jtag_ctrl_chainer/jtagClkArea_nextWriteEnable[0]_18"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "s"  direction = "in"  />
         <pitem  name = "r"  direction = "in"  />
-        <pitem  name = "d"  direction = "in"  />
         <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "d"  direction = "in"  />
         <pitem  name = "clk"  direction = "in"  />
         </pins>
 
         <nets>
         <nitem  name = "jtag_ctrl_chainer/gnd"  />
-        <nitem  name = "jtag_io_jtag_tms"  />
-        <nitem  name = "jtag_ctrl_chainer_io_child_0_write_tms"  />
-        <nitem  name = "jtag_ctrl_chainer/io_primary_tck_N_219"  />
+        <nitem  name = "jtag_ctrl_chainer_io_child_0_writeEnable"  />
+        <nitem  name = "jtag_ctrl_chainer/jtagClkArea_nextWriteEnable_pos[0]"  />
+        <nitem  name = "jtag_ctrl_chainer/io_primary_tck_N_220"  />
         </nets>
     </instance>
 
@@ -289,20 +294,20 @@
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_chainer/io_child_0_tdo_regNext_15"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "jtag_ctrl_chainer/jtagClkArea_io_primary_tms_20"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "s"  direction = "in"  />
         <pitem  name = "r"  direction = "in"  />
-        <pitem  name = "clk"  direction = "in"  />
-        <pitem  name = "d"  direction = "in"  />
         <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
         </pins>
 
         <nets>
         <nitem  name = "jtag_ctrl_chainer/gnd"  />
-        <nitem  name = "jtag_io_jtag_tck"  />
-        <nitem  name = "jtag_io_child_0_tdo"  />
-        <nitem  name = "jtag_ctrl_chainer/io_child_0_tdo_regNext"  />
+        <nitem  name = "jtag_ctrl_chainer_io_child_0_write_tms"  />
+        <nitem  name = "jtag_ctrl_chainer/jtagClkArea_io_primary_tdi_pos"  />
+        <nitem  name = "jtag_ctrl_chainer/io_primary_tck_N_220"  />
         </nets>
     </instance>
 
@@ -334,20 +339,20 @@
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_chainer/io_primary_tdi_regNext_1_16"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "jtag_ctrl_chainer/jtagClkArea_nextWriteEnable_pos[0]_21"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "s"  direction = "in"  />
         <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
         <pitem  name = "d"  direction = "in"  />
         <pitem  name = "q"  direction = "out"  />
-        <pitem  name = "clk"  direction = "in"  />
         </pins>
 
         <nets>
         <nitem  name = "jtag_ctrl_chainer/gnd"  />
-        <nitem  name = "jtag_ctrl_jtagPreTap_tdo"  />
-        <nitem  name = "jtag_ctrl_chainer_io_child_0_write_tdi"  />
-        <nitem  name = "jtag_ctrl_chainer/io_primary_tck_N_219"  />
+        <nitem  name = "jtag_io_jtag_tck"  />
+        <nitem  name = "_zz_26[0]"  />
+        <nitem  name = "jtag_ctrl_chainer/jtagClkArea_nextWriteEnable_pos[0]"  />
         </nets>
     </instance>
 
@@ -652,6 +657,73 @@
         <nitem  name = "jtag_ctrl_tap_fsm_stateNext[2]"  />
         <nitem  name = "jtag_ctrl_tap_fsm_stateNext[1]"  />
         <nitem  name = "jtag_ctrl_tap_fsm_stateNext[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "jtag_ctrl_chainer/io_primary_tdi_regNext_16"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "clk"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "jtag_ctrl_chainer/gnd"  />
+        <nitem  name = "jtag_ctrl_jtagPreTap_tdo"  />
+        <nitem  name = "jtag_ctrl_chainer/io_primary_tdi_regNext"  />
+        <nitem  name = "jtag_ctrl_chainer/io_primary_tck_N_220"  />
+        </nets>
+    </instance>
+
+    <instance  name = "jtag_ctrl_chainer/jtagClkArea_io_primary_tdi_pos_22"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "d"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "jtag_ctrl_chainer/gnd"  />
+        <nitem  name = "jtag_ctrl_jtagPreTap_tdo"  />
+        <nitem  name = "jtag_io_jtag_tck"  />
+        <nitem  name = "jtag_ctrl_chainer/jtagClkArea_io_primary_tdi_pos"  />
+        </nets>
+    </instance>
+
+    <instance  name = "jtag_ctrl_chainer/jtagClkArea_bufPos[0]_24"  library = "work"  arch = ""  type = "reg">
+        <pins>
+        <pitem  name = "s"  direction = "in"  />
+        <pitem  name = "r"  direction = "in"  />
+        <pitem  name = "clk"  direction = "in"  />
+        <pitem  name = "q"  direction = "out"  />
+        <pitem  name = "d"  direction = "in"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "jtag_ctrl_chainer/gnd"  />
+        <nitem  name = "jtag_io_jtag_tck"  />
+        <nitem  name = "jtag_ctrl_chainer/jtagClkArea_bufPos[0]"  />
+        <nitem  name = "jtag_ctrl_chainer/jtagClkArea_bufPos_0__N_218"  />
+        </nets>
+    </instance>
+
+    <instance  name = "jtag_ctrl_chainer/jtagClkArea_bufPos_0__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "_zz_26[0]"  />
+        <nitem  name = "jtag_io_child_0_tdo"  />
+        <nitem  name = "jtag_ctrl_chainer/jtagClkArea_bufPos[0]"  />
+        <nitem  name = "jtag_ctrl_chainer/jtagClkArea_bufPos_0__N_218"  />
         </nets>
     </instance>
 
@@ -3135,19 +3207,15 @@
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_chainer/io_child_0_tdo_regNext_I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_ctrl_chainer/io_primary_tck_I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
-        <pitem  name = "a0"  direction = "in"  />
-        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "i"  direction = "in"  />
         <pitem  name = "o"  direction = "out"  />
-        <pitem  name = "a1"  direction = "in"  />
         </pins>
 
         <nets>
-        <nitem  name = "jtag_ctrl_chainer/gnd"  />
-        <nitem  name = "_zz_26[0]"  />
-        <nitem  name = "jtag_ctrl_chainer/jtagClkArea_buf[0]"  />
-        <nitem  name = "jtag_ctrl_chainer/io_child_0_tdo_regNext"  />
+        <nitem  name = "jtag_io_jtag_tck"  />
+        <nitem  name = "jtag_ctrl_chainer/io_primary_tck_N_220"  />
         </nets>
     </instance>
 
@@ -3195,19 +3263,19 @@
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_chainer/io_primary_tdi_I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_ctrl_chainer/io_primary_tdi_regNext_I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
-        <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "o"  direction = "out"  />
         <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "a1"  direction = "in"  />
         </pins>
 
         <nets>
-        <nitem  name = "jtag_ctrl_jtagPreTap_tdo"  />
         <nitem  name = "jtag_io_jtag_tdo"  />
         <nitem  name = "_zz_26[0]"  />
-        <nitem  name = "jtag_ctrl_chainer/jtagClkArea_buf[0]"  />
+        <nitem  name = "jtag_ctrl_chainer/io_primary_tdi_regNext"  />
+        <nitem  name = "jtag_ctrl_chainer/jtagClkArea_bufNeg[0]"  />
         </nets>
     </instance>
 
@@ -3400,13 +3468,17 @@
 
     <instance  name = "jtag_ctrl_chainer"  />
     <!--
-        REG instances in netlist: 17
+        REG instances in netlist: 21
     -->
 
     <regs>
-        <reg  name = "jtag_ctrl_chainer/io_primary_tms_regNext_14"  />
-        <reg  name = "jtag_ctrl_chainer/io_child_0_tdo_regNext_15"  />
-        <reg  name = "jtag_ctrl_chainer/io_primary_tdi_regNext_1_16"  />
+        <reg  name = "jtag_ctrl_chainer/jtagClkArea_bufNeg[0]_17"  />
+        <reg  name = "jtag_ctrl_chainer/jtagClkArea_nextWriteEnable[0]_18"  />
+        <reg  name = "jtag_ctrl_chainer/jtagClkArea_io_primary_tms_20"  />
+        <reg  name = "jtag_ctrl_chainer/jtagClkArea_nextWriteEnable_pos[0]_21"  />
+        <reg  name = "jtag_ctrl_chainer/io_primary_tdi_regNext_16"  />
+        <reg  name = "jtag_ctrl_chainer/jtagClkArea_io_primary_tdi_pos_22"  />
+        <reg  name = "jtag_ctrl_chainer/jtagClkArea_bufPos[0]_24"  />
         <reg  name = "jtag_ctrl_tap_bypass_127"  />
         <reg  name = "jtag_ctrl_tap_instructionShift"  />
         <reg  name = "jtag_ctrl_tap_instruction"  />

@@ -1,6 +1,6 @@
 --------------------------------------------------------------------------------
 Lattice Synthesis Timing Report, Version  
-Mon Sep 28 21:07:10 2020
+Wed Sep 30 22:10:51 2020
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -19,7 +19,7 @@ Report level:    verbose report, limited to 3 items per constraint
 
 ================================================================================
 Constraint: create_clock -period 5.000000 -name clk0 [get_nets jtag_io_jtag_tck_c]
-            1462 items scored, 1198 timing errors detected.
+            1516 items scored, 1266 timing errors detected.
 --------------------------------------------------------------------------------
 
 
@@ -43,15 +43,15 @@ Error:  The following path violates requirements by 6.272ns
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.444             CK to Q              jtag_ctrl_tap_instruction_i0 (from jtag_io_jtag_tck_c)
 Route        10   e 1.662                                  jtag_ctrl_tap_instruction[0]
-LUT4        ---     0.493              A to Z              i1_2_lut_rep_62
-Route         2   e 1.141                                  n2318
-LUT4        ---     0.493              D to Z              i3_4_lut
-Route         3   e 1.258                                  n15
-LUT4        ---     0.493              D to Z              i887_4_lut
-Route         1   e 0.020                                  n1165
-MUXL5       ---     0.233           ALUT to Z              mux_408_i1
-Route         1   e 0.941                                  n1175
-LUT4        ---     0.493              B to Z              i689_3_lut
+LUT4        ---     0.493              A to Z              i1_2_lut_rep_69
+Route         2   e 1.141                                  n2297
+LUT4        ---     0.493              D to Z              i3_4_lut_rep_61
+Route         3   e 1.258                                  n2289
+LUT4        ---     0.493              D to Z              i1_4_lut_adj_22
+Route         1   e 0.020                                  n10
+MUXL5       ---     0.233           ALUT to Z              i30
+Route         1   e 0.941                                  n15
+LUT4        ---     0.493              C to Z              i1_4_lut_adj_21
 Route         1   e 0.941                                  jtag_ctrl_tap_tdoUnbufferd
                   --------
                     8.612  (30.8% logic, 69.2% route), 6 logic levels.
@@ -77,15 +77,15 @@ Error:  The following path violates requirements by 6.242ns
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.444             CK to Q              jtag_ctrl_tap_instruction_i1 (from jtag_io_jtag_tck_c)
 Route         9   e 1.632                                  jtag_ctrl_tap_instruction[1]
-LUT4        ---     0.493              B to Z              i1_2_lut_rep_62
-Route         2   e 1.141                                  n2318
-LUT4        ---     0.493              D to Z              i3_4_lut
-Route         3   e 1.258                                  n15
-LUT4        ---     0.493              D to Z              i887_4_lut
-Route         1   e 0.020                                  n1165
-MUXL5       ---     0.233           ALUT to Z              mux_408_i1
-Route         1   e 0.941                                  n1175
-LUT4        ---     0.493              B to Z              i689_3_lut
+LUT4        ---     0.493              B to Z              i1_2_lut_rep_69
+Route         2   e 1.141                                  n2297
+LUT4        ---     0.493              D to Z              i3_4_lut_rep_61
+Route         3   e 1.258                                  n2289
+LUT4        ---     0.493              D to Z              i1_4_lut_adj_22
+Route         1   e 0.020                                  n10
+MUXL5       ---     0.233           ALUT to Z              i30
+Route         1   e 0.941                                  n15
+LUT4        ---     0.493              C to Z              i1_4_lut_adj_21
 Route         1   e 0.941                                  jtag_ctrl_tap_tdoUnbufferd
                   --------
                     8.582  (30.9% logic, 69.1% route), 6 logic levels.
@@ -111,15 +111,15 @@ Error:  The following path violates requirements by 6.169ns
    Name    Fanout   Delay (ns)          Pins               Resource(Cell.Net)
 L_CO        ---     0.444             CK to Q              jtag_ctrl_tap_instruction_i4 (from jtag_io_jtag_tck_c)
 Route         2   e 1.198                                  jtag_ctrl_tap_instruction[4]
-LUT4        ---     0.493              D to Z              i3_4_lut_adj_9
+LUT4        ---     0.493              A to Z              i3_4_lut
 Route         7   e 1.502                                  n14
-LUT4        ---     0.493              B to Z              i3_4_lut
-Route         3   e 1.258                                  n15
-LUT4        ---     0.493              D to Z              i887_4_lut
-Route         1   e 0.020                                  n1165
-MUXL5       ---     0.233           ALUT to Z              mux_408_i1
-Route         1   e 0.941                                  n1175
-LUT4        ---     0.493              B to Z              i689_3_lut
+LUT4        ---     0.493              B to Z              i3_4_lut_rep_61
+Route         3   e 1.258                                  n2289
+LUT4        ---     0.493              D to Z              i1_4_lut_adj_22
+Route         1   e 0.020                                  n10
+MUXL5       ---     0.233           ALUT to Z              i30
+Route         1   e 0.941                                  n15
+LUT4        ---     0.493              C to Z              i1_4_lut_adj_21
 Route         1   e 0.941                                  jtag_ctrl_tap_tdoUnbufferd
                   --------
                     8.509  (31.1% logic, 68.9% route), 6 logic levels.
@@ -144,23 +144,21 @@ clk0 [get_nets jtag_io_jtag_tck_c]      |     5.000 ns|    17.544 ns|     6 *
 --------------------------------------------------------------------------------
 Critical Nets                           |   Loads|  Errors| % of total
 --------------------------------------------------------------------------------
-n15                                     |       3|     416|     34.72%
+n2289                                   |       3|     416|     32.86%
                                         |        |        |
-jtag_io_jtag_tck_c_enable_67            |      32|     352|     29.38%
+jtag_io_jtag_tck_c_enable_67            |      32|     352|     27.80%
                                         |        |        |
-n14                                     |       7|     316|     26.38%
+n14                                     |       7|     316|     24.96%
                                         |        |        |
-n1391                                   |      19|     228|     19.03%
+n1396                                   |      19|     228|     18.01%
                                         |        |        |
-jtag_ctrl_tap_fsm_state[3]              |      24|     158|     13.19%
+jtag_ctrl_tap_fsm_state[3]              |      26|     172|     13.59%
                                         |        |        |
-jtag_ctrl_tap_fsm_state[1]              |      22|     156|     13.02%
+jtag_ctrl_tap_fsm_state[2]              |      32|     170|     13.43%
                                         |        |        |
-jtag_ctrl_tap_fsm_state[2]              |      31|     156|     13.02%
+jtag_ctrl_tap_fsm_state[1]              |      26|     169|     13.35%
                                         |        |        |
-n2306                                   |       3|     120|     10.02%
-                                        |        |        |
-n2318                                   |       2|     120|     10.02%
+jtag_ctrl_tap_fsm_state[0]              |      34|     127|     10.03%
                                         |        |        |
 --------------------------------------------------------------------------------
 
@@ -168,10 +166,10 @@ n2318                                   |       2|     120|     10.02%
 Timing summary:
 ---------------
 
-Timing errors: 1198  Score: 2447674
+Timing errors: 1266  Score: 2644518
 
-Constraints cover  1462 paths, 187 nets, and 631 connections (94.3% coverage)
+Constraints cover  1516 paths, 196 nets, and 661 connections (95.1% coverage)
 
 
-Peak memory: 185032704 bytes, TRCE: 1388544 bytes, DLYMAN: 253952 bytes
+Peak memory: 185286656 bytes, TRCE: 1482752 bytes, DLYMAN: 163840 bytes
 CPU_TIME_REPORT: 0 secs 

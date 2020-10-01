@@ -180,7 +180,8 @@ class JtagChainer(chains: Int) extends Component {
     io.primary.tdo := ClockDomain.current.withRevertedClockEdge()(RegNext(io.primary.tdi))
     val bufPos = Reg(B(0, chains bits))
     val bufNeg = ClockDomain.current.withRevertedClockEdge()(RegNext(bufPos))
-    val nextWriteEnable = ClockDomain.current.withRevertedClockEdge()(RegNext(io.select) init(0))
+    val nextWriteEnable_pos = RegNext(io.select)
+    val nextWriteEnable = ClockDomain.current.withRevertedClockEdge()(RegNext(nextWriteEnable_pos))
     //val nextWriteEnable = io.select
     val io_primary_tdi_pos = RegNext(io.primary.tdi)
     val io_primary_tms_pos = RegNext(io.primary.tms)

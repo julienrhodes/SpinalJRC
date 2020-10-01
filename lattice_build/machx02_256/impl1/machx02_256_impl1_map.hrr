@@ -3,18 +3,18 @@ Report for cell MyTopLevel
    Instance path: MyTopLevel
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	      52.00        100.0
-                                  LUT4	     100.00        100.0
+                                  SLIC	      55.00        100.0
+                                  LUT4	     105.00        100.0
                                  IOBUF	         11        100.0
-                                PFUREG	         84        100.0
+                                PFUREG	         88        100.0
 SUB MODULES
                                   cell	      count    SLC Usage(%)
-                           JtagChainer	          1         2.2
+                           JtagChainer	          1         3.9
 ---------------------------------------------------
 Report for cell JtagChainer
    Instance path: MyTopLevel/jtag_ctrl_chainer
                      Cell usage:
                                   cell	      count    Res Usage(%)
-                                  SLIC	       1.17         2.2
+                                  SLIC	       2.17         3.9
                                   LUT4	       1.00         1.0
-                                PFUREG	          3         3.6
+                                PFUREG	          7         8.0
