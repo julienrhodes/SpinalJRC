@@ -183,19 +183,16 @@ class JtagChainer(chains: Int) extends Component {
     val nextWriteEnable_pos = RegNext(io.select)
     val nextWriteEnable = ClockDomain.current.withRevertedClockEdge()(RegNext(nextWriteEnable_pos))
     //val nextWriteEnable = io.select
-    val io_primary_tdi_pos = RegNext(io.primary.tdi)
-    val io_primary_tms_pos = RegNext(io.primary.tms)
-    val io_primary_tdi = ClockDomain.current.withRevertedClockEdge()(RegNext(io_primary_tdi_pos))
-    val io_primary_tms = ClockDomain.current.withRevertedClockEdge()(RegNext(io_primary_tdi_pos))
+    val outputBuffer = True
 
     for(i <- 0 until chains) {
-      io.child(i).tristate.writeEnable := nextWriteEnable(i)
+      io.child(i).tristate.writeEnable := io.select(i)
       //val child = new ClockingArea(ClockDomain(clock=io.primary.tck,
       //  reset=ClockDomain.current.reset, config = ClockDomainConfig(
       //    clockEdge=RISING))) {
       //}
-      io.child(i).tristate.write.tdi := io_primary_tdi
-      io.child(i).tristate.write.tms := io_primary_tms
+      io.child(i).tristate.write.tdi := io.primary.tdi
+      io.child(i).tristate.write.tms := io.primary.tms
       //io.child(i).tristate.write.tdi := io.primary.tdi
       //io.child(i).tristate.write.tms := io.primary.tms
       //io.child(i).tristate.write.tck := RegNext(io.primary.tck)
@@ -212,7 +209,7 @@ class JtagChainer(chains: Int) extends Component {
         bufPos(i) := io.child(i).read.tdo
         
         // primary tdo will be set to the last selected child's output (last assignment wins)
-        io.primary.tdo :=  bufNeg(i)
+        io.primary.tdo := bufNeg(i)
 
         // tdi defaults to io.primary.tdi
         //io.child(i).tristate.write.tdi := ClockDomain.current.withRevertedClockEdge()(RegNext(io.primary.tdi))
@@ -220,7 +217,7 @@ class JtagChainer(chains: Int) extends Component {
         // tdi is set to the buf of the most immediately selected child earlier in the chain
         for(j <- 0 until i) {
           when(io.select(j)) {
-            io.child(i).tristate.write.tdi := bufNeg(j)
+            io.child(i).tristate.write.tdi := Mux(outputBuffer, bufNeg(j), io.child(j).read.tdo)
           }
         }
       }
@@ -254,7 +251,10 @@ class JtagBackplane(chains : Int, gpioWidth : Int) extends Area {
     // Define the TAP controller with configuration and control registers
     val tap = new MyJtagTap(jtagPreTap, 8)
     val idcodeArea = tap.read(B"x413bd043")(instructionId = 4)
-    val chainArea = tap.writeInitSync(data=chainSelect, dataInit=B(0, widthOf(chainSelect) bits), updateState=JtagState.IDLE)(instructionId = 8)
+    val chainArea = tap.writeInitSync(
+      data=chainSelect,
+      dataInit=B(0, widthOf(chainSelect) bits),
+      updateState=JtagState.IDLE)(instructionId = 8)
 
     // Define the GPIO registers and assign them to `tap`
     val gpioBaseInstr = 9

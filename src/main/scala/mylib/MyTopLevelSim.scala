@@ -84,23 +84,6 @@ class JtagStateController(jtag: Jtag, jtagClk: ClockDomain) {
   }
 }
 
-
-object ShiftRegSim {
-  def main(args: Array[String]) : Unit = {
-    val compiled = SimConfig.withWave.compile(new ShiftRegTestBench).doSim("ShiftReg") { dut =>
-      //val clk = new ClockDomain()
-      dut.clockDomain.forkStimulus(period = 10)
-      dut.clockDomain.waitSampling(10)
-      // Validate ShiftReg
-      val shiftReg = new ShiftReg(dut.clockDomain, 4)
-      assert(shiftReg.data == 0, "ShiftReg error start value")
-      shiftReg.shift(True, dut.buf)
-      dut.clockDomain.waitSampling(10)
-    }
-  }
-}
-
-
 object JtagChainerSim {
   val chainQuantity = 3
   def main(args: Array[String]) {
@@ -118,7 +101,8 @@ object JtagChainerSim {
       // Flush anything left from reset state
       jtagClk.waitSampling(2)
 
-      // A shift register for every child chain
+      // Fork as many 8-bit shift registers as necessary, hooked up to each child chain
+      // Clock in on posedge, clock out on negedge
       val shift_register : Array[ShiftReg] = new Array(chainQuantity)// = Array(new ShiftReg(jtagClk, 1), new ShiftReg(jtagClk, 1))
       for (i <- 0 until chainQuantity) {
         shift_register(i) = new ShiftReg(jtagClk, 8)
@@ -155,7 +139,7 @@ object JtagChainerSim {
             jtagClk.waitFallingEdge(shift_register(i).length + 1) // Delayed by 0.5 (negedge)
             var tmp = shift_register(i).data
             assert((shift_register(i).data & 1) == 0, f"Chain $i non-zero start: $tmp%X")
-            jtagClk.waitRisingEdge(2) // Delayed by 1.5 (negedge)
+            jtagClk.waitRisingEdge(1) // Delayed by 0.5 (negedge)
             tmp = shift_register(i).data
             // 1s are fully shifted in to childChain
             assert((shift_register(i).data & 1) == 1, f"Chain $i non-unary end: $tmp%X")
@@ -175,16 +159,22 @@ object JtagChainerSim {
         }
       }
 
+      jtagClk.waitSampling(1)
+
+      // Check shift-register contents
       var tmp = shift_register(0).data
       assert(tmp == 0, f"Shift reg 0: $tmp%X")
       tmp = shift_register(1).data
       assert(tmp == 0, f"Shift reg 1: $tmp%X")
+
+
 
       // Enable chain 1
       enableChain(jtagClk, dut.io.primary, dut.io.select, 1)
       assert(dut.io.child(0).tristate.writeEnable.toBoolean == true, "Child 0 not enabled!")
       assert(dut.io.child(1).tristate.writeEnable.toBoolean == false, "Child 1 enabled!")
 
+      // Check shift-register contents
       tmp = shift_register(0).data
       assert(tmp == 0xFF, f"Shift reg 0: $tmp%X")
       tmp = shift_register(1).data
@@ -197,6 +187,7 @@ object JtagChainerSim {
 
       flush(jtagClk, dut.io.primary)
 
+      // Check shift-register contents
       tmp = shift_register(0).data
       assert(tmp == 0, f"Shift reg 0: $tmp%X")
       tmp = shift_register(1).data
@@ -206,11 +197,19 @@ object JtagChainerSim {
       // Check output
       assert(dut.io.primary.tdo.toBoolean == false)
 
+
+      enableChain(jtagClk, dut.io.primary, dut.io.select, 0)
+      flush(jtagClk, dut.io.primary)
+      jtagClk.waitSampling(1)
+
       // Enable chain 2
       enableChain(jtagClk, dut.io.primary, dut.io.select, 2)
       assert(dut.io.child(0).tristate.writeEnable.toBoolean == false, "Child 0 enabled!")
       assert(dut.io.child(1).tristate.writeEnable.toBoolean == true, "Child 1 not enabled!")
 
+      // Check shift-register contents
+      tmp = shift_register(0).data
+      assert(tmp == 0, f"Shift reg 0: $tmp%X")
       tmp = shift_register(1).data
       assert(tmp == 0xFF, f"Shift reg 1: $tmp%X")
 
@@ -225,9 +224,9 @@ object JtagChainerSim {
       enableChain(jtagClk, dut.io.primary, dut.io.select, 1 | 2)
 
       // Check output
-      //assert(dut.io.primary.tdo.toBoolean == false)
+      assert(dut.io.primary.tdo.toBoolean == false)
       jtagClk.waitSampling(1) // Delayed by 1 (negedge)
-      //assert(dut.io.primary.tdo.toBoolean == true)
+      assert(dut.io.primary.tdo.toBoolean == true)
 
       flush(jtagClk, dut.io.primary)
     }
@@ -347,6 +346,7 @@ object MyTopLevelSim {
 
       // Setup fork for the shift register on child(0)
       fork {
+        jtagClk.waitSampling()
         while(true) {
           child0Shift.shift(
             dut.io.child(0).tristate.write.tdi,
@@ -429,12 +429,14 @@ object MyTopLevelSim {
       assert(dut.ctrl.chainSelect.toInt == 1, f"Unexpected chain selection: $chainSelect%X")
 
       // Test Chaining into jtag child 1
-      // Tap has a negedge bypass buffer, so the delay is 2.5 (rounds to 3 clocks after switching to posedge)
-      shiftOut = jtagCont.shift(0xA1, 11)
+      // Tap has a bypass buffer, so the delay is 2 clk
       shifty = child0Shift.data
-      assert(shifty == 0xA1, f"Unexpected data in jtag1 shift register: $shifty%X")
+      assert(shifty == 0x00, f"Unexpected data in shift register: $shifty%X")
+      shiftOut = jtagCont.shift(0xA1, 10)
+      shifty = child0Shift.data
+      assert(shifty == 0xA1, f"Unexpected data in shift register: $shifty%X")
       // The output of the chainer (a negedge buf register) is fed directly to tdo
-      shiftOut = jtagCont.shift(0x00, 8)
+      shiftOut = jtagCont.shift(0xA1, 8)
       assert(shiftOut == 0xA1, f"Unexpected idle pass through with jtag1: $shiftOut%X")
 
 
