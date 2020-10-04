@@ -2,8 +2,8 @@
 <BaliMessageLog>
     <Task name="Bitgen">
         <Message>
-            <ID>1083783</ID>
-            <Severity>Error</Severity>
+            <ID>1083784</ID>
+            <Severity>Warning</Severity>
         </Message>
     </Task>
     <Task name="Map">
@@ -63,18 +63,18 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/MyTopLevel.v(452): </Dynamic>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/MyTopLevel.v(447): </Dynamic>
             <Dynamic>JtagChainer</Dynamic>
             <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/MyTopLevel.v</Navigation>
-            <Navigation>452</Navigation>
+            <Navigation>447</Navigation>
         </Message>
         <Message>
             <ID>35935034</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/MyTopLevel.v(108): </Dynamic>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/MyTopLevel.v(107): </Dynamic>
             <Dynamic>osc</Dynamic>
             <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_256/MyTopLevel.v</Navigation>
-            <Navigation>108</Navigation>
+            <Navigation>107</Navigation>
         </Message>
         <Message>
             <ID>35001611</ID>

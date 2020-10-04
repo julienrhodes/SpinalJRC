@@ -37,7 +37,7 @@
     </pins>
 
     <!--
-        Instances in netlist: 93
+        Instances in netlist: 81
     -->
 
     <instance  name = "osc"  library = "work"  arch = ""  type = "comb">
@@ -58,8 +58,8 @@
         </pins>
 
         <nets>
-        <nitem  name = "jtag_ctrl_chainer_io_child_0_write_tms"  />
-        <nitem  name = "jtag_ctrl_chainer_io_child_0_writeEnable"  />
+        <nitem  name = "jtag_io_jtag_tms"  />
+        <nitem  name = "_zz_25[0]"  />
         <nitem  name = "jtag_io_child_0_tms"  />
         </nets>
     </instance>
@@ -72,8 +72,8 @@
         </pins>
 
         <nets>
-        <nitem  name = "jtag_ctrl_chainer_io_child_0_write_tms"  />
-        <nitem  name = "jtag_ctrl_chainer_io_child_0_writeEnable"  />
+        <nitem  name = "jtag_ctrl_jtagPreTap_tdo"  />
+        <nitem  name = "_zz_25[0]"  />
         <nitem  name = "jtag_io_child_0_tdi"  />
         </nets>
     </instance>
@@ -87,7 +87,7 @@
 
         <nets>
         <nitem  name = "jtag_io_jtag_tck"  />
-        <nitem  name = "jtag_ctrl_chainer_io_child_0_writeEnable"  />
+        <nitem  name = "_zz_25[0]"  />
         <nitem  name = "jtag_io_child_0_tck"  />
         </nets>
     </instance>
@@ -106,7 +106,7 @@
         </nets>
     </instance>
 
-    <instance  name = "_zz_11_1__I_0_153"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "_zz_11_1__I_0_149"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "i"  direction = "in"  />
         <pitem  name = "c"  direction = "in"  />
@@ -120,24 +120,7 @@
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_chainer/jtagClkArea_bufNeg[0]_17"  library = "work"  arch = ""  type = "reg">
-        <pins>
-        <pitem  name = "s"  direction = "in"  />
-        <pitem  name = "r"  direction = "in"  />
-        <pitem  name = "d"  direction = "in"  />
-        <pitem  name = "q"  direction = "out"  />
-        <pitem  name = "clk"  direction = "in"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "jtag_ctrl_chainer/gnd"  />
-        <nitem  name = "jtag_ctrl_chainer/jtagClkArea_bufPos[0]"  />
-        <nitem  name = "jtag_ctrl_chainer/jtagClkArea_bufNeg[0]"  />
-        <nitem  name = "jtag_ctrl_chainer/io_primary_tck_N_220"  />
-        </nets>
-    </instance>
-
-    <instance  name = "jtag_io_jtag_tms_I_0_140"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_io_jtag_tms_I_0_136"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[3]"  direction = "in"  />
         <pitem  name = "d0[2]"  direction = "in"  />
@@ -165,24 +148,7 @@
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_chainer/jtagClkArea_nextWriteEnable[0]_18"  library = "work"  arch = ""  type = "reg">
-        <pins>
-        <pitem  name = "s"  direction = "in"  />
-        <pitem  name = "r"  direction = "in"  />
-        <pitem  name = "q"  direction = "out"  />
-        <pitem  name = "d"  direction = "in"  />
-        <pitem  name = "clk"  direction = "in"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "jtag_ctrl_chainer/gnd"  />
-        <nitem  name = "jtag_ctrl_chainer_io_child_0_writeEnable"  />
-        <nitem  name = "jtag_ctrl_chainer/jtagClkArea_nextWriteEnable_pos[0]"  />
-        <nitem  name = "jtag_ctrl_chainer/io_primary_tck_N_220"  />
-        </nets>
-    </instance>
-
-    <instance  name = "jtag_io_jtag_tms_I_0_141"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_io_jtag_tms_I_0_137"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[3]"  direction = "in"  />
         <pitem  name = "d0[2]"  direction = "in"  />
@@ -210,7 +176,7 @@
         </nets>
     </instance>
 
-    <instance  name = "jtag_io_jtag_tms_I_0_142"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_io_jtag_tms_I_0_138"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[3]"  direction = "in"  />
         <pitem  name = "d0[2]"  direction = "in"  />
@@ -238,7 +204,7 @@
         </nets>
     </instance>
 
-    <instance  name = "jtag_io_jtag_tms_I_0_143"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_io_jtag_tms_I_0_139"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[3]"  direction = "in"  />
         <pitem  name = "d0[2]"  direction = "in"  />
@@ -266,7 +232,7 @@
         </nets>
     </instance>
 
-    <instance  name = "jtag_io_jtag_tms_I_0_144"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_io_jtag_tms_I_0_140"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[3]"  direction = "in"  />
         <pitem  name = "d0[2]"  direction = "in"  />
@@ -294,24 +260,7 @@
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_chainer/jtagClkArea_io_primary_tms_20"  library = "work"  arch = ""  type = "reg">
-        <pins>
-        <pitem  name = "s"  direction = "in"  />
-        <pitem  name = "r"  direction = "in"  />
-        <pitem  name = "q"  direction = "out"  />
-        <pitem  name = "d"  direction = "in"  />
-        <pitem  name = "clk"  direction = "in"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "jtag_ctrl_chainer/gnd"  />
-        <nitem  name = "jtag_ctrl_chainer_io_child_0_write_tms"  />
-        <nitem  name = "jtag_ctrl_chainer/jtagClkArea_io_primary_tdi_pos"  />
-        <nitem  name = "jtag_ctrl_chainer/io_primary_tck_N_220"  />
-        </nets>
-    </instance>
-
-    <instance  name = "jtag_io_jtag_tms_I_0_145"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_io_jtag_tms_I_0_141"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[3]"  direction = "in"  />
         <pitem  name = "d0[2]"  direction = "in"  />
@@ -339,24 +288,7 @@
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_chainer/jtagClkArea_nextWriteEnable_pos[0]_21"  library = "work"  arch = ""  type = "reg">
-        <pins>
-        <pitem  name = "s"  direction = "in"  />
-        <pitem  name = "r"  direction = "in"  />
-        <pitem  name = "clk"  direction = "in"  />
-        <pitem  name = "d"  direction = "in"  />
-        <pitem  name = "q"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "jtag_ctrl_chainer/gnd"  />
-        <nitem  name = "jtag_io_jtag_tck"  />
-        <nitem  name = "_zz_26[0]"  />
-        <nitem  name = "jtag_ctrl_chainer/jtagClkArea_nextWriteEnable_pos[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "jtag_io_jtag_tms_I_0_146"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_io_jtag_tms_I_0_142"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[3]"  direction = "in"  />
         <pitem  name = "d0[2]"  direction = "in"  />
@@ -384,7 +316,7 @@
         </nets>
     </instance>
 
-    <instance  name = "jtag_io_jtag_tms_I_0_147"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_io_jtag_tms_I_0_143"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[3]"  direction = "in"  />
         <pitem  name = "d0[2]"  direction = "in"  />
@@ -412,7 +344,7 @@
         </nets>
     </instance>
 
-    <instance  name = "jtag_io_jtag_tms_I_0_148"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_io_jtag_tms_I_0_144"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[3]"  direction = "in"  />
         <pitem  name = "d0[2]"  direction = "in"  />
@@ -440,7 +372,7 @@
         </nets>
     </instance>
 
-    <instance  name = "jtag_io_jtag_tms_I_0_149"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_io_jtag_tms_I_0_145"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[3]"  direction = "in"  />
         <pitem  name = "d0[2]"  direction = "in"  />
@@ -468,7 +400,7 @@
         </nets>
     </instance>
 
-    <instance  name = "jtag_io_jtag_tms_I_0_150"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_io_jtag_tms_I_0_146"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[3]"  direction = "in"  />
         <pitem  name = "d0[2]"  direction = "in"  />
@@ -524,7 +456,7 @@
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_tap_fsm_state_3__I_0_151"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_ctrl_tap_fsm_state_3__I_0_147"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "sel[3]"  direction = "in"  />
         <pitem  name = "sel[2]"  direction = "in"  />
@@ -660,74 +592,23 @@
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_chainer/io_primary_tdi_regNext_16"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "jtag_ctrl_chainer/io_primary_tdi_I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
-        <pitem  name = "s"  direction = "in"  />
-        <pitem  name = "r"  direction = "in"  />
-        <pitem  name = "d"  direction = "in"  />
-        <pitem  name = "q"  direction = "out"  />
-        <pitem  name = "clk"  direction = "in"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "jtag_ctrl_chainer/gnd"  />
-        <nitem  name = "jtag_ctrl_jtagPreTap_tdo"  />
-        <nitem  name = "jtag_ctrl_chainer/io_primary_tdi_regNext"  />
-        <nitem  name = "jtag_ctrl_chainer/io_primary_tck_N_220"  />
-        </nets>
-    </instance>
-
-    <instance  name = "jtag_ctrl_chainer/jtagClkArea_io_primary_tdi_pos_22"  library = "work"  arch = ""  type = "reg">
-        <pins>
-        <pitem  name = "s"  direction = "in"  />
-        <pitem  name = "r"  direction = "in"  />
-        <pitem  name = "d"  direction = "in"  />
-        <pitem  name = "clk"  direction = "in"  />
-        <pitem  name = "q"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "jtag_ctrl_chainer/gnd"  />
-        <nitem  name = "jtag_ctrl_jtagPreTap_tdo"  />
-        <nitem  name = "jtag_io_jtag_tck"  />
-        <nitem  name = "jtag_ctrl_chainer/jtagClkArea_io_primary_tdi_pos"  />
-        </nets>
-    </instance>
-
-    <instance  name = "jtag_ctrl_chainer/jtagClkArea_bufPos[0]_24"  library = "work"  arch = ""  type = "reg">
-        <pins>
-        <pitem  name = "s"  direction = "in"  />
-        <pitem  name = "r"  direction = "in"  />
-        <pitem  name = "clk"  direction = "in"  />
-        <pitem  name = "q"  direction = "out"  />
-        <pitem  name = "d"  direction = "in"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "jtag_ctrl_chainer/gnd"  />
-        <nitem  name = "jtag_io_jtag_tck"  />
-        <nitem  name = "jtag_ctrl_chainer/jtagClkArea_bufPos[0]"  />
-        <nitem  name = "jtag_ctrl_chainer/jtagClkArea_bufPos_0__N_218"  />
-        </nets>
-    </instance>
-
-    <instance  name = "jtag_ctrl_chainer/jtagClkArea_bufPos_0__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "c"  direction = "in"  />
-        <pitem  name = "a1"  direction = "in"  />
         <pitem  name = "a0"  direction = "in"  />
         <pitem  name = "o"  direction = "out"  />
+        <pitem  name = "c"  direction = "in"  />
+        <pitem  name = "a1"  direction = "in"  />
         </pins>
 
         <nets>
-        <nitem  name = "_zz_26[0]"  />
+        <nitem  name = "jtag_ctrl_jtagPreTap_tdo"  />
+        <nitem  name = "jtag_io_jtag_tdo"  />
+        <nitem  name = "_zz_25[0]"  />
         <nitem  name = "jtag_io_child_0_tdo"  />
-        <nitem  name = "jtag_ctrl_chainer/jtagClkArea_bufPos[0]"  />
-        <nitem  name = "jtag_ctrl_chainer/jtagClkArea_bufPos_0__N_218"  />
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_tap_instructionShift_7__N_148_I_0_155"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_ctrl_tap_instructionShift_7__N_140_I_0_151"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[2]"  direction = "in"  />
         <pitem  name = "a[1]"  direction = "in"  />
@@ -736,10 +617,10 @@
         </pins>
 
         <nets>
-        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_148"  />
-        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_211"  />
-        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_212"  />
-        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_210"  />
+        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_140"  />
+        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_202"  />
+        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_203"  />
+        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_201"  />
         </nets>
     </instance>
 
@@ -755,8 +636,8 @@
         </pins>
 
         <nets>
-        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_210"  />
-        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_213"  />
+        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_201"  />
+        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_204"  />
         <nitem  name = "jtag_ctrl_chainArea_ctrl_shift"  />
         <nitem  name = "jtag_ctrl_tap_bypass"  />
         <nitem  name = "jtag_ctrl_tap_instructionShift[0]"  />
@@ -777,7 +658,7 @@
         <nitem  name = "n10"  />
         <nitem  name = "_zz_15[0]"  />
         <nitem  name = "_zz_14"  />
-        <nitem  name = "jtag_ctrl_tap_tdoDr_N_217"  />
+        <nitem  name = "jtag_ctrl_tap_tdoDr_N_208"  />
         </nets>
     </instance>
 
@@ -790,10 +671,10 @@
         </pins>
 
         <nets>
-        <nitem  name = "jtag_ctrl_tap_tdoDr_N_217"  />
+        <nitem  name = "jtag_ctrl_tap_tdoDr_N_208"  />
         <nitem  name = "jtag_ctrl_chainArea_ctrl_tdo"  />
         <nitem  name = "jtag_ctrl_chainArea_ctrl_enable"  />
-        <nitem  name = "jtag_ctrl_tap_tdoDr_N_216"  />
+        <nitem  name = "jtag_ctrl_tap_tdoDr_N_207"  />
         </nets>
     </instance>
 
@@ -806,10 +687,10 @@
         </pins>
 
         <nets>
-        <nitem  name = "jtag_ctrl_tap_tdoDr_N_216"  />
-        <nitem  name = "_zz_18[0]"  />
-        <nitem  name = "_zz_17"  />
-        <nitem  name = "jtag_ctrl_tap_tdoDr_N_215"  />
+        <nitem  name = "jtag_ctrl_tap_tdoDr_N_207"  />
+        <nitem  name = "_zz_17[0]"  />
+        <nitem  name = "_zz_16"  />
+        <nitem  name = "jtag_ctrl_tap_tdoDr_N_206"  />
         </nets>
     </instance>
 
@@ -822,10 +703,10 @@
         </pins>
 
         <nets>
-        <nitem  name = "jtag_ctrl_tap_tdoDr_N_215"  />
-        <nitem  name = "_zz_20[0]"  />
-        <nitem  name = "_zz_19"  />
-        <nitem  name = "jtag_ctrl_tap_tdoDr_N_214"  />
+        <nitem  name = "jtag_ctrl_tap_tdoDr_N_206"  />
+        <nitem  name = "_zz_19[0]"  />
+        <nitem  name = "_zz_18"  />
+        <nitem  name = "jtag_ctrl_tap_tdoDr_N_205"  />
         </nets>
     </instance>
 
@@ -838,14 +719,14 @@
         </pins>
 
         <nets>
-        <nitem  name = "jtag_ctrl_tap_tdoDr_N_214"  />
-        <nitem  name = "_zz_23[0]"  />
-        <nitem  name = "_zz_22"  />
+        <nitem  name = "jtag_ctrl_tap_tdoDr_N_205"  />
+        <nitem  name = "_zz_22[0]"  />
+        <nitem  name = "_zz_21"  />
         <nitem  name = "jtag_ctrl_tap_tdoDr"  />
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_tap_instruction_7__I_0_158"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_ctrl_tap_instruction_7__I_0_154"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[7]"  direction = "in"  />
         <pitem  name = "a[6]"  direction = "in"  />
@@ -881,7 +762,7 @@
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_tap_instruction_7__I_0_162"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_ctrl_tap_instruction_7__I_0_158"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[7]"  direction = "in"  />
         <pitem  name = "a[6]"  direction = "in"  />
@@ -940,7 +821,7 @@
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_tap_instruction_7__I_0_163"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_ctrl_tap_instruction_7__I_0_159"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[7]"  direction = "in"  />
         <pitem  name = "a[6]"  direction = "in"  />
@@ -972,11 +853,11 @@
         <nitem  name = "jtag_ctrl_tap_instruction[0]"  />
         <nitem  name = "n10"  />
         <nitem  name = "pwr"  />
-        <nitem  name = "_zz_17"  />
+        <nitem  name = "_zz_16"  />
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_tap_instruction_7__I_0_164"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_ctrl_tap_instruction_7__I_0_160"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[7]"  direction = "in"  />
         <pitem  name = "a[6]"  direction = "in"  />
@@ -1008,7 +889,7 @@
         <nitem  name = "jtag_ctrl_tap_instruction[0]"  />
         <nitem  name = "n10"  />
         <nitem  name = "pwr"  />
-        <nitem  name = "_zz_19"  />
+        <nitem  name = "_zz_18"  />
         </nets>
     </instance>
 
@@ -1044,11 +925,11 @@
         <nitem  name = "jtag_ctrl_tap_instruction[0]"  />
         <nitem  name = "n10"  />
         <nitem  name = "pwr"  />
-        <nitem  name = "_zz_22"  />
+        <nitem  name = "_zz_21"  />
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_tap_fsm_state_3__I_0_154"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_ctrl_tap_fsm_state_3__I_0_150"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[3]"  direction = "in"  />
         <pitem  name = "a[2]"  direction = "in"  />
@@ -1068,11 +949,11 @@
         <nitem  name = "jtag_ctrl_tap_fsm_state[0]"  />
         <nitem  name = "n10"  />
         <nitem  name = "pwr"  />
-        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_148"  />
+        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_140"  />
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_tap_fsm_state_3__I_0_159"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_ctrl_tap_fsm_state_3__I_0_155"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[3]"  direction = "in"  />
         <pitem  name = "a[2]"  direction = "in"  />
@@ -1092,11 +973,11 @@
         <nitem  name = "jtag_ctrl_tap_fsm_state[0]"  />
         <nitem  name = "n10"  />
         <nitem  name = "pwr"  />
-        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_213"  />
+        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_204"  />
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_tap_fsm_state_3__I_0_156"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_ctrl_tap_fsm_state_3__I_0_152"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[3]"  direction = "in"  />
         <pitem  name = "a[2]"  direction = "in"  />
@@ -1116,11 +997,11 @@
         <nitem  name = "jtag_ctrl_tap_fsm_state[0]"  />
         <nitem  name = "pwr"  />
         <nitem  name = "n10"  />
-        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_211"  />
+        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_202"  />
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_tap_fsm_state_3__I_0_161"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_ctrl_tap_fsm_state_3__I_0_157"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[3]"  direction = "in"  />
         <pitem  name = "a[2]"  direction = "in"  />
@@ -1144,7 +1025,7 @@
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_tap_instructionShift_7__N_148_I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_ctrl_tap_instructionShift_7__N_140_I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[3]"  direction = "in"  />
         <pitem  name = "a[2]"  direction = "in"  />
@@ -1154,11 +1035,11 @@
         </pins>
 
         <nets>
-        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_148"  />
-        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_213"  />
-        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_211"  />
+        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_140"  />
+        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_204"  />
+        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_202"  />
         <nitem  name = "jtag_ctrl_chainArea_ctrl_shift"  />
-        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_212"  />
+        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_203"  />
         </nets>
     </instance>
 
@@ -1220,11 +1101,11 @@
         </pins>
 
         <nets>
-        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_148"  />
-        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_213"  />
-        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_211"  />
+        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_140"  />
+        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_204"  />
+        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_202"  />
         <nitem  name = "jtag_ctrl_chainArea_ctrl_shift"  />
-        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_212"  />
+        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_203"  />
         <nitem  name = "jtag_ctrl_tap_instruction[7]"  />
         <nitem  name = "jtag_ctrl_tap_instruction[6]"  />
         <nitem  name = "jtag_ctrl_tap_instruction[5]"  />
@@ -1242,14 +1123,14 @@
         <nitem  name = "jtag_ctrl_tap_instructionShift[2]"  />
         <nitem  name = "jtag_ctrl_tap_instructionShift[1]"  />
         <nitem  name = "jtag_ctrl_tap_instructionShift[0]"  />
-        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_140[7]"  />
-        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_140[6]"  />
-        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_140[5]"  />
-        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_140[4]"  />
-        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_140[3]"  />
-        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_140[2]"  />
-        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_140[1]"  />
-        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_140[0]"  />
+        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_132[7]"  />
+        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_132[6]"  />
+        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_132[5]"  />
+        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_132[4]"  />
+        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_132[3]"  />
+        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_132[2]"  />
+        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_132[1]"  />
+        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_132[0]"  />
         </nets>
     </instance>
 
@@ -1311,11 +1192,11 @@
         </pins>
 
         <nets>
-        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_148"  />
-        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_213"  />
-        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_211"  />
+        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_140"  />
+        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_204"  />
+        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_202"  />
         <nitem  name = "jtag_ctrl_chainArea_ctrl_shift"  />
-        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_212"  />
+        <nitem  name = "jtag_ctrl_tap_tdoUnbufferd_N_203"  />
         <nitem  name = "jtag_ctrl_tap_instruction[7]"  />
         <nitem  name = "jtag_ctrl_tap_instruction[6]"  />
         <nitem  name = "jtag_ctrl_tap_instruction[5]"  />
@@ -1332,18 +1213,18 @@
         <nitem  name = "jtag_ctrl_tap_instructionShift[2]"  />
         <nitem  name = "jtag_ctrl_tap_instructionShift[1]"  />
         <nitem  name = "jtag_ctrl_tap_instructionShift[0]"  />
-        <nitem  name = "jtag_ctrl_tap_instruction_7__N_131[7]"  />
-        <nitem  name = "jtag_ctrl_tap_instruction_7__N_131[6]"  />
-        <nitem  name = "jtag_ctrl_tap_instruction_7__N_131[5]"  />
-        <nitem  name = "jtag_ctrl_tap_instruction_7__N_131[4]"  />
-        <nitem  name = "jtag_ctrl_tap_instruction_7__N_131[3]"  />
-        <nitem  name = "jtag_ctrl_tap_instruction_7__N_131[2]"  />
-        <nitem  name = "jtag_ctrl_tap_instruction_7__N_131[1]"  />
-        <nitem  name = "jtag_ctrl_tap_instruction_7__N_131[0]"  />
+        <nitem  name = "jtag_ctrl_tap_instruction_7__N_123[7]"  />
+        <nitem  name = "jtag_ctrl_tap_instruction_7__N_123[6]"  />
+        <nitem  name = "jtag_ctrl_tap_instruction_7__N_123[5]"  />
+        <nitem  name = "jtag_ctrl_tap_instruction_7__N_123[4]"  />
+        <nitem  name = "jtag_ctrl_tap_instruction_7__N_123[3]"  />
+        <nitem  name = "jtag_ctrl_tap_instruction_7__N_123[2]"  />
+        <nitem  name = "jtag_ctrl_tap_instruction_7__N_123[1]"  />
+        <nitem  name = "jtag_ctrl_tap_instruction_7__N_123[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_tap_fsm_state_3__I_0_152"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_ctrl_tap_fsm_state_3__I_0_148"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[3]"  direction = "in"  />
         <pitem  name = "a[2]"  direction = "in"  />
@@ -1362,11 +1243,11 @@
         <nitem  name = "jtag_ctrl_tap_fsm_state[1]"  />
         <nitem  name = "jtag_ctrl_tap_fsm_state[0]"  />
         <nitem  name = "n10"  />
-        <nitem  name = "jtag_ctrl_tap_instruction_7__N_139"  />
+        <nitem  name = "jtag_ctrl_tap_instruction_7__N_131"  />
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_tap_instruction_7__I_0_157"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_ctrl_tap_instruction_7__I_0_153"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[7]"  direction = "in"  />
         <pitem  name = "d0[6]"  direction = "in"  />
@@ -1396,17 +1277,17 @@
         </pins>
 
         <nets>
-        <nitem  name = "jtag_ctrl_tap_instruction_7__N_131[7]"  />
-        <nitem  name = "jtag_ctrl_tap_instruction_7__N_131[6]"  />
-        <nitem  name = "jtag_ctrl_tap_instruction_7__N_131[5]"  />
-        <nitem  name = "jtag_ctrl_tap_instruction_7__N_131[4]"  />
-        <nitem  name = "jtag_ctrl_tap_instruction_7__N_131[3]"  />
-        <nitem  name = "jtag_ctrl_tap_instruction_7__N_131[2]"  />
-        <nitem  name = "jtag_ctrl_tap_instruction_7__N_131[1]"  />
-        <nitem  name = "jtag_ctrl_tap_instruction_7__N_131[0]"  />
+        <nitem  name = "jtag_ctrl_tap_instruction_7__N_123[7]"  />
+        <nitem  name = "jtag_ctrl_tap_instruction_7__N_123[6]"  />
+        <nitem  name = "jtag_ctrl_tap_instruction_7__N_123[5]"  />
+        <nitem  name = "jtag_ctrl_tap_instruction_7__N_123[4]"  />
+        <nitem  name = "jtag_ctrl_tap_instruction_7__N_123[3]"  />
+        <nitem  name = "jtag_ctrl_tap_instruction_7__N_123[2]"  />
+        <nitem  name = "jtag_ctrl_tap_instruction_7__N_123[1]"  />
+        <nitem  name = "jtag_ctrl_tap_instruction_7__N_123[0]"  />
         <nitem  name = "n10"  />
         <nitem  name = "pwr"  />
-        <nitem  name = "jtag_ctrl_tap_instruction_7__N_139"  />
+        <nitem  name = "jtag_ctrl_tap_instruction_7__N_131"  />
         <nitem  name = "jtag_ctrl_tap_instruction_7__N_61[7]"  />
         <nitem  name = "jtag_ctrl_tap_instruction_7__N_61[6]"  />
         <nitem  name = "jtag_ctrl_tap_instruction_7__N_61[5]"  />
@@ -1448,17 +1329,17 @@
         </pins>
 
         <nets>
-        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_140[7]"  />
-        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_140[6]"  />
-        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_140[5]"  />
-        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_140[4]"  />
-        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_140[3]"  />
-        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_140[2]"  />
-        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_140[1]"  />
-        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_140[0]"  />
+        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_132[7]"  />
+        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_132[6]"  />
+        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_132[5]"  />
+        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_132[4]"  />
+        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_132[3]"  />
+        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_132[2]"  />
+        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_132[1]"  />
+        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_132[0]"  />
         <nitem  name = "n10"  />
         <nitem  name = "pwr"  />
-        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_148"  />
+        <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_140"  />
         <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_69[7]"  />
         <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_69[6]"  />
         <nitem  name = "jtag_ctrl_tap_instructionShift_7__N_69[5]"  />
@@ -1470,7 +1351,7 @@
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_tap_fsm_state_3__I_0_160"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "jtag_ctrl_tap_fsm_state_3__I_0_156"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "a[3]"  direction = "in"  />
         <pitem  name = "a[2]"  direction = "in"  />
@@ -1833,38 +1714,38 @@
         <nitem  name = "_zz_15[2]"  />
         <nitem  name = "_zz_15[1]"  />
         <nitem  name = "jtag_ctrl_chainArea_ctrl_shift"  />
-        <nitem  name = "_zz_15_31__N_149[31]"  />
-        <nitem  name = "_zz_15_31__N_149[30]"  />
-        <nitem  name = "_zz_15_31__N_149[29]"  />
-        <nitem  name = "_zz_15_31__N_149[28]"  />
-        <nitem  name = "_zz_15_31__N_149[27]"  />
-        <nitem  name = "_zz_15_31__N_149[26]"  />
-        <nitem  name = "_zz_15_31__N_149[25]"  />
-        <nitem  name = "_zz_15_31__N_149[24]"  />
-        <nitem  name = "_zz_15_31__N_149[23]"  />
-        <nitem  name = "_zz_15_31__N_149[22]"  />
-        <nitem  name = "_zz_15_31__N_149[21]"  />
-        <nitem  name = "_zz_15_31__N_149[20]"  />
-        <nitem  name = "_zz_15_31__N_149[19]"  />
-        <nitem  name = "_zz_15_31__N_149[18]"  />
-        <nitem  name = "_zz_15_31__N_149[17]"  />
-        <nitem  name = "_zz_15_31__N_149[16]"  />
-        <nitem  name = "_zz_15_31__N_149[15]"  />
-        <nitem  name = "_zz_15_31__N_149[14]"  />
-        <nitem  name = "_zz_15_31__N_149[13]"  />
-        <nitem  name = "_zz_15_31__N_149[12]"  />
-        <nitem  name = "_zz_15_31__N_149[11]"  />
-        <nitem  name = "_zz_15_31__N_149[10]"  />
-        <nitem  name = "_zz_15_31__N_149[9]"  />
-        <nitem  name = "_zz_15_31__N_149[8]"  />
-        <nitem  name = "_zz_15_31__N_149[7]"  />
-        <nitem  name = "_zz_15_31__N_149[6]"  />
-        <nitem  name = "_zz_15_31__N_149[5]"  />
-        <nitem  name = "_zz_15_31__N_149[4]"  />
-        <nitem  name = "_zz_15_31__N_149[3]"  />
-        <nitem  name = "_zz_15_31__N_149[2]"  />
-        <nitem  name = "_zz_15_31__N_149[1]"  />
-        <nitem  name = "_zz_15_31__N_149[0]"  />
+        <nitem  name = "_zz_15_31__N_141[31]"  />
+        <nitem  name = "_zz_15_31__N_141[30]"  />
+        <nitem  name = "_zz_15_31__N_141[29]"  />
+        <nitem  name = "_zz_15_31__N_141[28]"  />
+        <nitem  name = "_zz_15_31__N_141[27]"  />
+        <nitem  name = "_zz_15_31__N_141[26]"  />
+        <nitem  name = "_zz_15_31__N_141[25]"  />
+        <nitem  name = "_zz_15_31__N_141[24]"  />
+        <nitem  name = "_zz_15_31__N_141[23]"  />
+        <nitem  name = "_zz_15_31__N_141[22]"  />
+        <nitem  name = "_zz_15_31__N_141[21]"  />
+        <nitem  name = "_zz_15_31__N_141[20]"  />
+        <nitem  name = "_zz_15_31__N_141[19]"  />
+        <nitem  name = "_zz_15_31__N_141[18]"  />
+        <nitem  name = "_zz_15_31__N_141[17]"  />
+        <nitem  name = "_zz_15_31__N_141[16]"  />
+        <nitem  name = "_zz_15_31__N_141[15]"  />
+        <nitem  name = "_zz_15_31__N_141[14]"  />
+        <nitem  name = "_zz_15_31__N_141[13]"  />
+        <nitem  name = "_zz_15_31__N_141[12]"  />
+        <nitem  name = "_zz_15_31__N_141[11]"  />
+        <nitem  name = "_zz_15_31__N_141[10]"  />
+        <nitem  name = "_zz_15_31__N_141[9]"  />
+        <nitem  name = "_zz_15_31__N_141[8]"  />
+        <nitem  name = "_zz_15_31__N_141[7]"  />
+        <nitem  name = "_zz_15_31__N_141[6]"  />
+        <nitem  name = "_zz_15_31__N_141[5]"  />
+        <nitem  name = "_zz_15_31__N_141[4]"  />
+        <nitem  name = "_zz_15_31__N_141[3]"  />
+        <nitem  name = "_zz_15_31__N_141[2]"  />
+        <nitem  name = "_zz_15_31__N_141[1]"  />
+        <nitem  name = "_zz_15_31__N_141[0]"  />
         </nets>
     </instance>
 
@@ -2002,38 +1883,38 @@
         <nitem  name = "_zz_15[2]"  />
         <nitem  name = "_zz_15[1]"  />
         <nitem  name = "_zz_15[0]"  />
-        <nitem  name = "_zz_15_31__N_149[31]"  />
-        <nitem  name = "_zz_15_31__N_149[30]"  />
-        <nitem  name = "_zz_15_31__N_149[29]"  />
-        <nitem  name = "_zz_15_31__N_149[28]"  />
-        <nitem  name = "_zz_15_31__N_149[27]"  />
-        <nitem  name = "_zz_15_31__N_149[26]"  />
-        <nitem  name = "_zz_15_31__N_149[25]"  />
-        <nitem  name = "_zz_15_31__N_149[24]"  />
-        <nitem  name = "_zz_15_31__N_149[23]"  />
-        <nitem  name = "_zz_15_31__N_149[22]"  />
-        <nitem  name = "_zz_15_31__N_149[21]"  />
-        <nitem  name = "_zz_15_31__N_149[20]"  />
-        <nitem  name = "_zz_15_31__N_149[19]"  />
-        <nitem  name = "_zz_15_31__N_149[18]"  />
-        <nitem  name = "_zz_15_31__N_149[17]"  />
-        <nitem  name = "_zz_15_31__N_149[16]"  />
-        <nitem  name = "_zz_15_31__N_149[15]"  />
-        <nitem  name = "_zz_15_31__N_149[14]"  />
-        <nitem  name = "_zz_15_31__N_149[13]"  />
-        <nitem  name = "_zz_15_31__N_149[12]"  />
-        <nitem  name = "_zz_15_31__N_149[11]"  />
-        <nitem  name = "_zz_15_31__N_149[10]"  />
-        <nitem  name = "_zz_15_31__N_149[9]"  />
-        <nitem  name = "_zz_15_31__N_149[8]"  />
-        <nitem  name = "_zz_15_31__N_149[7]"  />
-        <nitem  name = "_zz_15_31__N_149[6]"  />
-        <nitem  name = "_zz_15_31__N_149[5]"  />
-        <nitem  name = "_zz_15_31__N_149[4]"  />
-        <nitem  name = "_zz_15_31__N_149[3]"  />
-        <nitem  name = "_zz_15_31__N_149[2]"  />
-        <nitem  name = "_zz_15_31__N_149[1]"  />
-        <nitem  name = "_zz_15_31__N_149[0]"  />
+        <nitem  name = "_zz_15_31__N_141[31]"  />
+        <nitem  name = "_zz_15_31__N_141[30]"  />
+        <nitem  name = "_zz_15_31__N_141[29]"  />
+        <nitem  name = "_zz_15_31__N_141[28]"  />
+        <nitem  name = "_zz_15_31__N_141[27]"  />
+        <nitem  name = "_zz_15_31__N_141[26]"  />
+        <nitem  name = "_zz_15_31__N_141[25]"  />
+        <nitem  name = "_zz_15_31__N_141[24]"  />
+        <nitem  name = "_zz_15_31__N_141[23]"  />
+        <nitem  name = "_zz_15_31__N_141[22]"  />
+        <nitem  name = "_zz_15_31__N_141[21]"  />
+        <nitem  name = "_zz_15_31__N_141[20]"  />
+        <nitem  name = "_zz_15_31__N_141[19]"  />
+        <nitem  name = "_zz_15_31__N_141[18]"  />
+        <nitem  name = "_zz_15_31__N_141[17]"  />
+        <nitem  name = "_zz_15_31__N_141[16]"  />
+        <nitem  name = "_zz_15_31__N_141[15]"  />
+        <nitem  name = "_zz_15_31__N_141[14]"  />
+        <nitem  name = "_zz_15_31__N_141[13]"  />
+        <nitem  name = "_zz_15_31__N_141[12]"  />
+        <nitem  name = "_zz_15_31__N_141[11]"  />
+        <nitem  name = "_zz_15_31__N_141[10]"  />
+        <nitem  name = "_zz_15_31__N_141[9]"  />
+        <nitem  name = "_zz_15_31__N_141[8]"  />
+        <nitem  name = "_zz_15_31__N_141[7]"  />
+        <nitem  name = "_zz_15_31__N_141[6]"  />
+        <nitem  name = "_zz_15_31__N_141[5]"  />
+        <nitem  name = "_zz_15_31__N_141[4]"  />
+        <nitem  name = "_zz_15_31__N_141[3]"  />
+        <nitem  name = "_zz_15_31__N_141[2]"  />
+        <nitem  name = "_zz_15_31__N_141[1]"  />
+        <nitem  name = "_zz_15_31__N_141[0]"  />
         <nitem  name = "_zz_14"  />
         <nitem  name = "_zz_15_31__N_77[31]"  />
         <nitem  name = "_zz_15_31__N_77[30]"  />
@@ -2108,14 +1989,14 @@
         <nitem  name = "jtag_ctrl_chainArea_shifter[2]"  />
         <nitem  name = "jtag_ctrl_chainArea_shifter[1]"  />
         <nitem  name = "jtag_ctrl_chainArea_ctrl_tdo"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[7]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[6]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[5]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[4]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[3]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[2]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[1]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[0]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[7]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[6]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[5]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[4]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[3]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[2]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[1]"  />
+        <nitem  name = "_zz_25[0]"  />
         <nitem  name = "jtag_ctrl_chainArea_ctrl_capture"  />
         <nitem  name = "n523"  />
         <nitem  name = "n524"  />
@@ -2175,14 +2056,14 @@
         <nitem  name = "jtag_ctrl_chainArea_shifter[2]"  />
         <nitem  name = "jtag_ctrl_chainArea_shifter[1]"  />
         <nitem  name = "jtag_ctrl_chainArea_ctrl_shift"  />
-        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_181[7]"  />
-        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_181[6]"  />
-        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_181[5]"  />
-        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_181[4]"  />
-        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_181[3]"  />
-        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_181[2]"  />
-        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_181[1]"  />
-        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_181[0]"  />
+        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_173[7]"  />
+        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_173[6]"  />
+        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_173[5]"  />
+        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_173[4]"  />
+        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_173[3]"  />
+        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_173[2]"  />
+        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_173[1]"  />
+        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_173[0]"  />
         </nets>
     </instance>
 
@@ -2224,14 +2105,14 @@
         <nitem  name = "jtag_ctrl_chainArea_shifter[2]"  />
         <nitem  name = "jtag_ctrl_chainArea_shifter[1]"  />
         <nitem  name = "jtag_ctrl_chainArea_ctrl_tdo"  />
-        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_181[7]"  />
-        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_181[6]"  />
-        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_181[5]"  />
-        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_181[4]"  />
-        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_181[3]"  />
-        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_181[2]"  />
-        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_181[1]"  />
-        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_181[0]"  />
+        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_173[7]"  />
+        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_173[6]"  />
+        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_173[5]"  />
+        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_173[4]"  />
+        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_173[3]"  />
+        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_173[2]"  />
+        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_173[1]"  />
+        <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_173[0]"  />
         <nitem  name = "jtag_ctrl_chainArea_ctrl_enable"  />
         <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_109[7]"  />
         <nitem  name = "jtag_ctrl_chainArea_shifter_7__N_109[6]"  />
@@ -2256,8 +2137,8 @@
         </pins>
 
         <nets>
-        <nitem  name = "_zz_18[1]"  />
-        <nitem  name = "_zz_18[0]"  />
+        <nitem  name = "_zz_17[1]"  />
+        <nitem  name = "_zz_17[0]"  />
         <nitem  name = "jtag_io_gpio_0[1]"  />
         <nitem  name = "jtag_io_gpio_0[0]"  />
         <nitem  name = "jtag_ctrl_chainArea_ctrl_capture"  />
@@ -2281,14 +2162,14 @@
         <nitem  name = "n551"  />
         <nitem  name = "n552"  />
         <nitem  name = "jtag_io_jtag_tdi"  />
-        <nitem  name = "_zz_18[1]"  />
+        <nitem  name = "_zz_17[1]"  />
         <nitem  name = "jtag_ctrl_chainArea_ctrl_shift"  />
-        <nitem  name = "_zz_18_1__N_189[1]"  />
-        <nitem  name = "_zz_18_1__N_189[0]"  />
+        <nitem  name = "_zz_17_1__N_181[1]"  />
+        <nitem  name = "_zz_17_1__N_181[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "_zz_18_1__I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "_zz_17_1__I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[1]"  direction = "in"  />
         <pitem  name = "d0[0]"  direction = "in"  />
@@ -2300,13 +2181,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "_zz_18[1]"  />
-        <nitem  name = "_zz_18[0]"  />
-        <nitem  name = "_zz_18_1__N_189[1]"  />
-        <nitem  name = "_zz_18_1__N_189[0]"  />
-        <nitem  name = "_zz_17"  />
-        <nitem  name = "_zz_18_1__N_125[1]"  />
-        <nitem  name = "_zz_18_1__N_125[0]"  />
+        <nitem  name = "_zz_17[1]"  />
+        <nitem  name = "_zz_17[0]"  />
+        <nitem  name = "_zz_17_1__N_181[1]"  />
+        <nitem  name = "_zz_17_1__N_181[0]"  />
+        <nitem  name = "_zz_16"  />
+        <nitem  name = "_zz_17_1__N_117[1]"  />
+        <nitem  name = "_zz_17_1__N_117[0]"  />
         </nets>
     </instance>
 
@@ -2322,8 +2203,8 @@
         </pins>
 
         <nets>
-        <nitem  name = "_zz_20[1]"  />
-        <nitem  name = "_zz_20[0]"  />
+        <nitem  name = "_zz_19[1]"  />
+        <nitem  name = "_zz_19[0]"  />
         <nitem  name = "_zz_1"  />
         <nitem  name = "_zz_2"  />
         <nitem  name = "jtag_ctrl_chainArea_ctrl_capture"  />
@@ -2347,14 +2228,14 @@
         <nitem  name = "n562"  />
         <nitem  name = "n563"  />
         <nitem  name = "jtag_io_jtag_tdi"  />
-        <nitem  name = "_zz_20[1]"  />
+        <nitem  name = "_zz_19[1]"  />
         <nitem  name = "jtag_ctrl_chainArea_ctrl_shift"  />
-        <nitem  name = "_zz_20_1__N_191[1]"  />
-        <nitem  name = "_zz_20_1__N_191[0]"  />
+        <nitem  name = "_zz_19_1__N_183[1]"  />
+        <nitem  name = "_zz_19_1__N_183[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "_zz_20_1__I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "_zz_19_1__I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[1]"  direction = "in"  />
         <pitem  name = "d0[0]"  direction = "in"  />
@@ -2366,13 +2247,13 @@
         </pins>
 
         <nets>
-        <nitem  name = "_zz_20[1]"  />
-        <nitem  name = "_zz_20[0]"  />
-        <nitem  name = "_zz_20_1__N_191[1]"  />
-        <nitem  name = "_zz_20_1__N_191[0]"  />
-        <nitem  name = "_zz_19"  />
-        <nitem  name = "_zz_20_1__N_127[1]"  />
-        <nitem  name = "_zz_20_1__N_127[0]"  />
+        <nitem  name = "_zz_19[1]"  />
+        <nitem  name = "_zz_19[0]"  />
+        <nitem  name = "_zz_19_1__N_183[1]"  />
+        <nitem  name = "_zz_19_1__N_183[0]"  />
+        <nitem  name = "_zz_18"  />
+        <nitem  name = "_zz_19_1__N_119[1]"  />
+        <nitem  name = "_zz_19_1__N_119[0]"  />
         </nets>
     </instance>
 
@@ -2388,8 +2269,8 @@
         </pins>
 
         <nets>
-        <nitem  name = "_zz_23[1]"  />
-        <nitem  name = "_zz_23[0]"  />
+        <nitem  name = "_zz_22[1]"  />
+        <nitem  name = "_zz_22[0]"  />
         <nitem  name = "_zz_11[1]"  />
         <nitem  name = "_zz_11[0]"  />
         <nitem  name = "jtag_ctrl_chainArea_ctrl_capture"  />
@@ -2413,14 +2294,14 @@
         <nitem  name = "n573"  />
         <nitem  name = "n574"  />
         <nitem  name = "jtag_io_jtag_tdi"  />
-        <nitem  name = "_zz_23[1]"  />
+        <nitem  name = "_zz_22[1]"  />
         <nitem  name = "jtag_ctrl_chainArea_ctrl_shift"  />
-        <nitem  name = "_zz_23_1__N_193[1]"  />
-        <nitem  name = "_zz_23_1__N_193[0]"  />
+        <nitem  name = "_zz_22_1__N_185[1]"  />
+        <nitem  name = "_zz_22_1__N_185[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "_zz_23_1__I_0"  library = "work"  arch = ""  type = "comb">
+    <instance  name = "_zz_22_1__I_0"  library = "work"  arch = ""  type = "comb">
         <pins>
         <pitem  name = "d0[1]"  direction = "in"  />
         <pitem  name = "d0[0]"  direction = "in"  />
@@ -2432,17 +2313,17 @@
         </pins>
 
         <nets>
-        <nitem  name = "_zz_23[1]"  />
-        <nitem  name = "_zz_23[0]"  />
-        <nitem  name = "_zz_23_1__N_193[1]"  />
-        <nitem  name = "_zz_23_1__N_193[0]"  />
-        <nitem  name = "_zz_22"  />
-        <nitem  name = "_zz_23_1__N_129[1]"  />
-        <nitem  name = "_zz_23_1__N_129[0]"  />
+        <nitem  name = "_zz_22[1]"  />
+        <nitem  name = "_zz_22[0]"  />
+        <nitem  name = "_zz_22_1__N_185[1]"  />
+        <nitem  name = "_zz_22_1__N_185[0]"  />
+        <nitem  name = "_zz_21"  />
+        <nitem  name = "_zz_22_1__N_121[1]"  />
+        <nitem  name = "_zz_22_1__N_121[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_tap_bypass_127"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "jtag_ctrl_tap_bypass_124"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d"  direction = "in"  />
         <pitem  name = "clk"  direction = "in"  />
@@ -2839,7 +2720,7 @@
         </nets>
     </instance>
 
-    <instance  name = "_zz_18"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "_zz_17"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d[1]"  direction = "in"  />
         <pitem  name = "d[0]"  direction = "in"  />
@@ -2853,16 +2734,16 @@
         </pins>
 
         <nets>
-        <nitem  name = "_zz_18_1__N_125[1]"  />
-        <nitem  name = "_zz_18_1__N_125[0]"  />
+        <nitem  name = "_zz_17_1__N_117[1]"  />
+        <nitem  name = "_zz_17_1__N_117[0]"  />
         <nitem  name = "n10"  />
         <nitem  name = "jtag_io_jtag_tck"  />
-        <nitem  name = "_zz_18[1]"  />
-        <nitem  name = "_zz_18[0]"  />
+        <nitem  name = "_zz_17[1]"  />
+        <nitem  name = "_zz_17[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "_zz_20"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "_zz_19"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d[1]"  direction = "in"  />
         <pitem  name = "d[0]"  direction = "in"  />
@@ -2876,16 +2757,16 @@
         </pins>
 
         <nets>
-        <nitem  name = "_zz_20_1__N_127[1]"  />
-        <nitem  name = "_zz_20_1__N_127[0]"  />
+        <nitem  name = "_zz_19_1__N_119[1]"  />
+        <nitem  name = "_zz_19_1__N_119[0]"  />
         <nitem  name = "n10"  />
         <nitem  name = "jtag_io_jtag_tck"  />
-        <nitem  name = "_zz_20[1]"  />
-        <nitem  name = "_zz_20[0]"  />
+        <nitem  name = "_zz_19[1]"  />
+        <nitem  name = "_zz_19[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "_zz_23"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "_zz_22"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d[1]"  direction = "in"  />
         <pitem  name = "d[0]"  direction = "in"  />
@@ -2899,16 +2780,16 @@
         </pins>
 
         <nets>
-        <nitem  name = "_zz_23_1__N_129[1]"  />
-        <nitem  name = "_zz_23_1__N_129[0]"  />
+        <nitem  name = "_zz_22_1__N_121[1]"  />
+        <nitem  name = "_zz_22_1__N_121[0]"  />
         <nitem  name = "n10"  />
         <nitem  name = "jtag_io_jtag_tck"  />
-        <nitem  name = "_zz_23[1]"  />
-        <nitem  name = "_zz_23[0]"  />
+        <nitem  name = "_zz_22[1]"  />
+        <nitem  name = "_zz_22[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "jtag_ctrl_tap_tdoUnbufferd_regNext_135"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "jtag_ctrl_tap_tdoUnbufferd_regNext_132"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d"  direction = "in"  />
         <pitem  name = "clk"  direction = "in"  />
@@ -2919,7 +2800,7 @@
 
         <nets>
         <nitem  name = "jtag_ctrl_tap_tdoUnbufferd"  />
-        <nitem  name = "jtag_io_jtag_tck_N_209"  />
+        <nitem  name = "jtag_io_jtag_tck_N_200"  />
         <nitem  name = "n10"  />
         <nitem  name = "jtag_ctrl_jtagPreTap_tdo"  />
         </nets>
@@ -2933,393 +2814,7 @@
 
         <nets>
         <nitem  name = "jtag_io_jtag_tck"  />
-        <nitem  name = "jtag_io_jtag_tck_N_209"  />
-        </nets>
-    </instance>
-
-    <instance  name = "_zz_16"  library = "work"  arch = ""  type = "reg">
-        <pins>
-        <pitem  name = "d[7]"  direction = "in"  />
-        <pitem  name = "d[6]"  direction = "in"  />
-        <pitem  name = "d[5]"  direction = "in"  />
-        <pitem  name = "d[4]"  direction = "in"  />
-        <pitem  name = "d[3]"  direction = "in"  />
-        <pitem  name = "d[2]"  direction = "in"  />
-        <pitem  name = "d[1]"  direction = "in"  />
-        <pitem  name = "d[0]"  direction = "in"  />
-        <pitem  name = "set[7]"  direction = "in"  />
-        <pitem  name = "set[6]"  direction = "in"  />
-        <pitem  name = "set[5]"  direction = "in"  />
-        <pitem  name = "set[4]"  direction = "in"  />
-        <pitem  name = "set[3]"  direction = "in"  />
-        <pitem  name = "set[2]"  direction = "in"  />
-        <pitem  name = "set[1]"  direction = "in"  />
-        <pitem  name = "set[0]"  direction = "in"  />
-        <pitem  name = "reset[7]"  direction = "in"  />
-        <pitem  name = "reset[6]"  direction = "in"  />
-        <pitem  name = "reset[5]"  direction = "in"  />
-        <pitem  name = "reset[4]"  direction = "in"  />
-        <pitem  name = "reset[3]"  direction = "in"  />
-        <pitem  name = "reset[2]"  direction = "in"  />
-        <pitem  name = "reset[1]"  direction = "in"  />
-        <pitem  name = "reset[0]"  direction = "in"  />
-        <pitem  name = "clock"  direction = "in"  />
-        <pitem  name = "q[7]"  direction = "out"  />
-        <pitem  name = "q[6]"  direction = "out"  />
-        <pitem  name = "q[5]"  direction = "out"  />
-        <pitem  name = "q[4]"  direction = "out"  />
-        <pitem  name = "q[3]"  direction = "out"  />
-        <pitem  name = "q[2]"  direction = "out"  />
-        <pitem  name = "q[1]"  direction = "out"  />
-        <pitem  name = "q[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "_zz_26_0__N_1[7]"  />
-        <nitem  name = "_zz_26_0__N_1[6]"  />
-        <nitem  name = "_zz_26_0__N_1[5]"  />
-        <nitem  name = "_zz_26_0__N_1[4]"  />
-        <nitem  name = "_zz_26_0__N_1[3]"  />
-        <nitem  name = "_zz_26_0__N_1[2]"  />
-        <nitem  name = "_zz_26_0__N_1[1]"  />
-        <nitem  name = "_zz_26_0__N_1[0]"  />
-        <nitem  name = "n10"  />
-        <nitem  name = "reset_N_10"  />
-        <nitem  name = "jtag_io_jtag_tck"  />
-        <nitem  name = "jtag_ctrl_chainSelect[7]"  />
-        <nitem  name = "jtag_ctrl_chainSelect[6]"  />
-        <nitem  name = "jtag_ctrl_chainSelect[5]"  />
-        <nitem  name = "jtag_ctrl_chainSelect[4]"  />
-        <nitem  name = "jtag_ctrl_chainSelect[3]"  />
-        <nitem  name = "jtag_ctrl_chainSelect[2]"  />
-        <nitem  name = "jtag_ctrl_chainSelect[1]"  />
-        <nitem  name = "_zz_26[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "reset_I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "i"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "reset"  />
-        <nitem  name = "reset_N_10"  />
-        </nets>
-    </instance>
-
-    <instance  name = "jtag_ctrl_tap_fsm_stateNext_3__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "a[3]"  direction = "in"  />
-        <pitem  name = "a[2]"  direction = "in"  />
-        <pitem  name = "a[1]"  direction = "in"  />
-        <pitem  name = "a[0]"  direction = "in"  />
-        <pitem  name = "b[3]"  direction = "in"  />
-        <pitem  name = "b[2]"  direction = "in"  />
-        <pitem  name = "b[1]"  direction = "in"  />
-        <pitem  name = "b[0]"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "jtag_ctrl_tap_fsm_stateNext[3]"  />
-        <nitem  name = "jtag_ctrl_tap_fsm_stateNext[2]"  />
-        <nitem  name = "jtag_ctrl_tap_fsm_stateNext[1]"  />
-        <nitem  name = "jtag_ctrl_tap_fsm_stateNext[0]"  />
-        <nitem  name = "n10"  />
-        <nitem  name = "pwr"  />
-        <nitem  name = "_zz_26_0__N_195"  />
-        </nets>
-    </instance>
-
-    <instance  name = "jtag_ctrl_chainSelect_7__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "d0[7]"  direction = "in"  />
-        <pitem  name = "d0[6]"  direction = "in"  />
-        <pitem  name = "d0[5]"  direction = "in"  />
-        <pitem  name = "d0[4]"  direction = "in"  />
-        <pitem  name = "d0[3]"  direction = "in"  />
-        <pitem  name = "d0[2]"  direction = "in"  />
-        <pitem  name = "d0[1]"  direction = "in"  />
-        <pitem  name = "d0[0]"  direction = "in"  />
-        <pitem  name = "d1[7]"  direction = "in"  />
-        <pitem  name = "d1[6]"  direction = "in"  />
-        <pitem  name = "d1[5]"  direction = "in"  />
-        <pitem  name = "d1[4]"  direction = "in"  />
-        <pitem  name = "d1[3]"  direction = "in"  />
-        <pitem  name = "d1[2]"  direction = "in"  />
-        <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
-        <pitem  name = "cond"  direction = "in"  />
-        <pitem  name = "o[7]"  direction = "out"  />
-        <pitem  name = "o[6]"  direction = "out"  />
-        <pitem  name = "o[5]"  direction = "out"  />
-        <pitem  name = "o[4]"  direction = "out"  />
-        <pitem  name = "o[3]"  direction = "out"  />
-        <pitem  name = "o[2]"  direction = "out"  />
-        <pitem  name = "o[1]"  direction = "out"  />
-        <pitem  name = "o[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "jtag_ctrl_chainSelect[7]"  />
-        <nitem  name = "jtag_ctrl_chainSelect[6]"  />
-        <nitem  name = "jtag_ctrl_chainSelect[5]"  />
-        <nitem  name = "jtag_ctrl_chainSelect[4]"  />
-        <nitem  name = "jtag_ctrl_chainSelect[3]"  />
-        <nitem  name = "jtag_ctrl_chainSelect[2]"  />
-        <nitem  name = "jtag_ctrl_chainSelect[1]"  />
-        <nitem  name = "_zz_26[0]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[7]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[6]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[5]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[4]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[3]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[2]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[1]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[0]"  />
-        <nitem  name = "_zz_26_0__N_195"  />
-        <nitem  name = "_zz_26_0__N_1[7]"  />
-        <nitem  name = "_zz_26_0__N_1[6]"  />
-        <nitem  name = "_zz_26_0__N_1[5]"  />
-        <nitem  name = "_zz_26_0__N_1[4]"  />
-        <nitem  name = "_zz_26_0__N_1[3]"  />
-        <nitem  name = "_zz_26_0__N_1[2]"  />
-        <nitem  name = "_zz_26_0__N_1[1]"  />
-        <nitem  name = "_zz_26_0__N_1[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "mux_113"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "d0[7]"  direction = "in"  />
-        <pitem  name = "d0[6]"  direction = "in"  />
-        <pitem  name = "d0[5]"  direction = "in"  />
-        <pitem  name = "d0[4]"  direction = "in"  />
-        <pitem  name = "d0[3]"  direction = "in"  />
-        <pitem  name = "d0[2]"  direction = "in"  />
-        <pitem  name = "d0[1]"  direction = "in"  />
-        <pitem  name = "d0[0]"  direction = "in"  />
-        <pitem  name = "d1[7]"  direction = "in"  />
-        <pitem  name = "d1[6]"  direction = "in"  />
-        <pitem  name = "d1[5]"  direction = "in"  />
-        <pitem  name = "d1[4]"  direction = "in"  />
-        <pitem  name = "d1[3]"  direction = "in"  />
-        <pitem  name = "d1[2]"  direction = "in"  />
-        <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
-        <pitem  name = "cond"  direction = "in"  />
-        <pitem  name = "o[7]"  direction = "out"  />
-        <pitem  name = "o[6]"  direction = "out"  />
-        <pitem  name = "o[5]"  direction = "out"  />
-        <pitem  name = "o[4]"  direction = "out"  />
-        <pitem  name = "o[3]"  direction = "out"  />
-        <pitem  name = "o[2]"  direction = "out"  />
-        <pitem  name = "o[1]"  direction = "out"  />
-        <pitem  name = "o[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "jtag_ctrl_chainArea_store[7]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[6]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[5]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[4]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[3]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[2]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[1]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[0]"  />
-        <nitem  name = "jtag_ctrl_chainArea_shifter[7]"  />
-        <nitem  name = "jtag_ctrl_chainArea_shifter[6]"  />
-        <nitem  name = "jtag_ctrl_chainArea_shifter[5]"  />
-        <nitem  name = "jtag_ctrl_chainArea_shifter[4]"  />
-        <nitem  name = "jtag_ctrl_chainArea_shifter[3]"  />
-        <nitem  name = "jtag_ctrl_chainArea_shifter[2]"  />
-        <nitem  name = "jtag_ctrl_chainArea_shifter[1]"  />
-        <nitem  name = "jtag_ctrl_chainArea_ctrl_tdo"  />
-        <nitem  name = "jtag_ctrl_chainArea_ctrl_update"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_196[7]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_196[6]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_196[5]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_196[4]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_196[3]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_196[2]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_196[1]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_196[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "jtag_ctrl_chainArea_store_7__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "d0[7]"  direction = "in"  />
-        <pitem  name = "d0[6]"  direction = "in"  />
-        <pitem  name = "d0[5]"  direction = "in"  />
-        <pitem  name = "d0[4]"  direction = "in"  />
-        <pitem  name = "d0[3]"  direction = "in"  />
-        <pitem  name = "d0[2]"  direction = "in"  />
-        <pitem  name = "d0[1]"  direction = "in"  />
-        <pitem  name = "d0[0]"  direction = "in"  />
-        <pitem  name = "d1[7]"  direction = "in"  />
-        <pitem  name = "d1[6]"  direction = "in"  />
-        <pitem  name = "d1[5]"  direction = "in"  />
-        <pitem  name = "d1[4]"  direction = "in"  />
-        <pitem  name = "d1[3]"  direction = "in"  />
-        <pitem  name = "d1[2]"  direction = "in"  />
-        <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
-        <pitem  name = "cond"  direction = "in"  />
-        <pitem  name = "o[7]"  direction = "out"  />
-        <pitem  name = "o[6]"  direction = "out"  />
-        <pitem  name = "o[5]"  direction = "out"  />
-        <pitem  name = "o[4]"  direction = "out"  />
-        <pitem  name = "o[3]"  direction = "out"  />
-        <pitem  name = "o[2]"  direction = "out"  />
-        <pitem  name = "o[1]"  direction = "out"  />
-        <pitem  name = "o[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "jtag_ctrl_chainArea_store[7]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[6]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[5]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[4]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[3]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[2]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[1]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[0]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_196[7]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_196[6]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_196[5]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_196[4]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_196[3]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_196[2]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_196[1]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_196[0]"  />
-        <nitem  name = "jtag_ctrl_chainArea_ctrl_enable"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_117[7]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_117[6]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_117[5]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_117[4]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_117[3]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_117[2]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_117[1]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_117[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "jtag_ctrl_chainer/io_primary_tck_I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "i"  direction = "in"  />
-        <pitem  name = "o"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "jtag_io_jtag_tck"  />
-        <nitem  name = "jtag_ctrl_chainer/io_primary_tck_N_220"  />
-        </nets>
-    </instance>
-
-    <instance  name = "mux_116"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "d0[1]"  direction = "in"  />
-        <pitem  name = "d0[0]"  direction = "in"  />
-        <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
-        <pitem  name = "cond"  direction = "in"  />
-        <pitem  name = "o[1]"  direction = "out"  />
-        <pitem  name = "o[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "_zz_1"  />
-        <nitem  name = "_zz_2"  />
-        <nitem  name = "_zz_20[1]"  />
-        <nitem  name = "_zz_20[0]"  />
-        <nitem  name = "jtag_ctrl_chainArea_ctrl_update"  />
-        <nitem  name = "n691"  />
-        <nitem  name = "n692"  />
-        </nets>
-    </instance>
-
-    <instance  name = "mux_117"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "d0[1]"  direction = "in"  />
-        <pitem  name = "d0[0]"  direction = "in"  />
-        <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
-        <pitem  name = "cond"  direction = "in"  />
-        <pitem  name = "o[1]"  direction = "out"  />
-        <pitem  name = "o[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "_zz_1"  />
-        <nitem  name = "_zz_2"  />
-        <nitem  name = "n691"  />
-        <nitem  name = "n692"  />
-        <nitem  name = "_zz_19"  />
-        <nitem  name = "_zz_1_N_206[1]"  />
-        <nitem  name = "_zz_1_N_206[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "jtag_ctrl_chainer/io_primary_tdi_regNext_I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "o"  direction = "out"  />
-        <pitem  name = "c"  direction = "in"  />
-        <pitem  name = "a0"  direction = "in"  />
-        <pitem  name = "a1"  direction = "in"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "jtag_io_jtag_tdo"  />
-        <nitem  name = "_zz_26[0]"  />
-        <nitem  name = "jtag_ctrl_chainer/io_primary_tdi_regNext"  />
-        <nitem  name = "jtag_ctrl_chainer/jtagClkArea_bufNeg[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "mux_119"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "d0[1]"  direction = "in"  />
-        <pitem  name = "d0[0]"  direction = "in"  />
-        <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
-        <pitem  name = "cond"  direction = "in"  />
-        <pitem  name = "o[1]"  direction = "out"  />
-        <pitem  name = "o[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "_zz_11[1]"  />
-        <nitem  name = "_zz_11[0]"  />
-        <nitem  name = "_zz_23[1]"  />
-        <nitem  name = "_zz_23[0]"  />
-        <nitem  name = "jtag_ctrl_chainArea_ctrl_update"  />
-        <nitem  name = "_zz_11_1__N_204[1]"  />
-        <nitem  name = "_zz_11_1__N_204[0]"  />
-        </nets>
-    </instance>
-
-    <instance  name = "_zz_11_1__I_0"  library = "work"  arch = ""  type = "comb">
-        <pins>
-        <pitem  name = "d0[1]"  direction = "in"  />
-        <pitem  name = "d0[0]"  direction = "in"  />
-        <pitem  name = "d1[1]"  direction = "in"  />
-        <pitem  name = "d1[0]"  direction = "in"  />
-        <pitem  name = "cond"  direction = "in"  />
-        <pitem  name = "o[1]"  direction = "out"  />
-        <pitem  name = "o[0]"  direction = "out"  />
-        </pins>
-
-        <nets>
-        <nitem  name = "_zz_11[1]"  />
-        <nitem  name = "_zz_11[0]"  />
-        <nitem  name = "_zz_11_1__N_204[1]"  />
-        <nitem  name = "_zz_11_1__N_204[0]"  />
-        <nitem  name = "_zz_22"  />
-        <nitem  name = "_zz_11_1__N_11[1]"  />
-        <nitem  name = "_zz_11_1__N_11[0]"  />
+        <nitem  name = "jtag_io_jtag_tck_N_200"  />
         </nets>
     </instance>
 
@@ -3361,29 +2856,245 @@
         </pins>
 
         <nets>
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_117[7]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_117[6]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_117[5]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_117[4]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_117[3]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_117[2]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_117[1]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store_7__N_117[0]"  />
+        <nitem  name = "_zz_25_0__N_1[7]"  />
+        <nitem  name = "_zz_25_0__N_1[6]"  />
+        <nitem  name = "_zz_25_0__N_1[5]"  />
+        <nitem  name = "_zz_25_0__N_1[4]"  />
+        <nitem  name = "_zz_25_0__N_1[3]"  />
+        <nitem  name = "_zz_25_0__N_1[2]"  />
+        <nitem  name = "_zz_25_0__N_1[1]"  />
+        <nitem  name = "_zz_25_0__N_1[0]"  />
         <nitem  name = "n10"  />
         <nitem  name = "reset_N_10"  />
         <nitem  name = "jtag_io_jtag_tck"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[7]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[6]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[5]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[4]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[3]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[2]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[1]"  />
-        <nitem  name = "jtag_ctrl_chainArea_store[0]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[7]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[6]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[5]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[4]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[3]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[2]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[1]"  />
+        <nitem  name = "_zz_25[0]"  />
         </nets>
     </instance>
 
-    <instance  name = "_zz_21"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "reset_I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "i"  direction = "in"  />
+        <pitem  name = "o"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "reset"  />
+        <nitem  name = "reset_N_10"  />
+        </nets>
+    </instance>
+
+    <instance  name = "mux_111"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "jtag_ctrl_chainSelect[7]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[6]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[5]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[4]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[3]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[2]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[1]"  />
+        <nitem  name = "_zz_25[0]"  />
+        <nitem  name = "jtag_ctrl_chainArea_shifter[7]"  />
+        <nitem  name = "jtag_ctrl_chainArea_shifter[6]"  />
+        <nitem  name = "jtag_ctrl_chainArea_shifter[5]"  />
+        <nitem  name = "jtag_ctrl_chainArea_shifter[4]"  />
+        <nitem  name = "jtag_ctrl_chainArea_shifter[3]"  />
+        <nitem  name = "jtag_ctrl_chainArea_shifter[2]"  />
+        <nitem  name = "jtag_ctrl_chainArea_shifter[1]"  />
+        <nitem  name = "jtag_ctrl_chainArea_ctrl_tdo"  />
+        <nitem  name = "jtag_ctrl_chainArea_ctrl_update"  />
+        <nitem  name = "_zz_25_0__N_187[7]"  />
+        <nitem  name = "_zz_25_0__N_187[6]"  />
+        <nitem  name = "_zz_25_0__N_187[5]"  />
+        <nitem  name = "_zz_25_0__N_187[4]"  />
+        <nitem  name = "_zz_25_0__N_187[3]"  />
+        <nitem  name = "_zz_25_0__N_187[2]"  />
+        <nitem  name = "_zz_25_0__N_187[1]"  />
+        <nitem  name = "_zz_25_0__N_187[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "jtag_ctrl_chainSelect_7__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[7]"  direction = "in"  />
+        <pitem  name = "d0[6]"  direction = "in"  />
+        <pitem  name = "d0[5]"  direction = "in"  />
+        <pitem  name = "d0[4]"  direction = "in"  />
+        <pitem  name = "d0[3]"  direction = "in"  />
+        <pitem  name = "d0[2]"  direction = "in"  />
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[7]"  direction = "in"  />
+        <pitem  name = "d1[6]"  direction = "in"  />
+        <pitem  name = "d1[5]"  direction = "in"  />
+        <pitem  name = "d1[4]"  direction = "in"  />
+        <pitem  name = "d1[3]"  direction = "in"  />
+        <pitem  name = "d1[2]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "o[7]"  direction = "out"  />
+        <pitem  name = "o[6]"  direction = "out"  />
+        <pitem  name = "o[5]"  direction = "out"  />
+        <pitem  name = "o[4]"  direction = "out"  />
+        <pitem  name = "o[3]"  direction = "out"  />
+        <pitem  name = "o[2]"  direction = "out"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "jtag_ctrl_chainSelect[7]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[6]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[5]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[4]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[3]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[2]"  />
+        <nitem  name = "jtag_ctrl_chainSelect[1]"  />
+        <nitem  name = "_zz_25[0]"  />
+        <nitem  name = "_zz_25_0__N_187[7]"  />
+        <nitem  name = "_zz_25_0__N_187[6]"  />
+        <nitem  name = "_zz_25_0__N_187[5]"  />
+        <nitem  name = "_zz_25_0__N_187[4]"  />
+        <nitem  name = "_zz_25_0__N_187[3]"  />
+        <nitem  name = "_zz_25_0__N_187[2]"  />
+        <nitem  name = "_zz_25_0__N_187[1]"  />
+        <nitem  name = "_zz_25_0__N_187[0]"  />
+        <nitem  name = "jtag_ctrl_chainArea_ctrl_enable"  />
+        <nitem  name = "_zz_25_0__N_1[7]"  />
+        <nitem  name = "_zz_25_0__N_1[6]"  />
+        <nitem  name = "_zz_25_0__N_1[5]"  />
+        <nitem  name = "_zz_25_0__N_1[4]"  />
+        <nitem  name = "_zz_25_0__N_1[3]"  />
+        <nitem  name = "_zz_25_0__N_1[2]"  />
+        <nitem  name = "_zz_25_0__N_1[1]"  />
+        <nitem  name = "_zz_25_0__N_1[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "mux_114"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "_zz_1"  />
+        <nitem  name = "_zz_2"  />
+        <nitem  name = "_zz_19[1]"  />
+        <nitem  name = "_zz_19[0]"  />
+        <nitem  name = "jtag_ctrl_chainArea_ctrl_update"  />
+        <nitem  name = "n681"  />
+        <nitem  name = "n682"  />
+        </nets>
+    </instance>
+
+    <instance  name = "mux_115"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "_zz_1"  />
+        <nitem  name = "_zz_2"  />
+        <nitem  name = "n681"  />
+        <nitem  name = "n682"  />
+        <nitem  name = "_zz_18"  />
+        <nitem  name = "_zz_1_N_197[1]"  />
+        <nitem  name = "_zz_1_N_197[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "mux_117"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "_zz_11[1]"  />
+        <nitem  name = "_zz_11[0]"  />
+        <nitem  name = "_zz_22[1]"  />
+        <nitem  name = "_zz_22[0]"  />
+        <nitem  name = "jtag_ctrl_chainArea_ctrl_update"  />
+        <nitem  name = "_zz_11_1__N_195[1]"  />
+        <nitem  name = "_zz_11_1__N_195[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "_zz_11_1__I_0"  library = "work"  arch = ""  type = "comb">
+        <pins>
+        <pitem  name = "d0[1]"  direction = "in"  />
+        <pitem  name = "d0[0]"  direction = "in"  />
+        <pitem  name = "d1[1]"  direction = "in"  />
+        <pitem  name = "d1[0]"  direction = "in"  />
+        <pitem  name = "cond"  direction = "in"  />
+        <pitem  name = "o[1]"  direction = "out"  />
+        <pitem  name = "o[0]"  direction = "out"  />
+        </pins>
+
+        <nets>
+        <nitem  name = "_zz_11[1]"  />
+        <nitem  name = "_zz_11[0]"  />
+        <nitem  name = "_zz_11_1__N_195[1]"  />
+        <nitem  name = "_zz_11_1__N_195[0]"  />
+        <nitem  name = "_zz_21"  />
+        <nitem  name = "_zz_11_1__N_11[1]"  />
+        <nitem  name = "_zz_11_1__N_11[0]"  />
+        </nets>
+    </instance>
+
+    <instance  name = "_zz_20"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d[1]"  direction = "in"  />
         <pitem  name = "d[0]"  direction = "in"  />
@@ -3397,8 +3108,8 @@
         </pins>
 
         <nets>
-        <nitem  name = "_zz_1_N_206[1]"  />
-        <nitem  name = "_zz_1_N_206[0]"  />
+        <nitem  name = "_zz_1_N_197[1]"  />
+        <nitem  name = "_zz_1_N_197[0]"  />
         <nitem  name = "n10"  />
         <nitem  name = "reset_N_10"  />
         <nitem  name = "jtag_io_jtag_tck"  />
@@ -3407,7 +3118,7 @@
         </nets>
     </instance>
 
-    <instance  name = "_zz_24"  library = "work"  arch = ""  type = "reg">
+    <instance  name = "_zz_23"  library = "work"  arch = ""  type = "reg">
         <pins>
         <pitem  name = "d[1]"  direction = "in"  />
         <pitem  name = "d[0]"  direction = "in"  />
@@ -3468,30 +3179,22 @@
 
     <instance  name = "jtag_ctrl_chainer"  />
     <!--
-        REG instances in netlist: 21
+        REG instances in netlist: 13
     -->
 
     <regs>
-        <reg  name = "jtag_ctrl_chainer/jtagClkArea_bufNeg[0]_17"  />
-        <reg  name = "jtag_ctrl_chainer/jtagClkArea_nextWriteEnable[0]_18"  />
-        <reg  name = "jtag_ctrl_chainer/jtagClkArea_io_primary_tms_20"  />
-        <reg  name = "jtag_ctrl_chainer/jtagClkArea_nextWriteEnable_pos[0]_21"  />
-        <reg  name = "jtag_ctrl_chainer/io_primary_tdi_regNext_16"  />
-        <reg  name = "jtag_ctrl_chainer/jtagClkArea_io_primary_tdi_pos_22"  />
-        <reg  name = "jtag_ctrl_chainer/jtagClkArea_bufPos[0]_24"  />
-        <reg  name = "jtag_ctrl_tap_bypass_127"  />
+        <reg  name = "jtag_ctrl_tap_bypass_124"  />
         <reg  name = "jtag_ctrl_tap_instructionShift"  />
         <reg  name = "jtag_ctrl_tap_instruction"  />
         <reg  name = "_zz_15"  />
         <reg  name = "jtag_ctrl_chainArea_shifter"  />
-        <reg  name = "_zz_18"  />
+        <reg  name = "_zz_17"  />
+        <reg  name = "_zz_19"  />
+        <reg  name = "_zz_22"  />
+        <reg  name = "jtag_ctrl_tap_tdoUnbufferd_regNext_132"  />
+        <reg  name = "jtag_ctrl_chainArea_store"  />
         <reg  name = "_zz_20"  />
         <reg  name = "_zz_23"  />
-        <reg  name = "jtag_ctrl_tap_tdoUnbufferd_regNext_135"  />
-        <reg  name = "_zz_16"  />
-        <reg  name = "jtag_ctrl_chainArea_store"  />
-        <reg  name = "_zz_21"  />
-        <reg  name = "_zz_24"  />
         <reg  name = "jtag_ctrl_tap_fsm_state"  />
     </regs>
 

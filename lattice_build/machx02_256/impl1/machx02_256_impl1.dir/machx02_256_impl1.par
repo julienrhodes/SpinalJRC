@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Wed Sep 30 22:10:51 2020
+Sat Oct  3 21:44:44 2020
 
 /usr/local/diamond/3.11_x64/ispfpga/bin/lin64/par -f machx02_256_impl1.p2t
 machx02_256_impl1_map.ncd machx02_256_impl1.dir machx02_256_impl1.prf -gui

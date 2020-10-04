@@ -63,19 +63,16 @@ class MyJtagTap(jtag: Jtag, instructionWidth: Int) extends JtagTap(jtag, instruc
 
   def writeInitSync[T <: Data](data: T, dataInit: T, cleanUpdate: Boolean = true, updateState: SpinalEnumElement[JtagState.type] = JtagState.DR_UPDATE)(instructionId: Int) = {
     val out = Bits(widthOf(data) bit)
-    val buf = Reg(Bits(widthOf(data) bit)) init(dataInit.asBits)
-    data.assignFromBits(buf)
+    val buf = ClockDomain.current.withRevertedClockEdge()(Reg(Bits(widthOf(data) bit)) init(dataInit.asBits))
     when(fsm.stateNext === updateState){
       buf := out
     }
+    data.assignFromBits(buf)
     val area = new JtagTapInstructionWrite(out, cleanUpdate, readable = true){
       store.init(dataInit.asBits)
     }
     map(area.ctrl, instructionId)
     area
-    //val area = writeInit(buf, dataInit, cleanUpdate)(instructionId)
-    //map(area.ctrl, instructionId)
-    //area
   }
 
   // Ensure IDCODE is default state after reset
@@ -174,50 +171,42 @@ class JtagChainer(chains: Int) extends Component {
 
 
   val jtagClkArea = new ClockingArea(ClockDomain(io.primary.tck, ClockDomain.current.reset)) {
+    // Enables the inter-child half-clock buffer (clocks in previous child on posedge, clocks out to next child on negedge).
+    val childBuffer = False
+    val outBuffer = False
     // ASSUMPTION: The tdi signal is already from a negedge buffer.
-    //io.primary.tdo := io.primary.tdi
+    // io.primary.tdo := io.primary.tdi
     // This is safer but appears to create an unnecessary buffer.
-    io.primary.tdo := ClockDomain.current.withRevertedClockEdge()(RegNext(io.primary.tdi))
-    val bufPos = Reg(B(0, chains bits))
-    val bufNeg = ClockDomain.current.withRevertedClockEdge()(RegNext(bufPos))
-    val nextWriteEnable_pos = RegNext(io.select)
-    val nextWriteEnable = ClockDomain.current.withRevertedClockEdge()(RegNext(nextWriteEnable_pos))
-    //val nextWriteEnable = io.select
-    val outputBuffer = True
+    val ioPrimaryNeg = ClockDomain.current.withRevertedClockEdge()(RegNext(io.primary.tdi))
+    io.primary.tdo := Mux(outBuffer, ioPrimaryNeg, io.primary.tdi)
+    val childBufPos = Reg(B(0, chains bits))
+    val childBufNeg = ClockDomain.current.withRevertedClockEdge()(RegNext(childBufPos))
+    val writeEnableNeg = io.select // negedge synced already
+    //val writeEnablePos = RegNext(io.select)
+    //val writeEnableNeg = ClockDomain.current.withRevertedClockEdge()(RegNext(writeEnablePos))
 
     for(i <- 0 until chains) {
-      io.child(i).tristate.writeEnable := io.select(i)
-      //val child = new ClockingArea(ClockDomain(clock=io.primary.tck,
-      //  reset=ClockDomain.current.reset, config = ClockDomainConfig(
-      //    clockEdge=RISING))) {
-      //}
+      io.child(i).tristate.writeEnable := writeEnableNeg(i)
       io.child(i).tristate.write.tdi := io.primary.tdi
       io.child(i).tristate.write.tms := io.primary.tms
-      //io.child(i).tristate.write.tdi := io.primary.tdi
-      //io.child(i).tristate.write.tms := io.primary.tms
-      //io.child(i).tristate.write.tck := RegNext(io.primary.tck)
       io.child(i).tristate.write.tck := io.primary.tck
     }
 
     for(i <- 0 until chains) {
-      when(io.select(i)) {
+      when(writeEnableNeg(i)) {
         // every child has an output buffer for chaining to the next child
-        //val child = new ClockingArea(ClockDomain(clock=io.primary.tck,
-        //  reset=ClockDomain.current.reset, config = ClockDomainConfig(
-        //    clockEdge=RISING))) {
-        //}
-        bufPos(i) := io.child(i).read.tdo
+        childBufPos(i) := io.child(i).read.tdo
         
         // primary tdo will be set to the last selected child's output (last assignment wins)
-        io.primary.tdo := bufNeg(i)
+        io.primary.tdo := Mux(outBuffer, childBufNeg(i), io.child(i).read.tdo)
 
         // tdi defaults to io.primary.tdi
         //io.child(i).tristate.write.tdi := ClockDomain.current.withRevertedClockEdge()(RegNext(io.primary.tdi))
 
         // tdi is set to the buf of the most immediately selected child earlier in the chain
         for(j <- 0 until i) {
-          when(io.select(j)) {
-            io.child(i).tristate.write.tdi := Mux(outputBuffer, bufNeg(j), io.child(j).read.tdo)
+          when(writeEnableNeg(j)) {
+            io.child(i).tristate.write.tdi := Mux(childBuffer, childBufNeg(j), io.child(j).read.tdo)
           }
         }
       }
@@ -251,10 +240,10 @@ class JtagBackplane(chains : Int, gpioWidth : Int) extends Area {
     // Define the TAP controller with configuration and control registers
     val tap = new MyJtagTap(jtagPreTap, 8)
     val idcodeArea = tap.read(B"x413bd043")(instructionId = 4)
-    val chainArea = tap.writeInitSync(
+    val chainArea = tap.writeInit(//Sync(
       data=chainSelect,
-      dataInit=B(0, widthOf(chainSelect) bits),
-      updateState=JtagState.IDLE)(instructionId = 8)
+      dataInit=B(0, widthOf(chainSelect) bits))(instructionId = 8)
+      //updateState=JtagState.IDLE)(instructionId = 8)
 
     // Define the GPIO registers and assign them to `tap`
     val gpioBaseInstr = 9

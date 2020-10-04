@@ -24,19 +24,19 @@ Target Vendor:  LATTICE
 Target Device:  LCMXO2-256HCQFN32
 Target Performance:   4
 Mapper:  xo2c00,  version:  Diamond (64-bit) 3.11.0.396.4
-Mapped on:  09/30/20  22:10:51
+Mapped on:  10/03/20  21:44:43
 
 
 <A name="mrp_ds"></A><B><U><big>Design Summary</big></U></B>
-   Number of registers:     88 out of   322 (27%)
-      PFU registers:           88 out of   256 (34%)
+   Number of registers:     80 out of   322 (25%)
+      PFU registers:           80 out of   256 (31%)
       PIO registers:            0 out of    66 (0%)
-   Number of SLICEs:        55 out of   128 (43%)
-      SLICEs as Logic/ROM:     55 out of   128 (43%)
+   Number of SLICEs:        50 out of   128 (39%)
+      SLICEs as Logic/ROM:     50 out of   128 (39%)
       SLICEs as RAM:            0 out of    96 (0%)
       SLICEs as Carry:          0 out of   128 (0%)
-   Number of LUT4s:        105 out of   256 (41%)
-      Number used as logic LUTs:        105
+   Number of LUT4s:         93 out of   256 (36%)
+      Number used as logic LUTs:         93
       Number used as distributed RAM:     0
       Number used as ripple logic:        0
       Number used as shift registers:     0
@@ -60,39 +60,37 @@ Mapped on:  09/30/20  22:10:51
       2. Number of logic LUT4s does not include count of distributed RAM and
      ripple logic.
    Number of clocks:  1
-     Net jtag_io_jtag_tck_c: 52 loads, 49 rising, 3 falling (Driver: PIO
+     Net jtag_io_jtag_tck_c: 48 loads, 47 rising, 1 falling (Driver: PIO
      jtag_io_jtag_tck )
-   Number of Clock Enables:  12
-     Net jtag_io_jtag_tck_c_enable_14: 4 loads, 4 LSLICEs
-     Net jtag_io_jtag_tck_c_enable_13: 1 loads, 1 LSLICEs
+   Number of Clock Enables:  10
+     Net jtag_io_jtag_tck_c_enable_48: 4 loads, 4 LSLICEs
      Net jtag_io_jtag_tck_c_enable_12: 1 loads, 1 LSLICEs
-     Net jtag_io_jtag_tck_c_enable_25: 4 loads, 4 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_11: 1 loads, 1 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_10: 1 loads, 1 LSLICEs
 
-     Net jtag_io_jtag_tck_c_enable_17: 1 loads, 1 LSLICEs
-     Net jtag_io_jtag_tck_c_enable_49: 1 loads, 1 LSLICEs
-     Net jtag_io_jtag_tck_c_enable_28: 1 loads, 1 LSLICEs
-     Net jtag_io_jtag_tck_c_enable_21: 1 loads, 1 LSLICEs
-     Net jtag_io_jtag_tck_c_enable_67: 19 loads, 19 LSLICEs
-     Net jtag_io_jtag_tck_c_enable_47: 5 loads, 5 LSLICEs
-     Net jtag_io_jtag_tck_c_enable_52: 1 loads, 1 LSLICEs
-     Net _zz_26_0: 1 loads, 1 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_20: 4 loads, 4 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_34: 1 loads, 1 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_33: 1 loads, 1 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_66: 19 loads, 19 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_46: 5 loads, 5 LSLICEs
+     Net jtag_io_jtag_tck_c_enable_47: 1 loads, 1 LSLICEs
    Number of LSRs:  4
-     Net n1394: 4 loads, 4 LSLICEs
-     Net n1364: 5 loads, 5 LSLICEs
-     Net n1396: 10 loads, 10 LSLICEs
-     Net n2287: 2 loads, 2 LSLICEs
+     Net n1343: 4 loads, 4 LSLICEs
+     Net n1315: 5 loads, 5 LSLICEs
+     Net n1347: 10 loads, 10 LSLICEs
+     Net n1065: 3 loads, 3 LSLICEs
    Number of nets driven by tri-state buffers:  0
    Top 10 highest fanout non-clock nets:
-     Net jtag_ctrl_tap_fsm_state_0: 34 loads
-     Net jtag_ctrl_tap_fsm_state_2: 32 loads
-     Net n1874: 27 loads
-     Net jtag_ctrl_tap_fsm_state_1: 26 loads
-     Net jtag_ctrl_tap_fsm_state_3: 26 loads
-     Net jtag_io_jtag_tck_c_enable_67: 19 loads
-     Net n2299: 15 loads
-     Net n2290: 14 loads
-     Net n2295: 13 loads
-     Net jtag_ctrl_tap_instruction_0: 10 loads
+     Net jtag_ctrl_tap_fsm_state_0: 40 loads
+     Net jtag_ctrl_tap_fsm_state_2: 29 loads
+     Net n2249: 28 loads
+     Net jtag_ctrl_tap_fsm_state_3: 23 loads
+     Net jtag_ctrl_tap_fsm_state_1: 22 loads
+     Net jtag_io_jtag_tck_c_enable_66: 19 loads
+     Net n2247: 17 loads
+     Net n2245: 14 loads
+     Net jtag_ctrl_tap_instruction_0: 11 loads
+     Net n1347: 10 loads
 
 
 
@@ -125,14 +123,11 @@ WARNING - map: All configuration ports of the design have been disabled.
 
 
 
-
-
-
-
 <A name="mrp_ioa"></A><B><U><big>IO (PIO) Attributes</big></U></B>
 
 +---------------------+-----------+-----------+------------+
 | IO Name             | Direction | Levelmode | IO         |
+
 |                     |           |  IO_TYPE  | Register   |
 +---------------------+-----------+-----------+------------+
 | jtag_io_gpio_0[1]   | BIDIR     | LVCMOS33  |            |
@@ -162,18 +157,18 @@ WARNING - map: All configuration ports of the design have been disabled.
 
 <A name="mrp_rm"></A><B><U><big>Removed logic</big></U></B>
 
-Block i1465 undriven or does not drive anything - clipped.
-Block i1464 undriven or does not drive anything - clipped.
-Signal jtag_io_jtag_tck_N_209 was merged into signal jtag_io_jtag_tck_c
-Signal n1255 was merged into signal _zz_2
-Signal n1256 was merged into signal jtag_ctrl_chainer_io_child_0_writeEnable
-Signal n1253 was merged into signal _zz_1
+Block i1453 undriven or does not drive anything - clipped.
+Block i1452 undriven or does not drive anything - clipped.
+Signal jtag_io_jtag_tck_N_200 was merged into signal jtag_io_jtag_tck_c
+Signal n1215 was merged into signal _zz_2
+Signal n1217 was merged into signal _zz_25_0
+Signal n1213 was merged into signal _zz_1
 Signal VCC_net undriven or does not drive anything - clipped.
 Signal GND_net undriven or does not drive anything - clipped.
-Block i1467 was optimized away.
-Block i478_1_lut was optimized away.
-Block i479_1_lut was optimized away.
-Block i477_1_lut was optimized away.
+Block i1455 was optimized away.
+Block i463_1_lut was optimized away.
+Block i465_1_lut was optimized away.
+Block i462_1_lut was optimized away.
 
      
 
@@ -189,10 +184,10 @@ GSR Component:
 
      GSR Property:
    The design components with GSR property set to ENABLED will respond to global
-
         set reset while the components with GSR property set to DISABLED will
         not.
         
+
 
      Components with disabled GSR Property
 -------------------------------------
@@ -201,85 +196,78 @@ GSR Component:
      not respond to the reset signal 'reset_c' via the GSR component.
 
      Type and number of components of the type: 
-   Register = 75 
+   Register = 68 
 
      Type and instance name of component: 
-   Register : _zz_23_i0_i1
-   Register : _zz_20_i0_i1
    Register : jtag_ctrl_tap_instructionShift_i0
-   Register : jtag_ctrl_tap_bypass_127
-   Register : jtag_ctrl_tap_instruction_i0
-   Register : _zz_18_i0_i0
-   Register : _zz_20_i0_i0
-   Register : _zz_23_i0_i0
-   Register : jtag_ctrl_tap_tdoUnbufferd_regNext_135
-   Register : _zz_18_i0_i1
+   Register : _zz_22_i0_i1
+   Register : _zz_19_i0_i1
+   Register : _zz_17_i0_i1
    Register : jtag_ctrl_tap_instruction_i7
    Register : jtag_ctrl_tap_instruction_i6
    Register : jtag_ctrl_tap_instruction_i5
-   Register : jtag_ctrl_tap_instructionShift_i3
-   Register : jtag_ctrl_tap_fsm_state_i0
-   Register : jtag_ctrl_tap_instruction_i2
+   Register : jtag_ctrl_tap_bypass_124
+   Register : jtag_ctrl_tap_instruction_i0
+   Register : _zz_17_i0_i0
+   Register : _zz_19_i0_i0
+   Register : _zz_22_i0_i0
+   Register : jtag_ctrl_tap_tdoUnbufferd_regNext_132
+   Register : _zz_15_i0_i0
    Register : jtag_ctrl_tap_instruction_i4
    Register : jtag_ctrl_tap_instruction_i3
-   Register : _zz_15_i0_i4
+   Register : jtag_ctrl_tap_instructionShift_i2
+   Register : jtag_ctrl_tap_fsm_state_i0
+   Register : _zz_15_i0_i31
    Register : jtag_ctrl_tap_instruction_i1
    Register : jtag_ctrl_tap_instructionShift_i7
    Register : jtag_ctrl_tap_instructionShift_i6
    Register : jtag_ctrl_tap_instructionShift_i5
-   Register : jtag_ctrl_tap_instructionShift_i2
-   Register : _zz_15_i0_i1
-   Register : jtag_ctrl_tap_instructionShift_i1
-   Register : _zz_15_i0_i0
    Register : jtag_ctrl_tap_instructionShift_i4
+   Register : jtag_ctrl_tap_instructionShift_i3
+   Register : jtag_ctrl_tap_instructionShift_i1
    Register : jtag_ctrl_tap_fsm_state_i3
    Register : jtag_ctrl_tap_fsm_state_i2
    Register : jtag_ctrl_tap_fsm_state_i1
-   Register : jtag_ctrl_chainArea_shifter__i0
-   Register : _zz_15_i0_i6
-   Register : _zz_15_i0_i12
-   Register : _zz_15_i0_i14
-   Register : _zz_15_i0_i15
-   Register : _zz_15_i0_i16
-   Register : _zz_15_i0_i17
-   Register : _zz_15_i0_i19
-   Register : _zz_15_i0_i20
-   Register : _zz_15_i0_i21
-   Register : _zz_15_i0_i24
-
    Register : _zz_15_i0_i30
+   Register : _zz_15_i0_i24
+   Register : _zz_15_i0_i21
+   Register : _zz_15_i0_i20
+   Register : _zz_15_i0_i19
+   Register : _zz_15_i0_i17
+   Register : _zz_15_i0_i16
+   Register : _zz_15_i0_i15
+   Register : _zz_15_i0_i14
+   Register : _zz_15_i0_i12
+   Register : _zz_15_i0_i6
+   Register : _zz_15_i0_i1
+   Register : jtag_ctrl_chainArea_shifter__i0
    Register : jtag_ctrl_chainArea_shifter__i1
    Register : jtag_ctrl_chainArea_shifter__i2
    Register : jtag_ctrl_chainArea_shifter__i3
+
    Register : jtag_ctrl_chainArea_shifter__i4
    Register : jtag_ctrl_chainArea_shifter__i5
    Register : jtag_ctrl_chainArea_shifter__i6
    Register : jtag_ctrl_chainArea_shifter__i7
+   Register : jtag_ctrl_tap_instruction_i2
+   Register : _zz_15_i0_i29
+   Register : _zz_15_i0_i28
+   Register : _zz_15_i0_i27
+   Register : _zz_15_i0_i26
+   Register : _zz_15_i0_i25
+   Register : _zz_15_i0_i23
+   Register : _zz_15_i0_i22
+   Register : _zz_15_i0_i18
+   Register : _zz_15_i0_i13
+   Register : _zz_15_i0_i11
+   Register : _zz_15_i0_i10
+   Register : _zz_15_i0_i9
+   Register : _zz_15_i0_i8
+   Register : _zz_15_i0_i7
    Register : _zz_15_i0_i5
+   Register : _zz_15_i0_i4
    Register : _zz_15_i0_i3
    Register : _zz_15_i0_i2
-   Register : _zz_15_i0_i7
-   Register : _zz_15_i0_i8
-   Register : _zz_15_i0_i9
-   Register : _zz_15_i0_i10
-   Register : _zz_15_i0_i11
-   Register : _zz_15_i0_i13
-   Register : _zz_15_i0_i18
-   Register : _zz_15_i0_i22
-   Register : _zz_15_i0_i23
-   Register : _zz_15_i0_i25
-   Register : _zz_15_i0_i26
-   Register : _zz_15_i0_i27
-   Register : _zz_15_i0_i28
-   Register : _zz_15_i0_i29
-   Register : _zz_15_i0_i31
-   Register : jtag_ctrl_chainer/jtagClkArea_bufNeg_0__17
-   Register : jtag_ctrl_chainer/jtagClkArea_nextWriteEnable_0__18
-   Register : jtag_ctrl_chainer/jtagClkArea_io_primary_tms_20
-   Register : jtag_ctrl_chainer/jtagClkArea_nextWriteEnable_pos_0__21
-   Register : jtag_ctrl_chainer/jtagClkArea_io_primary_tdi_pos_22
-   Register : jtag_ctrl_chainer/io_primary_tdi_regNext_16
-   Register : jtag_ctrl_chainer/jtagClkArea_bufPos_0__24
 
 
 
@@ -290,6 +278,16 @@ GSR Component:
    Total REAL Time: 0 secs  
    Peak Memory Usage: 151 MB
         
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -1,6 +1,6 @@
 // Generator : SpinalHDL v1.4.1    git head : 7bd45f3ec4adb4e3ae8b019eb79d09811eabaf5e
 // Component : MyTopLevel
-// Git hash  : 61c7be015c59964da4c851c9bc8f6973e7ca8cab
+// Git hash  : 8b61c76cb4c043956f1ea6225c9e97e4b8f29cb0
 
 
 `define JtagState_binary_sequential_type [3:0]
@@ -44,8 +44,8 @@ module MyTopLevel (
    inout     [3:0]    jtag_io_gpio_2,
   input               reset
 );
-  wire                _zz_71;
-  wire       [2:0]    _zz_72;
+  wire                _zz_70;
+  wire       [2:0]    _zz_71;
   wire                osc_OSC;
   wire                osc_SEDSTDBY;
   wire                jtag_ctrl_chainer_io_primary_tdo;
@@ -120,7 +120,6 @@ module MyTopLevel (
   reg                 jtag_ctrl_tap_tdoUnbufferd_regNext;
   wire                _zz_44;
   reg        [31:0]   _zz_45;
-  reg        [7:0]    _zz_46;
   wire                jtag_ctrl_chainArea_ctrl_tdi;
   wire                jtag_ctrl_chainArea_ctrl_enable;
   wire                jtag_ctrl_chainArea_ctrl_capture;
@@ -130,30 +129,30 @@ module MyTopLevel (
   wire                jtag_ctrl_chainArea_ctrl_tdo;
   reg        [7:0]    jtag_ctrl_chainArea_shifter;
   reg        [7:0]    jtag_ctrl_chainArea_store;
-  wire                _zz_47;
-  reg        [3:0]    _zz_48;
-  wire                _zz_49;
+  wire                _zz_46;
+  reg        [3:0]    _zz_47;
+  wire                _zz_48;
+  reg        [3:0]    _zz_49;
   reg        [3:0]    _zz_50;
-  reg        [3:0]    _zz_51;
-  wire                _zz_52;
+  wire                _zz_51;
+  reg        [3:0]    _zz_52;
   reg        [3:0]    _zz_53;
-  reg        [3:0]    _zz_54;
-  wire                _zz_55;
-  reg        [3:0]    _zz_56;
-  wire                _zz_57;
+  wire                _zz_54;
+  reg        [3:0]    _zz_55;
+  wire                _zz_56;
+  reg        [3:0]    _zz_57;
   reg        [3:0]    _zz_58;
-  reg        [3:0]    _zz_59;
-  wire                _zz_60;
+  wire                _zz_59;
+  reg        [3:0]    _zz_60;
   reg        [3:0]    _zz_61;
-  reg        [3:0]    _zz_62;
-  wire                _zz_63;
-  reg        [3:0]    _zz_64;
-  wire                _zz_65;
+  wire                _zz_62;
+  reg        [3:0]    _zz_63;
+  wire                _zz_64;
+  reg        [3:0]    _zz_65;
   reg        [3:0]    _zz_66;
-  reg        [3:0]    _zz_67;
-  wire                _zz_68;
+  wire                _zz_67;
+  reg        [3:0]    _zz_68;
   reg        [3:0]    _zz_69;
-  reg        [3:0]    _zz_70;
   wire                jtag_ctrl_jtagPostTap_tms;
   wire                jtag_ctrl_jtagPostTap_tdi;
   wire                jtag_ctrl_jtagPostTap_tdo;
@@ -166,7 +165,7 @@ module MyTopLevel (
 
 
   (* NOM_FREQ = "12.09" *) OSCH osc (
-    .STDBY       (_zz_71        ), //i
+    .STDBY       (_zz_70        ), //i
     .OSC         (osc_OSC       ), //o
     .SEDSTDBY    (osc_SEDSTDBY  )  //o
   );
@@ -175,7 +174,7 @@ module MyTopLevel (
     .io_primary_tdi            (jtag_ctrl_jtagPostTap_tdi                 ), //i
     .io_primary_tdo            (jtag_ctrl_chainer_io_primary_tdo          ), //o
     .io_primary_tck            (jtag_ctrl_jtagPostTap_tck                 ), //i
-    .io_select                 (_zz_72[2:0]                               ), //i
+    .io_select                 (_zz_71[2:0]                               ), //i
     .io_child_0_write_tms      (jtag_ctrl_chainer_io_child_0_write_tms    ), //o
     .io_child_0_write_tdi      (jtag_ctrl_chainer_io_child_0_write_tdi    ), //o
     .io_child_0_write_tck      (jtag_ctrl_chainer_io_child_0_write_tck    ), //o
@@ -427,7 +426,7 @@ module MyTopLevel (
     end
   end
 
-  assign _zz_71 = 1'b0;
+  assign _zz_70 = 1'b0;
   assign jtag_ctrl_jtagPreTap_tck = jtag_io_jtag_tck;
   assign jtag_ctrl_jtagPreTap_tms = jtag_io_jtag_tms;
   assign jtag_ctrl_jtagPreTap_tdi = jtag_io_jtag_tdi;
@@ -511,66 +510,66 @@ module MyTopLevel (
     if(jtag_ctrl_chainArea_ctrl_enable)begin
       jtag_ctrl_tap_tdoDr = jtag_ctrl_chainArea_ctrl_tdo;
     end
-    if(_zz_47)begin
-      jtag_ctrl_tap_tdoDr = _zz_48[0];
+    if(_zz_46)begin
+      jtag_ctrl_tap_tdoDr = _zz_47[0];
     end
-    if(_zz_49)begin
-      jtag_ctrl_tap_tdoDr = _zz_50[0];
+    if(_zz_48)begin
+      jtag_ctrl_tap_tdoDr = _zz_49[0];
     end
-    if(_zz_52)begin
-      jtag_ctrl_tap_tdoDr = _zz_53[0];
+    if(_zz_51)begin
+      jtag_ctrl_tap_tdoDr = _zz_52[0];
     end
-    if(_zz_55)begin
-      jtag_ctrl_tap_tdoDr = _zz_56[0];
+    if(_zz_54)begin
+      jtag_ctrl_tap_tdoDr = _zz_55[0];
     end
-    if(_zz_57)begin
-      jtag_ctrl_tap_tdoDr = _zz_58[0];
+    if(_zz_56)begin
+      jtag_ctrl_tap_tdoDr = _zz_57[0];
     end
-    if(_zz_60)begin
-      jtag_ctrl_tap_tdoDr = _zz_61[0];
+    if(_zz_59)begin
+      jtag_ctrl_tap_tdoDr = _zz_60[0];
     end
-    if(_zz_63)begin
-      jtag_ctrl_tap_tdoDr = _zz_64[0];
+    if(_zz_62)begin
+      jtag_ctrl_tap_tdoDr = _zz_63[0];
     end
-    if(_zz_65)begin
-      jtag_ctrl_tap_tdoDr = _zz_66[0];
+    if(_zz_64)begin
+      jtag_ctrl_tap_tdoDr = _zz_65[0];
     end
-    if(_zz_68)begin
-      jtag_ctrl_tap_tdoDr = _zz_69[0];
+    if(_zz_67)begin
+      jtag_ctrl_tap_tdoDr = _zz_68[0];
     end
   end
 
   assign jtag_ctrl_tap_tdoIr = jtag_ctrl_tap_instructionShift[0];
   assign jtag_ctrl_jtagPreTap_tdo = jtag_ctrl_tap_tdoUnbufferd_regNext;
   assign _zz_44 = (jtag_ctrl_tap_instruction == 8'h04);
-  assign jtag_ctrl_chainSelect = _zz_46;
   assign jtag_ctrl_chainArea_ctrl_tdo = jtag_ctrl_chainArea_shifter[0];
+  assign jtag_ctrl_chainSelect = jtag_ctrl_chainArea_store;
   assign jtag_ctrl_chainArea_ctrl_tdi = jtag_ctrl_jtagPreTap_tdi;
   assign jtag_ctrl_chainArea_ctrl_enable = (jtag_ctrl_tap_instruction == 8'h08);
   assign jtag_ctrl_chainArea_ctrl_capture = (jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_CAPTURE);
   assign jtag_ctrl_chainArea_ctrl_shift = (jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_SHIFT);
   assign jtag_ctrl_chainArea_ctrl_update = (jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_UPDATE);
   assign jtag_ctrl_chainArea_ctrl_reset = (jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_RESET);
-  assign _zz_47 = (jtag_ctrl_tap_instruction == 8'h09);
-  assign _zz_36 = _zz_51;
-  assign _zz_49 = (jtag_ctrl_tap_instruction == 8'h0a);
-  assign _zz_35 = _zz_54;
-  assign _zz_52 = (jtag_ctrl_tap_instruction == 8'h0b);
-  assign _zz_55 = (jtag_ctrl_tap_instruction == 8'h0c);
-  assign _zz_39 = _zz_59;
-  assign _zz_57 = (jtag_ctrl_tap_instruction == 8'h0d);
-  assign _zz_38 = _zz_62;
-  assign _zz_60 = (jtag_ctrl_tap_instruction == 8'h0e);
-  assign _zz_63 = (jtag_ctrl_tap_instruction == 8'h0f);
-  assign _zz_42 = _zz_67;
-  assign _zz_65 = (jtag_ctrl_tap_instruction == 8'h10);
-  assign _zz_41 = _zz_70;
-  assign _zz_68 = (jtag_ctrl_tap_instruction == 8'h11);
+  assign _zz_46 = (jtag_ctrl_tap_instruction == 8'h09);
+  assign _zz_36 = _zz_50;
+  assign _zz_48 = (jtag_ctrl_tap_instruction == 8'h0a);
+  assign _zz_35 = _zz_53;
+  assign _zz_51 = (jtag_ctrl_tap_instruction == 8'h0b);
+  assign _zz_54 = (jtag_ctrl_tap_instruction == 8'h0c);
+  assign _zz_39 = _zz_58;
+  assign _zz_56 = (jtag_ctrl_tap_instruction == 8'h0d);
+  assign _zz_38 = _zz_61;
+  assign _zz_59 = (jtag_ctrl_tap_instruction == 8'h0e);
+  assign _zz_62 = (jtag_ctrl_tap_instruction == 8'h0f);
+  assign _zz_42 = _zz_66;
+  assign _zz_64 = (jtag_ctrl_tap_instruction == 8'h10);
+  assign _zz_41 = _zz_69;
+  assign _zz_67 = (jtag_ctrl_tap_instruction == 8'h11);
   assign jtag_ctrl_jtagPostTap_tdi = jtag_ctrl_jtagPreTap_tdo;
   assign jtag_ctrl_jtagPostTap_tck = jtag_ctrl_jtagPreTap_tck;
   assign jtag_ctrl_jtagPostTap_tms = jtag_ctrl_jtagPreTap_tms;
   assign jtag_ctrl_jtagPostTap_tdo = jtag_ctrl_chainer_io_primary_tdo;
-  assign _zz_72 = jtag_ctrl_chainSelect[2:0];
+  assign _zz_71 = jtag_ctrl_chainSelect[2:0];
   assign _zz_22 = jtag_ctrl_chainer_io_child_0_write_tms;
   assign _zz_23 = jtag_ctrl_chainer_io_child_0_write_tdi;
   assign _zz_24 = jtag_ctrl_chainer_io_child_0_write_tck;
@@ -628,76 +627,76 @@ module MyTopLevel (
         jtag_ctrl_chainArea_shifter <= ({jtag_ctrl_chainArea_ctrl_tdi,jtag_ctrl_chainArea_shifter} >>> 1);
       end
     end
-    if(_zz_47)begin
+    if(_zz_46)begin
       if((jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_CAPTURE))begin
-        _zz_48 <= _zz_34;
+        _zz_47 <= _zz_34;
       end
       if((jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_SHIFT))begin
-        _zz_48 <= ({jtag_ctrl_jtagPreTap_tdi,_zz_48} >>> 1);
+        _zz_47 <= ({jtag_ctrl_jtagPreTap_tdi,_zz_47} >>> 1);
       end
     end
-    if(_zz_49)begin
+    if(_zz_48)begin
       if((jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_CAPTURE))begin
-        _zz_50 <= _zz_51;
+        _zz_49 <= _zz_50;
       end
       if((jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_SHIFT))begin
-        _zz_50 <= ({jtag_ctrl_jtagPreTap_tdi,_zz_50} >>> 1);
+        _zz_49 <= ({jtag_ctrl_jtagPreTap_tdi,_zz_49} >>> 1);
       end
     end
-    if(_zz_52)begin
+    if(_zz_51)begin
       if((jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_CAPTURE))begin
-        _zz_53 <= _zz_54;
+        _zz_52 <= _zz_53;
       end
       if((jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_SHIFT))begin
-        _zz_53 <= ({jtag_ctrl_jtagPreTap_tdi,_zz_53} >>> 1);
+        _zz_52 <= ({jtag_ctrl_jtagPreTap_tdi,_zz_52} >>> 1);
       end
     end
-    if(_zz_55)begin
+    if(_zz_54)begin
       if((jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_CAPTURE))begin
-        _zz_56 <= _zz_37;
+        _zz_55 <= _zz_37;
       end
       if((jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_SHIFT))begin
-        _zz_56 <= ({jtag_ctrl_jtagPreTap_tdi,_zz_56} >>> 1);
+        _zz_55 <= ({jtag_ctrl_jtagPreTap_tdi,_zz_55} >>> 1);
       end
     end
-    if(_zz_57)begin
+    if(_zz_56)begin
       if((jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_CAPTURE))begin
-        _zz_58 <= _zz_59;
+        _zz_57 <= _zz_58;
       end
       if((jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_SHIFT))begin
-        _zz_58 <= ({jtag_ctrl_jtagPreTap_tdi,_zz_58} >>> 1);
+        _zz_57 <= ({jtag_ctrl_jtagPreTap_tdi,_zz_57} >>> 1);
       end
     end
-    if(_zz_60)begin
+    if(_zz_59)begin
       if((jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_CAPTURE))begin
-        _zz_61 <= _zz_62;
+        _zz_60 <= _zz_61;
       end
       if((jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_SHIFT))begin
-        _zz_61 <= ({jtag_ctrl_jtagPreTap_tdi,_zz_61} >>> 1);
+        _zz_60 <= ({jtag_ctrl_jtagPreTap_tdi,_zz_60} >>> 1);
       end
     end
-    if(_zz_63)begin
+    if(_zz_62)begin
       if((jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_CAPTURE))begin
-        _zz_64 <= _zz_40;
+        _zz_63 <= _zz_40;
       end
       if((jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_SHIFT))begin
-        _zz_64 <= ({jtag_ctrl_jtagPreTap_tdi,_zz_64} >>> 1);
+        _zz_63 <= ({jtag_ctrl_jtagPreTap_tdi,_zz_63} >>> 1);
       end
     end
-    if(_zz_65)begin
+    if(_zz_64)begin
       if((jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_CAPTURE))begin
-        _zz_66 <= _zz_67;
+        _zz_65 <= _zz_66;
       end
       if((jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_SHIFT))begin
-        _zz_66 <= ({jtag_ctrl_jtagPreTap_tdi,_zz_66} >>> 1);
+        _zz_65 <= ({jtag_ctrl_jtagPreTap_tdi,_zz_65} >>> 1);
       end
     end
-    if(_zz_68)begin
+    if(_zz_67)begin
       if((jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_CAPTURE))begin
-        _zz_69 <= _zz_70;
+        _zz_68 <= _zz_69;
       end
       if((jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_SHIFT))begin
-        _zz_69 <= ({jtag_ctrl_jtagPreTap_tdi,_zz_69} >>> 1);
+        _zz_68 <= ({jtag_ctrl_jtagPreTap_tdi,_zz_68} >>> 1);
       end
     end
   end
@@ -708,51 +707,47 @@ module MyTopLevel (
 
   always @ (posedge jtag_io_jtag_tck or negedge reset) begin
     if (!reset) begin
-      _zz_46 <= 8'h0;
       jtag_ctrl_chainArea_store <= 8'h0;
-      _zz_51 <= 4'b0000;
-      _zz_54 <= 4'b0000;
-      _zz_59 <= 4'b0000;
-      _zz_62 <= 4'b0000;
-      _zz_67 <= 4'b0000;
-      _zz_70 <= 4'b0000;
+      _zz_50 <= 4'b0000;
+      _zz_53 <= 4'b0000;
+      _zz_58 <= 4'b0000;
+      _zz_61 <= 4'b0000;
+      _zz_66 <= 4'b0000;
+      _zz_69 <= 4'b0000;
     end else begin
-      if((jtag_ctrl_tap_fsm_stateNext == `JtagState_binary_sequential_IDLE))begin
-        _zz_46 <= jtag_ctrl_chainArea_store;
-      end
       if(jtag_ctrl_chainArea_ctrl_enable)begin
         if(jtag_ctrl_chainArea_ctrl_update)begin
           jtag_ctrl_chainArea_store <= jtag_ctrl_chainArea_shifter;
         end
       end
-      if(_zz_49)begin
+      if(_zz_48)begin
         if((jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_UPDATE))begin
-          _zz_51 <= _zz_50;
+          _zz_50 <= _zz_49;
         end
       end
-      if(_zz_52)begin
+      if(_zz_51)begin
         if((jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_UPDATE))begin
-          _zz_54 <= _zz_53;
+          _zz_53 <= _zz_52;
         end
       end
-      if(_zz_57)begin
+      if(_zz_56)begin
         if((jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_UPDATE))begin
-          _zz_59 <= _zz_58;
+          _zz_58 <= _zz_57;
         end
       end
-      if(_zz_60)begin
+      if(_zz_59)begin
         if((jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_UPDATE))begin
-          _zz_62 <= _zz_61;
+          _zz_61 <= _zz_60;
         end
       end
-      if(_zz_65)begin
+      if(_zz_64)begin
         if((jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_UPDATE))begin
-          _zz_67 <= _zz_66;
+          _zz_66 <= _zz_65;
         end
       end
-      if(_zz_68)begin
+      if(_zz_67)begin
         if((jtag_ctrl_tap_fsm_state == `JtagState_binary_sequential_DR_UPDATE))begin
-          _zz_70 <= _zz_69;
+          _zz_69 <= _zz_68;
         end
       end
     end
@@ -787,83 +782,75 @@ module JtagChainer (
   wire                _zz_1;
   wire                _zz_2;
   wire                _zz_3;
-  reg                 io_primary_tdi_regNext;
-  reg        [2:0]    jtagClkArea_bufPos;
-  reg        [2:0]    jtagClkArea_bufNeg;
-  reg        [2:0]    jtagClkArea_nextWriteEnable_pos;
-  reg        [2:0]    jtagClkArea_nextWriteEnable;
-  reg                 jtagClkArea_io_primary_tdi_pos;
-  reg                 jtagClkArea_io_primary_tms_pos;
-  reg                 jtagClkArea_io_primary_tdi;
-  reg                 jtagClkArea_io_primary_tms;
+  wire                jtagClkArea_childBuffer;
+  wire                jtagClkArea_outBuffer;
+  reg                 jtagClkArea_ioPrimaryNeg;
+  reg        [2:0]    jtagClkArea_childBufPos;
+  reg        [2:0]    jtagClkArea_childBufNeg;
 
   assign _zz_1 = io_select[0];
   assign _zz_2 = io_select[1];
   assign _zz_3 = io_select[2];
+  assign jtagClkArea_childBuffer = 1'b0;
+  assign jtagClkArea_outBuffer = 1'b0;
   always @ (*) begin
-    io_primary_tdo = io_primary_tdi_regNext;
+    io_primary_tdo = (jtagClkArea_outBuffer ? jtagClkArea_ioPrimaryNeg : io_primary_tdi);
     if(_zz_1)begin
-      io_primary_tdo = jtagClkArea_bufNeg[0];
+      io_primary_tdo = (jtagClkArea_outBuffer ? jtagClkArea_childBufNeg[0] : io_child_0_tdo);
     end
     if(_zz_2)begin
-      io_primary_tdo = jtagClkArea_bufNeg[1];
+      io_primary_tdo = (jtagClkArea_outBuffer ? jtagClkArea_childBufNeg[1] : io_child_1_tdo);
     end
     if(_zz_3)begin
-      io_primary_tdo = jtagClkArea_bufNeg[2];
+      io_primary_tdo = (jtagClkArea_outBuffer ? jtagClkArea_childBufNeg[2] : io_child_2_tdo);
     end
   end
 
-  assign io_child_0_writeEnable = jtagClkArea_nextWriteEnable[0];
-  assign io_child_0_write_tdi = jtagClkArea_io_primary_tdi;
-  assign io_child_0_write_tms = jtagClkArea_io_primary_tms;
+  assign io_child_0_writeEnable = io_select[0];
+  assign io_child_0_write_tdi = io_primary_tdi;
+  assign io_child_0_write_tms = io_primary_tms;
   assign io_child_0_write_tck = io_primary_tck;
-  assign io_child_1_writeEnable = jtagClkArea_nextWriteEnable[1];
+  assign io_child_1_writeEnable = io_select[1];
   always @ (*) begin
-    io_child_1_write_tdi = jtagClkArea_io_primary_tdi;
+    io_child_1_write_tdi = io_primary_tdi;
     if(_zz_2)begin
       if(io_select[0])begin
-        io_child_1_write_tdi = jtagClkArea_bufNeg[0];
+        io_child_1_write_tdi = (jtagClkArea_childBuffer ? jtagClkArea_childBufNeg[0] : io_child_0_tdo);
       end
     end
   end
 
-  assign io_child_1_write_tms = jtagClkArea_io_primary_tms;
+  assign io_child_1_write_tms = io_primary_tms;
   assign io_child_1_write_tck = io_primary_tck;
-  assign io_child_2_writeEnable = jtagClkArea_nextWriteEnable[2];
+  assign io_child_2_writeEnable = io_select[2];
   always @ (*) begin
-    io_child_2_write_tdi = jtagClkArea_io_primary_tdi;
+    io_child_2_write_tdi = io_primary_tdi;
     if(_zz_3)begin
       if(io_select[0])begin
-        io_child_2_write_tdi = jtagClkArea_bufNeg[0];
+        io_child_2_write_tdi = (jtagClkArea_childBuffer ? jtagClkArea_childBufNeg[0] : io_child_0_tdo);
       end
       if(io_select[1])begin
-        io_child_2_write_tdi = jtagClkArea_bufNeg[1];
+        io_child_2_write_tdi = (jtagClkArea_childBuffer ? jtagClkArea_childBufNeg[1] : io_child_1_tdo);
       end
     end
   end
 
-  assign io_child_2_write_tms = jtagClkArea_io_primary_tms;
+  assign io_child_2_write_tms = io_primary_tms;
   assign io_child_2_write_tck = io_primary_tck;
   always @ (negedge io_primary_tck) begin
-    io_primary_tdi_regNext <= io_primary_tdi;
-    jtagClkArea_bufNeg <= jtagClkArea_bufPos;
-    jtagClkArea_nextWriteEnable <= jtagClkArea_nextWriteEnable_pos;
-    jtagClkArea_io_primary_tdi <= jtagClkArea_io_primary_tdi_pos;
-    jtagClkArea_io_primary_tms <= jtagClkArea_io_primary_tdi_pos;
+    jtagClkArea_ioPrimaryNeg <= io_primary_tdi;
+    jtagClkArea_childBufNeg <= jtagClkArea_childBufPos;
   end
 
   always @ (posedge io_primary_tck) begin
-    jtagClkArea_nextWriteEnable_pos <= io_select;
-    jtagClkArea_io_primary_tdi_pos <= io_primary_tdi;
-    jtagClkArea_io_primary_tms_pos <= io_primary_tms;
     if(_zz_1)begin
-      jtagClkArea_bufPos[0] <= io_child_0_tdo;
+      jtagClkArea_childBufPos[0] <= io_child_0_tdo;
     end
     if(_zz_2)begin
-      jtagClkArea_bufPos[1] <= io_child_1_tdo;
+      jtagClkArea_childBufPos[1] <= io_child_1_tdo;
     end
     if(_zz_3)begin
-      jtagClkArea_bufPos[2] <= io_child_2_tdo;
+      jtagClkArea_childBufPos[2] <= io_child_2_tdo;
     end
   end
 

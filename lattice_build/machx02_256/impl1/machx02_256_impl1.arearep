@@ -1,32 +1,30 @@
 ----------------------------------------------------------------------
 Report for cell MyTopLevel.TECH
-Register bits:  88 of 322 (27.329%)
+Register bits:  80 of 322 (24.845%)
 I/O cells:      11
                                   Cell usage:
                                cell     count   Res Usage(%)
                                  BB         2          100.0
-                            FD1P3AX        41          100.0
+                            FD1P3AX        39          100.0
                             FD1P3IX        26          100.0
                             FD1P3JX         1          100.0
-                            FD1S3AX        10          100.0
-                            FD1S3IX         9          100.0
+                            FD1S3AX         3          100.0
+                            FD1S3IX        10          100.0
                             FD1S3JX         1          100.0
                                 GSR         1          100.0
                                  IB         5          100.0
                                 INV         1          100.0
-                               LUT4       108          100.0
+                               LUT4        96          100.0
                                  OB         1          100.0
                                 OBZ         3          100.0
                               PFUMX         6          100.0
 SUB MODULES
                         JtagChainer         1
-                              TOTAL       216
+                              TOTAL       196
 ----------------------------------------------------------------------
 Report for cell JtagChainer.v1
 Instance Path : jtag_ctrl_chainer
                                   Cell usage:
                                cell     count   Res Usage(%)
-                            FD1P3AX         1            2.4
-                            FD1S3AX         6           60.0
-                               LUT4         1            0.9
-                              TOTAL         8
+                               LUT4         1            1.0
+                              TOTAL         1

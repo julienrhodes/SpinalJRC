@@ -5,23 +5,23 @@
             <Task name="IBIS" build_result="0" update_result="2" update_time="0"/>
             <Task name="TimingSimFileVlg" build_result="0" update_result="2" update_time="0"/>
             <Task name="TimingSimFileVHD" build_result="0" update_result="2" update_time="0"/>
-            <Task name="Bitgen" build_result="0" update_result="2" update_time="0"/>
-            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1601529056"/>
+            <Task name="Bitgen" build_result="2" update_result="0" update_time="1601786691"/>
+            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1601786689"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1601529051">
-            <Task name="Map" build_result="2" update_result="0" update_time="1601529051"/>
+        <Milestone name="Map" build_result="2" build_time="1601786684">
+            <Task name="Map" build_result="2" update_result="0" update_time="1601786684"/>
             <Task name="MapTrace" build_result="0" update_result="2" update_time="0"/>
             <Task name="MapVerilogSimFile" build_result="0" update_result="2" update_time="0"/>
             <Task name="MapVHDLSimFile" build_result="0" update_result="2" update_time="0"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1601529054">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1601529054"/>
-            <Task name="PARTrace" build_result="2" update_result="0" update_time="1601529055"/>
+        <Milestone name="PAR" build_result="2" build_time="1601786687">
+            <Task name="PAR" build_result="2" update_result="0" update_time="1601786687"/>
+            <Task name="PARTrace" build_result="2" update_result="0" update_time="1601786687"/>
             <Task name="IOTiming" build_result="0" update_result="2" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1601529051">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1601529051"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1601529056"/>
+        <Milestone name="Synthesis" build_result="2" build_time="1601786683">
+            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1601786683"/>
+            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1601786689"/>
         </Milestone>
         <Milestone name="TOOL_Report" build_result="0" build_time="0">
             <Task name="HDLE" build_result="0" update_result="2" update_time="1601073456"/>
@@ -30,13 +30,14 @@
             <Task name="PIODRC" build_result="0" update_result="2" update_time="0"/>
             <Task name="DEC" build_result="0" update_result="2" update_time="0"/>
         </Milestone>
-        <Report name=".vdbs/machx02_256_impl1_map.vdb" last_build_time="1601529051" last_build_size="71291"/>
-        <Report name="machx02_256_impl1.bgn" last_build_time="1601529056" last_build_size="4150"/>
-        <Report name="machx02_256_impl1.jed" last_build_time="1601529056" last_build_size="75184"/>
-        <Report name="machx02_256_impl1.lsedata" last_build_time="1601529050" last_build_size="160162"/>
-        <Report name="machx02_256_impl1.ncd" last_build_time="1601529054" last_build_size="133382"/>
-        <Report name="machx02_256_impl1.ngd" last_build_time="1601529051" last_build_size="113671"/>
-        <Report name="machx02_256_impl1.twr" last_build_time="1601529055" last_build_size="46446"/>
-        <Report name="machx02_256_impl1_map.ncd" last_build_time="1601529051" last_build_size="90021"/>
+        <Report name=".vdbs/machx02_256_impl1_map.vdb" last_build_time="1601786684" last_build_size="66402"/>
+        <Report name="machx02_256_impl1.bgn" last_build_time="1601786691" last_build_size="4143"/>
+        <Report name="machx02_256_impl1.bit" last_build_time="1601786691" last_build_size="3256"/>
+        <Report name="machx02_256_impl1.jed" last_build_time="1601786689" last_build_size="75184"/>
+        <Report name="machx02_256_impl1.lsedata" last_build_time="1601786683" last_build_size="146110"/>
+        <Report name="machx02_256_impl1.ncd" last_build_time="1601786687" last_build_size="121892"/>
+        <Report name="machx02_256_impl1.ngd" last_build_time="1601786683" last_build_size="103403"/>
+        <Report name="machx02_256_impl1.twr" last_build_time="1601786687" last_build_size="48751"/>
+        <Report name="machx02_256_impl1_map.ncd" last_build_time="1601786683" last_build_size="82030"/>
     </Strategy>
 </BuildStatus>

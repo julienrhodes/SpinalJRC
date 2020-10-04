@@ -1,5 +1,5 @@
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.11.0.396.4 -- WARNING: Map write only section -- Wed Sep 30 22:10:51 2020
+# map:  version Diamond (64-bit) 3.11.0.396.4 -- WARNING: Map write only section -- Sat Oct  3 21:44:43 2020
 
 SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=DISABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=ENABLE BACKGROUND_RECONFIG=OFF INBUF=ON ;
 LOCATE COMP "jtag_io_gpio_0[1]" SITE "14" ;
@@ -20,5 +20,5 @@ COMMERCIAL ;
 
 // No timing preferences found. TRCE invokes auto-generation of timing preferences
 // Section Autogen
-FREQUENCY NET "jtag_io_jtag_tck_c" 188.111 MHz ;
+FREQUENCY NET "jtag_io_jtag_tck_c" 147.973 MHz ;
 // End Section Autogen
