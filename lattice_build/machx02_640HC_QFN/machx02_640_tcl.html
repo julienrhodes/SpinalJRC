@@ -35,6 +35,33 @@ prj_project close
 
 
 
+<A name="pn200925143609"></A><B><U><big>pn200925143609</big></U></B>
+#Start recording tcl command: 9/25/2020 10:46:15
+#Project Location: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN; Project name: machx02_640
+prj_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/machx02_640.ldf"
+prj_run PAR -impl impl1 -task PARTrace
+prj_run PAR -impl impl1
+prj_run PAR -impl impl1
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Jedecgen
+prj_project close
+#Stop recording: 9/25/2020 14:36:09
+
+
+
+<A name="pn201009140046"></A><B><U><big>pn201009140046</big></U></B>
+#Start recording tcl command: 10/9/2020 13:59:56
+#Project Location: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN; Project name: machx02_640
+prj_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/machx02_640.ldf"
+prj_src add -exclude "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/flash.xcf"
+prj_src enable "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/flash.xcf"
+pgr_project save "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/flash.xcf"
+prj_project save
+prj_project close
+#Stop recording: 10/9/2020 14:00:46
+
+
+
 <BR>
 <BR>
 <BR>

@@ -1,0 +1,10 @@
+#Start recording tcl command: 9/25/2020 10:46:15
+#Project Location: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN; Project name: machx02_640
+prj_project open "/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/machx02_640.ldf"
+prj_run PAR -impl impl1 -task PARTrace
+prj_run PAR -impl impl1
+prj_run PAR -impl impl1
+prj_run Export -impl impl1 -task Bitgen
+prj_run Export -impl impl1 -task Jedecgen
+prj_project close
+#Stop recording: 9/25/2020 14:36:09

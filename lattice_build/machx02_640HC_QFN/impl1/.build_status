@@ -5,26 +5,26 @@
             <Task name="IBIS" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVlg" build_result="0" update_result="3" update_time="0"/>
             <Task name="TimingSimFileVHD" build_result="0" update_result="3" update_time="0"/>
-            <Task name="Bitgen" build_result="2" update_result="0" update_time="1601056688"/>
-            <Task name="Jedecgen" build_result="2" update_result="0" update_time="1601056691"/>
+            <Task name="Bitgen" build_result="0" update_result="2" update_time="1601056688"/>
+            <Task name="Jedecgen" build_result="0" update_result="2" update_time="1601056691"/>
         </Milestone>
-        <Milestone name="Map" build_result="2" build_time="1601056637">
-            <Task name="Map" build_result="2" update_result="0" update_time="1601056637"/>
+        <Milestone name="Map" build_result="0" build_time="1601056637">
+            <Task name="Map" build_result="0" update_result="2" update_time="1601056637"/>
             <Task name="MapTrace" build_result="0" update_result="3" update_time="0"/>
             <Task name="MapVerilogSimFile" build_result="0" update_result="3" update_time="0"/>
             <Task name="MapVHDLSimFile" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="PAR" build_result="2" build_time="1601056640">
-            <Task name="PAR" build_result="2" update_result="0" update_time="1601056640"/>
-            <Task name="PARTrace" build_result="2" update_result="0" update_time="1601056640"/>
+        <Milestone name="PAR" build_result="0" build_time="1601056640">
+            <Task name="PAR" build_result="0" update_result="2" update_time="1601056640"/>
+            <Task name="PARTrace" build_result="0" update_result="2" update_time="1601056640"/>
             <Task name="IOTiming" build_result="0" update_result="3" update_time="0"/>
         </Milestone>
-        <Milestone name="Synthesis" build_result="2" build_time="1601056167">
-            <Task name="Lattice_Synthesis" build_result="2" update_result="0" update_time="1601056167"/>
-            <Task name="LSE_Compile" build_result="2" update_result="0" update_time="1601056171"/>
+        <Milestone name="Synthesis" build_result="0" build_time="1601056167">
+            <Task name="Lattice_Synthesis" build_result="0" update_result="2" update_time="1601056167"/>
+            <Task name="LSE_Compile" build_result="0" update_result="2" update_time="1601056171"/>
         </Milestone>
         <Milestone name="TOOL_Report" build_result="0" build_time="0">
-            <Task name="HDLE" build_result="0" update_result="2" update_time="1600883460"/>
+            <Task name="HDLE" build_result="2" update_result="0" update_time="1602277258"/>
             <Task name="BKM" build_result="0" update_result="2" update_time="0"/>
             <Task name="SSO" build_result="0" update_result="2" update_time="0"/>
             <Task name="PIODRC" build_result="0" update_result="2" update_time="0"/>
