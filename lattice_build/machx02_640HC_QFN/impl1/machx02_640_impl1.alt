@@ -1,23 +1,26 @@
 NOTE Copyright (C), 1992-2010, Lattice Semiconductor Corporation *
 NOTE All Rights Reserved *
-NOTE DATE CREATED: Fri Sep 25 10:58:11 2020 *
+NOTE DATE CREATED: Wed Oct 28 14:02:58 2020 *
 NOTE DESIGN NAME: MyTopLevel *
 NOTE DEVICE NAME: LCMXO2-640HC-4QFN48 *
 NOTE PIN ASSIGNMENTS *
 NOTE PINS jtag_io_gpio_0[3] : 27 : inout *
-NOTE PINS reset : 5 : in *
+NOTE PINS reset : 12 : in *
 NOTE PINS jtag_io_child_2_tdo : 2 : in *
 NOTE PINS jtag_io_child_1_tdo : 14 : in *
 NOTE PINS jtag_io_child_0_tdo : 36 : in *
 NOTE PINS jtag_io_jtag_tck : 43 : in *
 NOTE PINS jtag_io_jtag_tdi : 47 : in *
 NOTE PINS jtag_io_jtag_tms : 44 : in *
+NOTE PINS jtag_io_child_2_trst : 5 : out *
 NOTE PINS jtag_io_child_2_tck : 4 : out *
 NOTE PINS jtag_io_child_2_tdi : 3 : out *
 NOTE PINS jtag_io_child_2_tms : 7 : out *
+NOTE PINS jtag_io_child_1_trst : 17 : out *
 NOTE PINS jtag_io_child_1_tck : 16 : out *
 NOTE PINS jtag_io_child_1_tdi : 15 : out *
 NOTE PINS jtag_io_child_1_tms : 18 : out *
+NOTE PINS jtag_io_child_0_trst : 33 : out *
 NOTE PINS jtag_io_child_0_tck : 34 : out *
 NOTE PINS jtag_io_child_0_tdi : 35 : out *
 NOTE PINS jtag_io_child_0_tms : 32 : out *

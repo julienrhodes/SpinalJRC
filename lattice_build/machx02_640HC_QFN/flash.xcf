@@ -20,13 +20,15 @@
 				<BScanVal>0</BScanVal>
 			</Bypass>
 			<File>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/impl1/machx02_640_impl1.jed</File>
-			<FileTime>09/25/20 10:58:11</FileTime>
+			<FileTime>10/28/20 14:02:58</FileTime>
+			<JedecChecksum>0x177B</JedecChecksum>
 			<Operation>FLASH Erase,Program,Verify</Operation>
 			<Option>
 				<SVFVendor>JTAG STANDARD</SVFVendor>
 				<IOState>HighZ</IOState>
 				<PreloadLength>152</PreloadLength>
 				<IOVectorData>0xFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF</IOVectorData>
+				<SVFProcessor>SVF Processor</SVFProcessor>
 				<Usercode>0x00000000</Usercode>
 				<AccessMode>FLASH</AccessMode>
 			</Option>
@@ -41,4 +43,13 @@
 		<VerifyUsercode value="FALSE"/>
 		<TCKDelay>1</TCKDelay>
 	</ProjectOptions>
+	<CableOptions>
+		<CableName>USB2</CableName>
+		<PortAdd>FTUSB-0</PortAdd>
+		<USBID>LATTICE XO3L STARTER KIT A Location 0000 Serial LATTICE XO3L STARTER KIT A</USBID>
+		<JTAGPinSetting>
+			ISPEN	HIGH;
+		</JTAGPinSetting>
+		<ISPENConnect value="TRUE"/>
+	</CableOptions>
 </ispXCF>

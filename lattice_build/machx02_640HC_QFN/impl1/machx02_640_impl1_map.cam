@@ -1,28 +1,27 @@
 [ START MERGED ]
-n1758 _zz_12
-jtag_io_jtag_tck_N_285 jtag_io_jtag_tck_c
-n1768 _zz_1
-n1752 _zz_9
-n1756 _zz_11
-n1754 _zz_10
-n1782 _zz_71_2
-n1779 _zz_71_1
-n1776 _zz_71_0
-n1774 _zz_4
-n1772 _zz_3
-n1770 _zz_2
-n1766 _zz_8
-n1764 _zz_7
-n1762 _zz_6
-n1760 _zz_5
+jtag_io_jtag_tck_N_290 jtag_io_jtag_tck_c
+n1796 _zz_2
+n1794 _zz_1
+n1792 _zz_8
+n1778 _zz_9
+n1812 _zz_77_2
+n1808 _zz_77_1
+n1804 _zz_77_0
+n1800 _zz_4
+n1798 _zz_3
+n1790 _zz_7
+n1788 _zz_6
+n1786 _zz_5
+n1784 _zz_12
+n1782 _zz_11
+n1780 _zz_10
 [ END MERGED ]
 [ START CLIPPED ]
-VCC_net
 GND_net
 [ END CLIPPED ]
 [ START DESIGN PREFS ]
 SCHEMATIC START ;
-# map:  version Diamond (64-bit) 3.11.0.396.4 -- WARNING: Map write only section -- Fri Sep 25 10:57:16 2020
+# map:  version Diamond (64-bit) 3.11.0.396.4 -- WARNING: Map write only section -- Wed Oct 28 14:02:51 2020
 
 SYSCONFIG SDM_PORT=DISABLE SLAVE_SPI_PORT=DISABLE I2C_PORT=DISABLE MASTER_SPI_PORT=DISABLE COMPRESS_CONFIG=ON CONFIGURATION=CFG MY_ASSP=OFF ONE_TIME_PROGRAM=OFF CONFIG_SECURE=OFF MCCLK_FREQ=2.08 JTAG_PORT=DISABLE ENABLE_TRANSFR=DISABLE SHAREDEBRINIT=DISABLE MUX_CONFIGURATION_PORTS=ENABLE BACKGROUND_RECONFIG=OFF INBUF=ON ;
 LOCATE COMP "jtag_io_gpio_0[3]" SITE "27" ;
@@ -32,12 +31,15 @@ LOCATE COMP "jtag_io_child_0_tdo" SITE "36" ;
 LOCATE COMP "jtag_io_jtag_tck" SITE "43" ;
 LOCATE COMP "jtag_io_jtag_tdi" SITE "47" ;
 LOCATE COMP "jtag_io_jtag_tms" SITE "44" ;
+LOCATE COMP "jtag_io_child_2_trst" SITE "5" ;
 LOCATE COMP "jtag_io_child_2_tck" SITE "4" ;
 LOCATE COMP "jtag_io_child_2_tdi" SITE "3" ;
 LOCATE COMP "jtag_io_child_2_tms" SITE "7" ;
+LOCATE COMP "jtag_io_child_1_trst" SITE "17" ;
 LOCATE COMP "jtag_io_child_1_tck" SITE "16" ;
 LOCATE COMP "jtag_io_child_1_tdi" SITE "15" ;
 LOCATE COMP "jtag_io_child_1_tms" SITE "18" ;
+LOCATE COMP "jtag_io_child_0_trst" SITE "33" ;
 LOCATE COMP "jtag_io_child_0_tck" SITE "34" ;
 LOCATE COMP "jtag_io_child_0_tdi" SITE "35" ;
 LOCATE COMP "jtag_io_child_0_tms" SITE "32" ;

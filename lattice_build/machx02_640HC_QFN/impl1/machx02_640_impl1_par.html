@@ -12,7 +12,7 @@ Copyright (c) 1995 AT&amp;T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Sep 25 10:57:17 2020
+Wed Oct 28 14:02:51 2020
 
 /usr/local/diamond/3.11_x64/ispfpga/bin/lin64/par -f machx02_640_impl1.p2t
 machx02_640_impl1_map.ncd machx02_640_impl1.dir machx02_640_impl1.prf -gui
@@ -26,17 +26,17 @@ Preference file: machx02_640_impl1.prf.
 Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
 Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
 ----------   --------     -----        ------       -----------  -----------  ----         ------
-5_1   *      0            -            -            -            -            02           Completed
+5_1   *      0            -            -            -            -            03           Completed
 * : Design saved.
 
-Total (real) run time for 1-seed: 2 secs 
+Total (real) run time for 1-seed: 3 secs 
 
 par done!
 
 Note: user must run &apos;Trace&apos; for timing closure signoff.
 
 Lattice Place and Route Report for Design &quot;machx02_640_impl1_map.ncd&quot;
-Fri Sep 25 10:57:17 2020
+Wed Oct 28 14:02:51 2020
 
 
 <A name="par_best"></A><B><U><big>Best Par Run</big></U></B>
@@ -63,28 +63,28 @@ Ignore Preference Error(s):  True
 
 <A name="par_dus"></A><B><U><big>Device utilization summary:</big></U></B>
 
-   PIO (prelim)   29+1(JTAGENB)/80  38% used
-                  29+1(JTAGENB)/40  75% bonded
+   PIO (prelim)   32+1(JTAGENB)/80  41% used
+                  32+1(JTAGENB)/40  83% bonded
 
-   SLICE             81/320          25% used
+   SLICE             83/320          25% used
 
    GSR                1/1           100% used
 
 
-Number of Signals: 300
-Number of Connections: 925
+Number of Signals: 304
+Number of Connections: 938
 WARNING - par: The JTAG Port has been disabled in this project, and JTAG pins will be configured as General Purpose IO. You must use JTAGENB pin in hardware to change the personality of the port from JTAG pins to general purpose IO. This mux control pin is dedicated to the selection of JTAG pins for GPIO use by the user design.  Refer to the MachXO2 Handbook for details on dual-function JTAG ports.
 
 Pin Constraint Summary:
-   28 out of 29 pins locked (96% locked).
+   31 out of 32 pins locked (96% locked).
 
 The following 1 signal is selected to use the primary clock routing resources:
-    jtag_io_jtag_tck_c (driver: jtag_io_jtag_tck, clk load #: 74)
+    jtag_io_jtag_tck_c (driver: jtag_io_jtag_tck, clk load #: 73)
 
 
 The following 2 signals are selected to use the secondary clock routing resources:
-    jtag_io_jtag_tck_c_enable_116 (driver: SLICE_98, clk load #: 0, sr load #: 0, ce load #: 19)
-    n1980 (driver: SLICE_114, clk load #: 0, sr load #: 10, ce load #: 0)
+    jtag_io_jtag_tck_c_enable_116 (driver: SLICE_113, clk load #: 0, sr load #: 0, ce load #: 19)
+    n2007 (driver: SLICE_95, clk load #: 0, sr load #: 10, ce load #: 0)
 
 Signal reset_c is selected as Global Set/Reset.
 .
@@ -94,13 +94,13 @@ Finished Placer Phase 0.  REAL time: 0 secs
 
 Starting Placer Phase 1.
 ..................
-Placer score = 40164.
-Finished Placer Phase 1.  REAL time: 0 secs 
+Placer score = 42266.
+Finished Placer Phase 1.  REAL time: 2 secs 
 
 Starting Placer Phase 2.
 .
-Placer score =  40134
-Finished Placer Phase 2.  REAL time: 0 secs 
+Placer score =  42080
+Finished Placer Phase 2.  REAL time: 2 secs 
 
 
 
@@ -112,9 +112,9 @@ Global Clock Resources:
   DCC        : 0 out of 8 (0%)
 
 Global Clocks:
-  PRIMARY &quot;jtag_io_jtag_tck_c&quot; from comp &quot;jtag_io_jtag_tck&quot; on CLK_PIN site &quot;43 (PT9C)&quot;, clk load = 74
-  SECONDARY &quot;jtag_io_jtag_tck_c_enable_116&quot; from F0 on comp &quot;SLICE_98&quot; on site &quot;R6C8A&quot;, clk load = 0, ce load = 19, sr load = 0
-  SECONDARY &quot;n1980&quot; from F0 on comp &quot;SLICE_114&quot; on site &quot;R6C8B&quot;, clk load = 0, ce load = 0, sr load = 10
+  PRIMARY &quot;jtag_io_jtag_tck_c&quot; from comp &quot;jtag_io_jtag_tck&quot; on CLK_PIN site &quot;43 (PT9C)&quot;, clk load = 73
+  SECONDARY &quot;jtag_io_jtag_tck_c_enable_116&quot; from F1 on comp &quot;SLICE_113&quot; on site &quot;R6C8C&quot;, clk load = 0, ce load = 19, sr load = 0
+  SECONDARY &quot;n2007&quot; from F0 on comp &quot;SLICE_95&quot; on site &quot;R6C8A&quot;, clk load = 0, ce load = 0, sr load = 10
 
   PRIMARY  : 1 out of 8 (12%)
   SECONDARY: 2 out of 8 (25%)
@@ -123,20 +123,20 @@ Global Clocks:
 
 
 I/O Usage Summary (final):
-   29 + 1(JTAGENB) out of 80 (37.5%) PIO sites used.
-   29 + 1(JTAGENB) out of 40 (75.0%) bonded PIO sites used.
-   Number of PIO comps: 29; differential: 0.
+   32 + 1(JTAGENB) out of 80 (41.2%) PIO sites used.
+   32 + 1(JTAGENB) out of 40 (82.5%) bonded PIO sites used.
+   Number of PIO comps: 32; differential: 0.
    Number of Vref pins used: 0.
 
 I/O Bank Usage Summary:
-+----------+---------------+------------+-----------+
-| I/O Bank | Usage         | Bank Vccio | Bank Vref |
-+----------+---------------+------------+-----------+
-| 0        | 4 / 10 ( 40%) | 3.3V       | -         |
-| 1        | 8 / 10 ( 80%) | 1.8V       | -         |
-| 2        | 8 / 10 ( 80%) | 3.3V       | -         |
-| 3        | 9 / 10 ( 90%) | 3.3V       | -         |
-+----------+---------------+------------+-----------+
++----------+----------------+------------+-----------+
+| I/O Bank | Usage          | Bank Vccio | Bank Vref |
++----------+----------------+------------+-----------+
+| 0        | 4 / 10 ( 40%)  | 3.3V       | -         |
+| 1        | 9 / 10 ( 90%)  | 1.8V       | -         |
+| 2        | 9 / 10 ( 90%)  | 3.3V       | -         |
+| 3        | 10 / 10 (100%) | 3.3V       | -         |
++----------+----------------+------------+-----------+
 
 Total placer CPU time: 1 secs 
 
@@ -147,12 +147,12 @@ Dumping design to file machx02_640_impl1.dir/5_1.ncd.
 INFO - par: ASE feature is off due to non timing-driven settings.  
 -----------------------------------------------------------------
 
-0 connections routed; 925 unrouted.
+0 connections routed; 938 unrouted.
 Starting router resource preassignment
 
 Completed router resource preassignment. Real time: 2 secs 
 
-Start NBR router at Fri Sep 25 10:57:19 PDT 2020
+Start NBR router at Wed Oct 28 14:02:53 PDT 2020
 
 *****************************************************************
 Info: NBR allows conflicts(one node used by more than one signal)
@@ -167,32 +167,30 @@ Note: NBR uses a different method to calculate timing slacks. The
       your design.                                               
 *****************************************************************
 
-Start NBR special constraint process at Fri Sep 25 10:57:19 PDT 2020
+Start NBR special constraint process at Wed Oct 28 14:02:53 PDT 2020
 
-Start NBR section for initial routing at Fri Sep 25 10:57:19 PDT 2020
+Start NBR section for initial routing at Wed Oct 28 14:02:53 PDT 2020
 Level 4, iteration 1
-41(0.09%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
+36(0.08%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
 
 Info: Initial congestion level at 75% usage is 0
 Info: Initial congestion area  at 75% usage is 0 (0.00%)
 
-Start NBR section for normal routing at Fri Sep 25 10:57:19 PDT 2020
+Start NBR section for normal routing at Wed Oct 28 14:02:53 PDT 2020
 Level 4, iteration 1
-21(0.05%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
+18(0.04%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
 Level 4, iteration 2
 6(0.01%) conflicts; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
 Level 4, iteration 3
 1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
 Level 4, iteration 4
-1(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
-Level 4, iteration 5
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
 
-Start NBR section for re-routing at Fri Sep 25 10:57:19 PDT 2020
+Start NBR section for re-routing at Wed Oct 28 14:02:53 PDT 2020
 Level 4, iteration 1
 0(0.00%) conflict; 0(0.00%) untouched conn; 0 (nbr) score; real time: 2 secs 
 
-Start NBR section for post-routing at Fri Sep 25 10:57:19 PDT 2020
+Start NBR section for post-routing at Wed Oct 28 14:02:53 PDT 2020
 
 End NBR router with 0 unrouted connection
 
@@ -210,7 +208,7 @@ Notes: The timing info is calculated for SETUP only and all PAR_ADJs are ignored
 Total CPU time 2 secs 
 Total REAL time: 2 secs 
 Completely routed.
-End of route.  925 routed (100.00%); 0 unrouted.
+End of route.  938 routed (100.00%); 0 unrouted.
 
 Hold time timing score: 0, hold timing errors: 0
 
@@ -231,7 +229,7 @@ PAR_SUMMARY::Timing score&lt;hold /&lt;ns&gt;&gt; = &lt;n/a&gt;
 PAR_SUMMARY::Number of errors = 0
 
 Total CPU  time to completion: 2 secs 
-Total REAL time to completion: 2 secs 
+Total REAL time to completion: 3 secs 
 
 par done!
 

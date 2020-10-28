@@ -13,7 +13,7 @@ Setup and Hold Report
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Setup, Version Diamond (64-bit) 3.11.0.396.4
-Fri Sep 25 10:57:20 2020
+Wed Oct 28 14:02:54 2020
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -38,535 +38,537 @@ BLOCK RESETPATHS
 
 
 ================================================================================
-Preference: FREQUENCY NET "jtag_io_jtag_tck_c" 164.799000 MHz ;
-            1613 items scored, 663 timing errors detected.
+Preference: FREQUENCY NET "jtag_io_jtag_tck_c" 147.973000 MHz ;
+            1683 items scored, 439 timing errors detected.
 --------------------------------------------------------------------------------
 
 
-Error: The following path exceeds requirements by 6.988ns (weighted slack = -13.976ns)
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              jtag_ctrl_tap_instruction_i5  (from jtag_io_jtag_tck_c +)
-   Destination:    FF         Data in        jtag_ctrl_tap_tdoUnbufferd_regNext_264  (to jtag_io_jtag_tck_c -)
-
-   Delay:               9.856ns  (30.8% logic, 69.2% route), 6 logic levels.
-
- Constraint Details:
-
-      9.856ns physical path delay SLICE_101 to SLICE_64 exceeds
-      3.034ns delay constraint less
-      0.000ns skew and
-      0.166ns DIN_SET requirement (totaling 2.868ns) by 6.988ns
-
- Physical Path Details:
-
-      Data path SLICE_101 to SLICE_64:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452      R4C7B.CLK to       R4C7B.Q0 SLICE_101 (from jtag_io_jtag_tck_c)
-ROUTE         6     2.766       R4C7B.Q0 to       R5C9B.B0 jtag_ctrl_tap_instruction_5
-CTOF_DEL    ---     0.495       R5C9B.B0 to       R5C9B.F0 SLICE_115
-ROUTE         3     1.426       R5C9B.F0 to       R6C7D.A1 n2456
-CTOF_DEL    ---     0.495       R6C7D.A1 to       R6C7D.F1 SLICE_88
-ROUTE         1     0.900       R6C7D.F1 to       R5C8A.M0 n2786
-MTOOFX_DEL  ---     0.376       R5C8A.M0 to     R5C8A.OFX0 mux_581_i1/SLICE_82
-ROUTE         1     0.744     R5C8A.OFX0 to       R5C7C.C1 n1537
-CTOOFX_DEL  ---     0.721       R5C7C.C1 to     R5C7C.OFX0 mux_662_i1/SLICE_81
-ROUTE         1     0.986     R5C7C.OFX0 to       R3C7A.A0 n1631
-CTOF_DEL    ---     0.495       R3C7A.A0 to       R3C7A.F0 SLICE_64
-ROUTE         1     0.000       R3C7A.F0 to      R3C7A.DI0 jtag_ctrl_tap_tdoUnbufferd (to jtag_io_jtag_tck_c)
-                  --------
-                    9.856   (30.8% logic, 69.2% route), 6 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path jtag_io_jtag_tck to SLICE_101:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     2.150       43.PADDI to      R4C7B.CLK jtag_io_jtag_tck_c
-                  --------
-                    2.150   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path jtag_io_jtag_tck to SLICE_64:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     2.150       43.PADDI to      R3C7A.CLK jtag_io_jtag_tck_c
-                  --------
-                    2.150   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Error: The following path exceeds requirements by 6.987ns (weighted slack = -13.974ns)
+Error: The following path exceeds requirements by 6.302ns (weighted slack = -12.604ns)
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
    Source:         FF         Q              jtag_ctrl_tap_instruction_i4  (from jtag_io_jtag_tck_c +)
-   Destination:    FF         Data in        jtag_ctrl_tap_tdoUnbufferd_regNext_264  (to jtag_io_jtag_tck_c -)
+   Destination:    FF         Data in        jtag_ctrl_tap_tdoUnbufferd_regNext_278  (to jtag_io_jtag_tck_c -)
 
-   Delay:               9.855ns  (34.3% logic, 65.7% route), 6 logic levels.
+   Delay:               9.515ns  (35.5% logic, 64.5% route), 6 logic levels.
 
  Constraint Details:
 
-      9.855ns physical path delay SLICE_94 to SLICE_64 exceeds
-      3.034ns delay constraint less
+      9.515ns physical path delay SLICE_116 to SLICE_61 exceeds
+      3.379ns delay constraint less
       0.000ns skew and
-      0.166ns DIN_SET requirement (totaling 2.868ns) by 6.987ns
+      0.166ns DIN_SET requirement (totaling 3.213ns) by 6.302ns
 
  Physical Path Details:
 
-      Data path SLICE_94 to SLICE_64:
+      Data path SLICE_116 to SLICE_61:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452      R4C7A.CLK to       R4C7A.Q1 SLICE_94 (from jtag_io_jtag_tck_c)
-ROUTE         8     2.423       R4C7A.Q1 to       R6C7D.B0 jtag_ctrl_tap_instruction_4
-CTOF_DEL    ---     0.495       R6C7D.B0 to       R6C7D.F0 SLICE_88
-ROUTE         3     1.322       R6C7D.F0 to       R5C9A.A1 n2999
-CTOF_DEL    ---     0.495       R5C9A.A1 to       R5C9A.F1 SLICE_113
-ROUTE         1     1.001       R5C9A.F1 to       R5C8A.B1 n3066
-CTOOFX_DEL  ---     0.721       R5C8A.B1 to     R5C8A.OFX0 mux_581_i1/SLICE_82
-ROUTE         1     0.744     R5C8A.OFX0 to       R5C7C.C1 n1537
-CTOOFX_DEL  ---     0.721       R5C7C.C1 to     R5C7C.OFX0 mux_662_i1/SLICE_81
-ROUTE         1     0.986     R5C7C.OFX0 to       R3C7A.A0 n1631
-CTOF_DEL    ---     0.495       R3C7A.A0 to       R3C7A.F0 SLICE_64
-ROUTE         1     0.000       R3C7A.F0 to      R3C7A.DI0 jtag_ctrl_tap_tdoUnbufferd (to jtag_io_jtag_tck_c)
+REG_DEL     ---     0.452      R5C8B.CLK to       R5C8B.Q0 SLICE_116 (from jtag_io_jtag_tck_c)
+ROUTE         8     2.395       R5C8B.Q0 to       R4C7D.B0 jtag_ctrl_tap_instruction_4
+CTOF_DEL    ---     0.495       R4C7D.B0 to       R4C7D.F0 SLICE_85
+ROUTE         2     0.635       R4C7D.F0 to       R4C7A.D1 n3333
+CTOF_DEL    ---     0.495       R4C7A.D1 to       R4C7A.F1 SLICE_89
+ROUTE         2     0.756       R4C7A.F1 to       R4C7C.C1 n3345
+CTOOFX_DEL  ---     0.721       R4C7C.C1 to     R4C7C.OFX0 mux_594_i1/SLICE_77
+ROUTE         1     0.967     R4C7C.OFX0 to       R4C7A.A0 n1561
+CTOF_DEL    ---     0.495       R4C7A.A0 to       R4C7A.F0 SLICE_89
+ROUTE         1     1.383       R4C7A.F0 to       R3C7D.A1 n3039
+CTOOFX_DEL  ---     0.721       R3C7D.A1 to     R3C7D.OFX0 SLICE_61
+ROUTE         1     0.000     R3C7D.OFX0 to      R3C7D.DI0 jtag_ctrl_tap_tdoUnbufferd (to jtag_io_jtag_tck_c)
                   --------
-                    9.855   (34.3% logic, 65.7% route), 6 logic levels.
+                    9.515   (35.5% logic, 64.5% route), 6 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path jtag_io_jtag_tck to SLICE_94:
+      Source Clock Path jtag_io_jtag_tck to SLICE_116:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     2.150       43.PADDI to      R4C7A.CLK jtag_io_jtag_tck_c
+ROUTE        76     2.150       43.PADDI to      R5C8B.CLK jtag_io_jtag_tck_c
                   --------
                     2.150   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path jtag_io_jtag_tck to SLICE_64:
+      Destination Clock Path jtag_io_jtag_tck to SLICE_61:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     2.150       43.PADDI to      R3C7A.CLK jtag_io_jtag_tck_c
+ROUTE        76     2.150       43.PADDI to      R3C7D.CLK jtag_io_jtag_tck_c
                   --------
                     2.150   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Error: The following path exceeds requirements by 6.748ns (weighted slack = -13.496ns)
+Error: The following path exceeds requirements by 6.247ns (weighted slack = -12.494ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              jtag_ctrl_tap_instruction_i5  (from jtag_io_jtag_tck_c +)
+   Destination:    FF         Data in        jtag_ctrl_tap_tdoUnbufferd_regNext_278  (to jtag_io_jtag_tck_c -)
+
+   Delay:               9.460ns  (32.1% logic, 67.9% route), 6 logic levels.
+
+ Constraint Details:
+
+      9.460ns physical path delay SLICE_116 to SLICE_61 exceeds
+      3.379ns delay constraint less
+      0.000ns skew and
+      0.166ns DIN_SET requirement (totaling 3.213ns) by 6.247ns
+
+ Physical Path Details:
+
+      Data path SLICE_116 to SLICE_61:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452      R5C8B.CLK to       R5C8B.Q1 SLICE_116 (from jtag_io_jtag_tck_c)
+ROUTE         7     2.515       R5C8B.Q1 to       R3C7B.C0 jtag_ctrl_tap_instruction_5
+CTOF_DEL    ---     0.495       R3C7B.C0 to       R3C7B.F0 SLICE_114
+ROUTE         2     0.993       R3C7B.F0 to       R4C7D.A1 n3348
+CTOF_DEL    ---     0.495       R4C7D.A1 to       R4C7D.F1 SLICE_85
+ROUTE         1     0.568       R4C7D.F1 to       R4C7C.M0 n3091
+MTOOFX_DEL  ---     0.376       R4C7C.M0 to     R4C7C.OFX0 mux_594_i1/SLICE_77
+ROUTE         1     0.967     R4C7C.OFX0 to       R4C7A.A0 n1561
+CTOF_DEL    ---     0.495       R4C7A.A0 to       R4C7A.F0 SLICE_89
+ROUTE         1     1.383       R4C7A.F0 to       R3C7D.A1 n3039
+CTOOFX_DEL  ---     0.721       R3C7D.A1 to     R3C7D.OFX0 SLICE_61
+ROUTE         1     0.000     R3C7D.OFX0 to      R3C7D.DI0 jtag_ctrl_tap_tdoUnbufferd (to jtag_io_jtag_tck_c)
+                  --------
+                    9.460   (32.1% logic, 67.9% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path jtag_io_jtag_tck to SLICE_116:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        76     2.150       43.PADDI to      R5C8B.CLK jtag_io_jtag_tck_c
+                  --------
+                    2.150   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path jtag_io_jtag_tck to SLICE_61:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        76     2.150       43.PADDI to      R3C7D.CLK jtag_io_jtag_tck_c
+                  --------
+                    2.150   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 5.792ns (weighted slack = -11.584ns)
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
    Source:         FF         Q              jtag_ctrl_tap_instruction_i3  (from jtag_io_jtag_tck_c +)
-   Destination:    FF         Data in        jtag_ctrl_tap_tdoUnbufferd_regNext_264  (to jtag_io_jtag_tck_c -)
+   Destination:    FF         Data in        jtag_ctrl_tap_tdoUnbufferd_regNext_278  (to jtag_io_jtag_tck_c -)
 
-   Delay:               9.616ns  (35.1% logic, 64.9% route), 6 logic levels.
+   Delay:               9.005ns  (37.5% logic, 62.5% route), 6 logic levels.
 
  Constraint Details:
 
-      9.616ns physical path delay SLICE_94 to SLICE_64 exceeds
-      3.034ns delay constraint less
+      9.005ns physical path delay SLICE_104 to SLICE_61 exceeds
+      3.379ns delay constraint less
       0.000ns skew and
-      0.166ns DIN_SET requirement (totaling 2.868ns) by 6.748ns
+      0.166ns DIN_SET requirement (totaling 3.213ns) by 5.792ns
 
  Physical Path Details:
 
-      Data path SLICE_94 to SLICE_64:
+      Data path SLICE_104 to SLICE_61:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452      R4C7A.CLK to       R4C7A.Q0 SLICE_94 (from jtag_io_jtag_tck_c)
-ROUTE        14     2.184       R4C7A.Q0 to       R6C7D.C0 jtag_ctrl_tap_instruction_3
-CTOF_DEL    ---     0.495       R6C7D.C0 to       R6C7D.F0 SLICE_88
-ROUTE         3     1.322       R6C7D.F0 to       R5C9A.A1 n2999
-CTOF_DEL    ---     0.495       R5C9A.A1 to       R5C9A.F1 SLICE_113
-ROUTE         1     1.001       R5C9A.F1 to       R5C8A.B1 n3066
-CTOOFX_DEL  ---     0.721       R5C8A.B1 to     R5C8A.OFX0 mux_581_i1/SLICE_82
-ROUTE         1     0.744     R5C8A.OFX0 to       R5C7C.C1 n1537
-CTOOFX_DEL  ---     0.721       R5C7C.C1 to     R5C7C.OFX0 mux_662_i1/SLICE_81
-ROUTE         1     0.986     R5C7C.OFX0 to       R3C7A.A0 n1631
-CTOF_DEL    ---     0.495       R3C7A.A0 to       R3C7A.F0 SLICE_64
-ROUTE         1     0.000       R3C7A.F0 to      R3C7A.DI0 jtag_ctrl_tap_tdoUnbufferd (to jtag_io_jtag_tck_c)
+REG_DEL     ---     0.452      R5C8C.CLK to       R5C8C.Q1 SLICE_104 (from jtag_io_jtag_tck_c)
+ROUTE        15     1.885       R5C8C.Q1 to       R4C7D.A0 jtag_ctrl_tap_instruction_3
+CTOF_DEL    ---     0.495       R4C7D.A0 to       R4C7D.F0 SLICE_85
+ROUTE         2     0.635       R4C7D.F0 to       R4C7A.D1 n3333
+CTOF_DEL    ---     0.495       R4C7A.D1 to       R4C7A.F1 SLICE_89
+ROUTE         2     0.756       R4C7A.F1 to       R4C7C.C1 n3345
+CTOOFX_DEL  ---     0.721       R4C7C.C1 to     R4C7C.OFX0 mux_594_i1/SLICE_77
+ROUTE         1     0.967     R4C7C.OFX0 to       R4C7A.A0 n1561
+CTOF_DEL    ---     0.495       R4C7A.A0 to       R4C7A.F0 SLICE_89
+ROUTE         1     1.383       R4C7A.F0 to       R3C7D.A1 n3039
+CTOOFX_DEL  ---     0.721       R3C7D.A1 to     R3C7D.OFX0 SLICE_61
+ROUTE         1     0.000     R3C7D.OFX0 to      R3C7D.DI0 jtag_ctrl_tap_tdoUnbufferd (to jtag_io_jtag_tck_c)
                   --------
-                    9.616   (35.1% logic, 64.9% route), 6 logic levels.
+                    9.005   (37.5% logic, 62.5% route), 6 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path jtag_io_jtag_tck to SLICE_94:
+      Source Clock Path jtag_io_jtag_tck to SLICE_104:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     2.150       43.PADDI to      R4C7A.CLK jtag_io_jtag_tck_c
+ROUTE        76     2.150       43.PADDI to      R5C8C.CLK jtag_io_jtag_tck_c
                   --------
                     2.150   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path jtag_io_jtag_tck to SLICE_64:
+      Destination Clock Path jtag_io_jtag_tck to SLICE_61:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     2.150       43.PADDI to      R3C7A.CLK jtag_io_jtag_tck_c
+ROUTE        76     2.150       43.PADDI to      R3C7D.CLK jtag_io_jtag_tck_c
                   --------
                     2.150   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Error: The following path exceeds requirements by 6.474ns (weighted slack = -12.948ns)
+Error: The following path exceeds requirements by 5.579ns (weighted slack = -11.158ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              jtag_ctrl_tap_instruction_i4  (from jtag_io_jtag_tck_c +)
+   Destination:    FF         Data in        jtag_ctrl_tap_tdoUnbufferd_regNext_278  (to jtag_io_jtag_tck_c -)
+
+   Delay:               8.792ns  (34.5% logic, 65.5% route), 6 logic levels.
+
+ Constraint Details:
+
+      8.792ns physical path delay SLICE_116 to SLICE_61 exceeds
+      3.379ns delay constraint less
+      0.000ns skew and
+      0.166ns DIN_SET requirement (totaling 3.213ns) by 5.579ns
+
+ Physical Path Details:
+
+      Data path SLICE_116 to SLICE_61:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452      R5C8B.CLK to       R5C8B.Q0 SLICE_116 (from jtag_io_jtag_tck_c)
+ROUTE         8     2.395       R5C8B.Q0 to       R4C7D.B0 jtag_ctrl_tap_instruction_4
+CTOF_DEL    ---     0.495       R4C7D.B0 to       R4C7D.F0 SLICE_85
+ROUTE         2     0.445       R4C7D.F0 to       R4C7D.C1 n3333
+CTOF_DEL    ---     0.495       R4C7D.C1 to       R4C7D.F1 SLICE_85
+ROUTE         1     0.568       R4C7D.F1 to       R4C7C.M0 n3091
+MTOOFX_DEL  ---     0.376       R4C7C.M0 to     R4C7C.OFX0 mux_594_i1/SLICE_77
+ROUTE         1     0.967     R4C7C.OFX0 to       R4C7A.A0 n1561
+CTOF_DEL    ---     0.495       R4C7A.A0 to       R4C7A.F0 SLICE_89
+ROUTE         1     1.383       R4C7A.F0 to       R3C7D.A1 n3039
+CTOOFX_DEL  ---     0.721       R3C7D.A1 to     R3C7D.OFX0 SLICE_61
+ROUTE         1     0.000     R3C7D.OFX0 to      R3C7D.DI0 jtag_ctrl_tap_tdoUnbufferd (to jtag_io_jtag_tck_c)
+                  --------
+                    8.792   (34.5% logic, 65.5% route), 6 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path jtag_io_jtag_tck to SLICE_116:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        76     2.150       43.PADDI to      R5C8B.CLK jtag_io_jtag_tck_c
+                  --------
+                    2.150   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path jtag_io_jtag_tck to SLICE_61:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        76     2.150       43.PADDI to      R3C7D.CLK jtag_io_jtag_tck_c
+                  --------
+                    2.150   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 5.566ns (weighted slack = -11.132ns)
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              jtag_ctrl_tap_instruction_i5  (from jtag_io_jtag_tck_c +)
+   Destination:    FF         Data in        jtag_ctrl_tap_tdoUnbufferd_regNext_278  (to jtag_io_jtag_tck_c -)
+
+   Delay:               8.779ns  (32.9% logic, 67.1% route), 5 logic levels.
+
+ Constraint Details:
+
+      8.779ns physical path delay SLICE_116 to SLICE_61 exceeds
+      3.379ns delay constraint less
+      0.000ns skew and
+      0.166ns DIN_SET requirement (totaling 3.213ns) by 5.566ns
+
+ Physical Path Details:
+
+      Data path SLICE_116 to SLICE_61:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.452      R5C8B.CLK to       R5C8B.Q1 SLICE_116 (from jtag_io_jtag_tck_c)
+ROUTE         7     2.515       R5C8B.Q1 to       R3C7B.C0 jtag_ctrl_tap_instruction_5
+CTOF_DEL    ---     0.495       R3C7B.C0 to       R3C7B.F0 SLICE_114
+ROUTE         2     1.030       R3C7B.F0 to       R4C7C.B1 n3348
+CTOOFX_DEL  ---     0.721       R4C7C.B1 to     R4C7C.OFX0 mux_594_i1/SLICE_77
+ROUTE         1     0.967     R4C7C.OFX0 to       R4C7A.A0 n1561
+CTOF_DEL    ---     0.495       R4C7A.A0 to       R4C7A.F0 SLICE_89
+ROUTE         1     1.383       R4C7A.F0 to       R3C7D.A1 n3039
+CTOOFX_DEL  ---     0.721       R3C7D.A1 to     R3C7D.OFX0 SLICE_61
+ROUTE         1     0.000     R3C7D.OFX0 to      R3C7D.DI0 jtag_ctrl_tap_tdoUnbufferd (to jtag_io_jtag_tck_c)
+                  --------
+                    8.779   (32.9% logic, 67.1% route), 5 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path jtag_io_jtag_tck to SLICE_116:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        76     2.150       43.PADDI to      R5C8B.CLK jtag_io_jtag_tck_c
+                  --------
+                    2.150   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path jtag_io_jtag_tck to SLICE_61:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        76     2.150       43.PADDI to      R3C7D.CLK jtag_io_jtag_tck_c
+                  --------
+                    2.150   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Error: The following path exceeds requirements by 5.561ns (weighted slack = -11.122ns)
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
    Source:         FF         Q              jtag_ctrl_tap_instruction_i2  (from jtag_io_jtag_tck_c +)
-   Destination:    FF         Data in        jtag_ctrl_tap_tdoUnbufferd_regNext_264  (to jtag_io_jtag_tck_c -)
+   Destination:    FF         Data in        jtag_ctrl_tap_tdoUnbufferd_regNext_278  (to jtag_io_jtag_tck_c -)
 
-   Delay:               9.342ns  (36.2% logic, 63.8% route), 6 logic levels.
+   Delay:               8.774ns  (38.5% logic, 61.5% route), 6 logic levels.
 
  Constraint Details:
 
-      9.342ns physical path delay SLICE_93 to SLICE_64 exceeds
-      3.034ns delay constraint less
+      8.774ns physical path delay SLICE_99 to SLICE_61 exceeds
+      3.379ns delay constraint less
       0.000ns skew and
-      0.166ns DIN_SET requirement (totaling 2.868ns) by 6.474ns
+      0.166ns DIN_SET requirement (totaling 3.213ns) by 5.561ns
 
  Physical Path Details:
 
-      Data path SLICE_93 to SLICE_64:
+      Data path SLICE_99 to SLICE_61:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452      R4C6C.CLK to       R4C6C.Q0 SLICE_93 (from jtag_io_jtag_tck_c)
-ROUTE        16     1.910       R4C6C.Q0 to       R6C7D.A0 jtag_ctrl_tap_instruction_2
-CTOF_DEL    ---     0.495       R6C7D.A0 to       R6C7D.F0 SLICE_88
-ROUTE         3     1.322       R6C7D.F0 to       R5C9A.A1 n2999
-CTOF_DEL    ---     0.495       R5C9A.A1 to       R5C9A.F1 SLICE_113
-ROUTE         1     1.001       R5C9A.F1 to       R5C8A.B1 n3066
-CTOOFX_DEL  ---     0.721       R5C8A.B1 to     R5C8A.OFX0 mux_581_i1/SLICE_82
-ROUTE         1     0.744     R5C8A.OFX0 to       R5C7C.C1 n1537
-CTOOFX_DEL  ---     0.721       R5C7C.C1 to     R5C7C.OFX0 mux_662_i1/SLICE_81
-ROUTE         1     0.986     R5C7C.OFX0 to       R3C7A.A0 n1631
-CTOF_DEL    ---     0.495       R3C7A.A0 to       R3C7A.F0 SLICE_64
-ROUTE         1     0.000       R3C7A.F0 to      R3C7A.DI0 jtag_ctrl_tap_tdoUnbufferd (to jtag_io_jtag_tck_c)
+REG_DEL     ---     0.452      R5C8D.CLK to       R5C8D.Q0 SLICE_99 (from jtag_io_jtag_tck_c)
+ROUTE        13     1.654       R5C8D.Q0 to       R4C7D.C0 jtag_ctrl_tap_instruction_2
+CTOF_DEL    ---     0.495       R4C7D.C0 to       R4C7D.F0 SLICE_85
+ROUTE         2     0.635       R4C7D.F0 to       R4C7A.D1 n3333
+CTOF_DEL    ---     0.495       R4C7A.D1 to       R4C7A.F1 SLICE_89
+ROUTE         2     0.756       R4C7A.F1 to       R4C7C.C1 n3345
+CTOOFX_DEL  ---     0.721       R4C7C.C1 to     R4C7C.OFX0 mux_594_i1/SLICE_77
+ROUTE         1     0.967     R4C7C.OFX0 to       R4C7A.A0 n1561
+CTOF_DEL    ---     0.495       R4C7A.A0 to       R4C7A.F0 SLICE_89
+ROUTE         1     1.383       R4C7A.F0 to       R3C7D.A1 n3039
+CTOOFX_DEL  ---     0.721       R3C7D.A1 to     R3C7D.OFX0 SLICE_61
+ROUTE         1     0.000     R3C7D.OFX0 to      R3C7D.DI0 jtag_ctrl_tap_tdoUnbufferd (to jtag_io_jtag_tck_c)
                   --------
-                    9.342   (36.2% logic, 63.8% route), 6 logic levels.
+                    8.774   (38.5% logic, 61.5% route), 6 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path jtag_io_jtag_tck to SLICE_93:
+      Source Clock Path jtag_io_jtag_tck to SLICE_99:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     2.150       43.PADDI to      R4C6C.CLK jtag_io_jtag_tck_c
+ROUTE        76     2.150       43.PADDI to      R5C8D.CLK jtag_io_jtag_tck_c
                   --------
                     2.150   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path jtag_io_jtag_tck to SLICE_64:
+      Destination Clock Path jtag_io_jtag_tck to SLICE_61:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     2.150       43.PADDI to      R3C7A.CLK jtag_io_jtag_tck_c
+ROUTE        76     2.150       43.PADDI to      R3C7D.CLK jtag_io_jtag_tck_c
                   --------
                     2.150   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Error: The following path exceeds requirements by 6.037ns (weighted slack = -12.074ns)
+Error: The following path exceeds requirements by 5.356ns (weighted slack = -10.712ns)
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              jtag_ctrl_tap_instruction_i7  (from jtag_io_jtag_tck_c +)
-   Destination:    FF         Data in        jtag_ctrl_tap_tdoUnbufferd_regNext_264  (to jtag_io_jtag_tck_c -)
+   Source:         FF         Q              jtag_ctrl_tap_instruction_i0  (from jtag_io_jtag_tck_c +)
+   Destination:    FF         Data in        jtag_ctrl_tap_tdoUnbufferd_regNext_278  (to jtag_io_jtag_tck_c -)
 
-   Delay:               8.905ns  (34.1% logic, 65.9% route), 6 logic levels.
+   Delay:               8.569ns  (35.4% logic, 64.6% route), 6 logic levels.
 
  Constraint Details:
 
-      8.905ns physical path delay SLICE_96 to SLICE_64 exceeds
-      3.034ns delay constraint less
+      8.569ns physical path delay SLICE_75 to SLICE_61 exceeds
+      3.379ns delay constraint less
       0.000ns skew and
-      0.166ns DIN_SET requirement (totaling 2.868ns) by 6.037ns
+      0.166ns DIN_SET requirement (totaling 3.213ns) by 5.356ns
 
  Physical Path Details:
 
-      Data path SLICE_96 to SLICE_64:
+      Data path SLICE_75 to SLICE_61:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452      R4C9A.CLK to       R4C9A.Q0 SLICE_96 (from jtag_io_jtag_tck_c)
-ROUTE         3     1.815       R4C9A.Q0 to       R5C9B.A0 jtag_ctrl_tap_instruction_7
-CTOF_DEL    ---     0.495       R5C9B.A0 to       R5C9B.F0 SLICE_115
-ROUTE         3     1.426       R5C9B.F0 to       R6C7D.A1 n2456
-CTOF_DEL    ---     0.495       R6C7D.A1 to       R6C7D.F1 SLICE_88
-ROUTE         1     0.900       R6C7D.F1 to       R5C8A.M0 n2786
-MTOOFX_DEL  ---     0.376       R5C8A.M0 to     R5C8A.OFX0 mux_581_i1/SLICE_82
-ROUTE         1     0.744     R5C8A.OFX0 to       R5C7C.C1 n1537
-CTOOFX_DEL  ---     0.721       R5C7C.C1 to     R5C7C.OFX0 mux_662_i1/SLICE_81
-ROUTE         1     0.986     R5C7C.OFX0 to       R3C7A.A0 n1631
-CTOF_DEL    ---     0.495       R3C7A.A0 to       R3C7A.F0 SLICE_64
-ROUTE         1     0.000       R3C7A.F0 to      R3C7A.DI0 jtag_ctrl_tap_tdoUnbufferd (to jtag_io_jtag_tck_c)
+REG_DEL     ---     0.452      R3C7A.CLK to       R3C7A.Q1 SLICE_75 (from jtag_io_jtag_tck_c)
+ROUTE        17     1.583       R3C7A.Q1 to       R5C7B.B0 jtag_ctrl_tap_instruction_0
+CTOF_DEL    ---     0.495       R5C7B.B0 to       R5C7B.F0 SLICE_90
+ROUTE         6     1.034       R5C7B.F0 to       R4C7D.B1 n3356
+CTOF_DEL    ---     0.495       R4C7D.B1 to       R4C7D.F1 SLICE_85
+ROUTE         1     0.568       R4C7D.F1 to       R4C7C.M0 n3091
+MTOOFX_DEL  ---     0.376       R4C7C.M0 to     R4C7C.OFX0 mux_594_i1/SLICE_77
+ROUTE         1     0.967     R4C7C.OFX0 to       R4C7A.A0 n1561
+CTOF_DEL    ---     0.495       R4C7A.A0 to       R4C7A.F0 SLICE_89
+ROUTE         1     1.383       R4C7A.F0 to       R3C7D.A1 n3039
+CTOOFX_DEL  ---     0.721       R3C7D.A1 to     R3C7D.OFX0 SLICE_61
+ROUTE         1     0.000     R3C7D.OFX0 to      R3C7D.DI0 jtag_ctrl_tap_tdoUnbufferd (to jtag_io_jtag_tck_c)
                   --------
-                    8.905   (34.1% logic, 65.9% route), 6 logic levels.
+                    8.569   (35.4% logic, 64.6% route), 6 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path jtag_io_jtag_tck to SLICE_96:
+      Source Clock Path jtag_io_jtag_tck to SLICE_75:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     2.150       43.PADDI to      R4C9A.CLK jtag_io_jtag_tck_c
+ROUTE        76     2.150       43.PADDI to      R3C7A.CLK jtag_io_jtag_tck_c
                   --------
                     2.150   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path jtag_io_jtag_tck to SLICE_64:
+      Destination Clock Path jtag_io_jtag_tck to SLICE_61:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     2.150       43.PADDI to      R3C7A.CLK jtag_io_jtag_tck_c
+ROUTE        76     2.150       43.PADDI to      R3C7D.CLK jtag_io_jtag_tck_c
                   --------
                     2.150   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Error: The following path exceeds requirements by 5.962ns (weighted slack = -11.924ns)
+Error: The following path exceeds requirements by 5.333ns (weighted slack = -10.666ns)
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
    Source:         FF         Q              jtag_ctrl_tap_instruction_i6  (from jtag_io_jtag_tck_c +)
-   Destination:    FF         Data in        jtag_ctrl_tap_tdoUnbufferd_regNext_264  (to jtag_io_jtag_tck_c -)
+   Destination:    FF         Data in        jtag_ctrl_tap_tdoUnbufferd_regNext_278  (to jtag_io_jtag_tck_c -)
 
-   Delay:               8.830ns  (38.3% logic, 61.7% route), 6 logic levels.
+   Delay:               8.546ns  (39.5% logic, 60.5% route), 6 logic levels.
 
  Constraint Details:
 
-      8.830ns physical path delay SLICE_101 to SLICE_64 exceeds
-      3.034ns delay constraint less
+      8.546ns physical path delay SLICE_101 to SLICE_61 exceeds
+      3.379ns delay constraint less
       0.000ns skew and
-      0.166ns DIN_SET requirement (totaling 2.868ns) by 5.962ns
+      0.166ns DIN_SET requirement (totaling 3.213ns) by 5.333ns
 
  Physical Path Details:
 
-      Data path SLICE_101 to SLICE_64:
+      Data path SLICE_101 to SLICE_61:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452      R4C7B.CLK to       R4C7B.Q1 SLICE_101 (from jtag_io_jtag_tck_c)
-ROUTE         4     1.398       R4C7B.Q1 to       R6C7D.D0 jtag_ctrl_tap_instruction_6
-CTOF_DEL    ---     0.495       R6C7D.D0 to       R6C7D.F0 SLICE_88
-ROUTE         3     1.322       R6C7D.F0 to       R5C9A.A1 n2999
-CTOF_DEL    ---     0.495       R5C9A.A1 to       R5C9A.F1 SLICE_113
-ROUTE         1     1.001       R5C9A.F1 to       R5C8A.B1 n3066
-CTOOFX_DEL  ---     0.721       R5C8A.B1 to     R5C8A.OFX0 mux_581_i1/SLICE_82
-ROUTE         1     0.744     R5C8A.OFX0 to       R5C7C.C1 n1537
-CTOOFX_DEL  ---     0.721       R5C7C.C1 to     R5C7C.OFX0 mux_662_i1/SLICE_81
-ROUTE         1     0.986     R5C7C.OFX0 to       R3C7A.A0 n1631
-CTOF_DEL    ---     0.495       R3C7A.A0 to       R3C7A.F0 SLICE_64
-ROUTE         1     0.000       R3C7A.F0 to      R3C7A.DI0 jtag_ctrl_tap_tdoUnbufferd (to jtag_io_jtag_tck_c)
+REG_DEL     ---     0.452      R6C8D.CLK to       R6C8D.Q0 SLICE_101 (from jtag_io_jtag_tck_c)
+ROUTE         6     1.426       R6C8D.Q0 to       R4C7D.D0 jtag_ctrl_tap_instruction_6
+CTOF_DEL    ---     0.495       R4C7D.D0 to       R4C7D.F0 SLICE_85
+ROUTE         2     0.635       R4C7D.F0 to       R4C7A.D1 n3333
+CTOF_DEL    ---     0.495       R4C7A.D1 to       R4C7A.F1 SLICE_89
+ROUTE         2     0.756       R4C7A.F1 to       R4C7C.C1 n3345
+CTOOFX_DEL  ---     0.721       R4C7C.C1 to     R4C7C.OFX0 mux_594_i1/SLICE_77
+ROUTE         1     0.967     R4C7C.OFX0 to       R4C7A.A0 n1561
+CTOF_DEL    ---     0.495       R4C7A.A0 to       R4C7A.F0 SLICE_89
+ROUTE         1     1.383       R4C7A.F0 to       R3C7D.A1 n3039
+CTOOFX_DEL  ---     0.721       R3C7D.A1 to     R3C7D.OFX0 SLICE_61
+ROUTE         1     0.000     R3C7D.OFX0 to      R3C7D.DI0 jtag_ctrl_tap_tdoUnbufferd (to jtag_io_jtag_tck_c)
                   --------
-                    8.830   (38.3% logic, 61.7% route), 6 logic levels.
+                    8.546   (39.5% logic, 60.5% route), 6 logic levels.
 
  Clock Skew Details: 
 
       Source Clock Path jtag_io_jtag_tck to SLICE_101:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     2.150       43.PADDI to      R4C7B.CLK jtag_io_jtag_tck_c
+ROUTE        76     2.150       43.PADDI to      R6C8D.CLK jtag_io_jtag_tck_c
                   --------
                     2.150   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path jtag_io_jtag_tck to SLICE_64:
+      Destination Clock Path jtag_io_jtag_tck to SLICE_61:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     2.150       43.PADDI to      R3C7A.CLK jtag_io_jtag_tck_c
+ROUTE        76     2.150       43.PADDI to      R3C7D.CLK jtag_io_jtag_tck_c
                   --------
                     2.150   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Error: The following path exceeds requirements by 5.664ns (weighted slack = -11.328ns)
+Error: The following path exceeds requirements by 5.194ns (weighted slack = -10.388ns)
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              jtag_ctrl_tap_instruction_i4  (from jtag_io_jtag_tck_c +)
-   Destination:    FF         Data in        jtag_ctrl_tap_tdoUnbufferd_regNext_264  (to jtag_io_jtag_tck_c -)
+   Source:         FF         Q              jtag_ctrl_tap_instruction_i2  (from jtag_io_jtag_tck_c +)
+   Destination:    FF         Data in        jtag_ctrl_tap_tdoUnbufferd_regNext_278  (to jtag_io_jtag_tck_c -)
 
-   Delay:               8.532ns  (35.6% logic, 64.4% route), 6 logic levels.
-
- Constraint Details:
-
-      8.532ns physical path delay SLICE_94 to SLICE_64 exceeds
-      3.034ns delay constraint less
-      0.000ns skew and
-      0.166ns DIN_SET requirement (totaling 2.868ns) by 5.664ns
-
- Physical Path Details:
-
-      Data path SLICE_94 to SLICE_64:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452      R4C7A.CLK to       R4C7A.Q1 SLICE_94 (from jtag_io_jtag_tck_c)
-ROUTE         8     2.423       R4C7A.Q1 to       R6C7D.B0 jtag_ctrl_tap_instruction_4
-CTOF_DEL    ---     0.495       R6C7D.B0 to       R6C7D.F0 SLICE_88
-ROUTE         3     0.445       R6C7D.F0 to       R6C7D.C1 n2999
-CTOF_DEL    ---     0.495       R6C7D.C1 to       R6C7D.F1 SLICE_88
-ROUTE         1     0.900       R6C7D.F1 to       R5C8A.M0 n2786
-MTOOFX_DEL  ---     0.376       R5C8A.M0 to     R5C8A.OFX0 mux_581_i1/SLICE_82
-ROUTE         1     0.744     R5C8A.OFX0 to       R5C7C.C1 n1537
-CTOOFX_DEL  ---     0.721       R5C7C.C1 to     R5C7C.OFX0 mux_662_i1/SLICE_81
-ROUTE         1     0.986     R5C7C.OFX0 to       R3C7A.A0 n1631
-CTOF_DEL    ---     0.495       R3C7A.A0 to       R3C7A.F0 SLICE_64
-ROUTE         1     0.000       R3C7A.F0 to      R3C7A.DI0 jtag_ctrl_tap_tdoUnbufferd (to jtag_io_jtag_tck_c)
-                  --------
-                    8.532   (35.6% logic, 64.4% route), 6 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path jtag_io_jtag_tck to SLICE_94:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     2.150       43.PADDI to      R4C7A.CLK jtag_io_jtag_tck_c
-                  --------
-                    2.150   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path jtag_io_jtag_tck to SLICE_64:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     2.150       43.PADDI to      R3C7A.CLK jtag_io_jtag_tck_c
-                  --------
-                    2.150   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Error: The following path exceeds requirements by 5.567ns (weighted slack = -11.134ns)
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              jtag_ctrl_tap_instruction_i5  (from jtag_io_jtag_tck_c +)
-   Destination:    FF         Data in        jtag_ctrl_tap_tdoUnbufferd_regNext_264  (to jtag_io_jtag_tck_c -)
-
-   Delay:               8.435ns  (34.2% logic, 65.8% route), 5 logic levels.
+   Delay:               8.407ns  (32.9% logic, 67.1% route), 5 logic levels.
 
  Constraint Details:
 
-      8.435ns physical path delay SLICE_101 to SLICE_64 exceeds
-      3.034ns delay constraint less
+      8.407ns physical path delay SLICE_99 to SLICE_61 exceeds
+      3.379ns delay constraint less
       0.000ns skew and
-      0.166ns DIN_SET requirement (totaling 2.868ns) by 5.567ns
+      0.166ns DIN_SET requirement (totaling 3.213ns) by 5.194ns
 
  Physical Path Details:
 
-      Data path SLICE_101 to SLICE_64:
+      Data path SLICE_99 to SLICE_61:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452      R4C7B.CLK to       R4C7B.Q0 SLICE_101 (from jtag_io_jtag_tck_c)
-ROUTE         6     2.766       R4C7B.Q0 to       R5C9B.B0 jtag_ctrl_tap_instruction_5
-CTOF_DEL    ---     0.495       R5C9B.B0 to       R5C9B.F0 SLICE_115
-ROUTE         3     1.055       R5C9B.F0 to       R5C8A.D1 n2456
-CTOOFX_DEL  ---     0.721       R5C8A.D1 to     R5C8A.OFX0 mux_581_i1/SLICE_82
-ROUTE         1     0.744     R5C8A.OFX0 to       R5C7C.C1 n1537
-CTOOFX_DEL  ---     0.721       R5C7C.C1 to     R5C7C.OFX0 mux_662_i1/SLICE_81
-ROUTE         1     0.986     R5C7C.OFX0 to       R3C7A.A0 n1631
-CTOF_DEL    ---     0.495       R3C7A.A0 to       R3C7A.F0 SLICE_64
-ROUTE         1     0.000       R3C7A.F0 to      R3C7A.DI0 jtag_ctrl_tap_tdoUnbufferd (to jtag_io_jtag_tck_c)
+REG_DEL     ---     0.452      R5C8D.CLK to       R5C8D.Q0 SLICE_99 (from jtag_io_jtag_tck_c)
+ROUTE        13     2.306       R5C8D.Q0 to       R6C7A.M1 jtag_ctrl_tap_instruction_2
+MTOOFX_DEL  ---     0.376       R6C7A.M1 to     R6C7A.OFX1 i2094/SLICE_78
+ROUTE         1     0.986     R6C7A.OFX1 to       R4C7C.A1 n3097
+CTOOFX_DEL  ---     0.721       R4C7C.A1 to     R4C7C.OFX0 mux_594_i1/SLICE_77
+ROUTE         1     0.967     R4C7C.OFX0 to       R4C7A.A0 n1561
+CTOF_DEL    ---     0.495       R4C7A.A0 to       R4C7A.F0 SLICE_89
+ROUTE         1     1.383       R4C7A.F0 to       R3C7D.A1 n3039
+CTOOFX_DEL  ---     0.721       R3C7D.A1 to     R3C7D.OFX0 SLICE_61
+ROUTE         1     0.000     R3C7D.OFX0 to      R3C7D.DI0 jtag_ctrl_tap_tdoUnbufferd (to jtag_io_jtag_tck_c)
                   --------
-                    8.435   (34.2% logic, 65.8% route), 5 logic levels.
+                    8.407   (32.9% logic, 67.1% route), 5 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path jtag_io_jtag_tck to SLICE_101:
+      Source Clock Path jtag_io_jtag_tck to SLICE_99:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     2.150       43.PADDI to      R4C7B.CLK jtag_io_jtag_tck_c
+ROUTE        76     2.150       43.PADDI to      R5C8D.CLK jtag_io_jtag_tck_c
                   --------
                     2.150   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path jtag_io_jtag_tck to SLICE_64:
+      Destination Clock Path jtag_io_jtag_tck to SLICE_61:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     2.150       43.PADDI to      R3C7A.CLK jtag_io_jtag_tck_c
+ROUTE        76     2.150       43.PADDI to      R3C7D.CLK jtag_io_jtag_tck_c
                   --------
                     2.150   (0.0% logic, 100.0% route), 0 logic levels.
 
 
-Error: The following path exceeds requirements by 5.489ns (weighted slack = -10.978ns)
+Error: The following path exceeds requirements by 5.069ns (weighted slack = -10.138ns)
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
    Source:         FF         Q              jtag_ctrl_tap_instruction_i3  (from jtag_io_jtag_tck_c +)
-   Destination:    FF         Data in        jtag_ctrl_tap_tdoUnbufferd_regNext_264  (to jtag_io_jtag_tck_c -)
+   Destination:    FF         Data in        jtag_ctrl_tap_tdoUnbufferd_regNext_278  (to jtag_io_jtag_tck_c -)
 
-   Delay:               8.357ns  (34.5% logic, 65.5% route), 5 logic levels.
-
- Constraint Details:
-
-      8.357ns physical path delay SLICE_94 to SLICE_64 exceeds
-      3.034ns delay constraint less
-      0.000ns skew and
-      0.166ns DIN_SET requirement (totaling 2.868ns) by 5.489ns
-
- Physical Path Details:
-
-      Data path SLICE_94 to SLICE_64:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452      R4C7A.CLK to       R4C7A.Q0 SLICE_94 (from jtag_io_jtag_tck_c)
-ROUTE        14     2.184       R4C7A.Q0 to       R6C6A.C1 jtag_ctrl_tap_instruction_3
-CTOOFX_DEL  ---     0.721       R6C6A.C1 to     R6C6A.OFX0 i1927/SLICE_83
-ROUTE         1     1.336     R6C6A.OFX0 to       R5C7A.B0 n3015
-CTOF_DEL    ---     0.495       R5C7A.B0 to       R5C7A.F0 SLICE_118
-ROUTE         1     0.967       R5C7A.F0 to       R5C7C.A1 n40
-CTOOFX_DEL  ---     0.721       R5C7C.A1 to     R5C7C.OFX0 mux_662_i1/SLICE_81
-ROUTE         1     0.986     R5C7C.OFX0 to       R3C7A.A0 n1631
-CTOF_DEL    ---     0.495       R3C7A.A0 to       R3C7A.F0 SLICE_64
-ROUTE         1     0.000       R3C7A.F0 to      R3C7A.DI0 jtag_ctrl_tap_tdoUnbufferd (to jtag_io_jtag_tck_c)
-                  --------
-                    8.357   (34.5% logic, 65.5% route), 5 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path jtag_io_jtag_tck to SLICE_94:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     2.150       43.PADDI to      R4C7A.CLK jtag_io_jtag_tck_c
-                  --------
-                    2.150   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path jtag_io_jtag_tck to SLICE_64:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     2.150       43.PADDI to      R3C7A.CLK jtag_io_jtag_tck_c
-                  --------
-                    2.150   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Error: The following path exceeds requirements by 5.489ns (weighted slack = -10.978ns)
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              jtag_ctrl_tap_instruction_i3  (from jtag_io_jtag_tck_c +)
-   Destination:    FF         Data in        jtag_ctrl_tap_tdoUnbufferd_regNext_264  (to jtag_io_jtag_tck_c -)
-
-   Delay:               8.357ns  (34.5% logic, 65.5% route), 5 logic levels.
+   Delay:               8.282ns  (36.6% logic, 63.4% route), 6 logic levels.
 
  Constraint Details:
 
-      8.357ns physical path delay SLICE_94 to SLICE_64 exceeds
-      3.034ns delay constraint less
+      8.282ns physical path delay SLICE_104 to SLICE_61 exceeds
+      3.379ns delay constraint less
       0.000ns skew and
-      0.166ns DIN_SET requirement (totaling 2.868ns) by 5.489ns
+      0.166ns DIN_SET requirement (totaling 3.213ns) by 5.069ns
 
  Physical Path Details:
 
-      Data path SLICE_94 to SLICE_64:
+      Data path SLICE_104 to SLICE_61:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.452      R4C7A.CLK to       R4C7A.Q0 SLICE_94 (from jtag_io_jtag_tck_c)
-ROUTE        14     2.184       R4C7A.Q0 to       R6C6A.C0 jtag_ctrl_tap_instruction_3
-CTOOFX_DEL  ---     0.721       R6C6A.C0 to     R6C6A.OFX0 i1927/SLICE_83
-ROUTE         1     1.336     R6C6A.OFX0 to       R5C7A.B0 n3015
-CTOF_DEL    ---     0.495       R5C7A.B0 to       R5C7A.F0 SLICE_118
-ROUTE         1     0.967       R5C7A.F0 to       R5C7C.A1 n40
-CTOOFX_DEL  ---     0.721       R5C7C.A1 to     R5C7C.OFX0 mux_662_i1/SLICE_81
-ROUTE         1     0.986     R5C7C.OFX0 to       R3C7A.A0 n1631
-CTOF_DEL    ---     0.495       R3C7A.A0 to       R3C7A.F0 SLICE_64
-ROUTE         1     0.000       R3C7A.F0 to      R3C7A.DI0 jtag_ctrl_tap_tdoUnbufferd (to jtag_io_jtag_tck_c)
+REG_DEL     ---     0.452      R5C8C.CLK to       R5C8C.Q1 SLICE_104 (from jtag_io_jtag_tck_c)
+ROUTE        15     1.885       R5C8C.Q1 to       R4C7D.A0 jtag_ctrl_tap_instruction_3
+CTOF_DEL    ---     0.495       R4C7D.A0 to       R4C7D.F0 SLICE_85
+ROUTE         2     0.445       R4C7D.F0 to       R4C7D.C1 n3333
+CTOF_DEL    ---     0.495       R4C7D.C1 to       R4C7D.F1 SLICE_85
+ROUTE         1     0.568       R4C7D.F1 to       R4C7C.M0 n3091
+MTOOFX_DEL  ---     0.376       R4C7C.M0 to     R4C7C.OFX0 mux_594_i1/SLICE_77
+ROUTE         1     0.967     R4C7C.OFX0 to       R4C7A.A0 n1561
+CTOF_DEL    ---     0.495       R4C7A.A0 to       R4C7A.F0 SLICE_89
+ROUTE         1     1.383       R4C7A.F0 to       R3C7D.A1 n3039
+CTOOFX_DEL  ---     0.721       R3C7D.A1 to     R3C7D.OFX0 SLICE_61
+ROUTE         1     0.000     R3C7D.OFX0 to      R3C7D.DI0 jtag_ctrl_tap_tdoUnbufferd (to jtag_io_jtag_tck_c)
                   --------
-                    8.357   (34.5% logic, 65.5% route), 5 logic levels.
+                    8.282   (36.6% logic, 63.4% route), 6 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path jtag_io_jtag_tck to SLICE_94:
+      Source Clock Path jtag_io_jtag_tck to SLICE_104:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     2.150       43.PADDI to      R4C7A.CLK jtag_io_jtag_tck_c
+ROUTE        76     2.150       43.PADDI to      R5C8C.CLK jtag_io_jtag_tck_c
                   --------
                     2.150   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path jtag_io_jtag_tck to SLICE_64:
+      Destination Clock Path jtag_io_jtag_tck to SLICE_61:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     2.150       43.PADDI to      R3C7A.CLK jtag_io_jtag_tck_c
+ROUTE        76     2.150       43.PADDI to      R3C7D.CLK jtag_io_jtag_tck_c
                   --------
                     2.150   (0.0% logic, 100.0% route), 0 logic levels.
 
-Warning:  49.890MHz is the maximum frequency for this preference.
+Warning:  51.648MHz is the maximum frequency for this preference.
 
 Report Summary
 --------------
@@ -575,7 +577,7 @@ Preference                              |   Constraint|       Actual|Levels
 ----------------------------------------------------------------------------
                                         |             |             |
 FREQUENCY NET "jtag_io_jtag_tck_c"      |             |             |
-164.799000 MHz ;                        |  164.799 MHz|   49.890 MHz|   6 *
+147.973000 MHz ;                        |  147.973 MHz|   51.648 MHz|   6 *
                                         |             |             |
 ----------------------------------------------------------------------------
 
@@ -585,35 +587,33 @@ FREQUENCY NET "jtag_io_jtag_tck_c"      |             |             |
 ----------------------------------------------------------------------------
 Critical Nets                           |   Loads|  Errors| % of total
 ----------------------------------------------------------------------------
-jtag_io_jtag_tck_c_enable_116           |      19|     171|     25.79%
+n3339                                   |       1|     114|     25.97%
                                         |        |        |
-n2767                                   |       4|     136|     20.51%
+jtag_io_jtag_tck_c_enable_116           |      19|     114|     25.97%
                                         |        |        |
-n3056                                   |       1|     133|     20.06%
+n2007                                   |      10|     100|     22.78%
                                         |        |        |
-n1980                                   |      10|     120|     18.10%
+n3337                                   |       1|      80|     18.22%
                                         |        |        |
-n3072                                   |      11|      92|     13.88%
+n22                                     |       7|      68|     15.49%
                                         |        |        |
-n22                                     |       4|      91|     13.73%
+jtag_ctrl_tap_fsm_state_2               |      29|      63|     14.35%
                                         |        |        |
-n3055                                   |       1|      90|     13.57%
+n3353                                   |      15|      58|     13.21%
                                         |        |        |
-n3059                                   |      10|      85|     12.82%
+n3343                                   |       9|      57|     12.98%
                                         |        |        |
-jtag_ctrl_tap_fsm_state_1               |      21|      85|     12.82%
+jtag_ctrl_tap_tdoUnbufferd              |       1|      57|     12.98%
                                         |        |        |
-jtag_ctrl_tap_fsm_state_3               |      20|      80|     12.07%
+jtag_ctrl_tap_fsm_state_1               |      24|      56|     12.76%
                                         |        |        |
-n3068                                   |       7|      72|     10.86%
+jtag_ctrl_tap_instruction_6             |       6|      52|     11.85%
                                         |        |        |
-jtag_ctrl_tap_instruction_6             |       4|      72|     10.86%
+n3039                                   |       1|      50|     11.39%
                                         |        |        |
-jtag_ctrl_tap_instruction_7             |       3|      71|     10.71%
+jtag_ctrl_tap_instruction_5             |       7|      48|     10.93%
                                         |        |        |
-n3071                                   |      15|      70|     10.56%
-                                        |        |        |
-jtag_ctrl_tap_fsm_state_2               |      42|      70|     10.56%
+jtag_ctrl_tap_fsm_state_3               |      22|      46|     10.48%
                                         |        |        |
 ----------------------------------------------------------------------------
 
@@ -623,21 +623,21 @@ Clock Domains Analysis
 
 Found 1 clocks:
 
-Clock Domain: jtag_io_jtag_tck_c   Source: jtag_io_jtag_tck.PAD   Loads: 77
-   Covered under: FREQUENCY NET "jtag_io_jtag_tck_c" 164.799000 MHz ;
+Clock Domain: jtag_io_jtag_tck_c   Source: jtag_io_jtag_tck.PAD   Loads: 76
+   Covered under: FREQUENCY NET "jtag_io_jtag_tck_c" 147.973000 MHz ;
 
 
 Timing summary (Setup):
 ---------------
 
-Timing errors: 663  Score: 1406370
-Cumulative negative slack: 1153762
+Timing errors: 439  Score: 813735
+Cumulative negative slack: 594335
 
-Constraints cover 1613 paths, 1 nets, and 826 connections (89.30% coverage)
+Constraints cover 1683 paths, 1 nets, and 844 connections (89.98% coverage)
 
 --------------------------------------------------------------------------------
 Lattice TRACE Report - Hold, Version Diamond (64-bit) 3.11.0.396.4
-Fri Sep 25 10:57:20 2020
+Wed Oct 28 14:02:54 2020
 
 Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
 Copyright (c) 1995 AT&T Corp.   All rights reserved.
@@ -661,8 +661,8 @@ BLOCK RESETPATHS
 
 
 ================================================================================
-Preference: FREQUENCY NET "jtag_io_jtag_tck_c" 164.799000 MHz ;
-            1613 items scored, 0 timing errors detected.
+Preference: FREQUENCY NET "jtag_io_jtag_tck_c" 147.973000 MHz ;
+            1683 items scored, 0 timing errors detected.
 --------------------------------------------------------------------------------
 
 
@@ -670,342 +670,299 @@ Passed: The following path meets requirements by 0.304ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              _zz_45_i0_i5  (from jtag_io_jtag_tck_c +)
-   Destination:    FF         Data in        _zz_45_i0_i4  (to jtag_io_jtag_tck_c +)
+   Source:         FF         Q              _zz_51_i0_i14  (from jtag_io_jtag_tck_c +)
+   Destination:    FF         Data in        _zz_51_i0_i13  (to jtag_io_jtag_tck_c +)
 
    Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
 
  Constraint Details:
 
-      0.285ns physical path delay SLICE_102 to SLICE_102 meets
+      0.285ns physical path delay SLICE_21 to SLICE_109 meets
      -0.019ns M_HLD and
       0.000ns delay constraint less
       0.000ns skew requirement (totaling -0.019ns) by 0.304ns
 
  Physical Path Details:
 
-      Data path SLICE_102 to SLICE_102:
+      Data path SLICE_21 to SLICE_109:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133      R4C8D.CLK to       R4C8D.Q1 SLICE_102 (from jtag_io_jtag_tck_c)
-ROUTE         1     0.152       R4C8D.Q1 to       R4C8D.M0 _zz_45_5 (to jtag_io_jtag_tck_c)
+REG_DEL     ---     0.133      R3C8B.CLK to       R3C8B.Q0 SLICE_21 (from jtag_io_jtag_tck_c)
+ROUTE         1     0.152       R3C8B.Q0 to       R3C8D.M0 _zz_51_14 (to jtag_io_jtag_tck_c)
                   --------
                     0.285   (46.7% logic, 53.3% route), 1 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path jtag_io_jtag_tck to SLICE_102:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     0.690       43.PADDI to      R4C8D.CLK jtag_io_jtag_tck_c
-                  --------
-                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path jtag_io_jtag_tck to SLICE_102:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     0.690       43.PADDI to      R4C8D.CLK jtag_io_jtag_tck_c
-                  --------
-                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Passed: The following path meets requirements by 0.304ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              _zz_45_i0_i10  (from jtag_io_jtag_tck_c +)
-   Destination:    FF         Data in        _zz_45_i0_i9  (to jtag_io_jtag_tck_c +)
-
-   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
-
- Constraint Details:
-
-      0.285ns physical path delay SLICE_103 to SLICE_104 meets
-     -0.019ns M_HLD and
-      0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
-
- Physical Path Details:
-
-      Data path SLICE_103 to SLICE_104:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R4C10C.CLK to      R4C10C.Q0 SLICE_103 (from jtag_io_jtag_tck_c)
-ROUTE         1     0.152      R4C10C.Q0 to      R4C10A.M0 _zz_45_10 (to jtag_io_jtag_tck_c)
-                  --------
-                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path jtag_io_jtag_tck to SLICE_103:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     0.690       43.PADDI to     R4C10C.CLK jtag_io_jtag_tck_c
-                  --------
-                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path jtag_io_jtag_tck to SLICE_104:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     0.690       43.PADDI to     R4C10A.CLK jtag_io_jtag_tck_c
-                  --------
-                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Passed: The following path meets requirements by 0.304ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              _zz_45_i0_i8  (from jtag_io_jtag_tck_c +)
-   Destination:    FF         Data in        _zz_45_i0_i7  (to jtag_io_jtag_tck_c +)
-
-   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
-
- Constraint Details:
-
-      0.285ns physical path delay SLICE_109 to SLICE_109 meets
-     -0.019ns M_HLD and
-      0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
-
- Physical Path Details:
-
-      Data path SLICE_109 to SLICE_109:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133      R4C8B.CLK to       R4C8B.Q1 SLICE_109 (from jtag_io_jtag_tck_c)
-ROUTE         1     0.152       R4C8B.Q1 to       R4C8B.M0 _zz_45_8 (to jtag_io_jtag_tck_c)
-                  --------
-                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path jtag_io_jtag_tck to SLICE_109:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     0.690       43.PADDI to      R4C8B.CLK jtag_io_jtag_tck_c
-                  --------
-                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path jtag_io_jtag_tck to SLICE_109:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     0.690       43.PADDI to      R4C8B.CLK jtag_io_jtag_tck_c
-                  --------
-                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Passed: The following path meets requirements by 0.304ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              _zz_45_i0_i23  (from jtag_io_jtag_tck_c +)
-   Destination:    FF         Data in        _zz_45_i0_i22  (to jtag_io_jtag_tck_c +)
-
-   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
-
- Constraint Details:
-
-      0.285ns physical path delay SLICE_113 to SLICE_106 meets
-     -0.019ns M_HLD and
-      0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
-
- Physical Path Details:
-
-      Data path SLICE_113 to SLICE_106:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133      R5C9A.CLK to       R5C9A.Q0 SLICE_113 (from jtag_io_jtag_tck_c)
-ROUTE         1     0.152       R5C9A.Q0 to       R5C9C.M1 _zz_45_23 (to jtag_io_jtag_tck_c)
-                  --------
-                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path jtag_io_jtag_tck to SLICE_113:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     0.690       43.PADDI to      R5C9A.CLK jtag_io_jtag_tck_c
-                  --------
-                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path jtag_io_jtag_tck to SLICE_106:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     0.690       43.PADDI to      R5C9C.CLK jtag_io_jtag_tck_c
-                  --------
-                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Passed: The following path meets requirements by 0.304ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              _zz_45_i0_i27  (from jtag_io_jtag_tck_c +)
-   Destination:    FF         Data in        _zz_45_i0_i26  (to jtag_io_jtag_tck_c +)
-
-   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
-
- Constraint Details:
-
-      0.285ns physical path delay SLICE_117 to SLICE_117 meets
-     -0.019ns M_HLD and
-      0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
-
- Physical Path Details:
-
-      Data path SLICE_117 to SLICE_117:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R5C10B.CLK to      R5C10B.Q1 SLICE_117 (from jtag_io_jtag_tck_c)
-ROUTE         1     0.152      R5C10B.Q1 to      R5C10B.M0 _zz_45_27 (to jtag_io_jtag_tck_c)
-                  --------
-                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path jtag_io_jtag_tck to SLICE_117:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     0.690       43.PADDI to     R5C10B.CLK jtag_io_jtag_tck_c
-                  --------
-                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path jtag_io_jtag_tck to SLICE_117:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     0.690       43.PADDI to     R5C10B.CLK jtag_io_jtag_tck_c
-                  --------
-                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Passed: The following path meets requirements by 0.304ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              _zz_45_i0_i29  (from jtag_io_jtag_tck_c +)
-   Destination:    FF         Data in        _zz_45_i0_i28  (to jtag_io_jtag_tck_c +)
-
-   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
-
- Constraint Details:
-
-      0.285ns physical path delay SLICE_98 to SLICE_98 meets
-     -0.019ns M_HLD and
-      0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
-
- Physical Path Details:
-
-      Data path SLICE_98 to SLICE_98:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133      R6C8A.CLK to       R6C8A.Q1 SLICE_98 (from jtag_io_jtag_tck_c)
-ROUTE         1     0.152       R6C8A.Q1 to       R6C8A.M0 _zz_45_29 (to jtag_io_jtag_tck_c)
-                  --------
-                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path jtag_io_jtag_tck to SLICE_98:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     0.690       43.PADDI to      R6C8A.CLK jtag_io_jtag_tck_c
-                  --------
-                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path jtag_io_jtag_tck to SLICE_98:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     0.690       43.PADDI to      R6C8A.CLK jtag_io_jtag_tck_c
-                  --------
-                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Passed: The following path meets requirements by 0.306ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              _zz_45_i0_i6  (from jtag_io_jtag_tck_c +)
-   Destination:    FF         Data in        _zz_45_i0_i5  (to jtag_io_jtag_tck_c +)
-
-   Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
-
- Constraint Details:
-
-      0.287ns physical path delay SLICE_15 to SLICE_102 meets
-     -0.019ns M_HLD and
-      0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.019ns) by 0.306ns
-
- Physical Path Details:
-
-      Data path SLICE_15 to SLICE_102:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133      R3C8D.CLK to       R3C8D.Q0 SLICE_15 (from jtag_io_jtag_tck_c)
-ROUTE         1     0.154       R3C8D.Q0 to       R4C8D.M1 _zz_45_6 (to jtag_io_jtag_tck_c)
-                  --------
-                    0.287   (46.3% logic, 53.7% route), 1 logic levels.
-
- Clock Skew Details: 
-
-      Source Clock Path jtag_io_jtag_tck to SLICE_15:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     0.690       43.PADDI to      R3C8D.CLK jtag_io_jtag_tck_c
-                  --------
-                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
-
-      Destination Clock Path jtag_io_jtag_tck to SLICE_102:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     0.690       43.PADDI to      R4C8D.CLK jtag_io_jtag_tck_c
-                  --------
-                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
-
-
-Passed: The following path meets requirements by 0.306ns
-
- Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
-
-   Source:         FF         Q              _zz_45_i0_i14  (from jtag_io_jtag_tck_c +)
-   Destination:    FF         Data in        _zz_45_i0_i13  (to jtag_io_jtag_tck_c +)
-
-   Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
-
- Constraint Details:
-
-      0.287ns physical path delay SLICE_21 to SLICE_107 meets
-     -0.019ns M_HLD and
-      0.000ns delay constraint less
-      0.000ns skew requirement (totaling -0.019ns) by 0.306ns
-
- Physical Path Details:
-
-      Data path SLICE_21 to SLICE_107:
-
-   Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133      R3C9B.CLK to       R3C9B.Q0 SLICE_21 (from jtag_io_jtag_tck_c)
-ROUTE         1     0.154       R3C9B.Q0 to       R4C9B.M0 _zz_45_14 (to jtag_io_jtag_tck_c)
-                  --------
-                    0.287   (46.3% logic, 53.7% route), 1 logic levels.
 
  Clock Skew Details: 
 
       Source Clock Path jtag_io_jtag_tck to SLICE_21:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     0.690       43.PADDI to      R3C9B.CLK jtag_io_jtag_tck_c
+ROUTE        76     0.690       43.PADDI to      R3C8B.CLK jtag_io_jtag_tck_c
                   --------
                     0.690   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path jtag_io_jtag_tck to SLICE_107:
+      Destination Clock Path jtag_io_jtag_tck to SLICE_109:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     0.690       43.PADDI to      R4C9B.CLK jtag_io_jtag_tck_c
+ROUTE        76     0.690       43.PADDI to      R3C8D.CLK jtag_io_jtag_tck_c
+                  --------
+                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              _zz_51_i0_i8  (from jtag_io_jtag_tck_c +)
+   Destination:    FF         Data in        _zz_51_i0_i7  (to jtag_io_jtag_tck_c +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay SLICE_80 to SLICE_80 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path SLICE_80 to SLICE_80:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R4C10A.CLK to      R4C10A.Q1 SLICE_80 (from jtag_io_jtag_tck_c)
+ROUTE         1     0.152      R4C10A.Q1 to      R4C10A.M0 _zz_51_8 (to jtag_io_jtag_tck_c)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path jtag_io_jtag_tck to SLICE_80:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        76     0.690       43.PADDI to     R4C10A.CLK jtag_io_jtag_tck_c
+                  --------
+                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path jtag_io_jtag_tck to SLICE_80:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        76     0.690       43.PADDI to     R4C10A.CLK jtag_io_jtag_tck_c
+                  --------
+                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              _zz_51_i0_i9  (from jtag_io_jtag_tck_c +)
+   Destination:    FF         Data in        _zz_51_i0_i8  (to jtag_io_jtag_tck_c +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay SLICE_81 to SLICE_80 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path SLICE_81 to SLICE_80:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R4C10B.CLK to      R4C10B.Q0 SLICE_81 (from jtag_io_jtag_tck_c)
+ROUTE         1     0.152      R4C10B.Q0 to      R4C10A.M1 _zz_51_9 (to jtag_io_jtag_tck_c)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path jtag_io_jtag_tck to SLICE_81:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        76     0.690       43.PADDI to     R4C10B.CLK jtag_io_jtag_tck_c
+                  --------
+                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path jtag_io_jtag_tck to SLICE_80:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        76     0.690       43.PADDI to     R4C10A.CLK jtag_io_jtag_tck_c
+                  --------
+                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              _zz_51_i0_i5  (from jtag_io_jtag_tck_c +)
+   Destination:    FF         Data in        _zz_51_i0_i4  (to jtag_io_jtag_tck_c +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay SLICE_89 to SLICE_89 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path SLICE_89 to SLICE_89:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R4C7A.CLK to       R4C7A.Q1 SLICE_89 (from jtag_io_jtag_tck_c)
+ROUTE         1     0.152       R4C7A.Q1 to       R4C7A.M0 _zz_51_5 (to jtag_io_jtag_tck_c)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path jtag_io_jtag_tck to SLICE_89:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        76     0.690       43.PADDI to      R4C7A.CLK jtag_io_jtag_tck_c
+                  --------
+                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path jtag_io_jtag_tck to SLICE_89:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        76     0.690       43.PADDI to      R4C7A.CLK jtag_io_jtag_tck_c
+                  --------
+                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              _zz_51_i0_i27  (from jtag_io_jtag_tck_c +)
+   Destination:    FF         Data in        _zz_51_i0_i26  (to jtag_io_jtag_tck_c +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay SLICE_91 to SLICE_91 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path SLICE_91 to SLICE_91:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R5C7A.CLK to       R5C7A.Q1 SLICE_91 (from jtag_io_jtag_tck_c)
+ROUTE         1     0.152       R5C7A.Q1 to       R5C7A.M0 _zz_51_27 (to jtag_io_jtag_tck_c)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path jtag_io_jtag_tck to SLICE_91:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        76     0.690       43.PADDI to      R5C7A.CLK jtag_io_jtag_tck_c
+                  --------
+                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path jtag_io_jtag_tck to SLICE_91:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        76     0.690       43.PADDI to      R5C7A.CLK jtag_io_jtag_tck_c
+                  --------
+                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              _zz_51_i0_i29  (from jtag_io_jtag_tck_c +)
+   Destination:    FF         Data in        _zz_51_i0_i28  (to jtag_io_jtag_tck_c +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay SLICE_92 to SLICE_92 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path SLICE_92 to SLICE_92:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R5C8A.CLK to       R5C8A.Q1 SLICE_92 (from jtag_io_jtag_tck_c)
+ROUTE         1     0.152       R5C8A.Q1 to       R5C8A.M0 _zz_51_29 (to jtag_io_jtag_tck_c)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path jtag_io_jtag_tck to SLICE_92:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        76     0.690       43.PADDI to      R5C8A.CLK jtag_io_jtag_tck_c
+                  --------
+                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path jtag_io_jtag_tck to SLICE_92:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        76     0.690       43.PADDI to      R5C8A.CLK jtag_io_jtag_tck_c
+                  --------
+                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.304ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              _zz_51_i0_i11  (from jtag_io_jtag_tck_c +)
+   Destination:    FF         Data in        _zz_51_i0_i10  (to jtag_io_jtag_tck_c +)
+
+   Delay:               0.285ns  (46.7% logic, 53.3% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.285ns physical path delay SLICE_95 to SLICE_95 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.304ns
+
+ Physical Path Details:
+
+      Data path SLICE_95 to SLICE_95:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133      R6C8A.CLK to       R6C8A.Q1 SLICE_95 (from jtag_io_jtag_tck_c)
+ROUTE         1     0.152       R6C8A.Q1 to       R6C8A.M0 _zz_51_11 (to jtag_io_jtag_tck_c)
+                  --------
+                    0.285   (46.7% logic, 53.3% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path jtag_io_jtag_tck to SLICE_95:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        76     0.690       43.PADDI to      R6C8A.CLK jtag_io_jtag_tck_c
+                  --------
+                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path jtag_io_jtag_tck to SLICE_95:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        76     0.690       43.PADDI to      R6C8A.CLK jtag_io_jtag_tck_c
                   --------
                     0.690   (0.0% logic, 100.0% route), 0 logic levels.
 
@@ -1014,41 +971,41 @@ Passed: The following path meets requirements by 0.306ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              _zz_45_i0_i30  (from jtag_io_jtag_tck_c +)
-   Destination:    FF         Data in        _zz_45_i0_i29  (to jtag_io_jtag_tck_c +)
+   Source:         FF         Q              _zz_58_i0_i0  (from jtag_io_jtag_tck_c +)
+   Destination:    FF         Data in        _zz_59_i0_i0  (to jtag_io_jtag_tck_c +)
 
    Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
 
  Constraint Details:
 
-      0.287ns physical path delay SLICE_31 to SLICE_98 meets
+      0.287ns physical path delay SLICE_37 to SLICE_84 meets
      -0.019ns M_HLD and
       0.000ns delay constraint less
       0.000ns skew requirement (totaling -0.019ns) by 0.306ns
 
  Physical Path Details:
 
-      Data path SLICE_31 to SLICE_98:
+      Data path SLICE_37 to SLICE_84:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133      R4C8A.CLK to       R4C8A.Q0 SLICE_31 (from jtag_io_jtag_tck_c)
-ROUTE         1     0.154       R4C8A.Q0 to       R6C8A.M1 _zz_45_30 (to jtag_io_jtag_tck_c)
+REG_DEL     ---     0.133      R6C9B.CLK to       R6C9B.Q0 SLICE_37 (from jtag_io_jtag_tck_c)
+ROUTE         2     0.154       R6C9B.Q0 to       R6C9D.M0 _zz_58_0 (to jtag_io_jtag_tck_c)
                   --------
                     0.287   (46.3% logic, 53.7% route), 1 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path jtag_io_jtag_tck to SLICE_31:
+      Source Clock Path jtag_io_jtag_tck to SLICE_37:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     0.690       43.PADDI to      R4C8A.CLK jtag_io_jtag_tck_c
+ROUTE        76     0.690       43.PADDI to      R6C9B.CLK jtag_io_jtag_tck_c
                   --------
                     0.690   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path jtag_io_jtag_tck to SLICE_98:
+      Destination Clock Path jtag_io_jtag_tck to SLICE_84:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     0.690       43.PADDI to      R6C8A.CLK jtag_io_jtag_tck_c
+ROUTE        76     0.690       43.PADDI to      R6C9D.CLK jtag_io_jtag_tck_c
                   --------
                     0.690   (0.0% logic, 100.0% route), 0 logic levels.
 
@@ -1057,41 +1014,84 @@ Passed: The following path meets requirements by 0.306ns
 
  Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
 
-   Source:         FF         Q              _zz_49_i0_i1  (from jtag_io_jtag_tck_c +)
-   Destination:    FF         Data in        _zz_50_i0_i1  (to jtag_io_jtag_tck_c +)
+   Source:         FF         Q              _zz_58_i0_i3  (from jtag_io_jtag_tck_c +)
+   Destination:    FF         Data in        _zz_59_i0_i3  (to jtag_io_jtag_tck_c +)
 
    Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
 
  Constraint Details:
 
-      0.287ns physical path delay SLICE_35 to SLICE_112 meets
+      0.287ns physical path delay SLICE_38 to SLICE_86 meets
      -0.019ns M_HLD and
       0.000ns delay constraint less
       0.000ns skew requirement (totaling -0.019ns) by 0.306ns
 
  Physical Path Details:
 
-      Data path SLICE_35 to SLICE_112:
+      Data path SLICE_38 to SLICE_86:
 
    Name    Fanout   Delay (ns)          Site               Resource
-REG_DEL     ---     0.133     R5C10D.CLK to      R5C10D.Q1 SLICE_35 (from jtag_io_jtag_tck_c)
-ROUTE         2     0.154      R5C10D.Q1 to      R5C10A.M1 _zz_49_1 (to jtag_io_jtag_tck_c)
+REG_DEL     ---     0.133      R6C9C.CLK to       R6C9C.Q1 SLICE_38 (from jtag_io_jtag_tck_c)
+ROUTE         2     0.154       R6C9C.Q1 to       R6C9A.M1 _zz_58_3 (to jtag_io_jtag_tck_c)
                   --------
                     0.287   (46.3% logic, 53.7% route), 1 logic levels.
 
  Clock Skew Details: 
 
-      Source Clock Path jtag_io_jtag_tck to SLICE_35:
+      Source Clock Path jtag_io_jtag_tck to SLICE_38:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     0.690       43.PADDI to     R5C10D.CLK jtag_io_jtag_tck_c
+ROUTE        76     0.690       43.PADDI to      R6C9C.CLK jtag_io_jtag_tck_c
                   --------
                     0.690   (0.0% logic, 100.0% route), 0 logic levels.
 
-      Destination Clock Path jtag_io_jtag_tck to SLICE_112:
+      Destination Clock Path jtag_io_jtag_tck to SLICE_86:
 
    Name    Fanout   Delay (ns)          Site               Resource
-ROUTE        77     0.690       43.PADDI to     R5C10A.CLK jtag_io_jtag_tck_c
+ROUTE        76     0.690       43.PADDI to      R6C9A.CLK jtag_io_jtag_tck_c
+                  --------
+                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+
+Passed: The following path meets requirements by 0.306ns
+
+ Logical Details:  Cell type  Pin type       Cell/ASIC name  (clock net +/-)
+
+   Source:         FF         Q              _zz_63_i0_i1  (from jtag_io_jtag_tck_c +)
+   Destination:    FF         Data in        _zz_64_i0_i1  (to jtag_io_jtag_tck_c +)
+
+   Delay:               0.287ns  (46.3% logic, 53.7% route), 1 logic levels.
+
+ Constraint Details:
+
+      0.287ns physical path delay SLICE_41 to SLICE_87 meets
+     -0.019ns M_HLD and
+      0.000ns delay constraint less
+      0.000ns skew requirement (totaling -0.019ns) by 0.306ns
+
+ Physical Path Details:
+
+      Data path SLICE_41 to SLICE_87:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+REG_DEL     ---     0.133     R5C10D.CLK to      R5C10D.Q1 SLICE_41 (from jtag_io_jtag_tck_c)
+ROUTE         2     0.154      R5C10D.Q1 to      R5C10C.M1 _zz_63_1 (to jtag_io_jtag_tck_c)
+                  --------
+                    0.287   (46.3% logic, 53.7% route), 1 logic levels.
+
+ Clock Skew Details: 
+
+      Source Clock Path jtag_io_jtag_tck to SLICE_41:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        76     0.690       43.PADDI to     R5C10D.CLK jtag_io_jtag_tck_c
+                  --------
+                    0.690   (0.0% logic, 100.0% route), 0 logic levels.
+
+      Destination Clock Path jtag_io_jtag_tck to SLICE_87:
+
+   Name    Fanout   Delay (ns)          Site               Resource
+ROUTE        76     0.690       43.PADDI to     R5C10C.CLK jtag_io_jtag_tck_c
                   --------
                     0.690   (0.0% logic, 100.0% route), 0 logic levels.
 
@@ -1102,7 +1102,7 @@ Preference(MIN Delays)                  |   Constraint|       Actual|Levels
 ----------------------------------------------------------------------------
                                         |             |             |
 FREQUENCY NET "jtag_io_jtag_tck_c"      |             |             |
-164.799000 MHz ;                        |     0.000 ns|     0.304 ns|   1  
+147.973000 MHz ;                        |     0.000 ns|     0.304 ns|   1  
                                         |             |             |
 ----------------------------------------------------------------------------
 
@@ -1115,8 +1115,8 @@ Clock Domains Analysis
 
 Found 1 clocks:
 
-Clock Domain: jtag_io_jtag_tck_c   Source: jtag_io_jtag_tck.PAD   Loads: 77
-   Covered under: FREQUENCY NET "jtag_io_jtag_tck_c" 164.799000 MHz ;
+Clock Domain: jtag_io_jtag_tck_c   Source: jtag_io_jtag_tck.PAD   Loads: 76
+   Covered under: FREQUENCY NET "jtag_io_jtag_tck_c" 147.973000 MHz ;
 
 
 Timing summary (Hold):
@@ -1125,16 +1125,16 @@ Timing summary (Hold):
 Timing errors: 0  Score: 0
 Cumulative negative slack: 0
 
-Constraints cover 1613 paths, 1 nets, and 826 connections (89.30% coverage)
+Constraints cover 1683 paths, 1 nets, and 844 connections (89.98% coverage)
 
 
 
 Timing summary (Setup and Hold):
 ---------------
 
-Timing errors: 663 (setup), 0 (hold)
-Score: 1406370 (setup), 0 (hold)
-Cumulative negative slack: 1153762 (1153762+0)
+Timing errors: 439 (setup), 0 (hold)
+Score: 813735 (setup), 0 (hold)
+Cumulative negative slack: 594335 (594335+0)
 --------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------

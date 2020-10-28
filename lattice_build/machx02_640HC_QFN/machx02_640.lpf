@@ -2,14 +2,11 @@ BLOCK RESETPATHS ;
 BLOCK ASYNCPATHS ;
 SYSCONFIG JTAG_PORT=DISABLE MUX_CONFIGURATION_PORTS=ENABLE ;
 IOBUF PORT "reset" IO_TYPE=LVCMOS33 PULLMODE=UP ;
-LOCATE COMP "jtag_io_child_0_tdo" SITE "36" ;
 LOCATE COMP "jtag_io_child_0_tdi" SITE "35" ;
 LOCATE COMP "jtag_io_child_0_tck" SITE "34" ;
 LOCATE COMP "jtag_io_child_0_tms" SITE "32" ;
 LOCATE COMP "jtag_io_child_1_tck" SITE "16" ;
 LOCATE COMP "jtag_io_child_1_tms" SITE "18" ;
-LOCATE COMP "jtag_io_child_1_tdo" SITE "14" ;
-LOCATE COMP "jtag_io_child_1_tdi" SITE "15" ;
 LOCATE COMP "jtag_io_gpio_1[1]" SITE "20" ;
 LOCATE COMP "jtag_io_gpio_1[2]" SITE "21" ;
 LOCATE COMP "jtag_io_gpio_1[3]" SITE "23" ;
@@ -23,7 +20,6 @@ LOCATE COMP "jtag_io_jtag_tdi" SITE "47" ;
 LOCATE COMP "jtag_io_jtag_tck" SITE "43" ;
 LOCATE COMP "jtag_io_jtag_tdo" SITE "48" ;
 LOCATE COMP "jtag_io_child_2_tdo" SITE "2" ;
-LOCATE COMP "jtag_io_child_2_tdi" SITE "3" ;
 LOCATE COMP "jtag_io_child_2_tck" SITE "4" ;
 LOCATE COMP "jtag_io_child_2_tms" SITE "7" ;
 LOCATE COMP "jtag_io_gpio_2[0]" SITE "8" ;
@@ -42,7 +38,8 @@ DEFINE PORT GROUP "child_0" "jtag_io_child_0_tdo"
 "jtag_io_gpio_0[0]" 
 "jtag_io_gpio_0[1]" 
 "jtag_io_gpio_0[2]" 
-"jtag_io_gpio_0[3]" ;
+"jtag_io_gpio_0[3]" 
+"jtag_io_child_0_trst" ;
 IOBUF GROUP "child_0" PULLMODE=NONE IO_TYPE=LVCMOS18 OPENDRAIN=OFF ;
 DEFINE PORT GROUP "child_1" "jtag_io_child_1_tdo" 
 "jtag_io_child_1_tdi" 
@@ -51,7 +48,8 @@ DEFINE PORT GROUP "child_1" "jtag_io_child_1_tdo"
 "jtag_io_gpio_1[0]" 
 "jtag_io_gpio_1[1]" 
 "jtag_io_gpio_1[2]" 
-"jtag_io_gpio_1[3]" ;
+"jtag_io_gpio_1[3]" 
+"jtag_io_child_1_trst" ;
 IOBUF GROUP "child_1" PULLMODE=NONE IO_TYPE=LVCMOS33 OPENDRAIN=OFF ;
 DEFINE PORT GROUP "child_2" "jtag_io_child_2_tdo" 
 "jtag_io_child_2_tdi" 
@@ -60,5 +58,13 @@ DEFINE PORT GROUP "child_2" "jtag_io_child_2_tdo"
 "jtag_io_gpio_2[0]" 
 "jtag_io_gpio_2[1]" 
 "jtag_io_gpio_2[2]" 
-"jtag_io_gpio_2[3]" ;
+"jtag_io_gpio_2[3]" 
+"jtag_io_child_2_trst" ;
 IOBUF GROUP "child_2" PULLMODE=NONE IO_TYPE=LVCMOS33 OPENDRAIN=OFF ;
+LOCATE COMP "jtag_io_child_1_tdo" SITE "14" ;
+LOCATE COMP "jtag_io_child_0_trst" SITE "33" ;
+LOCATE COMP "jtag_io_child_1_trst" SITE "17" ;
+LOCATE COMP "jtag_io_child_2_trst" SITE "5" ;
+LOCATE COMP "jtag_io_child_1_tdi" SITE "15" ;
+LOCATE COMP "jtag_io_child_0_tdo" SITE "36" ;
+LOCATE COMP "jtag_io_child_2_tdi" SITE "3" ;

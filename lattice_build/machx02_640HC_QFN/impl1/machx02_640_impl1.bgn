@@ -4,7 +4,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Sep 25 10:58:09 2020
+Wed Oct 28 14:02:56 2020
 
 
 Command: bitgen -g RamCfg:Reset -path /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN -w -jedec -gui -msgset /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/promote.xml machx02_640_impl1.ncd machx02_640_impl1.prf 

@@ -47,18 +47,18 @@
         <Message>
             <ID>35901018</ID>
             <Severity>Info</Severity>
-            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/MyTopLevel.v(756): </Dynamic>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/MyTopLevel.v(801): </Dynamic>
             <Dynamic>JtagChainer</Dynamic>
             <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/MyTopLevel.v</Navigation>
-            <Navigation>756</Navigation>
+            <Navigation>801</Navigation>
         </Message>
         <Message>
             <ID>35935034</ID>
             <Severity>Warning</Severity>
-            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/MyTopLevel.v(171): </Dynamic>
+            <Dynamic>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/MyTopLevel.v(183): </Dynamic>
             <Dynamic>osc</Dynamic>
             <Navigation>/home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/MyTopLevel.v</Navigation>
-            <Navigation>171</Navigation>
+            <Navigation>183</Navigation>
         </Message>
         <Message>
             <ID>35001611</ID>

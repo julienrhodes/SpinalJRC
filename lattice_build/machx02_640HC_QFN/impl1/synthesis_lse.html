@@ -14,7 +14,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Sep 25 10:49:26 2020
+Wed Oct 28 11:34:57 2020
 
 
 Command Line:  synthesis -f machx02_640_impl1_lattice.synproj -gui -msgset /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/promote.xml 
@@ -90,23 +90,26 @@ Analyzing Verilog file /usr/local/diamond/3.11_x64/ispfpga/userware/unix/SYNTHES
 Top module name (Verilog): MyTopLevel
 INFO - synthesis: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/MyTopLevel.v(25): compiling module MyTopLevel. VERI-1018
 INFO - synthesis: /usr/local/diamond/3.11_x64/ispfpga/userware/unix/SYNTHESIS_HEADERS/machxo2.v(1793): compiling module OSCH. VERI-1018
-INFO - synthesis: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/MyTopLevel.v(756): compiling module JtagChainer. VERI-1018
+INFO - synthesis: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/MyTopLevel.v(801): compiling module JtagChainer. VERI-1018
 Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/xo2c00/data/xo2clib.ngl'...
 Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/mg5g00/data/mg5glib.ngl'...
 Loading NGL library '/usr/local/diamond/3.11_x64/ispfpga/or5g00/data/orc5glib.ngl'...
 Loading device for application map from file 'xo2c640.nph' in environment: /usr/local/diamond/3.11_x64/ispfpga.
 Package Status:                     Final          Version 1.39.
 Top-level module name = MyTopLevel.
-WARNING - synthesis: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/MyTopLevel.v(171): Removing unused instance osc. VDB-5034
+WARNING - synthesis: /home/julien/Documents/git/3rd/SpinalJRC/lattice_build/machx02_640HC_QFN/MyTopLevel.v(183): Removing unused instance osc. VDB-5034
 ######## Converting I/O port jtag_io_child_0_tms to output.
 ######## Converting I/O port jtag_io_child_0_tdi to output.
 ######## Converting I/O port jtag_io_child_0_tck to output.
+######## Converting I/O port jtag_io_child_0_trst to output.
 ######## Converting I/O port jtag_io_child_1_tms to output.
 ######## Converting I/O port jtag_io_child_1_tdi to output.
 ######## Converting I/O port jtag_io_child_1_tck to output.
+######## Converting I/O port jtag_io_child_1_trst to output.
 ######## Converting I/O port jtag_io_child_2_tms to output.
 ######## Converting I/O port jtag_io_child_2_tdi to output.
 ######## Converting I/O port jtag_io_child_2_tck to output.
+######## Converting I/O port jtag_io_child_2_trst to output.
 
 
 
@@ -124,21 +127,22 @@ All blocks are expanded and NGD expansion is successful.
 Writing NGD file machx02_640_impl1.ngd.
 
 ################### Begin Area Report (MyTopLevel)######################
-Number of register bits => 133 of 760 (17 % )
+Number of register bits => 130 of 760 (17 % )
 BB => 12
 FD1P3AX => 89
 FD1P3IX => 26
 FD1P3JX => 1
-FD1S3AX => 14
-FD1S3IX => 3
+FD1S3AX => 3
+FD1S3IX => 10
+FD1S3JX => 1
 GSR => 1
 IB => 7
 INV => 1
 L6MUX21 => 1
-LUT4 => 173
+LUT4 => 177
 OB => 1
-OBZ => 9
-PFUMX => 11
+OBZ => 12
+PFUMX => 9
 ################### End Area Report ##################
 
 ################### Begin BlackBox Report ######################
@@ -153,27 +157,27 @@ Clock Enable Nets
 Number of Clock Enables: 20
 Top 10 highest fanout Clock Enables:
   Net : jtag_io_jtag_tck_c_enable_116, loads : 32
-  Net : jtag_io_jtag_tck_c_enable_59, loads : 8
-  Net : jtag_io_jtag_tck_c_enable_99, loads : 8
-  Net : jtag_io_jtag_tck_c_enable_30, loads : 7
-  Net : jtag_io_jtag_tck_c_enable_79, loads : 4
-  Net : jtag_io_jtag_tck_c_enable_75, loads : 4
-  Net : jtag_io_jtag_tck_c_enable_48, loads : 4
-  Net : jtag_io_jtag_tck_c_enable_72, loads : 4
-  Net : jtag_io_jtag_tck_c_enable_43, loads : 4
-  Net : jtag_io_jtag_tck_c_enable_62, loads : 4
+  Net : jtag_io_jtag_tck_c_enable_103, loads : 8
+  Net : jtag_io_jtag_tck_c_enable_38, loads : 8
+  Net : jtag_io_jtag_tck_c_enable_28, loads : 7
+  Net : jtag_io_jtag_tck_c_enable_74, loads : 4
+  Net : jtag_io_jtag_tck_c_enable_59, loads : 4
+  Net : jtag_io_jtag_tck_c_enable_39, loads : 4
+  Net : jtag_io_jtag_tck_c_enable_58, loads : 4
+  Net : jtag_io_jtag_tck_c_enable_41, loads : 4
+  Net : jtag_io_jtag_tck_c_enable_54, loads : 4
 Highest fanout non-clock nets
 Top 10 highest fanout non-clock nets:
-  Net : n3061, loads : 45
-  Net : n3060, loads : 44
-  Net : jtag_ctrl_tap_fsm_state_2, loads : 42
-  Net : jtag_ctrl_tap_fsm_state_0, loads : 39
+  Net : n2877, loads : 57
+  Net : n3354, loads : 45
   Net : jtag_io_jtag_tck_c_enable_116, loads : 32
-  Net : jtag_ctrl_tap_fsm_state_1, loads : 21
-  Net : jtag_ctrl_tap_fsm_state_3, loads : 20
-  Net : n1980, loads : 19
-  Net : jtag_ctrl_tap_instruction_2, loads : 16
-  Net : jtag_ctrl_tap_instruction_0, loads : 15
+  Net : jtag_ctrl_tap_fsm_state_2, loads : 29
+  Net : jtag_ctrl_tap_fsm_state_0, loads : 25
+  Net : jtag_ctrl_tap_fsm_state_1, loads : 24
+  Net : jtag_ctrl_tap_fsm_state_3, loads : 22
+  Net : n2007, loads : 19
+  Net : jtag_ctrl_tap_instruction_0, loads : 17
+  Net : jtag_ctrl_tap_instruction_3, loads : 15
 ################### End Clock Report ##################
 
 <A name="lse_trs"></A><B><U><big>Timing Report Summary</big></U></B>
@@ -183,7 +187,7 @@ Constraint                              |   Constraint|       Actual|Levels
 --------------------------------------------------------------------------------
                                         |             |             |
 create_clock -period 5.000000 -name     |             |             |
-clk0 [get_nets jtag_io_jtag_tck_c]      |  200.000 MHz|   47.755 MHz|     8 *
+clk0 [get_nets jtag_io_jtag_tck_c]      |  200.000 MHz|   47.398 MHz|     8 *
                                         |             |             |
 --------------------------------------------------------------------------------
 
@@ -191,10 +195,10 @@ clk0 [get_nets jtag_io_jtag_tck_c]      |  200.000 MHz|   47.755 MHz|     8 *
 1 constraints not met.
 
 
-Peak Memory Usage: 180.160  MB
+Peak Memory Usage: 180.219  MB
 
 --------------------------------------------------------------
-Elapsed CPU time for LSE flow : 0.587  secs
+Elapsed CPU time for LSE flow : 0.652  secs
 --------------------------------------------------------------
 
 

@@ -147,6 +147,7 @@ class JtagOut extends Bundle {
     val tms = out Bool
     val tdi = out Bool
     val tck = out Bool
+    val trst = out Bool
 }
 
 case class TriStateJtag() extends Bundle with IMasterSlave {
@@ -187,6 +188,7 @@ class JtagChainer(chains: Int) extends Component {
 
     for(i <- 0 until chains) {
       io.child(i).tristate.writeEnable := writeEnableNeg(i)
+      io.child(i).tristate.write.trst := True
       io.child(i).tristate.write.tdi := io.primary.tdi
       io.child(i).tristate.write.tms := io.primary.tms
       io.child(i).tristate.write.tck := io.primary.tck

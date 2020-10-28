@@ -14,42 +14,45 @@ Performance Grade:      4
 PACKAGE:          QFN48
 Package Status:                     Final          Version 1.39
 
-Fri Sep 25 10:57:18 2020
+Wed Oct 28 14:02:53 2020
 
 Pinout by Port Name:
-+---------------------+----------+---------------+-------+-----------+-----------+------------------------------------------------+
-| Port Name           | Pin/Bank | Buffer Type   | Site  | PG Enable | BC Enable | Properties                                     |
-+---------------------+----------+---------------+-------+-----------+-----------+------------------------------------------------+
-| jtag_io_child_0_tck | 34/1     | LVCMOS18_OUT  | PR5C  |           |           | DRIVE:8mA SLEW:SLOW                            |
-| jtag_io_child_0_tdi | 35/1     | LVCMOS18_OUT  | PR3D  |           |           | DRIVE:8mA SLEW:SLOW                            |
-| jtag_io_child_0_tdo | 36/1     | LVCMOS18_IN   | PR3C  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
-| jtag_io_child_0_tms | 32/1     | LVCMOS18_OUT  | PR6C  |           |           | DRIVE:8mA SLEW:SLOW                            |
-| jtag_io_child_1_tck | 16/2     | LVCMOS33_OUT  | PB6A  |           |           | DRIVE:8mA SLEW:SLOW                            |
-| jtag_io_child_1_tdi | 15/2     | LVCMOS33_OUT  | PB4B  |           |           | DRIVE:8mA SLEW:SLOW                            |
-| jtag_io_child_1_tdo | 14/2     | LVCMOS33_IN   | PB4A  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
-| jtag_io_child_1_tms | 18/2     | LVCMOS33_OUT  | PB6C  |           |           | DRIVE:8mA SLEW:SLOW                            |
-| jtag_io_child_2_tck | 4/3      | LVCMOS33_OUT  | PL2C  |           |           | DRIVE:8mA SLEW:SLOW                            |
-| jtag_io_child_2_tdi | 3/3      | LVCMOS33_OUT  | PL2B  |           |           | DRIVE:8mA SLEW:SLOW                            |
-| jtag_io_child_2_tdo | 2/3      | LVCMOS33_IN   | PL2A  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
-| jtag_io_child_2_tms | 7/3      | LVCMOS33_OUT  | PL3A  |           |           | DRIVE:8mA SLEW:SLOW                            |
-| jtag_io_gpio_0[0]   | 31/1     | LVCMOS18_BIDI | PR6D  |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| jtag_io_gpio_0[1]   | 29/1     | LVCMOS18_BIDI | PR7A  |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| jtag_io_gpio_0[2]   | 28/1     | LVCMOS18_BIDI | PR7B  |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| jtag_io_gpio_0[3]   | 27/1     | LVCMOS18_BIDI | PR7C  |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| jtag_io_gpio_1[0]   | 19/2     | LVCMOS33_BIDI | PB6D  |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| jtag_io_gpio_1[1]   | 20/2     | LVCMOS33_BIDI | PB10C |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| jtag_io_gpio_1[2]   | 21/2     | LVCMOS33_BIDI | PB10D |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| jtag_io_gpio_1[3]   | 23/2     | LVCMOS33_BIDI | PB14C |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| jtag_io_gpio_2[0]   | 8/3      | LVCMOS33_BIDI | PL3B  |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| jtag_io_gpio_2[1]   | 9/3      | LVCMOS33_BIDI | PL5A  |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| jtag_io_gpio_2[2]   | 10/3     | LVCMOS33_BIDI | PL5B  |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| jtag_io_gpio_2[3]   | 11/3     | LVCMOS33_BIDI | PL6A  |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
-| jtag_io_jtag_tck    | 43/0     | LVCMOS33_IN   | PT9C  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
-| jtag_io_jtag_tdi    | 47/0     | LVCMOS33_IN   | PT7B  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
-| jtag_io_jtag_tdo    | 48/0     | LVCMOS33_OUT  | PT7A  |           |           | DRIVE:8mA SLEW:SLOW                            |
-| jtag_io_jtag_tms    | 44/0     | LVCMOS33_IN   | PT7D  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
-| reset               | 5/3      | LVCMOS33_IN   | PL2D  |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL              |
-+---------------------+----------+---------------+-------+-----------+-----------+------------------------------------------------+
++----------------------+----------+---------------+-------+-----------+-----------+------------------------------------------------+
+| Port Name            | Pin/Bank | Buffer Type   | Site  | PG Enable | BC Enable | Properties                                     |
++----------------------+----------+---------------+-------+-----------+-----------+------------------------------------------------+
+| jtag_io_child_0_tck  | 34/1     | LVCMOS18_OUT  | PR5C  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| jtag_io_child_0_tdi  | 35/1     | LVCMOS18_OUT  | PR3D  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| jtag_io_child_0_tdo  | 36/1     | LVCMOS18_IN   | PR3C  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| jtag_io_child_0_tms  | 32/1     | LVCMOS18_OUT  | PR6C  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| jtag_io_child_0_trst | 33/1     | LVCMOS18_OUT  | PR5D  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| jtag_io_child_1_tck  | 16/2     | LVCMOS33_OUT  | PB6A  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| jtag_io_child_1_tdi  | 15/2     | LVCMOS33_OUT  | PB4B  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| jtag_io_child_1_tdo  | 14/2     | LVCMOS33_IN   | PB4A  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| jtag_io_child_1_tms  | 18/2     | LVCMOS33_OUT  | PB6C  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| jtag_io_child_1_trst | 17/2     | LVCMOS33_OUT  | PB6B  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| jtag_io_child_2_tck  | 4/3      | LVCMOS33_OUT  | PL2C  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| jtag_io_child_2_tdi  | 3/3      | LVCMOS33_OUT  | PL2B  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| jtag_io_child_2_tdo  | 2/3      | LVCMOS33_IN   | PL2A  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| jtag_io_child_2_tms  | 7/3      | LVCMOS33_OUT  | PL3A  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| jtag_io_child_2_trst | 5/3      | LVCMOS33_OUT  | PL2D  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| jtag_io_gpio_0[0]    | 31/1     | LVCMOS18_BIDI | PR6D  |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_gpio_0[1]    | 29/1     | LVCMOS18_BIDI | PR7A  |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_gpio_0[2]    | 28/1     | LVCMOS18_BIDI | PR7B  |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_gpio_0[3]    | 27/1     | LVCMOS18_BIDI | PR7C  |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_gpio_1[0]    | 19/2     | LVCMOS33_BIDI | PB6D  |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_gpio_1[1]    | 20/2     | LVCMOS33_BIDI | PB10C |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_gpio_1[2]    | 21/2     | LVCMOS33_BIDI | PB10D |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_gpio_1[3]    | 23/2     | LVCMOS33_BIDI | PB14C |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_gpio_2[0]    | 8/3      | LVCMOS33_BIDI | PL3B  |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_gpio_2[1]    | 9/3      | LVCMOS33_BIDI | PL5A  |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_gpio_2[2]    | 10/3     | LVCMOS33_BIDI | PL5B  |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_gpio_2[3]    | 11/3     | LVCMOS33_BIDI | PL6A  |           |           | DRIVE:8mA CLAMP:ON HYSTERESIS:SMALL SLEW:SLOW  |
+| jtag_io_jtag_tck     | 43/0     | LVCMOS33_IN   | PT9C  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| jtag_io_jtag_tdi     | 47/0     | LVCMOS33_IN   | PT7B  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| jtag_io_jtag_tdo     | 48/0     | LVCMOS33_OUT  | PT7A  |           |           | DRIVE:8mA SLEW:SLOW                            |
+| jtag_io_jtag_tms     | 44/0     | LVCMOS33_IN   | PT7D  |           |           | CLAMP:ON HYSTERESIS:SMALL                      |
+| reset                | 12/3     | LVCMOS33_IN   | PL6B  |           |           | PULL:UP CLAMP:ON HYSTERESIS:SMALL              |
++----------------------+----------+---------------+-------+-----------+-----------+------------------------------------------------+
 
 Vccio by Bank:
 +------+-------+
@@ -75,17 +78,17 @@ Vccio by Bank:
 | 2/3      | jtag_io_child_2_tdo   | LOCATED    | LVCMOS33_IN   | PL2A  |               |           |           |
 | 3/3      | jtag_io_child_2_tdi   | LOCATED    | LVCMOS33_OUT  | PL2B  |               |           |           |
 | 4/3      | jtag_io_child_2_tck   | LOCATED    | LVCMOS33_OUT  | PL2C  | PCLKT3_2      |           |           |
-| 5/3      | reset                 |            | LVCMOS33_IN   | PL2D  | PCLKC3_2      |           |           |
+| 5/3      | jtag_io_child_2_trst  | LOCATED    | LVCMOS33_OUT  | PL2D  | PCLKC3_2      |           |           |
 | 7/3      | jtag_io_child_2_tms   | LOCATED    | LVCMOS33_OUT  | PL3A  |               |           |           |
 | 8/3      | jtag_io_gpio_2[0]     | LOCATED    | LVCMOS33_BIDI | PL3B  |               |           |           |
 | 9/3      | jtag_io_gpio_2[1]     | LOCATED    | LVCMOS33_BIDI | PL5A  | PCLKT3_1      |           |           |
 | 10/3     | jtag_io_gpio_2[2]     | LOCATED    | LVCMOS33_BIDI | PL5B  | PCLKC3_1      |           |           |
 | 11/3     | jtag_io_gpio_2[3]     | LOCATED    | LVCMOS33_BIDI | PL6A  |               |           |           |
-| 12/3     |     unused, PULL:DOWN |            |               | PL6B  |               |           |           |
+| 12/3     | reset                 |            | LVCMOS33_IN   | PL6B  |               |           |           |
 | 14/2     | jtag_io_child_1_tdo   | LOCATED    | LVCMOS33_IN   | PB4A  | CSSPIN        |           |           |
 | 15/2     | jtag_io_child_1_tdi   | LOCATED    | LVCMOS33_OUT  | PB4B  |               |           |           |
 | 16/2     | jtag_io_child_1_tck   | LOCATED    | LVCMOS33_OUT  | PB6A  | MCLK/CCLK     |           |           |
-| 17/2     |     unused, PULL:DOWN |            |               | PB6B  | SO/SPISO      |           |           |
+| 17/2     | jtag_io_child_1_trst  | LOCATED    | LVCMOS33_OUT  | PB6B  | SO/SPISO      |           |           |
 | 18/2     | jtag_io_child_1_tms   | LOCATED    | LVCMOS33_OUT  | PB6C  | PCLKT2_0      |           |           |
 | 19/2     | jtag_io_gpio_1[0]     | LOCATED    | LVCMOS33_BIDI | PB6D  | PCLKC2_0      |           |           |
 | 20/2     | jtag_io_gpio_1[1]     | LOCATED    | LVCMOS33_BIDI | PB10C | PCLKT2_1      |           |           |
@@ -98,7 +101,7 @@ Vccio by Bank:
 | 29/1     | jtag_io_gpio_0[1]     | LOCATED    | LVCMOS18_BIDI | PR7A  |               |           |           |
 | 31/1     | jtag_io_gpio_0[0]     | LOCATED    | LVCMOS18_BIDI | PR6D  |               |           |           |
 | 32/1     | jtag_io_child_0_tms   | LOCATED    | LVCMOS18_OUT  | PR6C  |               |           |           |
-| 33/1     |     unused, PULL:DOWN |            |               | PR5D  | PCLKC1_0      |           |           |
+| 33/1     | jtag_io_child_0_trst  | LOCATED    | LVCMOS18_OUT  | PR5D  | PCLKC1_0      |           |           |
 | 34/1     | jtag_io_child_0_tck   | LOCATED    | LVCMOS18_OUT  | PR5C  | PCLKT1_0      |           |           |
 | 35/1     | jtag_io_child_0_tdi   | LOCATED    | LVCMOS18_OUT  | PR3D  |               |           |           |
 | 36/1     | jtag_io_child_0_tdo   | LOCATED    | LVCMOS18_IN   | PR3C  |               |           |           |
@@ -171,14 +174,17 @@ LOCATE  COMP  "jtag_io_child_0_tck"  SITE  "34";
 LOCATE  COMP  "jtag_io_child_0_tdi"  SITE  "35";
 LOCATE  COMP  "jtag_io_child_0_tdo"  SITE  "36";
 LOCATE  COMP  "jtag_io_child_0_tms"  SITE  "32";
+LOCATE  COMP  "jtag_io_child_0_trst"  SITE  "33";
 LOCATE  COMP  "jtag_io_child_1_tck"  SITE  "16";
 LOCATE  COMP  "jtag_io_child_1_tdi"  SITE  "15";
 LOCATE  COMP  "jtag_io_child_1_tdo"  SITE  "14";
 LOCATE  COMP  "jtag_io_child_1_tms"  SITE  "18";
+LOCATE  COMP  "jtag_io_child_1_trst"  SITE  "17";
 LOCATE  COMP  "jtag_io_child_2_tck"  SITE  "4";
 LOCATE  COMP  "jtag_io_child_2_tdi"  SITE  "3";
 LOCATE  COMP  "jtag_io_child_2_tdo"  SITE  "2";
 LOCATE  COMP  "jtag_io_child_2_tms"  SITE  "7";
+LOCATE  COMP  "jtag_io_child_2_trst"  SITE  "5";
 LOCATE  COMP  "jtag_io_gpio_0[0]"  SITE  "31";
 LOCATE  COMP  "jtag_io_gpio_0[1]"  SITE  "29";
 LOCATE  COMP  "jtag_io_gpio_0[2]"  SITE  "28";
@@ -195,7 +201,7 @@ LOCATE  COMP  "jtag_io_jtag_tck"  SITE  "43";
 LOCATE  COMP  "jtag_io_jtag_tdi"  SITE  "47";
 LOCATE  COMP  "jtag_io_jtag_tdo"  SITE  "48";
 LOCATE  COMP  "jtag_io_jtag_tms"  SITE  "44";
-LOCATE  COMP  "reset"  SITE  "5";
+LOCATE  COMP  "reset"  SITE  "12";
 
 
 
@@ -207,7 +213,7 @@ Copyright (c) 1995 AT&T Corp.   All rights reserved.
 Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
 Copyright (c) 2001 Agere Systems   All rights reserved.
 Copyright (c) 2002-2019 Lattice Semiconductor Corporation,  All rights reserved.
-Fri Sep 25 10:57:18 2020
+Wed Oct 28 14:02:53 2020
 
 
 
